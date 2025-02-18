@@ -1,0 +1,116 @@
+.sntravel-nutritions-wrapper {
+	padding-top: 25px;
+	margin-top: 23px;
+	border-top: 1px solid $divider_color;
+	width: 100%;
+	.sntravel-nutrition-list {
+		@include d-flex();
+		.sntravel-nutrition {
+			flex-basis: 50%;
+			color: $heading_color;
+			font-weight: 500;
+			line-height: 35px;
+			letter-spacing: 0.02em;
+			.sntravel-nutrition-value {
+				color: $primary_color;
+			}
+		}
+	}
+}
+
+.sntravel-shop-layout-3 .sntravel-nutritions-wrapper {
+	h3 {
+		font-size: 25px;
+		font-weight: 600;
+		letter-spacing: 0.02em;
+	}
+	.sntravel-nutrition {
+		text-transform: uppercase;
+	}
+}
+
+.sntravel-shop-layout-4 .sntravel-nutritions-wrapper {
+	border-color: $divider_color;
+	h3 {
+		font-size: 20px;
+		font-weight: 400;
+		letter-spacing: 0.03em;
+	}
+	.sntravel-nutrition {
+		text-transform: uppercase;
+		font-weight: 600;
+		line-height: 35px;
+		letter-spacing: 0.02em;
+	}
+}
+.sntravel-shop-layout-6 .sntravel-nutritions-wrapper {
+	h3 {
+		font-size: 25px;
+		font-weight: 600;
+		letter-spacing: 0.02em;
+	}
+	.sntravel-nutrition {
+		text-transform: uppercase;
+	}
+}
+
+.sntravel-shop-layout-7 .sntravel-nutritions-wrapper {
+	h3 {
+		font-size: 25px;
+		font-weight: 600;
+		letter-spacing: 0.02em;
+	}
+	.sntravel-nutrition {
+		text-transform: uppercase;
+	}
+}
+.sntravel-shop-layout-8 .sntravel-nutritions-wrapper {
+	h3 {
+		font-size: 25px;
+		font-weight: 600;
+		letter-spacing: 0.02em;
+	}
+	.sntravel-nutrition {
+		text-transform: uppercase;
+	}
+}
+.sntravel-shop-layout-9 .sntravel-nutritions-wrapper {
+	h3 {
+		font-size: 25px;
+		font-weight: 600;
+		letter-spacing: 0.02em;
+	}
+	.sntravel-nutrition {
+		text-transform: uppercase;
+	}
+}
+.sntravel-shop-layout-10 .sntravel-nutritions-wrapper {
+	h3 {
+		font-size: 25px;
+		font-weight: 600;
+		letter-spacing: 0.02em;
+	}
+	.sntravel-nutrition {
+		text-transform: uppercase;
+	}
+}
+.sntravel-shop-layout-11 .sntravel-nutritions-wrapper {
+	h3 {
+		font-size: 25px;
+		font-weight: 600;
+		letter-spacing: 0.02em;
+	}
+	.sntravel-nutrition {
+		text-transform: uppercase;
+	}
+}
+.sntravel-shop-layout-12 .sntravel-nutritions-wrapper {
+	h3 {
+		font-size: 25px;
+		font-weight: 600;
+		letter-spacing: 0.02em;
+	}
+	.sntravel-nutrition {
+		text-transform: uppercase;
+	}
+}

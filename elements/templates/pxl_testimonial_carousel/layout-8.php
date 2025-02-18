@@ -44,7 +44,7 @@ $widget->add_render_attribute('carousel', [
 <?php if (isset($content_list) && !empty($content_list) && count($content_list)) : ?>
 <div class="sntravel-swiper-slider sntravel-testimonial-carousel layout-<?php echo esc_attr($settings['layout']) ?>">
     <div class="sntravel-swiper-slider-wrap sntravel-carousel-inner relative">
-        <div <?php pxl_print_html($widget->get_render_attribute_string('carousel')); ?>>
+        <div <?php sntravel_print_html($widget->get_render_attribute_string('carousel')); ?>>
             <?php if ($quote_icon_type == 'icon' && !empty($settings['selected_icon']['value'])) { ?>
                 <div class="icon-wrapper">
                     <?php \Elementor\Icons_Manager::render_icon($settings['selected_icon'], ['aria-hidden' => 'true', 'class' => 'item-quote-icon sntravel-icon'], 'i'); ?>
@@ -62,7 +62,7 @@ $widget->add_render_attribute('carousel', [
                     $description = isset($value['description']) ? $value['description'] : '';
                     $thumbnail = '';
                     if (!empty($image['id'])) {
-                        $img = pxl_get_image_by_size(array(
+                        $img = sntravel_get_image_by_size(array(
                             'attach_id'  => $image['id'],
                             'thumb_size' => '250x250',
                             'class' => 'no-lazyload',
@@ -75,7 +75,7 @@ $widget->add_render_attribute('carousel', [
                             <?php if (!empty($testimonial_title)) { ?>
                                 <h4 class="testimonial-title"><span><?php echo esc_html($testimonial_title); ?></span></h4>
                             <?php } ?>
-                            <div class="item-desc"><?php echo pxl_print_html($description); ?></div>
+                            <div class="item-desc"><?php echo sntravel_print_html($description); ?></div>
                             <div class="item-wrap row gx-20 justify-content-center">
                                 <?php if (!empty($value['rating']) && $value['rating'] != 'none') : ?>
                                     <div class="item-rating-star">

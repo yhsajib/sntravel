@@ -41,7 +41,7 @@ $widget->add_render_attribute('carousel', [
 <div class="sntravel-swiper-slider sntravel-testimonial-carousel layout-<?php echo esc_attr($settings['layout']) ?>">
     <div class="sntravel-swiper-slider-wrap sntravel-carousel-inner relative d-flex">
         <div class="sntravel-swiper-arrow sntravel-swiper-arrow-prev"><?php echo esc_html('Previous', 'sntravel'); ?></div>
-        <div <?php pxl_print_html($widget->get_render_attribute_string('carousel')); ?>>
+        <div <?php sntravel_print_html($widget->get_render_attribute_string('carousel')); ?>>
             <?php if ($quote_icon_type == 'icon' && !empty($settings['selected_icon']['value'])) { ?>
                 <div class="icon-wrapper">
                     <?php \Elementor\Icons_Manager::render_icon($settings['selected_icon'], ['aria-hidden' => 'true', 'class' => 'item-quote-icon sntravel-icon'], 'i'); ?>
@@ -69,16 +69,16 @@ $widget->add_render_attribute('carousel', [
                                         <h4 class="testimonial-title"><span><?php echo esc_html($testimonial_title); ?></span></h4>
                                     <?php } ?>
                                     <?php if (!empty($description)) : ?>
-                                        <div class="item-desc"><?php echo pxl_print_html($description); ?></div>
+                                        <div class="item-desc"><?php echo sntravel_print_html($description); ?></div>
                                     <?php endif; ?>
                                     <?php if (!empty($value['rating']) && $value['rating'] != 'none') : ?>
                                         <div class="item-rating-star">
                                             <div class="item-rating <?php echo esc_attr($value['rating']); ?>">
-                                                <i class="pxli pxli-star1"></i>
-                                                <i class="pxli pxli-star1"></i>
-                                                <i class="pxli pxli-star1"></i>
-                                                <i class="pxli pxli-star1"></i>
-                                                <i class="pxli pxli-star1"></i>
+                                                <i class="sntraveli sntraveli-star1"></i>
+                                                <i class="sntraveli sntraveli-star1"></i>
+                                                <i class="sntraveli sntraveli-star1"></i>
+                                                <i class="sntraveli sntraveli-star1"></i>
+                                                <i class="sntraveli sntraveli-star1"></i>
                                             </div>
                                         </div>
                                     <?php endif; ?>

@@ -324,7 +324,7 @@ body .mfp-bottom-bar {
     }
     &:before {
         background-color: transparent;
-        font-family: $pxli_font;
+        font-family: $sntraveli_font;
         font-size: 20px;
         font-weight: 700;
         color: #000;
@@ -349,12 +349,12 @@ body .mfp-bottom-bar {
         content: "\e95a";
     }
 }
-[class^="pxli-"], [class*=" pxli-"]{
+[class^="sntraveli-"], [class*=" sntraveli-"]{
     @include d-inline-flex();
     align-items: center;
     justify-content: center;
 }
-[class^="pxli-"]:before, [class*=" pxli-"]:before{
+[class^="sntraveli-"]:before, [class*=" sntraveli-"]:before{
     vertical-align: middle;
 }
 

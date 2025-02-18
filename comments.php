@@ -32,8 +32,8 @@ if($post_comment == '1'):
                 <nav class="navigation comments-pagination empty-none"><?php 
                     //the_comments_navigation(); 
                     paginate_comments_links([
-                        'prev_text' => '<span class="pxli-angle-left"></span>',
-                        'next_text' => '<span class="pxli-angle-left"></span>'
+                        'prev_text' => '<span class="sntraveli-angle-left"></span>',
+                        'next_text' => '<span class="sntraveli-angle-left"></span>'
                     ]); 
                 ?></nav> 
  

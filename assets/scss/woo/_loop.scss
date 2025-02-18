@@ -157,7 +157,7 @@ select.orderby{
 			height: 16px;
 			margin-right: 10px;
 			color: $primary_color;
-			font-family: $pxli_font;
+			font-family: $sntraveli_font;
 			font-size: 16px;
 			text-indent: 0;
 			line-height: 1;
@@ -166,7 +166,7 @@ select.orderby{
 		&.woosw-adding {
 			&:before {
 				content: "\e95b";
-				font-family: $pxli_font !important;
+				font-family: $sntraveli_font !important;
 				@include animation(sntravel-spin 2s linear infinite);
 			}
 			&:after{
@@ -293,7 +293,7 @@ select.orderby{
 			&.woosw-adding {
 				&:before {
 					content: "\e95b";
-					font-family: $pxli_font;
+					font-family: $sntraveli_font;
 					@include animation(sntravel-spin 2s linear infinite);
 				}
 			}
@@ -457,7 +457,7 @@ select.orderby{
 					@include animation(sntravel-spin 2s linear infinite);
 					&:before{
 						content: "\e95b";
-						font-family: "pxli" !important;
+						font-family: "sntraveli" !important;
 					}
 				}
 			}
@@ -465,7 +465,7 @@ select.orderby{
 				opacity: 0;
 				&:before {
 					content: '\e942';
-					font-family: "pxli";
+					font-family: "sntraveli";
 					font-weight: normal;
 					position: static;
 					height: auto;
@@ -771,7 +771,7 @@ select.orderby{
 				content: "\e985";
 				color: #fff;
 				margin-right: 0;
-				font-family: $pxli_font;
+				font-family: $sntraveli_font;
 				font-size: 15px;
 				text-indent: 0;
 				line-height: 1;
@@ -779,7 +779,7 @@ select.orderby{
 			&.woosw-adding {
 				&:before {
 					content: "\e95b";
-					font-family: $pxli_font;
+					font-family: $sntraveli_font;
 					@include animation(sntravel-spin 2s linear infinite);
 				}
 			}
@@ -842,7 +842,7 @@ select.orderby{
 						margin-left: 10px;
 						display: inline-block;
 						@include animation(sntravel-spin 2s linear infinite);
-						font-family: $pxli_font;
+						font-family: $sntraveli_font;
 						font-size: 11px;
 						color: $heading_color;
 					}
@@ -1027,7 +1027,7 @@ select.orderby{
 					&:before {
 						content: "\e985";
 						color: #fff;
-						font-family: $pxli_font;
+						font-family: $sntraveli_font;
 						font-size: 15px;
 						margin-right: 0;
 					}
@@ -1068,7 +1068,7 @@ select.orderby{
 					@include animation(sntravel-spin 2s linear infinite);
 					&:before{
 						content: "\e95b";
-						font-family: $pxli_font !important;
+						font-family: $sntraveli_font !important;
 						display: block;
 					}
 				}
@@ -1077,7 +1077,7 @@ select.orderby{
 				opacity: 0;
 				&:before {
 					content: '\e942';
-					font-family: $pxli_font;
+					font-family: $sntraveli_font;
 					font-weight: normal;
 					position: static;
 					height: auto;
@@ -1259,7 +1259,7 @@ select.orderby{
 					&:after {
 						content: "\e90c";
 						color: #fff;
-						font-family: $pxli_font;
+						font-family: $sntraveli_font;
 						font-size: 15px;
 						top: 1px;
 						position: relative;
@@ -1308,7 +1308,7 @@ select.orderby{
 					@include animation(sntravel-spin 2s linear infinite);
 					&:before{
 						content: "\e95b";
-						font-family: $pxli_font !important;
+						font-family: $sntraveli_font !important;
 						display: block;
 					}
 				}
@@ -1317,7 +1317,7 @@ select.orderby{
 				opacity: 0;
 				&:before {
 					content: '\e942';
-					font-family: $pxli_font;
+					font-family: $sntraveli_font;
 					font-weight: normal;
 					position: static;
 					height: auto;
@@ -1424,14 +1424,14 @@ select.orderby{
 				color: #fff;
 				position: relative;
 				font-weight: 500;
-				&.pxli-arrow-prev{
+				&.sntraveli-arrow-prev{
 					&::before{
 						content: '\f2ea';
 						font: normal normal normal 14px / 1 'Material-Design-Iconic-Font';
 						font-size: 21px;
 					}
 				}
-				&.pxli-arrow-next{
+				&.sntraveli-arrow-next{
 					&::before{
 						content: '\f2ee';
 						font: normal normal normal 14px / 1 'Material-Design-Iconic-Font';
@@ -1508,7 +1508,7 @@ select.orderby{
 				content: "\e985";
 				color: #fff;
 				margin-right: 0;
-				font-family: $pxli_font;
+				font-family: $sntraveli_font;
 				font-size: 15px;
 				text-indent: 0;
 				line-height: 1;
@@ -1516,7 +1516,7 @@ select.orderby{
 			&.woosw-adding {
 				&:before {
 					content: "\e95b";
-					font-family: $pxli_font;
+					font-family: $sntraveli_font;
 					@include animation(sntravel-spin 2s linear infinite);
 				}
 			}
@@ -1603,7 +1603,7 @@ select.orderby{
 					&:before {
 						content: "\e985";
 						color: #fff;
-						font-family: $pxli_font;
+						font-family: $sntraveli_font;
 						font-size: 15px;
 						top: 1px;
 						position: relative;
@@ -1651,7 +1651,7 @@ select.orderby{
 					@include animation(sntravel-spin 2s linear infinite);
 					&:before{
 						content: "\e95b";
-						font-family: $pxli_font !important;
+						font-family: $sntraveli_font !important;
 						display: block;
 					}
 				}
@@ -1660,7 +1660,7 @@ select.orderby{
 				opacity: 0;
 				&:before {
 					content: '\e942';
-					font-family: $pxli_font;
+					font-family: $sntraveli_font;
 					font-weight: normal;
 					position: static;
 					height: auto;
@@ -1771,19 +1771,19 @@ select.orderby{
 				color: $secondary_color;
 				position: relative;
 				font-weight: 500;
-				&.pxli-arrow-prev{
+				&.sntraveli-arrow-prev{
 					transform: rotate(180deg);
 					&::before{
 						content: '\ea07';
-						font-family: 'pxli';
+						font-family: 'sntraveli';
 						font-size: 20px;
 						font-weight: 700;
 					}
 				}
-				&.pxli-arrow-next{
+				&.sntraveli-arrow-next{
 					&::before{
 						content: '\ea07';
-						font-family: 'pxli';
+						font-family: 'sntraveli';
 						font-size: 20px;
 						font-weight: 700;
 					}
@@ -1864,7 +1864,7 @@ select.orderby{
 				content: "\e985";
 				color: #fff;
 				margin-right: 0;
-				font-family: $pxli_font;
+				font-family: $sntraveli_font;
 				font-size: 15px;
 				text-indent: 0;
 				line-height: 1;
@@ -1891,7 +1891,7 @@ select.orderby{
 			position: relative;
 			&::after{
 				content: "\e973";
-				font-family: "pxli";
+				font-family: "sntraveli";
 				position: absolute;
 				top: 50%;
 				right: 18px;
@@ -1913,7 +1913,7 @@ select.orderby{
 		.sntravel-view-layout-wrap {
 			.view-list{
 				.sntravel-ttip {
-					.pxli-list{
+					.sntraveli-list{
 						&::before{
 							content: "\ea0b";
 							font-size: 28px;
@@ -1922,7 +1922,7 @@ select.orderby{
 				}
 			}
 			.view-grid {
-				.pxli-grid{
+				.sntraveli-grid{
 					&::before{
 						content: "\ea0a";
 						font-size: 21px;
@@ -2073,7 +2073,7 @@ select.orderby{
 					&:before {
 						content: "\e985";
 						color: #fff;
-						font-family: $pxli_font;
+						font-family: $sntraveli_font;
 						font-size: 15px;
 						top: 1px;
 						position: relative;
@@ -2121,7 +2121,7 @@ select.orderby{
 					@include animation(sntravel-spin 2s linear infinite);
 					&:before{
 						content: "\e95b";
-						font-family: $pxli_font !important;
+						font-family: $sntraveli_font !important;
 						display: block;
 					}
 				}
@@ -2130,7 +2130,7 @@ select.orderby{
 				opacity: 0;
 				&:before {
 					content: '\e942';
-					font-family: $pxli_font;
+					font-family: $sntraveli_font;
 					font-weight: normal;
 					position: static;
 					height: auto;
@@ -2241,16 +2241,16 @@ select.orderby{
 				color: $secondary_color;
 				position: relative;
 				font-weight: 500;
-				&.pxli-arrow-prev{
+				&.sntraveli-arrow-prev{
 					&::before{
-						font-family: 'pxli';
+						font-family: 'sntraveli';
 						font-size: 20px;
 						font-weight: 700;
 					}
 				}
-				&.pxli-arrow-next{
+				&.sntraveli-arrow-next{
 					&::before{
-						font-family: 'pxli';
+						font-family: 'sntraveli';
 						font-size: 20px;
 						font-weight: 700;
 					}
@@ -2332,7 +2332,7 @@ select.orderby{
 				content: "\e985";
 				color: #fff;
 				margin-right: 0;
-				font-family: $pxli_font;
+				font-family: $sntraveli_font;
 				font-size: 15px;
 				text-indent: 0;
 				line-height: 1;
@@ -2359,7 +2359,7 @@ select.orderby{
 			position: relative;
 			&::after{
 				content: "\e973";
-				font-family: "pxli";
+				font-family: "sntraveli";
 				position: absolute;
 				top: 50%;
 				right: 18px;
@@ -2381,7 +2381,7 @@ select.orderby{
 		.sntravel-view-layout-wrap {
 			.view-list{
 				.sntravel-ttip {
-					.pxli-list{
+					.sntraveli-list{
 						&::before{
 							content: "\ea0b";
 							font-size: 28px;
@@ -2390,7 +2390,7 @@ select.orderby{
 				}
 			}
 			.view-grid {
-				.pxli-grid{
+				.sntraveli-grid{
 					&::before{
 						content: "\ea0a";
 						font-size: 21px;
@@ -2548,7 +2548,7 @@ select.orderby{
 					&:before {
 						content: "\e985";
 						color: #fff;
-						font-family: $pxli_font;
+						font-family: $sntraveli_font;
 						font-size: 15px;
 						top: 1px;
 						position: relative;
@@ -2598,7 +2598,7 @@ select.orderby{
 					@include animation(sntravel-spin 2s linear infinite);
 					&:before{
 						content: "\e95b";
-						font-family: $pxli_font !important;
+						font-family: $sntraveli_font !important;
 						display: block;
 					}
 				}
@@ -2607,7 +2607,7 @@ select.orderby{
 				opacity: 0;
 				&:before {
 					content: '\e942';
-					font-family: $pxli_font;
+					font-family: $sntraveli_font;
 					font-weight: normal;
 					position: static;
 					height: auto;
@@ -2734,16 +2734,16 @@ select.orderby{
 				color: $primary_color;
 				position: relative;
 				font-weight: 500;
-				&.pxli-arrow-prev{
+				&.sntraveli-arrow-prev{
 					&::before{
-						font-family: 'pxli';
+						font-family: 'sntraveli';
 						font-size: 35px;
 						font-weight: 400;
 					}
 				}
-				&.pxli-arrow-next{
+				&.sntraveli-arrow-next{
 					&::before{
-						font-family: 'pxli';
+						font-family: 'sntraveli';
 						font-size: 35px;
 						font-weight: 400;
 					}
@@ -2812,7 +2812,7 @@ select.orderby{
 				content: "\e985";
 				color: #fff;
 				margin-right: 0;
-				font-family: $pxli_font;
+				font-family: $sntraveli_font;
 				font-size: 15px;
 				text-indent: 0;
 				line-height: 1;
@@ -2839,7 +2839,7 @@ select.orderby{
 			position: relative;
 			&::after{
 				content: "\e973";
-				font-family: "pxli";
+				font-family: "sntraveli";
 				position: absolute;
 				top: 50%;
 				right: 36px;
@@ -2871,7 +2871,7 @@ select.orderby{
 		.sntravel-view-layout-wrap {
 			.view-list{
 				.sntravel-ttip {
-					.pxli-list{
+					.sntraveli-list{
 						&::before{
 							content: "\ea0b";
 							font-size: 28px;
@@ -2880,7 +2880,7 @@ select.orderby{
 				}
 			}
 			.view-grid {
-				.pxli-grid{
+				.sntraveli-grid{
 					&::before{
 						content: "\ea0a";
 						font-size: 21px;
@@ -3041,7 +3041,7 @@ select.orderby{
 					&:before {
 						content: "\e985";
 						color: #fff;
-						font-family: $pxli_font;
+						font-family: $sntraveli_font;
 						font-size: 15px;
 						top: 1px;
 						position: relative;
@@ -3091,7 +3091,7 @@ select.orderby{
 					@include animation(sntravel-spin 2s linear infinite);
 					&:before{
 						content: "\e95b";
-						font-family: $pxli_font !important;
+						font-family: $sntraveli_font !important;
 						display: block;
 					}
 				}
@@ -3100,7 +3100,7 @@ select.orderby{
 				opacity: 0;
 				&:before {
 					content: '\e942';
-					font-family: $pxli_font;
+					font-family: $sntraveli_font;
 					font-weight: normal;
 					position: static;
 					height: auto;
@@ -3226,16 +3226,16 @@ select.orderby{
 				color: $primary_color;
 				position: relative;
 				font-weight: 500;
-				&.pxli-arrow-prev{
+				&.sntraveli-arrow-prev{
 					&::before{
-						font-family: 'pxli';
+						font-family: 'sntraveli';
 						font-size: 35px;
 						font-weight: 400;
 					}
 				}
-				&.pxli-arrow-next{
+				&.sntraveli-arrow-next{
 					&::before{
-						font-family: 'pxli';
+						font-family: 'sntraveli';
 						font-size: 35px;
 						font-weight: 400;
 					}
@@ -3309,7 +3309,7 @@ select.orderby{
 				content: "\e985";
 				color: #fff;
 				margin-right: 0;
-				font-family: $pxli_font;
+				font-family: $sntraveli_font;
 				font-size: 15px;
 				text-indent: 0;
 				line-height: 1;
@@ -3336,7 +3336,7 @@ select.orderby{
 			position: relative;
 			&::after{
 				content: "\e973";
-				font-family: "pxli";
+				font-family: "sntraveli";
 				position: absolute;
 				top: 50%;
 				right: 36px;
@@ -3368,7 +3368,7 @@ select.orderby{
 		.sntravel-view-layout-wrap {
 			.view-list{
 				.sntravel-ttip {
-					.pxli-list{
+					.sntraveli-list{
 						&::before{
 							content: "\ea0b";
 							font-size: 28px;
@@ -3377,7 +3377,7 @@ select.orderby{
 				}
 			}
 			.view-grid {
-				.pxli-grid{
+				.sntraveli-grid{
 					&::before{
 						content: "\ea0a";
 						font-size: 21px;
@@ -3526,7 +3526,7 @@ select.orderby{
 					&:before {
 						content: "\e985";
 						color: #fff;
-						font-family: $pxli_font;
+						font-family: $sntraveli_font;
 						font-size: 15px;
 						top: 1px;
 						position: relative;
@@ -3574,7 +3574,7 @@ select.orderby{
 					@include animation(sntravel-spin 2s linear infinite);
 					&:before{
 						content: "\e95b";
-						font-family: $pxli_font !important;
+						font-family: $sntraveli_font !important;
 						display: block;
 					}
 				}
@@ -3583,7 +3583,7 @@ select.orderby{
 				opacity: 0;
 				&:before {
 					content: '\e942';
-					font-family: $pxli_font;
+					font-family: $sntraveli_font;
 					font-weight: normal;
 					position: static;
 					height: auto;
@@ -3690,19 +3690,19 @@ select.orderby{
 				color: $secondary_color;
 				position: relative;
 				font-weight: 500;
-				&.pxli-arrow-prev{
+				&.sntraveli-arrow-prev{
 					transform: rotate(180deg);
 					&::before{
 						content: '\ea07';
-						font-family: 'pxli';
+						font-family: 'sntraveli';
 						font-size: 20px;
 						font-weight: 700;
 					}
 				}
-				&.pxli-arrow-next{
+				&.sntraveli-arrow-next{
 					&::before{
 						content: '\ea07';
-						font-family: 'pxli';
+						font-family: 'sntraveli';
 						font-size: 20px;
 						font-weight: 700;
 					}
@@ -3780,7 +3780,7 @@ select.orderby{
 				content: "\e985";
 				color: #fff;
 				margin-right: 0;
-				font-family: $pxli_font;
+				font-family: $sntraveli_font;
 				font-size: 15px;
 				text-indent: 0;
 				line-height: 1;
@@ -3807,7 +3807,7 @@ select.orderby{
 			position: relative;
 			&::after{
 				content: "\e973";
-				font-family: "pxli";
+				font-family: "sntraveli";
 				position: absolute;
 				top: 50%;
 				right: 18px;
@@ -3829,7 +3829,7 @@ select.orderby{
 		.sntravel-view-layout-wrap {
 			.view-list{
 				.sntravel-ttip {
-					.pxli-list{
+					.sntraveli-list{
 						&::before{
 							content: "\ea0b";
 							font-size: 28px;
@@ -3838,7 +3838,7 @@ select.orderby{
 				}
 			}
 			.view-grid {
-				.pxli-grid{
+				.sntraveli-grid{
 					&::before{
 						content: "\ea0a";
 						font-size: 21px;
@@ -3995,7 +3995,7 @@ select.orderby{
 					&:before {
 						content: "\e985";
 						color: #fff;
-						font-family: $pxli_font;
+						font-family: $sntraveli_font;
 						font-size: 15px;
 						top: 1px;
 						position: relative;
@@ -4043,7 +4043,7 @@ select.orderby{
 					@include animation(sntravel-spin 2s linear infinite);
 					&:before{
 						content: "\e95b";
-						font-family: $pxli_font !important;
+						font-family: $sntraveli_font !important;
 						display: block;
 					}
 				}
@@ -4052,7 +4052,7 @@ select.orderby{
 				opacity: 0;
 				&:before {
 					content: '\e942';
-					font-family: $pxli_font;
+					font-family: $sntraveli_font;
 					font-weight: normal;
 					position: static;
 					height: auto;
@@ -4160,19 +4160,19 @@ select.orderby{
 				color: $secondary_color;
 				position: relative;
 				font-weight: 500;
-				&.pxli-arrow-prev{
+				&.sntraveli-arrow-prev{
 					transform: rotate(180deg);
 					&::before{
 						content: '\ea07';
-						font-family: 'pxli';
+						font-family: 'sntraveli';
 						font-size: 20px;
 						font-weight: 700;
 					}
 				}
-				&.pxli-arrow-next{
+				&.sntraveli-arrow-next{
 					&::before{
 						content: '\ea07';
-						font-family: 'pxli';
+						font-family: 'sntraveli';
 						font-size: 20px;
 						font-weight: 700;
 					}
@@ -4266,7 +4266,7 @@ select.orderby{
 				content: "\e985";
 				color: #fff;
 				margin-right: 0;
-				font-family: $pxli_font;
+				font-family: $sntraveli_font;
 				font-size: 15px;
 				text-indent: 0;
 				line-height: 1;
@@ -4307,7 +4307,7 @@ select.orderby{
 		.sntravel-view-layout-wrap {
 			.view-list{
 				.sntravel-ttip {
-					.pxli-list{
+					.sntraveli-list{
 						&::before{
 							content: "\ea0b";
 							font-size: 28px;
@@ -4316,7 +4316,7 @@ select.orderby{
 				}
 			}
 			.view-grid {
-				.pxli-grid{
+				.sntraveli-grid{
 					&::before{
 						content: "\ea0a";
 						font-size: 21px;

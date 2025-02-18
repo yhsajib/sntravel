@@ -7,8 +7,8 @@
  */
 
 //* Resize image
-if (!function_exists('pxl_stringify_attributes')) {
-    function pxl_stringify_attributes($attributes)
+if (!function_exists('sntravel_stringify_attributes')) {
+    function sntravel_stringify_attributes($attributes)
     {
         $atts = array();
         foreach ($attributes as $name => $value) {
@@ -18,8 +18,8 @@ if (!function_exists('pxl_stringify_attributes')) {
     }
 }
 
-if (!function_exists('pxl_resize')) {
-    function pxl_resize($attach_id = null, $img_url = null, $width = "", $height = "", $crop = false)
+if (!function_exists('sntravel_resize')) {
+    function sntravel_resize($attach_id = null, $img_url = null, $width = "", $height = "", $crop = false)
     {
         // this is an attachment, so we have the ID
         $image_src = array();
@@ -134,8 +134,8 @@ if (!function_exists('pxl_resize')) {
     }
 }
 
-if (!function_exists('pxl_get_image_by_size')) {
-    function pxl_get_image_by_size($params = array())
+if (!function_exists('sntravel_get_image_by_size')) {
+    function sntravel_get_image_by_size($params = array())
     {
         $params = array_merge(array(
             'post_id' => null,
@@ -155,7 +155,7 @@ if (!function_exists('pxl_get_image_by_size')) {
         $post_id = $params['post_id'];
 
         $attach_id = $post_id ? get_post_thumbnail_id($post_id) : $params['attach_id'];
-        $attach_id = apply_filters('pxl_object_id', $attach_id);
+        $attach_id = apply_filters('sntravel_object_id', $attach_id);
         $thumb_size = $params['thumb_size'];
         $thumb_class = (isset($params['class']) && '' !== $params['class']) ? $params['class'] . ' ' : '';
 
@@ -194,7 +194,7 @@ if (!function_exists('pxl_get_image_by_size')) {
 
             if (is_array($thumb_size)) {
                 // Resize image to custom size
-                $p_img = pxl_resize($attach_id, null, $thumb_size[0], $thumb_size[1], true);
+                $p_img = sntravel_resize($attach_id, null, $thumb_size[0], $thumb_size[1], true);
                 $alt = trim(wp_strip_all_tags(get_post_meta($attach_id, '_wp_attachment_image_alt', true)));
                 $attachment = get_post($attach_id);
                 if (!empty($attachment)) {
@@ -208,7 +208,7 @@ if (!function_exists('pxl_get_image_by_size')) {
                     }
                     if ($p_img) {
 
-                        $attributes = pxl_stringify_attributes(array(
+                        $attributes = sntravel_stringify_attributes(array(
                             'class' => $thumb_class,
                             'src' => $p_img['url'],
                             'width' => $p_img['width'],
@@ -226,7 +226,7 @@ if (!function_exists('pxl_get_image_by_size')) {
 
         $p_img_large = wp_get_attachment_image_src($attach_id, 'large');
 
-        return apply_filters('pxl_el_getimagesize', array(
+        return apply_filters('sntravel_el_getimagesize', array(
             'thumbnail' => $thumbnail,
             'url' => $thumbnail_url,
             'p_img_large' => $p_img_large,

@@ -20,7 +20,7 @@ $settings['layout']    = $settings['layout_'.$settings['post_type']];
 
 $tab_style = sntravel()->get_theme_opt('tab_style', 'style-df');
 
-extract(pxl_get_posts_of_grid(
+extract(sntravel_get_posts_of_grid(
     'post',
     ['source' => $source, 'orderby' => $orderby, 'order' => $order, 'limit' => $limit, 'post_ids' => $post_ids],
     $tax
@@ -57,7 +57,7 @@ $img_size = !empty( $img_size ) ? $img_size : '992x546';
 $data_settings = $item_anm_cls = '';
 if ( !empty( $item_animation) ) {
 
-    $item_anm_cls= ' pxl-animate pxl-invisible animated-'.$item_animation_duration;
+    $item_anm_cls= ' sntravel-animate sntravel-invisible animated-'.$item_animation_duration;
     $item_animation_delay = !empty($item_animation_delay) ? $item_animation_delay : '150';
     $data_animations = [
         'animation' => $item_animation,
@@ -66,7 +66,7 @@ if ( !empty( $item_animation) ) {
 }
 
 $widget->add_render_attribute( 'carousel', [
-    'class'         => 'pxl-swiper-container overflow-hidden',
+    'class'         => 'sntravel-swiper-container overflow-hidden',
     'dir'           => is_rtl() ? 'rtl' : 'ltr',
     'data-settings' => wp_json_encode($opts)
 ]);
@@ -76,7 +76,7 @@ $button_text = !empty($button_text) ? $button_text : esc_html__('Read more', 'sn
 ?>
 <?php if(!empty($posts) && count($posts)): ?>
 
-<div class="pxl-swiper-slider pxl-post-carousel layout-<?php echo esc_attr($settings['layout']);?> center-mode-<?php echo esc_attr($opts['center_slide']);?>">
+<div class="sntravel-swiper-slider sntravel-post-carousel layout-<?php echo esc_attr($settings['layout']);?> center-mode-<?php echo esc_attr($opts['center_slide']);?>">
     <?php if ($select_post_by === 'term_selected' && $filter == "true"): ?>
         <div class="swiper-filter-wrap <?php echo esc_attr($tab_style); ?>">
             <?php if(!empty($filter_default_title)): ?>
@@ -90,16 +90,16 @@ $button_text = !empty($button_text) ? $button_text : esc_html__('Read more', 'sn
             <?php endforeach; ?>
         </div>
     <?php endif; ?>
-    <div class="pxl-swiper-slider-wrap pxl-carousel-inner relative">
-        <div <?php pxl_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
-            <div class="pxl-swiper-wrapper swiper-wrapper">
+    <div class="sntravel-swiper-slider-wrap sntravel-carousel-inner relative">
+        <div <?php sntravel_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
+            <div class="sntravel-swiper-wrapper swiper-wrapper">
                 <?php
                 $i = 0;
                 foreach ($posts as $post):
                     $i = $i + 50;
                     $thumbnail = '';
                     if (has_post_thumbnail($post->ID)){
-                        $img = pxl_get_image_by_size( array(
+                        $img = sntravel_get_image_by_size( array(
                             'post_id'  => $post->ID ,
                             'thumb_size' => $img_size,
                             'class' => 'no-lazyload',
@@ -108,7 +108,7 @@ $button_text = !empty($button_text) ? $button_text : esc_html__('Read more', 'sn
                     }
                     $filter_class = '';
                     if ($select_post_by === 'term_selected' && $filter == "true")
-                        $filter_class = pxl_get_term_of_post_to_class($post->ID, array_unique($tax));
+                        $filter_class = sntravel_get_term_of_post_to_class($post->ID, array_unique($tax));
 
                     $author = get_user_by('id', $post->post_author);
 
@@ -116,7 +116,7 @@ $button_text = !empty($button_text) ? $button_text : esc_html__('Read more', 'sn
                     $data_animation =  json_encode($data_animations);
                     $data_settings = 'data-settings="'.esc_attr($data_animation).'"';
                     ?>
-                    <div class="pxl-swiper-slide swiper-slide" data-filter="<?php echo esc_attr($filter_class) ?>">
+                    <div class="sntravel-swiper-slide swiper-slide" data-filter="<?php echo esc_attr($filter_class) ?>">
                         <div class="item-inner relative">
                             <?php if (isset( $thumbnail )): ?>
                                 <div class="post-featured">
@@ -141,7 +141,7 @@ $button_text = !empty($button_text) ? $button_text : esc_html__('Read more', 'sn
                                     </div>
                                 </div>
                             <?php endif; ?>
-                            <div class="item-content <?php echo esc_attr($item_anm_cls) ?>" <?php pxl_print_html($data_settings); ?>>
+                            <div class="item-content <?php echo esc_attr($item_anm_cls) ?>" <?php sntravel_print_html($data_settings); ?>>
                                 <?php if ($show_category == 'true' || $show_author == 'true') : ?>
                                     <div class="post-metas">
                                         <div class="meta-inner d-flex">
@@ -160,7 +160,7 @@ $button_text = !empty($button_text) ? $button_text : esc_html__('Read more', 'sn
                                     </div>
                                 <?php endif; ?>
                                 <?php if ($show_divider == 'true') : ?>
-                                    <div class="pxl-divider"></div>
+                                    <div class="sntravel-divider"></div>
                                 <?php endif; ?>
                                 <?php if ($show_excerpt == true) : ?>
                                     <div class="item-excerpt">
@@ -177,9 +177,9 @@ $button_text = !empty($button_text) ? $button_text : esc_html__('Read more', 'sn
                                     </div>
                                 <?php endif; ?>
                                 <?php if ($show_button == 'true') : ?>
-                                    <div class="item-readmore pxl-button-wrapper">
+                                    <div class="item-readmore sntravel-button-wrapper">
                                         <a class="btn-more" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
-                                            <span><?php echo pxl_print_html($button_text); ?></span>
+                                            <span><?php echo sntravel_print_html($button_text); ?></span>
                                             <i class="zmdi zmdi-long-arrow-right"></i>
                                         </a>
                                     </div>
@@ -193,7 +193,7 @@ $button_text = !empty($button_text) ? $button_text : esc_html__('Read more', 'sn
         <?php
             basilico_arrow_template($settings);
         ?>
-        <div class="pxl-swiper-dots"></div>
+        <div class="sntravel-swiper-dots"></div>
     </div>
 </div>
 <?php endif; ?>

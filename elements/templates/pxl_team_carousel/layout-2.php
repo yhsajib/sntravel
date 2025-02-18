@@ -44,7 +44,7 @@ $widget->add_render_attribute( 'carousel', [
 <?php if(isset($content_list_layout2) && !empty($content_list_layout2) && count($content_list_layout2)): ?>
     <div class="sntravel-swiper-slider sntravel-team sntravel-team-carousel layout-<?php echo esc_attr($settings['layout'])?>">
         <div class="sntravel-swiper-slider-wrap sntravel-carousel-inner relative">
-            <div <?php pxl_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
+            <div <?php sntravel_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
                 <div class="sntravel-swiper-wrapper swiper-wrapper">
                     <?php foreach ($content_list_layout2 as $key => $value):
                         $title_layout2    = isset($value['title_layout2']) ? $value['title_layout2'] : '';
@@ -55,7 +55,7 @@ $widget->add_render_attribute( 'carousel', [
                         $image_signature    = isset($value['image_signature']) ? $value['image_signature'] : [];
                         $thumbnail = '';
                         if(!empty($image_layout2)) {
-                            $img = pxl_get_image_by_size( array(
+                            $img = sntravel_get_image_by_size( array(
                                 'attach_id'  => $image_layout2['id'],
                                 'thumb_size' => $img_size,
                                 'class' => 'no-lazyload',
@@ -64,7 +64,7 @@ $widget->add_render_attribute( 'carousel', [
                         }
                         $thumbnail_two = '';
                         if (!empty($image_signature)) {
-                            $img_two = pxl_get_image_by_size(array(
+                            $img_two = sntravel_get_image_by_size(array(
                                 'attach_id'  => $image_signature['id'],
                                 'thumb_size' => 'full',
                                 'class' => 'no-lazyload',
@@ -94,12 +94,12 @@ $widget->add_render_attribute( 'carousel', [
                         <div class="sntravel-swiper-slide swiper-slide">
                             <div class="item-inner">         
                                 <div class="item-content">
-                                    <div class="item-sub-title"><?php echo pxl_print_html($sub_title); ?></div>
+                                    <div class="item-sub-title"><?php echo sntravel_print_html($sub_title); ?></div>
                                     <h3 class="item-title">
-                                            <?php echo pxl_print_html($title_layout2); ?>
+                                            <?php echo sntravel_print_html($title_layout2); ?>
                                     </h3>
                                     <?php if(!empty($description_layout2)) { ?>
-                                        <div class="item-description"><?php echo pxl_print_html($description_layout2); ?></div>
+                                        <div class="item-description"><?php echo sntravel_print_html($description_layout2); ?></div>
                                     <?php } ?>
                                     <div class="box-sosial-background">
                                         <?php if(isset($content_sosial) && !empty($content_sosial) && count($content_sosial) > 0): ?>
@@ -133,7 +133,7 @@ $widget->add_render_attribute( 'carousel', [
                                                     <?php 
                                                     if (in_array($current_slide, $array) && !empty($sosial_text)):?>
                                                        <?php if ( ! empty( $link_sosial['url'] ) ): ?><a <?php echo implode( ' ', [ $link_attributes_two ] ); ?>><?php endif; ?>
-                                                            <span class="item-sosial"><?php echo pxl_print_html($sosial_text); ?></span>
+                                                            <span class="item-sosial"><?php echo sntravel_print_html($sosial_text); ?></span>
                                                         <?php if ( ! empty( $link_sosial['url'] ) ): ?></a><?php endif; ?>
                                                     <?php endif; ?>
                                                 <?php endforeach; ?>
@@ -163,8 +163,8 @@ $widget->add_render_attribute( 'carousel', [
                 </div>    
             </div>
             <div class="sntravel-swiper-arrows style-arrow-chef nav-vertical-out">
-                <div class="sntravel-swiper-arrow sntravel-swiper-arrow-prev"><span class="pxli-down-arrow-long"></span><span class="arrow-text">previours</span></div>
-                <div class="sntravel-swiper-arrow sntravel-swiper-arrow-next"><span class="arrow-text">next</span><span class="pxli-down-arrow-long"></span></div>
+                <div class="sntravel-swiper-arrow sntravel-swiper-arrow-prev"><span class="sntraveli-down-arrow-long"></span><span class="arrow-text">previours</span></div>
+                <div class="sntravel-swiper-arrow sntravel-swiper-arrow-next"><span class="arrow-text">next</span><span class="sntraveli-down-arrow-long"></span></div>
             </div>
             <div class="sntravel-swiper-dots"></div>
         </div>

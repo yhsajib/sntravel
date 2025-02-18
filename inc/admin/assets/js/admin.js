@@ -1,16 +1,16 @@
 (function($) {
     "use strict";
-    var pxl_ajax_url = '', api_url = '', theme_slug = '';
+    var sntravel_ajax_url = '', api_url = '', theme_slug = '';
     $(document).ready(function () {
         if( typeof merlin_params !== 'undefined'){
-            pxl_ajax_url = merlin_params.ajaxurl;
+            sntravel_ajax_url = merlin_params.ajaxurl;
             api_url = merlin_params.api_url;
             theme_slug = merlin_params.theme_slug;
         }
-        if(  typeof pxlart_admin !== 'undefined'){
-            pxl_ajax_url = pxlart_admin.ajaxurl;
-            api_url = pxlart_admin.api_url;
-            theme_slug = pxlart_admin.theme_slug;
+        if(  typeof sntravelart_admin !== 'undefined'){
+            sntravel_ajax_url = sntravelart_admin.ajaxurl;
+            api_url = sntravelart_admin.api_url;
+            theme_slug = sntravelart_admin.theme_slug;
         }
         initTabs();
         initDemo();
@@ -18,78 +18,78 @@
     });
 
     function initTabs(){
-        $(document).on('click','.pxl-tab-nav > ul > li > a',function(){
+        $(document).on('click','.sntravel-tab-nav > ul > li > a',function(){
             var data_filter = $(this).attr('data-filter');
             $(this).closest('ul').find('a').removeClass('active');
             $(this).addClass('active');
-            $(this).closest('.pxl-demos').find('.pxl-col:not(.'+data_filter+')').css('display','none');
-            $(this).closest('.pxl-demos').find('.pxl-col.'+data_filter).css('display','flex');
+            $(this).closest('.sntravel-demos').find('.sntravel-col:not(.'+data_filter+')').css('display','none');
+            $(this).closest('.sntravel-demos').find('.sntravel-col.'+data_filter).css('display','flex');
         });
     }
 
     function initDemo(){
-        $('.pxl-demos').on('click', '.pxl-popup-import', function() {
-            if ($('.pxl-error-message').length) {
+        $('.sntravel-demos').on('click', '.sntravel-popup-import', function() {
+            if ($('.sntravel-error-message').length) {
                 return;
             }
             var id = $(this).data('demo-id');
             var demo_file_url = api_url+'demos/'+theme_slug+'/'+id+'.zip';
-            //demo = pxlart_demos[id];
+            //demo = sntravelart_demos[id];
             $.ajax({
-                url: pxl_ajax_url,
+                url: sntravel_ajax_url,
                 type: 'GET',
                 data: {
-                    action: 'pxlart_prepare_demo_package',
+                    action: 'sntravelart_prepare_demo_package',
                     demo: id
                 },
                 beforeSend: function() {
-                    $('.pxl-demo-loader').addClass('active');
+                    $('.sntravel-demo-loader').addClass('active');
                 }
             }).done(function(resp) {  
                 var jsonresp = JSON.parse(resp);  
                 if (jsonresp.stat === 1) {
-                    $('.pxl-demo-loader').removeClass('active');
-                    $('.pxl-demo-content').addClass('active');
+                    $('.sntravel-demo-loader').removeClass('active');
+                    $('.sntravel-demo-content').addClass('active');
                     initPopUp(id);
                 } else {
-                    $('.pxl-demo-loader').removeClass('active');
+                    $('.sntravel-demo-loader').removeClass('active');
                     var $content = 'Your server was unable to connect to theme API server';
                     if( ( jsonresp.stat === 0 ) && ( jsonresp.message != null ) ) {   
                         $content = jsonresp.message;
                     }
-                    $('.pxl-demo-error-confirm').find('.message').html(pxl_esc_js($content));
-                    $('.pxl-demo-error-confirm').addClass('is-active'); 
+                    $('.sntravel-demo-error-confirm').find('.message').html(sntravel_esc_js($content));
+                    $('.sntravel-demo-error-confirm').addClass('is-active'); 
                     
-                    $('.pxl-demo-error-confirm').find('.link-download-demo-manual').html('<a href="'+demo_file_url+'">Click Here</a>');
+                    $('.sntravel-demo-error-confirm').find('.link-download-demo-manual').html('<a href="'+demo_file_url+'">Click Here</a>');
 
-                    $('.pxl-form-upload-demo').on('click', '.btn-upload', function() {
+                    $('.sntravel-form-upload-demo').on('click', '.btn-upload', function() {
                         var file_data = $('input[name="demo_filename"]').prop('files')[0];   
                         var form_data = new FormData();                  
                         form_data.append('file', file_data);
-                        form_data.append('action', 'pxlart_upload_demo_manual');
+                        form_data.append('action', 'sntravelart_upload_demo_manual');
                         form_data.append('demo_id', id);
                         $.ajax({
-                            url: pxl_ajax_url,
+                            url: sntravel_ajax_url,
                             type: 'post',
                             contentType: false,
                             processData: false,
                             data: form_data, 
                             beforeSend: function() {
-                                $('.pxl-demo-error-confirm .err').remove();
-                                $('.pxl-demo-error-confirm .btn-upload').addClass('loading'); 
+                                $('.sntravel-demo-error-confirm .err').remove();
+                                $('.sntravel-demo-error-confirm .btn-upload').addClass('loading'); 
                             }
                         }).done(function(res) {
-                            $('.pxl-demo-error-confirm .btn-upload').removeClass('loading'); 
+                            $('.sntravel-demo-error-confirm .btn-upload').removeClass('loading'); 
                             if( res == '1'){
-                                $('.pxl-demo-error-confirm').removeClass('is-active');
-                                $('.pxl-demo-content').addClass('active');
+                                $('.sntravel-demo-error-confirm').removeClass('is-active');
+                                $('.sntravel-demo-content').addClass('active');
                                 initPopUp(id);
                             }else if(res == '2'){
-                                $('.pxl-demo-error-confirm').find('.pxl-form-upload-demo').append('<p class="err">File upload incorect or not found</p>');
+                                $('.sntravel-demo-error-confirm').find('.sntravel-form-upload-demo').append('<p class="err">File upload incorect or not found</p>');
                             }else if(res == '3'){
-                                $('.pxl-demo-error-confirm').find('.pxl-form-upload-demo').append('<p class="err">The setting for upload_max_filesize is smaller than file upload, try change upload max file size in php config from 64MB or greater</p>');
+                                $('.sntravel-demo-error-confirm').find('.sntravel-form-upload-demo').append('<p class="err">The setting for upload_max_filesize is smaller than file upload, try change upload max file size in php config from 64MB or greater</p>');
                             }else{
-                                $('.pxl-demo-error-confirm').find('.pxl-form-upload-demo').append('<p class="err">File upload is false!</p>');
+                                $('.sntravel-demo-error-confirm').find('.sntravel-form-upload-demo').append('<p class="err">File upload is false!</p>');
                             }
                         });
                     });
@@ -100,28 +100,28 @@
         });
 
          
-        $(document).on('click','.pxl-demo-error-confirm .confirm-footer .btn',function(){
-            $(this).closest('.pxl-demo-error-confirm').removeClass('is-active');
+        $(document).on('click','.sntravel-demo-error-confirm .confirm-footer .btn',function(){
+            $(this).closest('.sntravel-demo-error-confirm').removeClass('is-active');
         })
     }
  
     function initPopUp(demo) {
-        $('.pxl-demo-content').on('click', '.pxl-imp-popup-close', function() {
-            $('.pxl-demo-content').removeClass('active');
+        $('.sntravel-demo-content').on('click', '.sntravel-imp-popup-close', function() {
+            $('.sntravel-demo-content').removeClass('active');
         });
 
         // Import Now
-        $('.pxl-demo-content').on('click', '.pxl-import-btn', function() {
+        $('.sntravel-demo-content').on('click', '.sntravel-import-btn', function() {
            
             var options = [];
-            $(this).closest('.pxl-demo-content').find(' .pxl-imp-opt :checked').each(function() {
+            $(this).closest('.sntravel-demo-content').find(' .sntravel-imp-opt :checked').each(function() {
                 options.push($(this).val());
             });
 
             var crop_img = 'yes';
             var skip_posts = 'yes';
-            var crop_img_checked = $(this).closest('.pxl-demo-content').find(' .pxl-imp-opt-crop :checked').val();
-            var skip_posts_existen = $(this).closest('.pxl-demo-content').find(' .pxl-imp-opt-skip-posts :checked').val();  
+            var crop_img_checked = $(this).closest('.sntravel-demo-content').find(' .sntravel-imp-opt-crop :checked').val();
+            var skip_posts_existen = $(this).closest('.sntravel-demo-content').find(' .sntravel-imp-opt-skip-posts :checked').val();  
             if (typeof crop_img_checked === 'undefined') {
                 crop_img = 'no';
             }
@@ -129,12 +129,12 @@
                 skip_posts = 'no';
             }
   
-            var importer = new pxlartImporter(demo, options, crop_img, skip_posts);
+            var importer = new sntravelartImporter(demo, options, crop_img, skip_posts);
 
         });
     }
 
-    var pxlartImporter = function(id, options, crop_img, skip_posts) {
+    var sntravelartImporter = function(id, options, crop_img, skip_posts) {
         var $this = this;
  
         $this.id = id;
@@ -150,8 +150,8 @@
             var self = this,
             message,
             actions = this.options.slice();
-            $('.pxl-demo-content').removeClass('active');
-            $('.pxl-progress-popup').addClass('active');
+            $('.sntravel-demo-content').removeClass('active');
+            $('.sntravel-progress-popup').addClass('active');
           
             var data = new FormData();
  
@@ -168,10 +168,10 @@
     function runImport(options, id, crop_img, skip_posts) {
 
         $.ajax({
-            url: pxl_ajax_url,
+            url: sntravel_ajax_url,
             type: 'POST',
             data: {
-                action: 'pxlart_import_start',
+                action: 'sntravelart_import_start',
                 demo: id,
                 skip_posts: skip_posts
             }
@@ -179,17 +179,17 @@
 
         var count = 0;  
         //options = ['import_media', 'import_content', 'import_theme_options', 'import_widgets', 'import_slider', 'import_settings'];
-        options[count] && ajaxRun('pxlart_' + options[options.length - options.length], options, id, count, crop_img, function() {
+        options[count] && ajaxRun('sntravelart_' + options[options.length - options.length], options, id, count, crop_img, function() {
             count++;  
-            options[count] && ajaxRun('pxlart_' + options[count], options, id, count, crop_img, function() {
+            options[count] && ajaxRun('sntravelart_' + options[count], options, id, count, crop_img, function() {
                 count++;  
-                options[count] && ajaxRun('pxlart_' + options[count], options, id, count, crop_img, function() {
+                options[count] && ajaxRun('sntravelart_' + options[count], options, id, count, crop_img, function() {
                     count++;
-                    options[count] && ajaxRun('pxlart_' + options[count], options, id, count, crop_img, function() {
+                    options[count] && ajaxRun('sntravelart_' + options[count], options, id, count, crop_img, function() {
                         count++;
-                        options[count] && ajaxRun('pxlart_' + options[count], options, id, count, crop_img, function() {
+                        options[count] && ajaxRun('sntravelart_' + options[count], options, id, count, crop_img, function() {
                             count++;
-                            options[count] && ajaxRun('pxlart_' + options[count], options, id, count, crop_img);
+                            options[count] && ajaxRun('sntravelart_' + options[count], options, id, count, crop_img);
                         });
                     });
                 });
@@ -204,26 +204,26 @@
         ajaxupdater = setInterval(function () {
             var width = ((idx + 1) * 100) / options.length;
             width = Math.ceil(width);
-            $('.pxl-loader').parent().css('width', width + '%');
-            $('.pxl-loader').html( width + '%');
+            $('.sntravel-loader').parent().css('width', width + '%');
+            $('.sntravel-loader').html( width + '%');
            
         }, 1000);
         
         $.ajax({
-            url: pxl_ajax_url,
+            url: sntravel_ajax_url,
             type: 'POST',
             data: {
                 action: action,
                 demo: demo,
-                content: ($('#pxl-imp-all').is(':checked') ? 1 : 0),
-                media: ($('#pxl-imp-media').is(':checked') ? 1 : 0)
+                content: ($('#sntravel-imp-all').is(':checked') ? 1 : 0),
+                media: ($('#sntravel-imp-media').is(':checked') ? 1 : 0)
             },
             beforeSend: function(jq) {
                 $.ajax({
-                    url: pxl_ajax_url,
+                    url: sntravel_ajax_url,
                     type: 'POST',
                     data: {
-                        action: 'pxlart_reset_logs',
+                        action: 'sntravelart_reset_logs',
                     },
                 });
                 ajaxprogress = setInterval(getProgress, 1000);
@@ -238,16 +238,16 @@
             },
         }).done(function(res) {
              
-            if ('pxlart_' + options[options.length - 1] === action) {
+            if ('sntravelart_' + options[options.length - 1] === action) {
                 clearInterval(ajaxupdater);
                 clearInterval(ajaxprogress);
                 runImportFinish(options, demo, crop_img);
-                $('.pxl-loader').parent().css('min-width', '100%');
-                $('.pxl-loader').text("100%");
+                $('.sntravel-loader').parent().css('min-width', '100%');
+                $('.sntravel-loader').text("100%");
                 setTimeout(function() {
-                    $('.pxl-imp-progress').append('<h4>Installed successfully</h4>');
+                    $('.sntravel-imp-progress').append('<h4>Installed successfully</h4>');
                     setTimeout(function() { 
-                        $('.pxl-progress-popup').removeClass('active');
+                        $('.sntravel-progress-popup').removeClass('active');
                     }, 8000);
                 }, 1200);
 
@@ -263,10 +263,10 @@
     }
     function runImportFinish(options, id, crop_img){
         $.ajax({
-            url: pxl_ajax_url,
+            url: sntravel_ajax_url,
             type: 'POST',
             data: {
-                action: 'pxlart_import_finish',
+                action: 'sntravelart_import_finish',
                 demo: id,
                 crop_img: crop_img 
             },
@@ -280,13 +280,13 @@
     }
     function getProgress() {
         $.ajax({
-            url: pxl_ajax_url,
+            url: sntravel_ajax_url,
             type: 'GET',
             data: {
-                action: 'pxlart_progress_imported',
+                action: 'sntravelart_progress_imported',
             },
         }).done(function(resp) {
-            $('.pxl-progress').text(resp);
+            $('.sntravel-progress').text(resp);
             return false;
         });
         return false;
@@ -306,7 +306,7 @@
 
         function ajax_callback(response){  
             var currentSpan = $current_node.find("h3>span"); 
-            var current_btn = $current_node.find(".pxl-button"); 
+            var current_btn = $current_node.find(".sntravel-button"); 
             var new_text = current_btn.attr('data-text-active');
             var new_href = current_btn.attr('data-deactive-url');
 
@@ -343,9 +343,9 @@
         function process_current(){ 
             if(current_item){
                 $current_node.addClass("current");    
-                jQuery.post(pxl_ajax_url, {
+                jQuery.post(sntravel_ajax_url, {
                     action: "merlin_plugins",
-                    wpnonce: pxlart_admin.wpnonce,
+                    wpnonce: sntravelart_admin.wpnonce,
                     slug: current_item,
                 }, ajax_callback).fail(ajax_callback);
                 
@@ -354,18 +354,18 @@
 
         function find_next(){  
             if($current_node){ 
-                if(!$current_node.hasClass("pxl-dsb-plugin-active")){
+                if(!$current_node.hasClass("sntravel-dsb-plugin-active")){
                     items_completed++;
-                    $current_node.addClass("pxl-dsb-plugin-active");
+                    $current_node.addClass("sntravel-dsb-plugin-active");
                 }
             }
 
-            var $plus_item = $('.pxl-plugin-inst');
+            var $plus_item = $('.sntravel-plugin-inst');
             if( $plus_item.length > 0 ){
                 $plus_item.each(function(){
-                    var $item = $(this).closest('.pxl-dsb-plugin');
+                    var $item = $(this).closest('.sntravel-dsb-plugin');
 
-                    if ( $item.hasClass("pxl-dsb-plugin-active") ) {
+                    if ( $item.hasClass("sntravel-dsb-plugin-active") ) {
                         return true;
                     }
                     
@@ -385,13 +385,13 @@
         return {
             init: function(){
  
-                $('.pxl-install-all-plugin').addClass("installing");
-                $('.pxl-dsb-plugin:not(.pxl-dsb-plugin-active)').addClass("installing");
+                $('.sntravel-install-all-plugin').addClass("installing");
+                $('.sntravel-dsb-plugin:not(.sntravel-dsb-plugin-active)').addClass("installing");
                 complete = function(){
 
                     setTimeout(function(){
-                        $(".pxl-dashboard-wrap").addClass('js-plugin-finished');
-                        $('.pxl-install-all-plugin').removeClass("installing");
+                        $(".sntravel-dashboard-wrap").addClass('js-plugin-finished');
+                        $('.sntravel-install-all-plugin').removeClass("installing");
                     },1000);
  
                 };
@@ -401,14 +401,14 @@
     }
 
     function initPlugin(){
-        $(".pxl-install-all-plugin").on( "click", function(e) {
+        $(".sntravel-install-all-plugin").on( "click", function(e) {
             e.preventDefault();
             var plugins = new PxlPluginManager();
             plugins.init();
         });
     }
 
-    function pxl_esc_js(str){
+    function sntravel_esc_js(str){
         return String(str).replace(/[^\w. ]/gi, function(c){
             return '&#'+c.charCodeAt(0)+';';
         });

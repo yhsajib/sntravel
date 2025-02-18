@@ -1,13 +1,13 @@
 <?php
 // Register Progress Bar Widget
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name'       => 'pxl_progressbar',
+        'name'       => 'sntravel_progressbar',
         'title'      => esc_html__( 'PXL Progress Bar', 'sntravel' ),
         'icon'       => 'eicon-skill-bar',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'scripts'    => array(
-            'pxl-progressbar',
+            'sntravel-progressbar',
             'sntravel-progressbar'
         ),
         'params' => array(
@@ -46,7 +46,7 @@ pxl_add_custom_widget(
                                         'label' => esc_html__( 'Bar Background Color', 'sntravel' ),
                                         'type' => \Elementor\Controls_Manager::COLOR,
                                         'selectors' => [
-                                            '{{WRAPPER}} {{CURRENT_ITEM}} .pxl-progress-bar' => 'background-color: {{VALUE}}',
+                                            '{{WRAPPER}} {{CURRENT_ITEM}} .sntravel-progress-bar' => 'background-color: {{VALUE}}',
                                         ],
                                     ),
                                 )
@@ -66,7 +66,7 @@ pxl_add_custom_widget(
                                 'label' => esc_html__( 'Title Color', 'sntravel' ),
                                 'type' => \Elementor\Controls_Manager::COLOR,
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-progressbar .progress-title' => 'color: {{VALUE}};',
+                                    '{{WRAPPER}} .sntravel-progressbar .progress-title' => 'color: {{VALUE}};',
                                 ],
                             ),
                             array(
@@ -74,14 +74,14 @@ pxl_add_custom_widget(
                                 'label' => esc_html__( 'Title Typography', 'sntravel' ),
                                 'type' => \Elementor\Group_Control_Typography::get_type(),
                                 'control_type' => 'group',
-                                'selector' => '{{WRAPPER}} .pxl-progressbar .progress-title',
+                                'selector' => '{{WRAPPER}} .sntravel-progressbar .progress-title',
                             ),
                             array(
                                 'name' => 'percent_color',
                                 'label' => esc_html__( 'Percentage Color', 'sntravel' ),
                                 'type' => \Elementor\Controls_Manager::COLOR,
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-progressbar .progress-percentage' => 'color: {{VALUE}};',
+                                    '{{WRAPPER}} .sntravel-progressbar .progress-percentage' => 'color: {{VALUE}};',
                                 ],
                             ),
                             array(
@@ -89,14 +89,14 @@ pxl_add_custom_widget(
                                 'label' => esc_html__( 'Percentage Typography', 'sntravel' ),
                                 'type' => \Elementor\Group_Control_Typography::get_type(),
                                 'control_type' => 'group',
-                                'selector' => '{{WRAPPER}} .pxl-progressbar .progress-percentage',
+                                'selector' => '{{WRAPPER}} .sntravel-progressbar .progress-percentage',
                             ),
                             array(
                                 'name' => 'bound_color',
                                 'label' => esc_html__( 'Bound Background Color', 'sntravel' ),
                                 'type' => \Elementor\Controls_Manager::COLOR,
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-progressbar .progress-bound' => 'background-color: {{VALUE}};'
+                                    '{{WRAPPER}} .sntravel-progressbar .progress-bound' => 'background-color: {{VALUE}};'
                                 ],
                             ),
                         ),

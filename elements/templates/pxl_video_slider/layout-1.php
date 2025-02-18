@@ -43,7 +43,7 @@ $widget->add_render_attribute( 'carousel', [
 <?php if(isset($clients) && !empty($clients) && count($clients)): ?>
     <div class="sntravel-swiper-slider sntravel-video-slider layout-<?php echo esc_attr($settings['layout'])?>">
         <div class="sntravel-swiper-slider-wrap sntravel-carousel-inner overflow-hidden">
-            <div <?php pxl_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
+            <div <?php sntravel_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
                 <div class="sntravel-swiper-wrapper swiper-wrapper">
                     <?php foreach ($clients as $key => $value):
                         $name             = isset($value['name']) ? $value['name'] : '';
@@ -53,7 +53,7 @@ $widget->add_render_attribute( 'carousel', [
                         $video_text             = isset($value['video_text']) ? $value['video_text'] : '';
                         $thumbnail1 = '';
                         if(!empty($client_img['id'])) {
-                            $img = pxl_get_image_by_size( array(
+                            $img = sntravel_get_image_by_size( array(
                                 'attach_id'  => $client_img['id'],
                                 'thumb_size' => 'full',
                                 'class' => 'no-lazyload',
@@ -82,7 +82,7 @@ $widget->add_render_attribute( 'carousel', [
                                     <div class="sntravel-media-popup">
                                         <div class="media-content-inner">
                                             <a class="media-play-button video-circle" href="<?php echo esc_url($video_link['url']);?>">
-                                                <i class="pxli-play"></i>
+                                                <i class="sntraveli-play"></i>
                                             </a>
                                             <?php
                                             if (!empty($video_text)){
@@ -98,8 +98,8 @@ $widget->add_render_attribute( 'carousel', [
                 </div>
             </div>
             <?php if($arrows !== 'false'): ?>
-                <div class="sntravel-swiper-arrow sntravel-swiper-arrow-next"><span class="sntravel-icon pxli-arrow-next"></span></div>
-                <div class="sntravel-swiper-arrow sntravel-swiper-arrow-prev"><span class="sntravel-icon pxli-arrow-prev"></span></div>
+                <div class="sntravel-swiper-arrow sntravel-swiper-arrow-next"><span class="sntravel-icon sntraveli-arrow-next"></span></div>
+                <div class="sntravel-swiper-arrow sntravel-swiper-arrow-prev"><span class="sntravel-icon sntraveli-arrow-prev"></span></div>
             <?php endif; ?>
             <?php if($dots !== 'false'): ?>
                 <div class="sntravel-swiper-dots"></div>

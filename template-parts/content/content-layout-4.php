@@ -27,7 +27,7 @@ $audio_url = get_post_meta(get_the_ID(), 'featured-audio-url', true);
             <h2 class="post-title">
                 <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php the_title_attribute(); ?>">
                     <?php if (is_sticky()) { ?>
-                        <i class="pxli-thumbtack"></i>
+                        <i class="sntraveli-thumbtack"></i>
                     <?php } ?>
                     <?php the_title(); ?>
                 </a>
@@ -49,7 +49,7 @@ $audio_url = get_post_meta(get_the_ID(), 'featured-audio-url', true);
                         <div class="post-btn-wrap sntravel-button-wrapper col-sm-6">
                             <a class="btn <?php echo esc_html($archive_readmore_btn_style); ?>" href="<?php echo esc_url(get_permalink()); ?>">
                                 <span><?php echo esc_html($archive_readmore_text); ?></span>
-                                <i class="pxli pxli-arrow-right-solid"></i>
+                                <i class="sntraveli sntraveli-arrow-right-solid"></i>
                             </a>
                         </div>
                     <?php endif; ?>

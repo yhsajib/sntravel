@@ -52,7 +52,7 @@ $args = array(
     // OPTIONAL -> Give you extra features
     'page_priority'        => 80,
     // Order where the menu appears in the admin area. If there is any conflict, something will not show. Warning.
-    'page_parent'          => 'pxlart', 
+    'page_parent'          => 'sntravelart', 
     // For a full list of options, visit: //codex.wordpress.org/Function_Reference/add_submenu_page#Parameters
     'page_permissions'     => 'manage_options',
     // Permissions needed to access the options panel.
@@ -62,7 +62,7 @@ $args = array(
     // Force your panel to always open to a specific tab (by id)
     'page_icon'            => 'icon-themes',
     // Icon displayed in the admin panel next to your menu_title
-    'page_slug'            => 'pxlart-theme-options',
+    'page_slug'            => 'sntravelart-theme-options',
     // Page slug used to denote the panel, will be based off page title then menu title then opt_name if not provided
     'save_defaults'        => true,
     // On load save the defaults to DB before user clicks save or not
@@ -640,42 +640,42 @@ Redux::setSection($opt_name, array(
     'subsection' => true,
     'fields' => array(
         array(
-            'id' => 'pxl_portfolio_slug',
+            'id' => 'sntravel_portfolio_slug',
             'type' => 'text',
             'title' => esc_html__('Portfolio Slug', 'sntravel'),
             'subtitle' => esc_html__('The slug name cannot be the same as a page name. Make sure to regenertate permalinks, after making changes.', 'sntravel'),
             'default' => '',
         ),
         array(
-            'id' => 'pxl_portfolio_label',
+            'id' => 'sntravel_portfolio_label',
             'type' => 'text',
             'title' => esc_html__('Portfolio Label', 'sntravel'),
             'subtitle' => esc_html__('Name of the post type shown in the menu, breadcrumb...', 'sntravel'),
             'default' => '',
         ),
         array(
-            'id'      => 'pxl_portfolio_archive_link',
+            'id'      => 'sntravel_portfolio_archive_link',
             'type'    => 'text',
             'title'   => esc_html__('Portfolio Archive Link', 'sntravel'),
             'subtitle' => esc_html__('Custom default archive link when customer click on breadcrumb, default layout same blog post archive.', 'sntravel'),
             'default' => '',
         ),
         array(
-            'id' => 'pxl_service_slug',
+            'id' => 'sntravel_service_slug',
             'type' => 'text',
             'title' => esc_html__('Service Slug', 'sntravel'),
             'subtitle' => esc_html__('The slug name cannot be the same as a page name. Make sure to regenertate permalinks, after making changes.', 'sntravel'),
             'default' => '',
         ),
         array(
-            'id' => 'pxl_service_label',
+            'id' => 'sntravel_service_label',
             'type' => 'text',
             'title' => esc_html__('Service Label', 'sntravel'),
             'subtitle' => esc_html__('Name of the post type shown in the menu, breadcrumb...', 'sntravel'),
             'default' => '',
         ),
         array(
-            'id'      => 'pxl_service_archive_link',
+            'id'      => 'sntravel_service_archive_link',
             'type'    => 'text',
             'title'   => esc_html__('Service Archive Link', 'sntravel'),
             'subtitle' => esc_html__('Custom default archive link when customer click on breadcrumb, default layout same blog post archive.', 'sntravel'),

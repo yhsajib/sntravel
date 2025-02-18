@@ -3,16 +3,16 @@
 add_action( 'elementor/element/section/section_structure/after_section_end', 'basilico_add_custom_section_controls' );
 function basilico_add_custom_section_controls( \Elementor\Element_Base $element) {
     $element->start_controls_section(
-        'section_pxl',
+        'section_sntravel',
         [
             'label' => esc_html__( 'Sntravel Settings', 'sntravel' ),
             'tab' => \Elementor\Controls_Manager::TAB_LAYOUT,
         ]
     );
-    if ( get_post_type( get_the_ID()) === 'pxl-template' && get_post_meta( get_the_ID(), 'template_type', true ) === 'header') {
+    if ( get_post_type( get_the_ID()) === 'sntravel-template' && get_post_meta( get_the_ID(), 'template_type', true ) === 'header') {
 
         $element->add_control(
-            'pxl_header_type',
+            'sntravel_header_type',
             [
                 'label' => esc_html__( 'Header Type', 'sntravel' ),
                 'type'  => \Elementor\Controls_Manager::SELECT,
@@ -27,9 +27,9 @@ function basilico_add_custom_section_controls( \Elementor\Element_Base $element)
             ]
         );
     }
-    if ( get_post_type( get_the_ID()) === 'pxl-template' && get_post_meta( get_the_ID(), 'template_type', true ) === 'header-mobile') {
+    if ( get_post_type( get_the_ID()) === 'sntravel-template' && get_post_meta( get_the_ID(), 'template_type', true ) === 'header-mobile') {
         $element->add_control(
-            'pxl_header_mobile_type',
+            'sntravel_header_mobile_type',
             [
                 'label' => esc_html__( 'Header Type', 'sntravel' ),
                 'type'  => \Elementor\Controls_Manager::SELECT,
@@ -46,11 +46,11 @@ function basilico_add_custom_section_controls( \Elementor\Element_Base $element)
     }
 
     $element->add_control(
-        'pxl_section_offset',
+        'sntravel_section_offset',
         [
             'label' => esc_html__( 'Section Offset', 'sntravel' ),
             'type'         => \Elementor\Controls_Manager::SELECT,
-            'prefix_class' => 'pxl-section-offset-',
+            'prefix_class' => 'sntravel-section-offset-',
             'hide_in_inner' => true,
             'options'      => array(
                 'none'    => esc_html__( 'None', 'sntravel' ),
@@ -65,11 +65,11 @@ function basilico_add_custom_section_controls( \Elementor\Element_Base $element)
     );
 
     $element->add_control(
-        'pxl_container_width',
+        'sntravel_container_width',
         [
             'label' => esc_html__( 'Container Width', 'sntravel' ),
             'type'         => \Elementor\Controls_Manager::SELECT,
-            'prefix_class' => 'pxl-container-width-',
+            'prefix_class' => 'sntravel-container-width-',
             'hide_in_inner' => true,
             'options'      => array(
                 'container-1200'    => esc_html__( '1200px', 'sntravel' ),
@@ -78,13 +78,13 @@ function basilico_add_custom_section_controls( \Elementor\Element_Base $element)
             'default'      => 'container-1200',
             'condition' => [
                 'layout' => 'full_width',
-                'pxl_section_offset!' => 'none'
+                'sntravel_section_offset!' => 'none'
             ]
         ]
     );
 
     $element->add_control(
-        'pxl_section_border_animated',
+        'sntravel_section_border_animated',
         [
             'label' => esc_html__('Border Animated', 'sntravel'),
             'type' => \Elementor\Controls_Manager::SWITCHER,
@@ -97,17 +97,17 @@ function basilico_add_custom_section_controls( \Elementor\Element_Base $element)
     );
 
     $element->add_control(
-        'pxl_parallax_bg_img',
+        'sntravel_parallax_bg_img',
         [
             'label' => esc_html__( 'Parallax Background Image', 'sntravel' ),
             'type' => \Elementor\Controls_Manager::MEDIA,
             'selectors' => [
-                '{{WRAPPER}} .pxl-section-bg-parallax' => 'background-image: url( {{URL}} );',
+                '{{WRAPPER}} .sntravel-section-bg-parallax' => 'background-image: url( {{URL}} );',
             ],
         ]
     );
     $element->add_responsive_control(
-        'pxl_parallax_bg_position',
+        'sntravel_parallax_bg_position',
         [
             'label' => esc_html__( 'Background Position', 'sntravel' ),
             'type'         => \Elementor\Controls_Manager::SELECT,
@@ -126,16 +126,16 @@ function basilico_add_custom_section_controls( \Elementor\Element_Base $element)
             ),
             'default'      => '',
             'selectors' => [
-                '{{WRAPPER}} .pxl-section-bg-parallax' => 'background-position: {{VALUE}};',
+                '{{WRAPPER}} .sntravel-section-bg-parallax' => 'background-position: {{VALUE}};',
             ],
             'condition' => [
-                'pxl_parallax_bg_img[url]!' => ''
+                'sntravel_parallax_bg_img[url]!' => ''
             ]        
         ]
     );
     
     $element->add_responsive_control(
-        'pxl_parallax_bg_pos_custom_x',
+        'sntravel_parallax_bg_pos_custom_x',
         [
             'label' => esc_html__( 'X Position', 'sntravel' ),
             'type' => \Elementor\Controls_Manager::SLIDER,  
@@ -163,16 +163,16 @@ function basilico_add_custom_section_controls( \Elementor\Element_Base $element)
                 ],
             ],
             'selectors' => [
-                '{{WRAPPER}} .pxl-section-bg-parallax' => 'background-position: {{SIZE}}{{UNIT}} {{pxl_parallax_bg_pos_custom_y.SIZE}}{{pxl_parallax_bg_pos_custom_y.UNIT}}',
+                '{{WRAPPER}} .sntravel-section-bg-parallax' => 'background-position: {{SIZE}}{{UNIT}} {{sntravel_parallax_bg_pos_custom_y.SIZE}}{{sntravel_parallax_bg_pos_custom_y.UNIT}}',
             ],
             'condition' => [
-                'pxl_parallax_bg_position' => [ 'initial' ],
-                'pxl_parallax_bg_img[url]!' => '',
+                'sntravel_parallax_bg_position' => [ 'initial' ],
+                'sntravel_parallax_bg_img[url]!' => '',
             ],
         ]
     );
     $element->add_responsive_control(
-        'pxl_parallax_bg_pos_custom_y',
+        'sntravel_parallax_bg_pos_custom_y',
         [
             'label' => esc_html__( 'Y Position', 'sntravel' ),
             'type' => \Elementor\Controls_Manager::SLIDER,  
@@ -201,17 +201,17 @@ function basilico_add_custom_section_controls( \Elementor\Element_Base $element)
                 ],
             ],
             'selectors' => [
-                '{{WRAPPER}} .pxl-section-bg-parallax' => 'background-position: {{pxl_parallax_bg_pos_custom_x.SIZE}}{{pxl_parallax_bg_pos_custom_x.UNIT}} {{SIZE}}{{UNIT}}',
+                '{{WRAPPER}} .sntravel-section-bg-parallax' => 'background-position: {{sntravel_parallax_bg_pos_custom_x.SIZE}}{{sntravel_parallax_bg_pos_custom_x.UNIT}} {{SIZE}}{{UNIT}}',
             ],
 
             'condition' => [
-                'pxl_parallax_bg_position' => [ 'initial' ],
-                'pxl_parallax_bg_img[url]!' => '',
+                'sntravel_parallax_bg_position' => [ 'initial' ],
+                'sntravel_parallax_bg_img[url]!' => '',
             ],
         ]
     );
     $element->add_responsive_control(
-        'pxl_parallax_bg_size',
+        'sntravel_parallax_bg_size',
         [
             'label' => esc_html__( 'Background Size', 'sntravel' ),
             'type'         => \Elementor\Controls_Manager::SELECT,
@@ -224,15 +224,15 @@ function basilico_add_custom_section_controls( \Elementor\Element_Base $element)
             ),
             'default'      => '',
             'selectors' => [
-                '{{WRAPPER}} .pxl-section-bg-parallax' => 'background-size: {{VALUE}};',
+                '{{WRAPPER}} .sntravel-section-bg-parallax' => 'background-size: {{VALUE}};',
             ],
             'condition' => [
-                'pxl_parallax_bg_img[url]!' => ''
+                'sntravel_parallax_bg_img[url]!' => ''
             ]        
         ]
     );
     $element->add_responsive_control(
-        'pxl_parallax_bg_size_custom',
+        'sntravel_parallax_bg_size_custom',
         [
             'label' => esc_html__( 'Background Width', 'sntravel' ),
             'type' => \Elementor\Controls_Manager::SLIDER,  
@@ -256,18 +256,18 @@ function basilico_add_custom_section_controls( \Elementor\Element_Base $element)
                 'unit' => '%',
             ],
             'selectors' => [
-                '{{WRAPPER}} .pxl-section-bg-parallax' => 'background-size: {{SIZE}}{{UNIT}} auto',
+                '{{WRAPPER}} .sntravel-section-bg-parallax' => 'background-size: {{SIZE}}{{UNIT}} auto',
             ],
             'condition' => [
-                'pxl_parallax_bg_size' => [ 'initial' ],
-                'pxl_parallax_bg_img[url]!' => '',
+                'sntravel_parallax_bg_size' => [ 'initial' ],
+                'sntravel_parallax_bg_img[url]!' => '',
             ],
         ]
     );
 
 
     $element->add_control(
-        'pxl_parallax_pos_popover_toggle',
+        'sntravel_parallax_pos_popover_toggle',
         [
             'label' => esc_html__( 'Parallax Background Position', 'sntravel' ),
             'type' => \Elementor\Controls_Manager::POPOVER_TOGGLE,
@@ -275,71 +275,71 @@ function basilico_add_custom_section_controls( \Elementor\Element_Base $element)
             'label_on' => esc_html__( 'Custom', 'sntravel' ),
             'return_value' => 'yes',
             'condition'     => [
-                'pxl_parallax_bg_img[url]!' => ''
+                'sntravel_parallax_bg_img[url]!' => ''
             ] 
         ]
     );
     $element->start_popover();
     $element->add_responsive_control(
-        'pxl_parallax_pos_left',
+        'sntravel_parallax_pos_left',
         [
             'label' => esc_html__( 'Left', 'sntravel' ).' (50px) px,%,vw,auto',
             'type' => 'text',
             'default' => '',
             'selectors' => [
-                '{{WRAPPER}} .pxl-section-bg-parallax' => 'left: {{VALUE}}',
+                '{{WRAPPER}} .sntravel-section-bg-parallax' => 'left: {{VALUE}}',
             ],
             'condition'     => [
-                'pxl_parallax_bg_img[url]!' => ''
+                'sntravel_parallax_bg_img[url]!' => ''
             ] 
         ]
     );
     $element->add_responsive_control(
-        'pxl_parallax_pos_top',
+        'sntravel_parallax_pos_top',
         [
             'label' => esc_html__( 'Top', 'sntravel' ).' (50px) px,%,vw,auto',
             'type' => 'text',
             'default' => '',
             'selectors' => [
-                '{{WRAPPER}} .pxl-section-bg-parallax' => 'top: {{VALUE}}',
+                '{{WRAPPER}} .sntravel-section-bg-parallax' => 'top: {{VALUE}}',
             ],
             'condition'     => [
-                'pxl_parallax_bg_img[url]!' => ''
+                'sntravel_parallax_bg_img[url]!' => ''
             ] 
         ]
     ); 
     $element->add_responsive_control(
-        'pxl_parallax_pos_right',
+        'sntravel_parallax_pos_right',
         [
             'label' => esc_html__( 'Right', 'sntravel' ).' (50px) px,%,vw,auto',
             'type' => 'text',
             'default' => '',
             'selectors' => [
-                '{{WRAPPER}} .pxl-section-bg-parallax' => 'right: {{VALUE}}',
+                '{{WRAPPER}} .sntravel-section-bg-parallax' => 'right: {{VALUE}}',
             ],
             'condition'     => [
-                'pxl_parallax_bg_img[url]!' => ''
+                'sntravel_parallax_bg_img[url]!' => ''
             ] 
         ]
     );
     $element->add_responsive_control(
-        'pxl_parallax_pos_bottom',
+        'sntravel_parallax_pos_bottom',
         [
             'label' => esc_html__( 'Bottom', 'sntravel' ).' (50px) px,%,vw,auto',
             'type' => 'text',
             'default' => '',
             'selectors' => [
-                '{{WRAPPER}} .pxl-section-bg-parallax' => 'bottom: {{VALUE}}',
+                '{{WRAPPER}} .sntravel-section-bg-parallax' => 'bottom: {{VALUE}}',
             ],
             'condition'     => [
-                'pxl_parallax_bg_img[url]!' => ''
+                'sntravel_parallax_bg_img[url]!' => ''
             ] 
         ]
     ); 
     $element->end_popover();
 
     $element->add_control(
-        'pxl_parallax_effect_popover_toggle',
+        'sntravel_parallax_effect_popover_toggle',
         [
             'label' => esc_html__( 'Parallax Background Effect', 'sntravel' ),
             'type' => \Elementor\Controls_Manager::POPOVER_TOGGLE,
@@ -347,125 +347,125 @@ function basilico_add_custom_section_controls( \Elementor\Element_Base $element)
             'label_on' => esc_html__( 'Custom', 'sntravel' ),
             'return_value' => 'yes',
             'condition'     => [
-                'pxl_parallax_bg_img[url]!' => ''
+                'sntravel_parallax_bg_img[url]!' => ''
             ] 
         ]
     );
     $element->start_popover();
     $element->add_control(
-        'pxl_parallax_bg_img_effect_x',
+        'sntravel_parallax_bg_img_effect_x',
         [
             'label' => esc_html__( 'TranslateX', 'sntravel' ).' (-80)',
             'type' => 'text',
             'default' => '',
             'condition'     => [
-                'pxl_parallax_bg_img[url]!' => ''
+                'sntravel_parallax_bg_img[url]!' => ''
             ] 
         ]
     );
     $element->add_control(
-        'pxl_parallax_bg_img_effect_y',
+        'sntravel_parallax_bg_img_effect_y',
         [
             'label' => esc_html__( 'TranslateY', 'sntravel' ).' (-80)',
             'type' => 'text',
             'default' => '',
             'condition'     => [
-                'pxl_parallax_bg_img[url]!' => ''
+                'sntravel_parallax_bg_img[url]!' => ''
             ] 
         ]
     );
     $element->add_control(
-        'pxl_parallax_bg_img_effect_z',
+        'sntravel_parallax_bg_img_effect_z',
         [
             'label' => esc_html__( 'TranslateZ', 'sntravel' ).' (-80)',
             'type' => 'text',
             'default' => '',
             'condition'     => [
-                'pxl_parallax_bg_img[url]!' => ''
+                'sntravel_parallax_bg_img[url]!' => ''
             ] 
         ]
     );
     $element->add_control(
-        'pxl_parallax_bg_img_effect_rotate_x',
+        'sntravel_parallax_bg_img_effect_rotate_x',
         [
             'label' => esc_html__( 'Rotate X', 'sntravel' ).' (30)',
             'type' => 'text',
             'default' => '',
             'condition'     => [
-                'pxl_parallax_bg_img[url]!' => ''
+                'sntravel_parallax_bg_img[url]!' => ''
             ] 
         ]
     );
     $element->add_control(
-        'pxl_parallax_bg_img_effect_rotate_y',
+        'sntravel_parallax_bg_img_effect_rotate_y',
         [
             'label' => esc_html__( 'Rotate Y', 'sntravel' ).' (30)',
             'type' => 'text',
             'default' => '',
             'condition'     => [
-                'pxl_parallax_bg_img[url]!' => ''
+                'sntravel_parallax_bg_img[url]!' => ''
             ] 
         ]
     );
     $element->add_control(
-        'pxl_parallax_bg_img_effect_rotate_z',
+        'sntravel_parallax_bg_img_effect_rotate_z',
         [
             'label' => esc_html__( 'Rotate Z', 'sntravel' ).' (30)',
             'type' => 'text',
             'default' => '',
             'condition'     => [
-                'pxl_parallax_bg_img[url]!' => ''
+                'sntravel_parallax_bg_img[url]!' => ''
             ] 
         ]
     );
     $element->add_control(
-        'pxl_parallax_bg_img_effect_scale_x',
+        'sntravel_parallax_bg_img_effect_scale_x',
         [
             'label' => esc_html__( 'Scale X', 'sntravel' ).' (1.2)',
             'type' => 'text',
             'default' => '',
             'condition'     => [
-                'pxl_parallax_bg_img[url]!' => ''
+                'sntravel_parallax_bg_img[url]!' => ''
             ] 
         ]
     ); 
     $element->add_control(
-        'pxl_parallax_bg_img_effect_scale_y',
+        'sntravel_parallax_bg_img_effect_scale_y',
         [
             'label' => esc_html__( 'Scale Y', 'sntravel' ).' (1.2)',
             'type' => 'text',
             'default' => '',
             'condition'     => [
-                'pxl_parallax_bg_img[url]!' => ''
+                'sntravel_parallax_bg_img[url]!' => ''
             ] 
         ]
     );
     $element->add_control(
-        'pxl_parallax_bg_img_effect_scale_z',
+        'sntravel_parallax_bg_img_effect_scale_z',
         [
             'label' => esc_html__( 'Scale Z', 'sntravel' ).' (1.2)',
             'type' => 'text',
             'default' => '',
             'condition'     => [
-                'pxl_parallax_bg_img[url]!' => ''
+                'sntravel_parallax_bg_img[url]!' => ''
             ] 
         ]
     );
     $element->add_control(
-        'pxl_parallax_bg_img_effect_scale',
+        'sntravel_parallax_bg_img_effect_scale',
         [
             'label' => esc_html__( 'Scale', 'sntravel' ).' (1.2)',
             'type' => 'text',
             'default' => '',
             'condition'     => [
-                'pxl_parallax_bg_img[url]!' => ''
+                'sntravel_parallax_bg_img[url]!' => ''
             ] 
         ]
     );
     $element->end_popover(); 
     
     $element->add_responsive_control(
-        'pxl_section_parallax_opacity',
+        'sntravel_section_parallax_opacity',
         [
             'label'      => esc_html__( 'Parallax Opacity (0 - 100)', 'sntravel' ),
             'type' => \Elementor\Controls_Manager::SLIDER,
@@ -495,16 +495,16 @@ function basilico_add_custom_section_controls( \Elementor\Element_Base $element)
                 'unit' => '%',
             ],
             'selectors' => [
-                '{{WRAPPER}} .pxl-section-bg-parallax' => 'opacity: {{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .sntravel-section-bg-parallax' => 'opacity: {{SIZE}}{{UNIT}};',
             ],
             'condition' => [
-                'pxl_parallax_bg_img[url]!' => ''
+                'sntravel_parallax_bg_img[url]!' => ''
             ] 
         ]
     );
     
     $element->add_control(
-        'pxl_section_static_position',
+        'sntravel_section_static_position',
         [
             'label' => esc_html__('Static Position', 'sntravel'),
             'type' => \Elementor\Controls_Manager::SWITCHER,
@@ -513,11 +513,11 @@ function basilico_add_custom_section_controls( \Elementor\Element_Base $element)
             'return_value' => 'yes',
             'default' => 'no',
             'separator' => 'before',
-            'prefix_class' => 'pxl-section-static-pos-'
+            'prefix_class' => 'sntravel-section-static-pos-'
         ]
     );
     $element->add_control(
-        'pxl_section_overflow_hidden',
+        'sntravel_section_overflow_hidden',
         [
             'label' => esc_html__('Overflow Hidden', 'sntravel'),
             'type' => \Elementor\Controls_Manager::SWITCHER,
@@ -525,23 +525,23 @@ function basilico_add_custom_section_controls( \Elementor\Element_Base $element)
             'label_off' => esc_html__( 'No', 'sntravel' ),
             'return_value' => 'yes',
             'default' => 'no',
-            'prefix_class' => 'pxl-section-overflow-hidden-'
+            'prefix_class' => 'sntravel-section-overflow-hidden-'
         ]
     );
 
     $element->add_control(
-        'pxl_bg_ken_burns_bg_img',
+        'sntravel_bg_ken_burns_bg_img',
         [
             'label' => esc_html__( 'Ken Burns Background Image', 'sntravel' ),
             'type' => \Elementor\Controls_Manager::MEDIA,
             'hide_in_inner' => true,
             'selectors' => [
-                '{{WRAPPER}} .pxl-section-bg-ken-burns' => '--pxl-ken-burns-bg-img: url( {{URL}} );',
+                '{{WRAPPER}} .sntravel-section-bg-ken-burns' => '--sntravel-ken-burns-bg-img: url( {{URL}} );',
             ],
         ]
     );
     $element->add_control(
-        'pxl_bg_ken_burns_effect',
+        'sntravel_bg_ken_burns_effect',
         [
             'label' => esc_html__('Ken Burns Effect', 'sntravel'),
             'type' => \Elementor\Controls_Manager::SELECT,
@@ -552,10 +552,10 @@ function basilico_add_custom_section_controls( \Elementor\Element_Base $element)
                 'out' => esc_html__( 'Out', 'sntravel' ),
                 'in-out' => esc_html__( 'In Out', 'sntravel' ),
             ],
-            'prefix_class' => 'pxl-section-ken-burns pxl-ken-burns--', 
+            'prefix_class' => 'sntravel-section-ken-burns sntravel-ken-burns--', 
             'hide_in_inner' => true,
             'condition' => [
-                'pxl_bg_ken_burns_bg_img[url]!' => ''
+                'sntravel_bg_ken_burns_bg_img[url]!' => ''
             ],
             'separator' => 'before',
         ]
@@ -567,14 +567,14 @@ function basilico_add_custom_section_controls( \Elementor\Element_Base $element)
 add_action( 'elementor/element/column/layout/after_section_end', 'basilico_add_custom_columns_controls' );
 function basilico_add_custom_columns_controls( \Elementor\Element_Base $element) {
     $element->start_controls_section(
-        'columns_pxl',
+        'columns_sntravel',
         [
             'label' => esc_html__( 'Sntravel Settings', 'sntravel' ),
             'tab' => \Elementor\Controls_Manager::TAB_LAYOUT,
         ]
     );
     $element->add_control(
-        'pxl_col_auto',
+        'sntravel_col_auto',
         [
             'label'   => esc_html__( 'Element Auto Width', 'sntravel' ),
             'type'    => \Elementor\Controls_Manager::SELECT,
@@ -584,11 +584,11 @@ function basilico_add_custom_columns_controls( \Elementor\Element_Base $element)
             ),
             'label_block'  => true,
             'default'      => 'default',
-            'prefix_class' => 'pxl-column-element-'
+            'prefix_class' => 'sntravel-column-element-'
         ]
     );
     $element->add_control(
-        'pxl_col_fullwidth_desktop',
+        'sntravel_col_fullwidth_desktop',
         [
             'label' => esc_html__('Desktop Full Width (> 1500px)', 'sntravel'),
             'type'    => \Elementor\Controls_Manager::SWITCHER,
@@ -596,11 +596,11 @@ function basilico_add_custom_columns_controls( \Elementor\Element_Base $element)
             'label_off' => esc_html__( 'No', 'sntravel' ),
             'return_value' => 'yes',
             'default' => 'no',
-            'prefix_class' => 'pxl-column-fullwidth-',
+            'prefix_class' => 'sntravel-column-fullwidth-',
         ]
     ); 
     $element->add_control(
-        'pxl_border_animated',
+        'sntravel_border_animated',
         [
             'label' => esc_html__('Border Animated', 'sntravel'),
             'type' => \Elementor\Controls_Manager::SWITCHER,
@@ -618,7 +618,7 @@ function basilico_add_custom_columns_controls( \Elementor\Element_Base $element)
 if (!function_exists('basilico_additional_shapes_divider')) {
     add_filter('elementor/shapes/additional_shapes', 'basilico_additional_shapes_divider', 11, 1);
     function basilico_additional_shapes_divider($additional_shapes){
-        $additional_shapes['pxl-waves'] = [
+        $additional_shapes['sntravel-waves'] = [
             'title' => _x( 'PXL Waves', 'Shapes', 'sntravel' ),
             'has_negative' => true,
             'has_flip' => true,
@@ -637,32 +637,32 @@ function basilico_custom_el_attributes($el){
     $settings = $el->get_settings();
      
     if( 'section' == $el->get_name() ) {
-        if ( isset( $settings['pxl_header_type'] ) && !empty($settings['pxl_header_type'] ) ) {
-            $el->add_render_attribute( '_wrapper', 'class', 'pxl-header-'.$settings['pxl_header_type']);
+        if ( isset( $settings['sntravel_header_type'] ) && !empty($settings['sntravel_header_type'] ) ) {
+            $el->add_render_attribute( '_wrapper', 'class', 'sntravel-header-'.$settings['sntravel_header_type']);
         }
-        if ( isset( $settings['pxl_header_sticky_effect'] ) && !empty($settings['pxl_header_sticky_effect'] ) ) {
-            $el->add_render_attribute( '_wrapper', 'class', 'pxl-header-'.$settings['pxl_header_sticky_effect']);
+        if ( isset( $settings['sntravel_header_sticky_effect'] ) && !empty($settings['sntravel_header_sticky_effect'] ) ) {
+            $el->add_render_attribute( '_wrapper', 'class', 'sntravel-header-'.$settings['sntravel_header_sticky_effect']);
         }
-        if ( isset( $settings['pxl_header_mobile_type'] ) && !empty($settings['pxl_header_mobile_type'] ) ) {
-            $el->add_render_attribute( '_wrapper', 'class', 'pxl-header-mobile-'.$settings['pxl_header_mobile_type']);
+        if ( isset( $settings['sntravel_header_mobile_type'] ) && !empty($settings['sntravel_header_mobile_type'] ) ) {
+            $el->add_render_attribute( '_wrapper', 'class', 'sntravel-header-mobile-'.$settings['sntravel_header_mobile_type']);
         }
-        if ( isset( $settings['pxl_section_border_animated'] ) && $settings['pxl_section_border_animated'] == 'yes'  ) {
-            $el->add_render_attribute( '_wrapper', 'class', 'pxl-border-section-anm');
+        if ( isset( $settings['sntravel_section_border_animated'] ) && $settings['sntravel_section_border_animated'] == 'yes'  ) {
+            $el->add_render_attribute( '_wrapper', 'class', 'sntravel-border-section-anm');
         }
 
-        if ( isset( $settings['pxl_section_offset'] ) && $settings['pxl_section_offset'] !='none' ) {
+        if ( isset( $settings['sntravel_section_offset'] ) && $settings['sntravel_section_offset'] !='none' ) {
             if( $settings['gap'] === 'no' )
-                $el->add_render_attribute( '_wrapper', 'class', 'pxl-section-gap-no');
+                $el->add_render_attribute( '_wrapper', 'class', 'sntravel-section-gap-no');
         }
          
     }
     if( 'column' == $el->get_name() ) {
-        if ( isset( $settings['pxl_border_animated'] ) && $settings['pxl_border_animated'] == 'yes'  ) {
-            $el->add_render_attribute( '_wrapper', 'class', 'pxl-border-column-anm');
+        if ( isset( $settings['sntravel_border_animated'] ) && $settings['sntravel_border_animated'] == 'yes'  ) {
+            $el->add_render_attribute( '_wrapper', 'class', 'sntravel-border-column-anm');
         }
-        if(!empty($settings['pxl_column_parallax']) && !empty($settings['pxl_column_parallax_value'])){
+        if(!empty($settings['sntravel_column_parallax']) && !empty($settings['sntravel_column_parallax_value'])){
             $parallax_settings = json_encode([
-                $settings['pxl_column_parallax'] => $settings['pxl_column_parallax_value']
+                $settings['sntravel_column_parallax'] => $settings['sntravel_column_parallax_value']
             ]);
             $el->add_render_attribute( '_widget_wrapper', 'data-parallax', $parallax_settings );
         }
@@ -685,62 +685,62 @@ function basilico_custom_el_attributes($el){
     if ( $has_animation ) {
         $is_static_render_mode = \Elementor\Plugin::$instance->frontend->is_static_render_mode();
         if ( ! $is_static_render_mode ) {
-            $el->add_render_attribute( '_wrapper', 'class', 'pxl-elementor-animate' );
+            $el->add_render_attribute( '_wrapper', 'class', 'sntravel-elementor-animate' );
         }
     }
 }
 
-add_filter( 'pxl_section_start_render', 'basilico_custom_section_start_render', 10, 3 );
+add_filter( 'sntravel_section_start_render', 'basilico_custom_section_start_render', 10, 3 );
 function basilico_custom_section_start_render($html, $settings, $el){  
-    if(!empty($settings['pxl_parallax_bg_img']['url'])){
+    if(!empty($settings['sntravel_parallax_bg_img']['url'])){
         $effects = [];
-        if(!empty($settings['pxl_parallax_bg_img_effect_x'])){
-            $effects['x'] = (int)$settings['pxl_parallax_bg_img_effect_x'];
+        if(!empty($settings['sntravel_parallax_bg_img_effect_x'])){
+            $effects['x'] = (int)$settings['sntravel_parallax_bg_img_effect_x'];
         }
-        if(!empty($settings['pxl_parallax_bg_img_effect_y'])){
-            $effects['y'] = (int)$settings['pxl_parallax_bg_img_effect_y'];
+        if(!empty($settings['sntravel_parallax_bg_img_effect_y'])){
+            $effects['y'] = (int)$settings['sntravel_parallax_bg_img_effect_y'];
         }
-        if(!empty($settings['pxl_parallax_bg_img_effect_z'])){
-            $effects['z'] = (int)$settings['pxl_parallax_bg_img_effect_z'];
+        if(!empty($settings['sntravel_parallax_bg_img_effect_z'])){
+            $effects['z'] = (int)$settings['sntravel_parallax_bg_img_effect_z'];
         }
-        if(!empty($settings['pxl_parallax_bg_img_effect_rotate_x'])){
-            $effects['rotateX'] = (float)$settings['pxl_parallax_bg_img_effect_rotate_x'];
+        if(!empty($settings['sntravel_parallax_bg_img_effect_rotate_x'])){
+            $effects['rotateX'] = (float)$settings['sntravel_parallax_bg_img_effect_rotate_x'];
         }
-        if(!empty($settings['pxl_parallax_bg_img_effect_rotate_y'])){
-            $effects['rotateY'] = (float)$settings['pxl_parallax_bg_img_effect_rotate_y'];
+        if(!empty($settings['sntravel_parallax_bg_img_effect_rotate_y'])){
+            $effects['rotateY'] = (float)$settings['sntravel_parallax_bg_img_effect_rotate_y'];
         }
-        if(!empty($settings['pxl_parallax_bg_img_effect_rotate_z'])){
-            $effects['rotateZ'] = (float)$settings['pxl_parallax_bg_img_effect_rotate_z'];
+        if(!empty($settings['sntravel_parallax_bg_img_effect_rotate_z'])){
+            $effects['rotateZ'] = (float)$settings['sntravel_parallax_bg_img_effect_rotate_z'];
         }
-        if(!empty($settings['pxl_parallax_bg_img_effect_scale_x'])){
-            $effects['scaleX'] = (float)$settings['pxl_parallax_bg_img_effect_scale_x'];
+        if(!empty($settings['sntravel_parallax_bg_img_effect_scale_x'])){
+            $effects['scaleX'] = (float)$settings['sntravel_parallax_bg_img_effect_scale_x'];
         }
-        if(!empty($settings['pxl_parallax_bg_img_effect_scale_y'])){
-            $effects['scaleY'] = (float)$settings['pxl_parallax_bg_img_effect_scale_y'];
+        if(!empty($settings['sntravel_parallax_bg_img_effect_scale_y'])){
+            $effects['scaleY'] = (float)$settings['sntravel_parallax_bg_img_effect_scale_y'];
         }
-        if(!empty($settings['pxl_parallax_bg_img_effect_scale_z'])){
-            $effects['scaleZ'] = (float)$settings['pxl_parallax_bg_img_effect_scale_z'];
+        if(!empty($settings['sntravel_parallax_bg_img_effect_scale_z'])){
+            $effects['scaleZ'] = (float)$settings['sntravel_parallax_bg_img_effect_scale_z'];
         }
-        if(!empty($settings['pxl_parallax_bg_img_effect_scale'])){
-            $effects['scale'] = (float)$settings['pxl_parallax_bg_img_effect_scale'];
+        if(!empty($settings['sntravel_parallax_bg_img_effect_scale'])){
+            $effects['scale'] = (float)$settings['sntravel_parallax_bg_img_effect_scale'];
         }
         $data_parallax = json_encode($effects);
-        $html .= '<div class="pxl-section-bg-parallax" data-parallax="'.esc_attr($data_parallax).'"></div>';
+        $html .= '<div class="sntravel-section-bg-parallax" data-parallax="'.esc_attr($data_parallax).'"></div>';
     }  
-    if(!empty($settings['pxl_bg_ken_burns_bg_img']['url'])){
-        $html .= '<div class="pxl-section-bg-ken-burns"></div>';
+    if(!empty($settings['sntravel_bg_ken_burns_bg_img']['url'])){
+        $html .= '<div class="sntravel-section-bg-ken-burns"></div>';
     }
     
-    if(!empty($settings['pxl_divider_top_img']['url'])){
-        $html .= '<div class="pxl-section-divider-top-img"></div>';
+    if(!empty($settings['sntravel_divider_top_img']['url'])){
+        $html .= '<div class="sntravel-section-divider-top-img"></div>';
     }
-    if(!empty($settings['pxl_divider_bot_img']['url'])){
-        $html .= '<div class="pxl-section-divider-bot-img"></div>';
+    if(!empty($settings['sntravel_divider_bot_img']['url'])){
+        $html .= '<div class="sntravel-section-divider-bot-img"></div>';
     }
     
-    if(!empty($settings['pxl_section_shape_anm']) && count($settings['pxl_section_shape_anm']) > 0){
-        foreach ($settings['pxl_section_shape_anm'] as $v) {
-            $html .= '<span class="pxl-section-shape-item elementor-repeater-item-'.$v['_id'].' '.$v['shape_animate'].'">
+    if(!empty($settings['sntravel_section_shape_anm']) && count($settings['sntravel_section_shape_anm']) > 0){
+        foreach ($settings['sntravel_section_shape_anm'] as $v) {
+            $html .= '<span class="sntravel-section-shape-item elementor-repeater-item-'.$v['_id'].' '.$v['shape_animate'].'">
             <img src="'.$v['shape_img']['url'].'" alt="'.$v['shape_title'].'"/>
             </span>';
         }
@@ -753,7 +753,7 @@ function basilico_custom_section_start_render($html, $settings, $el){
 add_action('elementor/element/common/_section_style/after_section_end', 'basilico_add_custom_common_controls');
 function basilico_add_custom_common_controls(\Elementor\Element_Base $element){
     $element->start_controls_section(
-        'section_pxl_widget_el',
+        'section_sntravel_widget_el',
         [
             'label' => esc_html__( 'PXL Settings', 'sntravel' ),
             'tab' => \Elementor\Controls_Manager::TAB_ADVANCED,
@@ -761,7 +761,7 @@ function basilico_add_custom_common_controls(\Elementor\Element_Base $element){
     );
     $element->start_popover();
     $element->add_responsive_control(
-        'pxl_widget_el_position',
+        'sntravel_widget_el_position',
         [
             'label' => esc_html__( 'Position', 'sntravel' ),
             'type'         => \Elementor\Controls_Manager::SELECT,
@@ -778,7 +778,7 @@ function basilico_add_custom_common_controls(\Elementor\Element_Base $element){
         ]
     );
     $element->add_responsive_control(
-        'pxl_widget_el_pos_left',
+        'sntravel_widget_el_pos_left',
         [
             'label' => esc_html__( 'Left', 'sntravel' ).' (50px) px,%,vw,auto',
             'type' => 'text',
@@ -787,12 +787,12 @@ function basilico_add_custom_common_controls(\Elementor\Element_Base $element){
                 '{{WRAPPER}}' => 'left: {{VALUE}}',
             ],
             'condition'     => [
-                'pxl_widget_el_position!' => ''
+                'sntravel_widget_el_position!' => ''
             ] 
         ]
     );
     $element->add_responsive_control(
-        'pxl_widget_el_pos_top',
+        'sntravel_widget_el_pos_top',
         [
             'label' => esc_html__( 'Top', 'sntravel' ).' (50px) px,%,vw,auto',
             'type' => 'text',
@@ -801,12 +801,12 @@ function basilico_add_custom_common_controls(\Elementor\Element_Base $element){
                 '{{WRAPPER}}' => 'top: {{VALUE}}',
             ],
             'condition'     => [
-                'pxl_widget_el_position!' => ''
+                'sntravel_widget_el_position!' => ''
             ] 
         ]
     ); 
     $element->add_responsive_control(
-        'pxl_widget_el_pos_right',
+        'sntravel_widget_el_pos_right',
         [
             'label' => esc_html__( 'Right', 'sntravel' ).' (50px) px,%,vw,auto',
             'type' => 'text',
@@ -815,12 +815,12 @@ function basilico_add_custom_common_controls(\Elementor\Element_Base $element){
                 '{{WRAPPER}}' => 'right: {{VALUE}}',
             ],
             'condition'     => [
-                'pxl_widget_el_position!' => ''
+                'sntravel_widget_el_position!' => ''
             ] 
         ]
     );
     $element->add_responsive_control(
-        'pxl_widget_el_pos_bottom',
+        'sntravel_widget_el_pos_bottom',
         [
             'label' => esc_html__( 'Bottom', 'sntravel' ).' (50px) px,%,vw,auto',
             'type' => 'text',
@@ -829,7 +829,7 @@ function basilico_add_custom_common_controls(\Elementor\Element_Base $element){
                 '{{WRAPPER}}' => 'bottom: {{VALUE}}',
             ],
             'condition'     => [
-                'pxl_widget_el_position!' => ''
+                'sntravel_widget_el_position!' => ''
             ] 
         ]
     ); 
@@ -906,7 +906,7 @@ function basilico_add_custom_common_controls(\Elementor\Element_Base $element){
         ]
     );
     $element->add_control(
-        'pxl_widget_el_border_animated',
+        'sntravel_widget_el_border_animated',
         [
             'label' => esc_html__('Border Animated', 'sntravel'),
             'type' => \Elementor\Controls_Manager::SWITCHER,
@@ -918,7 +918,7 @@ function basilico_add_custom_common_controls(\Elementor\Element_Base $element){
         ]
     );
     $element->add_control(
-        'pxl_widget_el_parallax_effect',
+        'sntravel_widget_el_parallax_effect',
         [
             'label' => esc_html__('Pxl Parallax Effect', 'sntravel' ),
             'type' => \Elementor\Controls_Manager::SELECT,
@@ -930,12 +930,12 @@ function basilico_add_custom_common_controls(\Elementor\Element_Base $element){
             ],
             'label_block' => true,
             'default' => '',
-            'prefix_class' => 'pxl-parallax-'
+            'prefix_class' => 'sntravel-parallax-'
         ]
     );
     
     $element->add_responsive_control(
-        'pxl_widget_align',
+        'sntravel_widget_align',
         [
             'label' => esc_html__('Alignment', 'sntravel' ),
             'type' => \Elementor\Controls_Manager::CHOOSE,
@@ -961,7 +961,7 @@ function basilico_add_custom_common_controls(\Elementor\Element_Base $element){
     );
 
     $element->add_control(
-        'pxl_widget_show_on_column_hover',
+        'sntravel_widget_show_on_column_hover',
         [
             'label' => esc_html__('Show On Column Hover', 'sntravel' ),
             'type' => \Elementor\Controls_Manager::SWITCHER,
@@ -975,9 +975,9 @@ function basilico_add_custom_common_controls(\Elementor\Element_Base $element){
     $element->end_controls_section();
 }
 
-add_filter( 'pxl-custom-section/before-render', 'basilico_custom_section_before_render', 10, 3 );
+add_filter( 'sntravel-custom-section/before-render', 'basilico_custom_section_before_render', 10, 3 );
 function basilico_custom_section_before_render($html, $settings, $el){  
-    if( isset($settings['pxl_section_border_animated']) && $settings['pxl_section_border_animated'] == 'yes' && isset($settings['border_width'])){
+    if( isset($settings['sntravel_section_border_animated']) && $settings['sntravel_section_border_animated'] == 'yes' && isset($settings['border_width'])){
         $unit = $settings['border_width']['unit'];
         $border_color = isset($settings['border_color']) ? $settings['border_color'] : '#000';
         $border_num = 0;
@@ -995,11 +995,11 @@ function basilico_custom_section_before_render($html, $settings, $el){
         if ((int)$settings['border_width']['left'] > 0)
             $border_num++;
         
-        $html = '<div class="pxl-border-animated num-'.$border_num.'">
-        <div class="pxl-border-anm bt w-100" '.$bd_top_style.'></div>
-        <div class="pxl-border-anm br h-100" '.$bd_right_style.'></div>
-        <div class="pxl-border-anm bb w-100" '.$bd_bottom_style.'></div>
-        <div class="pxl-border-anm bl h-100" '.$bd_left_style.'></div>
+        $html = '<div class="sntravel-border-animated num-'.$border_num.'">
+        <div class="sntravel-border-anm bt w-100" '.$bd_top_style.'></div>
+        <div class="sntravel-border-anm br h-100" '.$bd_right_style.'></div>
+        <div class="sntravel-border-anm bb w-100" '.$bd_bottom_style.'></div>
+        <div class="sntravel-border-anm bl h-100" '.$bd_left_style.'></div>
         </div>';
     }
     
@@ -1007,48 +1007,48 @@ function basilico_custom_section_before_render($html, $settings, $el){
 }
 
 //columns render
-add_filter( 'pxl-custom-column/before-render', 'basilico_custom_column_before_render', 10, 3 );
+add_filter( 'sntravel-custom-column/before-render', 'basilico_custom_column_before_render', 10, 3 );
 function basilico_custom_column_before_render($html, $settings, $el){  
-    if(!empty($settings['pxl_parallax_col_bg_img']['url'])){
-        if( $settings['pxl_bg_parallax_type'] == 'transform'){
+    if(!empty($settings['sntravel_parallax_col_bg_img']['url'])){
+        if( $settings['sntravel_bg_parallax_type'] == 'transform'){
             $effects = [];
-            if(!empty($settings['pxl_parallax_col_bg_img_effect_x'])){
-                $effects['x'] = (int)$settings['pxl_parallax_col_bg_img_effect_x'];
+            if(!empty($settings['sntravel_parallax_col_bg_img_effect_x'])){
+                $effects['x'] = (int)$settings['sntravel_parallax_col_bg_img_effect_x'];
             }
-            if(!empty($settings['pxl_parallax_col_bg_img_effect_y'])){
-                $effects['y'] = (int)$settings['pxl_parallax_col_bg_img_effect_y'];
+            if(!empty($settings['sntravel_parallax_col_bg_img_effect_y'])){
+                $effects['y'] = (int)$settings['sntravel_parallax_col_bg_img_effect_y'];
             }
-            if(!empty($settings['pxl_parallax_col_bg_img_effect_z'])){
-                $effects['z'] = (int)$settings['pxl_parallax_col_bg_img_effect_z'];
+            if(!empty($settings['sntravel_parallax_col_bg_img_effect_z'])){
+                $effects['z'] = (int)$settings['sntravel_parallax_col_bg_img_effect_z'];
             }
-            if(!empty($settings['pxl_parallax_col_bg_img_effect_rotate_x'])){
-                $effects['rotateX'] = (float)$settings['pxl_parallax_col_bg_img_effect_rotate_x'];
+            if(!empty($settings['sntravel_parallax_col_bg_img_effect_rotate_x'])){
+                $effects['rotateX'] = (float)$settings['sntravel_parallax_col_bg_img_effect_rotate_x'];
             }
-            if(!empty($settings['pxl_parallax_col_bg_img_effect_rotate_y'])){
-                $effects['rotateY'] = (float)$settings['pxl_parallax_col_bg_img_effect_rotate_y'];
+            if(!empty($settings['sntravel_parallax_col_bg_img_effect_rotate_y'])){
+                $effects['rotateY'] = (float)$settings['sntravel_parallax_col_bg_img_effect_rotate_y'];
             }
-            if(!empty($settings['pxl_parallax_col_bg_img_effect_rotate_z'])){
-                $effects['rotateZ'] = (float)$settings['pxl_parallax_col_bg_img_effect_rotate_z'];
+            if(!empty($settings['sntravel_parallax_col_bg_img_effect_rotate_z'])){
+                $effects['rotateZ'] = (float)$settings['sntravel_parallax_col_bg_img_effect_rotate_z'];
             } 
-            if(!empty($settings['pxl_parallax_col_bg_img_effect_scale_x'])){
-                $effects['scaleX'] = (float)$settings['pxl_parallax_col_bg_img_effect_scale_x'];
+            if(!empty($settings['sntravel_parallax_col_bg_img_effect_scale_x'])){
+                $effects['scaleX'] = (float)$settings['sntravel_parallax_col_bg_img_effect_scale_x'];
             }
-            if(!empty($settings['pxl_parallax_col_bg_img_effect_scale_y'])){
-                $effects['scaleY'] = (float)$settings['pxl_parallax_col_bg_img_effect_scale_y'];
+            if(!empty($settings['sntravel_parallax_col_bg_img_effect_scale_y'])){
+                $effects['scaleY'] = (float)$settings['sntravel_parallax_col_bg_img_effect_scale_y'];
             }
-            if(!empty($settings['pxl_parallax_col_bg_img_effect_scale_z'])){
-                $effects['scaleZ'] = (float)$settings['pxl_parallax_col_bg_img_effect_scale_z'];
+            if(!empty($settings['sntravel_parallax_col_bg_img_effect_scale_z'])){
+                $effects['scaleZ'] = (float)$settings['sntravel_parallax_col_bg_img_effect_scale_z'];
             }
-            if(!empty($settings['pxl_parallax_col_bg_img_effect_scale'])){
-                $effects['scale'] = (float)$settings['pxl_parallax_col_bg_img_effect_scale'];
+            if(!empty($settings['sntravel_parallax_col_bg_img_effect_scale'])){
+                $effects['scale'] = (float)$settings['sntravel_parallax_col_bg_img_effect_scale'];
             }
             $data_parallax = json_encode($effects);
-            $html .= '<div class="pxl-column-bg-parallax-outer"><div class="pxl-column-bg-parallax" data-parallax="'.esc_attr($data_parallax).'"></div></div>';
+            $html .= '<div class="sntravel-column-bg-parallax-outer"><div class="sntravel-column-bg-parallax" data-parallax="'.esc_attr($data_parallax).'"></div></div>';
         }else{
-            $html .= '<div class="pxl-column-bg-parallax parallax-inner"></div>';
+            $html .= '<div class="sntravel-column-bg-parallax parallax-inner"></div>';
         }
     } 
-    if( isset($settings['pxl_border_animated']) && $settings['pxl_border_animated'] == 'yes' ){
+    if( isset($settings['sntravel_border_animated']) && $settings['sntravel_border_animated'] == 'yes' ){
         
         $breakpoints = ['laptop','tablet_extra','tablet','mobile_extra','mobile'];
  
@@ -1142,11 +1142,11 @@ function basilico_custom_column_before_render($html, $settings, $el){
         if( (int)$settings['border_width']['bottom'] > 0) $border_num++;
         if( (int)$settings['border_width']['left'] > 0) $border_num++;
 
-        $html .= '<div class="pxl-border-animated num-'.$border_num.'">
-        <div class="pxl-border-anm bt w-100 '.$bd_top_w.'" '.$bd_top_style.'></div>
-        <div class="pxl-border-anm br h-100 '.$bd_right_w.'" '.$bd_right_style.'></div>
-        <div class="pxl-border-anm bb w-100 '.$bd_bottom_w.'" '.$bd_bottom_style.'></div>
-        <div class="pxl-border-anm bl h-100 '.$bd_left_w.'" '.$bd_left_style.'></div>
+        $html .= '<div class="sntravel-border-animated num-'.$border_num.'">
+        <div class="sntravel-border-anm bt w-100 '.$bd_top_w.'" '.$bd_top_style.'></div>
+        <div class="sntravel-border-anm br h-100 '.$bd_right_w.'" '.$bd_right_style.'></div>
+        <div class="sntravel-border-anm bb w-100 '.$bd_bottom_w.'" '.$bd_bottom_style.'></div>
+        <div class="sntravel-border-anm bl h-100 '.$bd_left_w.'" '.$bd_left_style.'></div>
         </div>';
     }   
     return $html;
@@ -1159,17 +1159,17 @@ function basilico_custom_widget_el_before_render($el){
     $settings = $el->get_settings();
     $effects = [];
 
-    if(isset($settings['pxl_widget_show_on_column_hover']) && $settings['pxl_widget_show_on_column_hover'] == 'yes') {
-        $el->add_render_attribute( '_wrapper', 'class', 'pxl-show-on-column-hover' );
+    if(isset($settings['sntravel_widget_show_on_column_hover']) && $settings['sntravel_widget_show_on_column_hover'] == 'yes') {
+        $el->add_render_attribute( '_wrapper', 'class', 'sntravel-show-on-column-hover' );
     }
 
-    if(!empty($settings['pxl_parallax_pos_x']['size']) || !empty($settings['pxl_parallax_pos_y']['size'])){
-        $el->add_render_attribute( '_wrapper', 'class', 'pxl-element-parallax' );
-        if(!empty($settings['pxl_parallax_pos_x'])){
-            $effects['x'] = $settings['pxl_parallax_pos_x']['size'].$settings['pxl_parallax_pos_x']['unit'];
+    if(!empty($settings['sntravel_parallax_pos_x']['size']) || !empty($settings['sntravel_parallax_pos_y']['size'])){
+        $el->add_render_attribute( '_wrapper', 'class', 'sntravel-element-parallax' );
+        if(!empty($settings['sntravel_parallax_pos_x'])){
+            $effects['x'] = $settings['sntravel_parallax_pos_x']['size'].$settings['sntravel_parallax_pos_x']['unit'];
         }
-        if(!empty($settings['pxl_parallax_pos_y'])){
-            $effects['y'] = $settings['pxl_parallax_pos_y']['size'].$settings['pxl_parallax_pos_y']['unit'];
+        if(!empty($settings['sntravel_parallax_pos_y'])){
+            $effects['y'] = $settings['sntravel_parallax_pos_y']['size'].$settings['sntravel_parallax_pos_y']['unit'];
         }
         $data_parallax = json_encode($effects);
         $el->add_render_attribute( '_wrapper', 'data-parallax', $data_parallax );
@@ -1179,9 +1179,9 @@ function basilico_custom_widget_el_before_render($el){
 add_filter('elementor/widget/render_content','basilico_custom_widget_el_render_content', 10, 2 );
 function basilico_custom_widget_el_render_content($widget_content, $el){  
     $settings = $el->get_settings();
-    if( isset($settings['pxl_widget_el_border_animated']) && $settings['pxl_widget_el_border_animated'] == 'yes' ){
+    if( isset($settings['sntravel_widget_el_border_animated']) && $settings['sntravel_widget_el_border_animated'] == 'yes' ){
 
-        $el->add_render_attribute( '_wrapper', 'class', 'pxl-border-wg-anm');
+        $el->add_render_attribute( '_wrapper', 'class', 'sntravel-border-wg-anm');
 
         $breakpoints = ['laptop','tablet_extra','tablet','mobile_extra','mobile'];
          
@@ -1275,11 +1275,11 @@ function basilico_custom_widget_el_render_content($widget_content, $el){
         if( (int)$settings['_border_width']['bottom'] > 0) $border_num++;
         if( (int)$settings['_border_width']['left'] > 0) $border_num++;
 
-        $html = '<div class="pxl-border-animated num-'.$border_num.'">
-        <div class="pxl-border-anm bt w-100 '.$bd_top_w.'" '.$bd_top_style.'></div>
-        <div class="pxl-border-anm br h-100 '.$bd_right_w.'" '.$bd_right_style.'></div>
-        <div class="pxl-border-anm bb w-100 '.$bd_bottom_w.'" '.$bd_bottom_style.'></div>
-        <div class="pxl-border-anm bl h-100 '.$bd_left_w.'" '.$bd_left_style.'></div>
+        $html = '<div class="sntravel-border-animated num-'.$border_num.'">
+        <div class="sntravel-border-anm bt w-100 '.$bd_top_w.'" '.$bd_top_style.'></div>
+        <div class="sntravel-border-anm br h-100 '.$bd_right_w.'" '.$bd_right_style.'></div>
+        <div class="sntravel-border-anm bb w-100 '.$bd_bottom_w.'" '.$bd_bottom_style.'></div>
+        <div class="sntravel-border-anm bl h-100 '.$bd_left_w.'" '.$bd_left_style.'></div>
         </div>';
         return $html.$widget_content;
     }else{

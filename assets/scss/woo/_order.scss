@@ -80,14 +80,14 @@ ul.order_details {
 	}
 
 	.woocommerce-customer-details--phone::before {
-		@include font-pxli( "\e037" );
+		@include font-sntraveli( "\e037" );
 		margin-left: -1.5em;
 		line-height: 1.75;
 		position: absolute;
 	}
 
 	.woocommerce-customer-details--email::before {
-		@include font-pxli( "\e02d" );
+		@include font-sntraveli( "\e02d" );
 		margin-left: -1.5em;
 		line-height: 1.75;
 		position: absolute;

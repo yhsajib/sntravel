@@ -4,7 +4,7 @@ $img_size = !empty( $img_size ) ? $img_size : '270x305';
 if(count($tabs_list_2) > 0){
 	$tab_bd_ids = [];
     ?>
-    <div class="pxl-tabs layout-14">
+    <div class="sntravel-tabs layout-14">
         <div class="tabs-title">
             <div class="image-wrap">
                 <?php foreach ($tabs_list_2 as $key => $tab) :
@@ -20,7 +20,7 @@ if(count($tabs_list_2) > 0){
                     }
                     $thumbnail = '';
                     if(!empty($image)) {
-                        $img = pxl_get_image_by_size( array(
+                        $img = sntravel_get_image_by_size( array(
                             'attach_id'  => $image['id'],
                             'thumb_size' => $img_size,
                             'class' => 'no-lazyload',
@@ -29,7 +29,7 @@ if(count($tabs_list_2) > 0){
                     }
                     ?>
                     <?php if(!empty($thumbnail)) { ?>
-                    <a href="javascript:void(0)" <?php pxl_print_html($widget->get_render_attribute_string( $image_key )); ?> data-slide="<?php echo esc_attr($key); ?>">
+                    <a href="javascript:void(0)" <?php sntravel_print_html($widget->get_render_attribute_string( $image_key )); ?> data-slide="<?php echo esc_attr($key); ?>">
                         <div class="item-image scale-hover-x">
                             <?php echo wp_kses_post($thumbnail); ?>
                         </div>
@@ -52,10 +52,10 @@ if(count($tabs_list_2) > 0){
                     $widget->add_render_attribute( $content_key, 'class', 'active');
                 }
                 ?>
-                <div <?php pxl_print_html($widget->get_render_attribute_string( $content_key )); ?>><?php pxl_print_html($tabs_content); ?>
-                    <h2 class="item-title"><?php echo pxl_print_html($tab['tab_title_2']); ?></h2>
-                    <div class="item-position"><?php echo pxl_print_html($tab['position']); ?></div>
-                    <span class="item-des"><?php echo pxl_print_html($tab['description']); ?></span>
+                <div <?php sntravel_print_html($widget->get_render_attribute_string( $content_key )); ?>><?php sntravel_print_html($tabs_content); ?>
+                    <h2 class="item-title"><?php echo sntravel_print_html($tab['tab_title_2']); ?></h2>
+                    <div class="item-position"><?php echo sntravel_print_html($tab['position']); ?></div>
+                    <span class="item-des"><?php echo sntravel_print_html($tab['description']); ?></span>
                 </div>
             <?php endforeach; ?>
         </div>

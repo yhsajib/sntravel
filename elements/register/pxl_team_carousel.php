@@ -1,10 +1,10 @@
 <?php
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name' => 'pxl_team_carousel',
+        'name' => 'sntravel_team_carousel',
         'title' => esc_html__('PXL Team Carousel', 'sntravel'),
         'icon' => 'eicon-posts-carousel',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'scripts' => array(
             'swiper',
             'sntravel-swiper',
@@ -24,11 +24,11 @@ pxl_add_custom_widget(
                             'options' => [
                                 '1' => [
                                     'label' => esc_html__('Layout 1', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_team_carousel-1.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_team_carousel-1.jpg'
                                 ],
                                 '2' => [
                                     'label' => esc_html__('Layout 2', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_team_carousel-2.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_team_carousel-2.jpg'
                                 ],
                             ],
                         ),
@@ -190,7 +190,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Title Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-team .item-title' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-team .item-title' => 'color: {{VALUE}};',
                             ],
                             'condition' => [
                                 'layout' => ['1']
@@ -201,7 +201,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Title Typography', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-team .item-title',
+                            'selector' => '{{WRAPPER}} .sntravel-team .item-title',
                             'condition' => [
                                 'layout' => ['1']
                             ],
@@ -211,7 +211,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Position Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-team .item-position' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-team .item-position' => 'color: {{VALUE}};',
                             ],
                             'condition' => [
                                 'layout' => ['1']
@@ -222,7 +222,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Position Typography', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-team .item-position',
+                            'selector' => '{{WRAPPER}} .sntravel-team .item-position',
                             'condition' => [
                                 'layout' => ['1']
                             ],
@@ -232,7 +232,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Description Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-team-carousel .item-description' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-team-carousel .item-description' => 'color: {{VALUE}};',
                             ],
                             'condition' => [
                                 'layout' => ['1']
@@ -243,8 +243,8 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Button Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-team-carousel .btn-text .btn-more' => 'color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-team-carousel .btn-text .btn-more::after' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-team-carousel .btn-text .btn-more' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-team-carousel .btn-text .btn-more::after' => 'background-color: {{VALUE}};',
                             ],
                             'condition' => [
                                 'layout' => ['1']
@@ -255,7 +255,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Icon Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-team-carousel .box-icon i' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-team-carousel .box-icon i' => 'color: {{VALUE}};',
                             ],
                             'condition' => [
                                 'layout' => ['1']
@@ -274,7 +274,7 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-team-carousel .box-icon i' => 'font-size: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-team-carousel .box-icon i' => 'font-size: {{SIZE}}{{UNIT}};',
                             ],
                             'condition' => [
                                 'layout' => ['1']
@@ -285,7 +285,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Sub Title Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-team-carousel .item-inner .item-content .item-sub-title' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-team-carousel .item-inner .item-content .item-sub-title' => 'color: {{VALUE}};',
                             ],
                             'condition' => [
                                 'layout' => ['2']
@@ -296,7 +296,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Position Typography', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-team-carousel .item-inner .item-content .item-sub-title',
+                            'selector' => '{{WRAPPER}} .sntravel-team-carousel .item-inner .item-content .item-sub-title',
                             'condition' => [
                                 'layout' => ['2']
                             ],
@@ -306,7 +306,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Title Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-team-carousel .item-inner .item-content .item-title' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-team-carousel .item-inner .item-content .item-title' => 'color: {{VALUE}};',
                             ],
                             'condition' => [
                                 'layout' => ['2']
@@ -317,7 +317,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Title Typography', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-team-carousel .item-inner .item-content .item-title',
+                            'selector' => '{{WRAPPER}} .sntravel-team-carousel .item-inner .item-content .item-title',
                             'condition' => [
                                 'layout' => ['2']
                             ],
@@ -327,8 +327,8 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Sosial Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-team-carousel .item-inner .box-sosial a' => 'color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-team-carousel .item-inner .box-sosial a span:after' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-team-carousel .item-inner .box-sosial a' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-team-carousel .item-inner .box-sosial a span:after' => 'background-color: {{VALUE}};',
                             ],
                             'condition' => [
                                 'layout' => ['2']
@@ -339,7 +339,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Sosial Typography', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-team-carousel .item-inner .box-sosial a',
+                            'selector' => '{{WRAPPER}} .sntravel-team-carousel .item-inner .box-sosial a',
                             'condition' => [
                                 'layout' => ['2']
                             ],
@@ -357,7 +357,7 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-team-carousel .swiper-slide-active .item-image img' => 'min-width: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-team-carousel .swiper-slide-active .item-image img' => 'min-width: {{SIZE}}{{UNIT}};',
                             ],
                             'condition' => [
                                 'layout' => ['1']

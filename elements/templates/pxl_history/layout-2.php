@@ -29,17 +29,17 @@ $opts = [
 
 
 $widget->add_render_attribute( 'carousel', [
-    'class'         => 'pxl-swiper-container',
+    'class'         => 'sntravel-swiper-container',
     'dir'           => is_rtl() ? 'rtl' : 'ltr',
     'data-settings' => wp_json_encode($opts)
 ]);
 ?>
 
 <?php if(isset($history_items) && !empty($history_items) && count($history_items)): ?>
-    <div class="pxl-swiper-slider pxl-history layout-<?php echo esc_attr($settings['layout'])?>">
-        <div class="pxl-swiper-slider-wrap pxl-carousel-inner relative">
-            <div <?php pxl_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
-                <div class="pxl-swiper-wrapper swiper-wrapper">
+    <div class="sntravel-swiper-slider sntravel-history layout-<?php echo esc_attr($settings['layout'])?>">
+        <div class="sntravel-swiper-slider-wrap sntravel-carousel-inner relative">
+            <div <?php sntravel_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
+                <div class="sntravel-swiper-wrapper swiper-wrapper">
                     <?php foreach ($history_items as $key => $value):
                         $title = isset($value['title']) ? $value['title'] : '';
                         $description = isset($value['description']) ? $value['description'] : '';
@@ -48,7 +48,7 @@ $widget->add_render_attribute( 'carousel', [
                         $image_link = isset($value['image_link']) ? $value['image_link'] : [];
                         $thumbnail1 = '';
                         if(!empty($history_img['id'])) {
-                            $img = pxl_get_image_by_size( array(
+                            $img = sntravel_get_image_by_size( array(
                                 'attach_id'  => $history_img['id'],
                                 'thumb_size' => 'full',
                                 'class' => 'no-lazyload',
@@ -78,7 +78,7 @@ $widget->add_render_attribute( 'carousel', [
                         }
                         $link_attributes = $widget->get_render_attribute_string( $link_key );
                         ?>
-                        <div class="pxl-swiper-slide swiper-slide">
+                        <div class="sntravel-swiper-slide swiper-slide">
                             <div class="item-wrap elementor-repeater-item-<?php echo esc_attr($value['_id']); ?>">
                                 <div class="item-inner relative">
                                     <div class="item-info">

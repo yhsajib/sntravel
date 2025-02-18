@@ -1,11 +1,11 @@
 <?php
 use Elementor\Controls_Manager;
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name' => 'pxl_media_popup',
+        'name' => 'sntravel_media_popup',
         'title' => esc_html__('Pxl Media Popup', 'sntravel' ),
         'icon' => 'eicon-play',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'scripts' => array(),
         'params' => array(
             'sections' => array(
@@ -89,7 +89,7 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-media-popup .media-content-inner' => 'justify-content: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-media-popup .media-content-inner' => 'justify-content: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -98,8 +98,8 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'default' => '',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-media-popup .media-play-button:before' => 'background-color: {{VALUE}}; background-image: none !important;',
-                                '{{WRAPPER}} .pxl-media-popup .media-play-button.media-wave::after' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-media-popup .media-play-button:before' => 'background-color: {{VALUE}}; background-image: none !important;',
+                                '{{WRAPPER}} .sntravel-media-popup .media-play-button.media-wave::after' => 'background-color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -108,7 +108,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'default' => '',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-media-popup .media-play-button:hover:before' => 'background-color: {{VALUE}}; background-image: none !important;',
+                                '{{WRAPPER}} .sntravel-media-popup .media-play-button:hover:before' => 'background-color: {{VALUE}}; background-image: none !important;',
                             ],
                         ),
                         array(
@@ -117,7 +117,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'default' => '',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-media-popup .media-play-button:before' => 'border: 1px solid {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-media-popup .media-play-button:before' => 'border: 1px solid {{VALUE}};',
                             ],
                         ),
                         array(
@@ -126,7 +126,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'default' => '',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-media-popup .media-play-button i' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-media-popup .media-play-button i' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -135,7 +135,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'default' => '',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-media-popup .media-play-button:hover i' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-media-popup .media-play-button:hover i' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -144,7 +144,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'default' => '',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-media-popup .media-play-button.media-circle:after' => 'border-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-media-popup .media-play-button.media-circle:after' => 'border-color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -163,7 +163,7 @@ pxl_add_custom_widget(
                                 'unit' => 'px',
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-media-popup .media-play-button' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-media-popup .media-play-button' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
                             ],
 
                         ),
@@ -184,7 +184,7 @@ pxl_add_custom_widget(
                                 'unit' => 'px',
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-media-popup .media-play-button i' => 'font-size: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-media-popup .media-play-button i' => 'font-size: {{SIZE}}{{UNIT}};',
                             ],
 
                         ),
@@ -195,7 +195,7 @@ pxl_add_custom_widget(
                             'control_type' => 'responsive',
                             'size_units' => [ 'px' ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-media-popup .media-play-button i' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-media-popup .media-play-button i' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                         ),
                     ),
@@ -211,14 +211,14 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'default' => '',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-media-popup .button-text' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-media-popup .button-text' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
                             'name' => 'title_typography',
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-media-popup .button-text',
+                            'selector' => '{{WRAPPER}} .sntravel-media-popup .button-text',
                         ),
                     ),
                 ),

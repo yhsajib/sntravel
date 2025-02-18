@@ -10,7 +10,7 @@
         <?php
         if(!empty($settings['tt_content'])){
             ?>
-            <div class="client-said"><?php pxl_print_html($settings['tt_content']); ?></div>
+            <div class="client-said"><?php sntravel_print_html($settings['tt_content']); ?></div>
             <?php
         }
         ?>
@@ -18,17 +18,17 @@
             <?php
             if(!empty($settings['tt_description'])){
                 ?>
-                <div class="client-description"><?php pxl_print_html($settings['tt_description']); ?></div>
+                <div class="client-description"><?php sntravel_print_html($settings['tt_description']); ?></div>
                 <?php
             }
             ?>
             <?php if(!empty($settings['rating']) && $settings['rating'] != 'none') : ?>
                 <div class="item-rating <?php echo esc_attr($settings['rating']); ?>">
-                    <i class="pxli-star1"></i>
-                    <i class="pxli-star1"></i>
-                    <i class="pxli-star1"></i>
-                    <i class="pxli-star1"></i>
-                    <i class="pxli-star1"></i>
+                    <i class="sntraveli-star1"></i>
+                    <i class="sntraveli-star1"></i>
+                    <i class="sntraveli-star1"></i>
+                    <i class="sntraveli-star1"></i>
+                    <i class="sntraveli-star1"></i>
                 </div>
             <?php endif; ?>
         </div>

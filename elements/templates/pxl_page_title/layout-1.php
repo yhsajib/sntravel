@@ -4,8 +4,8 @@ $titles = sntravel()->pagetitle->get_title();
 $style = $widget->get_setting('style', 'style-1');
 ?>
 
-<div class="pxl-pt-wrap <?php echo esc_attr($style); ?>">
+<div class="sntravel-pt-wrap <?php echo esc_attr($style); ?>">
     <h1 class="main-title">
-        <span><?php pxl_print_html($titles['title']) ?></span>
+        <span><?php sntravel_print_html($titles['title']) ?></span>
     </h1>
 </div>

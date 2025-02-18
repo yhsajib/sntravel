@@ -1,10 +1,10 @@
 <?php
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name' => 'pxl_fancy_box_accordion',
+        'name' => 'sntravel_fancy_box_accordion',
         'title' => esc_html__('PXL Fancy Box Accordion', 'sntravel'),
         'icon' => 'eicon-info-box',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'scripts' => [
         ],
         'params' => array(
@@ -22,7 +22,7 @@ pxl_add_custom_widget(
                             'options' => [
                                 '1' => [
                                     'label' => esc_html__( 'Layout 1', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_fancy_box_accordion-1.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_fancy_box_accordion-1.jpg'
                                 ],
                             ],
                         ),
@@ -51,8 +51,8 @@ pxl_add_custom_widget(
                                     'label'            => esc_html__( 'Content Icon', 'sntravel' ),
                                     'type'             => 'icons',
                                     'default'          => [
-                                        'library' => 'pxli',
-                                        'value'   => 'pxli-world'
+                                        'library' => 'sntraveli',
+                                        'value'   => 'sntraveli-world'
                                     ],
                                 ),
                                 array(
@@ -104,8 +104,8 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box-accordion .item-icon' => 'font-size: {{SIZE}}{{UNIT}};',
-                                '{{WRAPPER}} .pxl-fancy-box-accordion .item-icon svg' => 'width: {{SIZE}}{{UNIT}}; max-height: unset;',
+                                '{{WRAPPER}} .sntravel-fancy-box-accordion .item-icon' => 'font-size: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-fancy-box-accordion .item-icon svg' => 'width: {{SIZE}}{{UNIT}}; max-height: unset;',
                             ],
                         ),
                         array(
@@ -113,15 +113,15 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Title', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-fancy-box-accordion .item-title',
+                            'selector' => '{{WRAPPER}} .sntravel-fancy-box-accordion .item-title',
                         ),
                         array(
                             'name' => 'icon_color',
                             'label' => esc_html__('Icon Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box-accordion .item-icon i' => 'color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-fancy-box-accordion .item-icon svg' => 'fill: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-fancy-box-accordion .item-icon i' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-fancy-box-accordion .item-icon svg' => 'fill: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -129,7 +129,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Heading Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box-accordion .item-title' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-fancy-box-accordion .item-title' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -137,7 +137,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Description Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box-accordion .item-description' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-fancy-box-accordion .item-description' => 'color: {{VALUE}};',
                             ],
                         ),
                     ),

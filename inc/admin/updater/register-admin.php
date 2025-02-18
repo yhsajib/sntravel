@@ -28,9 +28,9 @@ class Sntravel_Register {
 	 * @since 1.0.0
 	 */
 	public function __construct( $config = array(), $strings = array() ) {
-		$pxl_server_info = apply_filters( 'pxl_server_info', ['api_url' => ''] ) ;
+		$sntravel_server_info = apply_filters( 'sntravel_server_info', ['api_url' => ''] ) ;
 		$config = wp_parse_args( $config, array(
-			'remote_api_url' => $pxl_server_info['api_url'],
+			'remote_api_url' => $sntravel_server_info['api_url'],
 			'theme_slug'     => sntravel()->get_slug(),
 			'theme_name'     => sntravel()->get_name(),
 			'version'        => '',
@@ -58,7 +58,7 @@ class Sntravel_Register {
 		add_action( 'admin_init', array( $this, 'register_option' ), 12 );
 		add_action( 'admin_init', array( $this, 'remove_key' ), 13);
 		add_action( 'admin_init', array( $this, 'updater' ), 14);
-		add_action( 'admin_init', array( $this, 'pxl_notice' ), 15);
+		add_action( 'admin_init', array( $this, 'sntravel_notice' ), 15);
 		add_filter( 'http_request_args', array( $this, 'disable_wporg_request' ), 5, 2 );
 
 	}
@@ -97,12 +97,12 @@ class Sntravel_Register {
 	 * @method init_hooks
 	 * @return [type]     [description]
 	 */
-	public function pxl_notice() {
- 		$dev_mode = apply_filters( 'pxl_set_dev_mode', (defined('DEV_MODE') && DEV_MODE)) ;
+	public function sntravel_notice() {
+ 		$dev_mode = apply_filters( 'sntravel_set_dev_mode', (defined('DEV_MODE') && DEV_MODE)) ;
  		if( $dev_mode === true) return;
         if ( 'valid' != get_option( $this->theme_slug . '_purchase_code_status', false ) ) {
 
-            if ( ( ! isset( $_GET['page'] ) || 'pxlart' != sanitize_text_field($_GET['page']) ) ) {
+            if ( ( ! isset( $_GET['page'] ) || 'sntravelart' != sanitize_text_field($_GET['page']) ) ) {
                 add_action( 'admin_notices', array( $this, 'admin_error' ) );
             } else {
                 add_action( 'admin_notices', array( $this, 'admin_notice' ) );
@@ -112,7 +112,7 @@ class Sntravel_Register {
 	}
 	
 	function admin_error() {
-		echo '<div class="error"><p>' . sprintf( wp_kses_post( esc_html__( 'The %s theme needs to be registered. %sRegister Now%s', 'sntravel' ) ), sntravel()->get_name(), '<a href="' . admin_url( 'admin.php?page=pxlart') . '">' , '</a>' ) . '</p></div>';
+		echo '<div class="error"><p>' . sprintf( wp_kses_post( esc_html__( 'The %s theme needs to be registered. %sRegister Now%s', 'sntravel' ) ), sntravel()->get_name(), '<a href="' . admin_url( 'admin.php?page=sntravelart') . '">' , '</a>' ) . '</p></div>';
 	}
 	
 	function admin_notice() {
@@ -141,7 +141,7 @@ class Sntravel_Register {
 	} 
 
 	function check_license($merlin) {
-		$pxl_server_info = apply_filters( 'pxl_server_info', ['docs_url' => '', 'support_url' => ''] ) ;
+		$sntravel_server_info = apply_filters( 'sntravel_server_info', ['docs_url' => '', 'support_url' => ''] ) ;
 		$purchase_code = trim( get_option( $this->theme_slug . '_purchase_code' ) ); 
 		$api_params = array(
 			'action' => 'check_license',
@@ -171,7 +171,7 @@ class Sntravel_Register {
 			?>
 			<div class="sntravel-dsb-confirmation fail">
 				<h6><?php echo esc_html__( 'Active false', 'sntravel' ) ?></h6>
-				<p><?php echo wp_kses_post( $message ) ?> <a href="<?php echo esc_url($pxl_server_info['docs_url']) ?>" target="_blank"><?php echo esc_html__( 'our help center', 'sntravel' ) ?></a> or <a href="<?php echo esc_url($pxl_server_info['support_url']) ?>" target="_blank"><?php echo esc_html__( 'submit a ticket', 'sntravel' ) ?></a></p>
+				<p><?php echo wp_kses_post( $message ) ?> <a href="<?php echo esc_url($sntravel_server_info['docs_url']) ?>" target="_blank"><?php echo esc_html__( 'our help center', 'sntravel' ) ?></a> or <a href="<?php echo esc_url($sntravel_server_info['support_url']) ?>" target="_blank"><?php echo esc_html__( 'submit a ticket', 'sntravel' ) ?></a></p>
 			</div>
 			<?php $this->form(); ?>
 			<div class="sntravel-dsb-box-foot">
@@ -189,7 +189,7 @@ class Sntravel_Register {
 					</div> 
 
 					<div class="sntravel-dsb-deactive">
-						<form method="POST" action="<?php echo admin_url( 'admin.php?page=pxlart' )?>">
+						<form method="POST" action="<?php echo admin_url( 'admin.php?page=sntravelart' )?>">
 							<input type="hidden" name="action" value="removekey"/>
 							<button class="btn button" type="submit"><?php esc_html_e( 'Remove Purchase Code', 'sntravel' ) ?></button>
 						</form>
@@ -197,7 +197,7 @@ class Sntravel_Register {
 				</div> 
 				<?php 
 				if($merlin)
-					wp_redirect(admin_url('admin.php?page=pxlart-setup&step=plugins'));
+					wp_redirect(admin_url('admin.php?page=sntravelart-setup&step=plugins'));
 			}
 		}
 
@@ -327,4 +327,4 @@ class Sntravel_Register {
 	
 }
 
-new Sntravel_Register;
+//new Sntravel_Register;

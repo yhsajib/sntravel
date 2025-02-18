@@ -30,17 +30,17 @@ $opts = [
   
 
 $widget->add_render_attribute( 'carousel', [
-    'class'         => 'pxl-swiper-container overflow-hidden',
+    'class'         => 'sntravel-swiper-container overflow-hidden',
     'dir'           => is_rtl() ? 'rtl' : 'ltr',
     'data-settings' => wp_json_encode($opts)
 ]);
 ?>
 
 <?php if(isset($clients) && !empty($clients) && count($clients)): ?>
-    <div class="pxl-swiper-slider pxl-clients layout-<?php echo esc_attr($settings['layout'])?>">
-        <div class="pxl-swiper-slider-wrap pxl-carousel-inner relative">
-            <div <?php pxl_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
-                <div class="pxl-swiper-wrapper swiper-wrapper align-items-center">
+    <div class="sntravel-swiper-slider sntravel-clients layout-<?php echo esc_attr($settings['layout'])?>">
+        <div class="sntravel-swiper-slider-wrap sntravel-carousel-inner relative">
+            <div <?php sntravel_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
+                <div class="sntravel-swiper-wrapper swiper-wrapper align-items-center">
                     <?php foreach ($clients as $key => $value):
                         $client_img       = isset($value['client_img']) ? $value['client_img'] : [];
                         $name             = isset($value['name']) ? $value['name'] : '';
@@ -48,7 +48,7 @@ $widget->add_render_attribute( 'carousel', [
                          
                         $thumbnail1 = '';
                         if(!empty($client_img['id'])) {
-                            $img = pxl_get_image_by_size( array(
+                            $img = sntravel_get_image_by_size( array(
                                 'attach_id'  => $client_img['id'],
                                 'thumb_size' => 'full',
                                 'class' => 'no-lazyload',
@@ -79,7 +79,7 @@ $widget->add_render_attribute( 'carousel', [
                         }
                         $link_attributes = $widget->get_render_attribute_string( $link_key );
                         ?>
-                        <div class="pxl-swiper-slide swiper-slide">
+                        <div class="sntravel-swiper-slide swiper-slide">
                             <div class="item-inner relative">
                                 <div class="item-image-wrap">
                                     <?php if(!empty($thumbnail1)) : ?>
@@ -101,7 +101,7 @@ $widget->add_render_attribute( 'carousel', [
                 </div>
             </div>
             <?php basilico_arrow_template($settings); ?>
-            <div class="pxl-swiper-dots"></div>
+            <div class="sntravel-swiper-dots"></div>
         </div>
     </div>
 <?php endif; ?>

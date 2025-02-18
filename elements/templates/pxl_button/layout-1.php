@@ -1,7 +1,7 @@
 <?php
 use Elementor\Utils;
 
-$widget->add_render_attribute( 'wrapper', 'class', 'pxl-button-wrapper d-flex pxl-button-layout1' );
+$widget->add_render_attribute( 'wrapper', 'class', 'sntravel-button-wrapper d-flex sntravel-button-layout1' );
 $link_type = $settings['button_url_type'];
 $is_fullwidth = esc_attr($settings['is_fullwidth']) == 'yes' ? 'btn-fullwidth' : '';
 $btn_style = $settings['style'];
@@ -26,33 +26,33 @@ if ($link_type == 'page') {
 }
 
 $widget->add_render_attribute( 'button', 'class', 'btn '.esc_attr($btn_style).' icon-ps-'.$settings['icon_align'].' '.$is_fullwidth );
-$html_id = pxl_get_element_id($settings);
+$html_id = sntravel_get_element_id($settings);
 
 if(!empty($settings['button_split_text_anm']) ){
     switch ($settings['hover_split_text_anm']) {
         case 'hover-split-text':
-            $split_cls = 'pxl-split-text hover-split-text '.$settings['button_split_text_anm'];
+            $split_cls = 'sntravel-split-text hover-split-text '.$settings['button_split_text_anm'];
             break;
         case 'only-hover-split-text':
-            $split_cls = 'pxl-split-text-only-hover '.$settings['button_split_text_anm'];
+            $split_cls = 'sntravel-split-text-only-hover '.$settings['button_split_text_anm'];
             break;
         default:
-            $split_cls = 'pxl-split-text '.$settings['button_split_text_anm'];
+            $split_cls = 'sntravel-split-text '.$settings['button_split_text_anm'];
             break;
     }
     $widget->add_render_attribute( 'button', 'class', $split_cls );
 }
 
 ?>
-<div id="<?php echo esc_attr($html_id); ?>" <?php pxl_print_html($widget->get_render_attribute_string( 'wrapper' )); ?>>
-    <a <?php pxl_print_html($widget->get_render_attribute_string( 'button' )); ?>>
+<div id="<?php echo esc_attr($html_id); ?>" <?php sntravel_print_html($widget->get_render_attribute_string( 'wrapper' )); ?>>
+    <a <?php sntravel_print_html($widget->get_render_attribute_string( 'button' )); ?>>
         <?php
 		$widget->add_inline_editing_attributes( 'text', 'none' );
         ?>
-        <span class="pxl-button-text" data-text="<?php echo esc_attr($settings['text']); ?>"><?php echo esc_html($settings['text']); ?></span>
+        <span class="sntravel-button-text" data-text="<?php echo esc_attr($settings['text']); ?>"><?php echo esc_html($settings['text']); ?></span>
         <?php 
         if ( $settings['btn_icon'] ) 
-            \Elementor\Icons_Manager::render_icon( $settings['btn_icon'], [ 'aria-hidden' => 'true', 'class' => 'pxl-button-icon pxl-icon '.$settings['icon_align'] ], 'i' ); 
+            \Elementor\Icons_Manager::render_icon( $settings['btn_icon'], [ 'aria-hidden' => 'true', 'class' => 'sntravel-button-icon sntravel-icon '.$settings['icon_align'] ], 'i' ); 
         ?>
     </a>
 </div>

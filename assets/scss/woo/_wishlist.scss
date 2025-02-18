@@ -31,7 +31,7 @@
 				@include animation(sntravel-spin 2s linear infinite);
 				&:before {
 					content: "\e95b";
-					font-family: "pxli" !important;
+					font-family: "sntraveli" !important;
 				}
 			}
 		}
@@ -41,7 +41,7 @@
 		+ .added_to_cart {
 			&:after {
 				content: '\e942';
-				font-family: "pxli";
+				font-family: "sntraveli";
 				font-weight: normal;
 				margin-left: 10px;
 			}

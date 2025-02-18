@@ -18,29 +18,29 @@ $row_cols_class = basilico_get_shop_loop_row_column_class([
     'col_xl'  => $widget->get_setting('col_xl', '4'),
     'col_xxl' => $widget->get_setting('col_xxl', '4')
 ]);
-$grid_class = 'pxl-grid-inner products row relative '.implode(' ', $row_cols_class);
+$grid_class = 'sntravel-grid-inner products row relative '.implode(' ', $row_cols_class);
 $widget->add_render_attribute( 'grid', 'class', $grid_class);
 if( $total <= 0){
-    echo '<div class="pxl-no-post-grid">'.esc_html__( 'No Post Found', 'sntravel' ). '</div>';
+    echo '<div class="sntravel-no-post-grid">'.esc_html__( 'No Post Found', 'sntravel' ). '</div>';
     return;
 }
 
 $product_layout = $widget->get_setting('product_layout', 'layout-1');
 ?>
 
-<div id="<?php echo esc_attr($wg_id) ?>" class="pxl-product-grid <?php echo 'pxl-shop-'.esc_attr($product_layout); ?>">
-    <div <?php pxl_print_html($widget->get_render_attribute_string('grid')); ?>>
+<div id="<?php echo esc_attr($wg_id) ?>" class="sntravel-product-grid <?php echo 'sntravel-shop-'.esc_attr($product_layout); ?>">
+    <div <?php sntravel_print_html($widget->get_render_attribute_string('grid')); ?>>
         <?php
         while ($query->have_posts()) {
             $query->the_post();
-            wc_get_template_part( 'pxl-content-product', esc_attr($product_layout) );
+            wc_get_template_part( 'sntravel-content-product', esc_attr($product_layout) );
         }
         ?>
         <?php wp_reset_postdata(); ?>
     </div>
 
     <?php if ($pagination_type == 'pagination' || $pagination_type == 'loadmore' || $pagination_type == 'infinite' ) { ?>
-        <div class="pxl-product-grid-pagination grid-df-pagin d-flex justify-content-center">
+        <div class="sntravel-product-grid-pagination grid-df-pagin d-flex justify-content-center">
             <?php
             if ( empty( $query ) ){
                 $query = $GLOBALS['wp_query'];

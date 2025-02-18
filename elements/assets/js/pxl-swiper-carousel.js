@@ -3,92 +3,92 @@
     'use strict';
     if( typeof Swiper == 'undefined') return;
     $(window).on("elementor/frontend/init", function () {
-        elementorFrontend.hooks.addAction("frontend/element_ready/pxl_team_carousel.default", function($scope) {
-            pxl_swiper_handler($scope);
+        elementorFrontend.hooks.addAction("frontend/element_ready/sntravel_team_carousel.default", function($scope) {
+            sntravel_swiper_handler($scope);
         });
-        elementorFrontend.hooks.addAction("frontend/element_ready/pxl_menu_carousel.default", function($scope) {
-            pxl_swiper_handler($scope);
+        elementorFrontend.hooks.addAction("frontend/element_ready/sntravel_menu_carousel.default", function($scope) {
+            sntravel_swiper_handler($scope);
         });
-        elementorFrontend.hooks.addAction("frontend/element_ready/pxl_post_carousel.default", function($scope) {
-            pxl_swiper_handler($scope);
+        elementorFrontend.hooks.addAction("frontend/element_ready/sntravel_post_carousel.default", function($scope) {
+            sntravel_swiper_handler($scope);
         });
-        elementorFrontend.hooks.addAction("frontend/element_ready/pxl_testimonial_carousel.default", function($scope) {
-            pxl_swiper_handler($scope);
+        elementorFrontend.hooks.addAction("frontend/element_ready/sntravel_testimonial_carousel.default", function($scope) {
+            sntravel_swiper_handler($scope);
         });
-        elementorFrontend.hooks.addAction("frontend/element_ready/pxl_fancy_box_carousel.default", function($scope) {
-            pxl_swiper_handler($scope);
+        elementorFrontend.hooks.addAction("frontend/element_ready/sntravel_fancy_box_carousel.default", function($scope) {
+            sntravel_swiper_handler($scope);
         });
-        elementorFrontend.hooks.addAction("frontend/element_ready/pxl_banner_carousel.default", function($scope) {
-            pxl_swiper_handler($scope);
+        elementorFrontend.hooks.addAction("frontend/element_ready/sntravel_banner_carousel.default", function($scope) {
+            sntravel_swiper_handler($scope);
         });
-        elementorFrontend.hooks.addAction("frontend/element_ready/pxl_clients.default", function($scope) {
-            pxl_swiper_handler($scope);
+        elementorFrontend.hooks.addAction("frontend/element_ready/sntravel_clients.default", function($scope) {
+            sntravel_swiper_handler($scope);
         });
-        elementorFrontend.hooks.addAction("frontend/element_ready/pxl_history.default", function($scope) {
-            pxl_swiper_handler($scope);
+        elementorFrontend.hooks.addAction("frontend/element_ready/sntravel_history.default", function($scope) {
+            sntravel_swiper_handler($scope);
         });
-        elementorFrontend.hooks.addAction("frontend/element_ready/pxl_video_slider.default", function($scope) {
-            pxl_swiper_handler($scope);
+        elementorFrontend.hooks.addAction("frontend/element_ready/sntravel_video_slider.default", function($scope) {
+            sntravel_swiper_handler($scope);
         });
-        elementorFrontend.hooks.addAction("frontend/element_ready/pxl_carousel_landing.default", function($scope) {
-            pxl_swiper_handler($scope);
+        elementorFrontend.hooks.addAction("frontend/element_ready/sntravel_carousel_landing.default", function($scope) {
+            sntravel_swiper_handler($scope);
         });
-        elementorFrontend.hooks.addAction("frontend/element_ready/pxl_image_carousel.default", function($scope) {
-            pxl_swiper_handler($scope);
+        elementorFrontend.hooks.addAction("frontend/element_ready/sntravel_image_carousel.default", function($scope) {
+            sntravel_swiper_handler($scope);
         });
-        elementorFrontend.hooks.addAction("frontend/element_ready/pxl_product_carousel.default", function($scope) {
-            pxl_swiper_handler($scope);
+        elementorFrontend.hooks.addAction("frontend/element_ready/sntravel_product_carousel.default", function($scope) {
+            sntravel_swiper_handler($scope);
         });
     });
 
     $( document ).ready( function() {
-        $('.pxl-theme-carousel').each(function() {
-            pxl_swiper_handler($(this));
+        $('.sntravel-theme-carousel').each(function() {
+            sntravel_swiper_handler($(this));
         });
-        pxl_swiper_handler( $('.product-loop-carousel') );
-        pxl_swiper_handler( $('.pxl-product-swiper-slider') );
-        pxl_swiper_handler( $('.pxl-product-loop-carousel .pxl-product-carousel') );
+        sntravel_swiper_handler( $('.product-loop-carousel') );
+        sntravel_swiper_handler( $('.sntravel-product-swiper-slider') );
+        sntravel_swiper_handler( $('.sntravel-product-loop-carousel .sntravel-product-carousel') );
     });
 
     $(document).ajaxComplete(function(event, xhr, settings){  
         "use strict";
-        pxl_swiper_handler( $('.product-loop-carousel') );     
+        sntravel_swiper_handler( $('.product-loop-carousel') );     
     });
 
-    function pxl_swiper_handler($scope){
+    function sntravel_swiper_handler($scope){
 
-        var $carousel_dom = $scope.find('.pxl-swiper-slider');
-        if( $scope.hasClass('pxl-swiper-slider') )
+        var $carousel_dom = $scope.find('.sntravel-swiper-slider');
+        if( $scope.hasClass('sntravel-swiper-slider') )
             $carousel_dom = $scope;
 
         $carousel_dom.each(function(index, element) { 
             var $this = $(this);
-            var settings = $this.find('.pxl-swiper-container').data().settings; 
+            var settings = $this.find('.sntravel-swiper-container').data().settings; 
             
-            var next_el = $this.find('.pxl-swiper-arrow-next')[0];
-            var prev_el = $this.find('.pxl-swiper-arrow-prev')[0]; 
-            var dots_el = $this.find('.pxl-swiper-dots')[0];
+            var next_el = $this.find('.sntravel-swiper-arrow-next')[0];
+            var prev_el = $this.find('.sntravel-swiper-arrow-prev')[0]; 
+            var dots_el = $this.find('.sntravel-swiper-dots')[0];
 
             if( $this.hasClass('swiper-parent')){
-                settings = $this.find('.pxl-swiper-container.swiper-parent').data().settings;
-                next_el = $this.find('.pxl-swiper-arrow-next.swiper-parent')[0];
-                prev_el = $this.find('.pxl-swiper-arrow-prev.swiper-parent')[0];
-                dots_el = $this.find('.pxl-swiper-dots.swiper-parent')[0];
+                settings = $this.find('.sntravel-swiper-container.swiper-parent').data().settings;
+                next_el = $this.find('.sntravel-swiper-arrow-next.swiper-parent')[0];
+                prev_el = $this.find('.sntravel-swiper-arrow-prev.swiper-parent')[0];
+                dots_el = $this.find('.sntravel-swiper-dots.swiper-parent')[0];
             }
 
-            if( $this.find('.pxl-swiper-slider-thumbs .pxl-swiper-arrows').length > 0){
-                next_el = [$this.find('.pxl-swiper-arrow-next')[0], $this.find('.pxl-swiper-arrow-next')[1]];
-                prev_el = [$this.find('.pxl-swiper-arrow-prev')[0], $this.find('.pxl-swiper-arrow-prev')[1]]; 
+            if( $this.find('.sntravel-swiper-slider-thumbs .sntravel-swiper-arrows').length > 0){
+                next_el = [$this.find('.sntravel-swiper-arrow-next')[0], $this.find('.sntravel-swiper-arrow-next')[1]];
+                prev_el = [$this.find('.sntravel-swiper-arrow-prev')[0], $this.find('.sntravel-swiper-arrow-prev')[1]]; 
             }
-            if( $this.find('.pxl-swiper-slider-thumbs .pxl-swiper-dots').length > 0){
-                dots_el = [$this.find('.pxl-swiper-dots')[0], $this.find('.pxl-swiper-dots')[1]];
+            if( $this.find('.sntravel-swiper-slider-thumbs .sntravel-swiper-dots').length > 0){
+                dots_el = [$this.find('.sntravel-swiper-dots')[0], $this.find('.sntravel-swiper-dots')[1]];
             }
 
             var carousel_settings = {
                 direction: settings['slide_direction'],
                 effect: settings['slide_mode'],
-                wrapperClass : 'pxl-swiper-wrapper',
-                slideClass: 'pxl-swiper-slide',
+                wrapperClass : 'sntravel-swiper-wrapper',
+                slideClass: 'sntravel-swiper-slide',
                 slidesPerView: settings['slides_to_show'],
                 slidesPerGroup: settings['slides_to_scroll'],
                 slidesPerColumn: settings['slide_percolumn'],
@@ -103,8 +103,8 @@
                     type: settings['dots_style'],
                     el: dots_el,
                     clickable : true,
-                    modifierClass: 'pxl-swiper-pagination-',
-                    bulletClass : 'pxl-swiper-pagination-bullet',
+                    modifierClass: 'sntravel-swiper-pagination-',
+                    bulletClass : 'sntravel-swiper-pagination-bullet',
                     renderCustom: function (swiper, element, current, total) {
                         return current + ' of ' + total;
                     }
@@ -144,23 +144,23 @@
                 },
                 on: {
                     init : function (swiper){
-                        $this.find('.swiper-slide .pxl-animate').each(function(){
+                        $this.find('.swiper-slide .sntravel-animate').each(function(){
                             var data = $(this).data('settings');
-                            $(this).removeClass('animated '+data['animation']).addClass('pxl-invisible');
+                            $(this).removeClass('animated '+data['animation']).addClass('sntravel-invisible');
                         });
-                        $this.find('.pxl-swiper-slide .pxl-animate').each(function(){
+                        $this.find('.sntravel-swiper-slide .sntravel-animate').each(function(){
                             var data = $(this).data('settings');
                             var cur_anm = $(this);
                             setTimeout(function () {  
-                                $(cur_anm).removeClass('pxl-invisible').addClass('animated ' + data['animation']);
+                                $(cur_anm).removeClass('sntravel-invisible').addClass('animated ' + data['animation']);
                             }, data['animation_delay']);
 
                         });
-                        $this.find('.pxl-bd-anm').each(function(){
-                            $(this).addClass('pxl-animated');
+                        $this.find('.sntravel-bd-anm').each(function(){
+                            $(this).addClass('sntravel-animated');
                         });
-                        $this.find('.swiper-slide .pxl-init-invisible').each(function(){
-                            $(this).addClass('pxl-animated');
+                        $this.find('.swiper-slide .sntravel-init-invisible').each(function(){
+                            $(this).addClass('sntravel-animated');
                         });
                         if (settings['auto_height']) setSlideHeight(this);
                     },
@@ -171,20 +171,20 @@
                         if (settings['auto_height']) setSlideHeight(this);
                     },
                     slideChange: function (swiper) {
-                        $this.find('.swiper-slide .pxl-animate').each(function(){
+                        $this.find('.swiper-slide .sntravel-animate').each(function(){
                             var data = $(this).data('settings');
-                            $(this).removeClass('animated '+data['animation']).addClass('pxl-invisible');
+                            $(this).removeClass('animated '+data['animation']).addClass('sntravel-invisible');
                         });
-                        $this.find('.pxl-swiper-slide .pxl-animate').each(function(){
+                        $this.find('.sntravel-swiper-slide .sntravel-animate').each(function(){
                             var data = $(this).data('settings');
                             var cur_anm = $(this);
                             setTimeout(function () {  
-                                $(cur_anm).removeClass('pxl-invisible').addClass('animated ' + data['animation']);
+                                $(cur_anm).removeClass('sntravel-invisible').addClass('animated ' + data['animation']);
                             }, data['animation_delay']);
 
                         }); 
-                        $this.find('.pxl-bd-anm').each(function(){
-                            $(this).addClass('pxl-animated');
+                        $this.find('.sntravel-bd-anm').each(function(){
+                            $(this).addClass('sntravel-animated');
                         });
                     },
                 },
@@ -225,15 +225,15 @@
             }
 
             
-            if($this.find('.pxl-swiper-thumbs').length > 0){  
-                var thumb_carousel_settings = pxl_get_thumbs_setting($this.find('.pxl-swiper-thumbs'));
+            if($this.find('.sntravel-swiper-thumbs').length > 0){  
+                var thumb_carousel_settings = sntravel_get_thumbs_setting($this.find('.sntravel-swiper-thumbs'));
                 thumb_carousel_settings['slideThumbActiveClass'] = 'swiper-slide-thumb-active';
                 thumb_carousel_settings['thumbsContainerClass'] = 'swiper-container-thumbs';
                 
-                var slide_thumbs = new Swiper($this.find('.pxl-swiper-thumbs')[0], thumb_carousel_settings);
+                var slide_thumbs = new Swiper($this.find('.sntravel-swiper-thumbs')[0], thumb_carousel_settings);
 
                 slide_thumbs.on('resize', function () {
-                    slide_thumbs.changeDirection(getDirection($this.find('.pxl-swiper-thumbs')));
+                    slide_thumbs.changeDirection(getDirection($this.find('.sntravel-swiper-thumbs')));
                 });
 
                 carousel_settings['thumbs'] = { swiper: slide_thumbs, autoScrollOffset: 1 };
@@ -241,10 +241,10 @@
             }
             
             //initial swiper
-            var swiper = new Swiper($this.find('.pxl-swiper-container')[0], carousel_settings);
+            var swiper = new Swiper($this.find('.sntravel-swiper-container')[0], carousel_settings);
 
             if(settings['autoplay'] && settings['pause_on_hover'] ){
-                $( $this.find('.pxl-swiper-container') ).on({
+                $( $this.find('.sntravel-swiper-container') ).on({
                     mouseenter: function mouseenter() {
                         //this.swiper.autoplay.stop();
                         swiper.autoplay.stop();
@@ -267,14 +267,14 @@
 
             $this.find(".swiper-filter-wrap .filter-item").on("click", function(){
                 var target = $(this).attr('data-filter-target');
-                var parent = $(this).closest('.pxl-swiper-slider');
+                var parent = $(this).closest('.sntravel-swiper-slider');
                 $(this).siblings().removeClass("active");
                 $(this).addClass("active");
 
                 if(target == "all"){
                     parent.find("[data-filter]").removeClass("non-swiper-slide").addClass("swiper-slide");
                     swiper.destroy();
-                    swiper = new Swiper($this.find('.pxl-swiper-container')[0], carousel_settings);
+                    swiper = new Swiper($this.find('.sntravel-swiper-container')[0], carousel_settings);
 
                 }else {
 
@@ -282,7 +282,7 @@
                     parent.find("[data-filter^='"+target+"'], [data-filter*=' "+target+"']").removeClass("non-swiper-slide").addClass("swiper-slide");
                     
                     swiper.destroy();
-                    swiper = new Swiper($this.find('.pxl-swiper-container')[0], carousel_settings);
+                    swiper = new Swiper($this.find('.sntravel-swiper-container')[0], carousel_settings);
                 }
             });
 
@@ -315,13 +315,13 @@
         return direction;
     }
 
-    function pxl_get_thumbs_setting($thumb_node){  
+    function sntravel_get_thumbs_setting($thumb_node){  
         var thumbs_settings = $thumb_node.data().settings, 
         thumbs_settings_params = {
             direction: getDirection($thumb_node),
             effect: thumbs_settings['slide_mode'],
-            wrapperClass : 'pxl-thumbs-wrapper',
-            slideClass: 'pxl-swiper-slide',
+            wrapperClass : 'sntravel-thumbs-wrapper',
+            slideClass: 'sntravel-swiper-slide',
             slidesPerView: thumbs_settings['slides_to_show'],
             slidesPerGroup: thumbs_settings['slides_to_scroll'],
             slidesPerColumn: thumbs_settings['slide_percolumn'],

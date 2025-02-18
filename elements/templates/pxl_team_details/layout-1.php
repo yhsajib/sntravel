@@ -32,7 +32,7 @@ $is_new = \Elementor\Icons_Manager::is_migration_allowed();
         $link     = isset($settings['link']) ? $settings['link'] : '';
         $thumbnail = '';
         if(!empty($image)) {
-            $img = pxl_get_image_by_size( array(
+            $img = sntravel_get_image_by_size( array(
                 'attach_id'  => $image['id'],
                 'thumb_size' => 'full',
                 'class' => 'no-lazyload',
@@ -60,10 +60,10 @@ $is_new = \Elementor\Icons_Manager::is_migration_allowed();
             <div class="name-wrap">
                 <h3 class="item-name">
                     <?php if ( $link_attributes ) echo '<a '. implode( ' ', [ $link_attributes ] ).'>'; ?>
-                    <?php pxl_print_html( nl2br($widget->get_setting('title'))); ?>
+                    <?php sntravel_print_html( nl2br($widget->get_setting('title'))); ?>
                     <?php if ( $link_attributes ) echo '</a>'; ?>
                 </h3>
-                <div class="item-position"><?php echo pxl_print_html($position); ?></div>
+                <div class="item-position"><?php echo sntravel_print_html($position); ?></div>
             </div>
             <div class="contact-wrap">
                 <?php
@@ -77,7 +77,7 @@ $is_new = \Elementor\Icons_Manager::is_migration_allowed();
                         <?php else: ?>
                             <i class="<?php echo esc_attr( $item['contact_icon'] ); ?>"></i>
                         <?php endif; ?>
-                        <span class="text-info"><?php pxl_print_html($item['contact_info']); ?></span>
+                        <span class="text-info"><?php sntravel_print_html($item['contact_info']); ?></span>
                     </div>
                 <?php endforeach; ?>
             </div>
@@ -87,7 +87,7 @@ $is_new = \Elementor\Icons_Manager::is_migration_allowed();
                     $team_social = json_decode($social, true);
                     foreach ($team_social as $settings): ?>
                         <a href="<?php echo esc_url($settings['url']); ?>" target="_blank">
-                            <i class="pxli <?php echo esc_attr($settings['icon']); ?>"></i>
+                            <i class="sntraveli <?php echo esc_attr($settings['icon']); ?>"></i>
                         </a>
                     <?php endforeach;?>
                 </div>

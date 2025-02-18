@@ -37,12 +37,12 @@ else if(!$status_ins && $status_act)
 
 		<?php 
 		 
-		$dev_mode = apply_filters( 'pxl_set_dev_mode', (defined('DEV_MODE') && DEV_MODE)) ;
+		$dev_mode = apply_filters( 'sntravel_set_dev_mode', (defined('DEV_MODE') && DEV_MODE)) ;
 		 
 		if ( 'valid' != get_option( sntravel()->get_slug().'_purchase_code_status', false ) && !$dev_mode ) :
 			
 			echo '<div class="error"><p>' .
-					sprintf( wp_kses_post( esc_html__( 'The %s theme needs to be registered. %sRegister Now%s', 'sntravel' ) ), sntravel()->get_name(), '<a href="' . admin_url( 'admin.php?page=pxlart') . '">' , '</a>' ) . '</p></div>';
+					sprintf( wp_kses_post( esc_html__( 'The %s theme needs to be registered. %sRegister Now%s', 'sntravel' ) ), sntravel()->get_name(), '<a href="' . admin_url( 'admin.php?page=sntravelart') . '">' , '</a>' ) . '</p></div>';
 			
 		else: ?>
 	

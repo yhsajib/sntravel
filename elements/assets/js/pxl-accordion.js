@@ -6,11 +6,11 @@
 
     'use strict';
     var PxlAccordionHandler = function( $scope, $ ) {
-        $scope.find(".pxl-accordion .pxl-ac-item .pxl-ac-title").on("click", function(e){
+        $scope.find(".sntravel-accordion .sntravel-ac-item .sntravel-ac-title").on("click", function(e){
             e.preventDefault();
             var target = $(this).data("target");
-            var parent = $(this).parents(".pxl-accordion");
-            var active_items = parent.find(".pxl-ac-title.active");
+            var parent = $(this).parents(".sntravel-accordion");
+            var active_items = parent.find(".sntravel-ac-title.active");
             $.each(active_items, function (index, item) {
                 var item_target = $(item).data("target");
                 if(item_target != target){
@@ -27,6 +27,6 @@
 
     // Make sure you run this code under Elementor.
     $( window ).on( 'elementor/frontend/init', function() {
-        elementorFrontend.hooks.addAction( 'frontend/element_ready/pxl_accordion.default', PxlAccordionHandler );
+        elementorFrontend.hooks.addAction( 'frontend/element_ready/sntravel_accordion.default', PxlAccordionHandler );
     } );
 } )( jQuery );

@@ -4,7 +4,7 @@ $img_size = !empty( $img_size ) ? $img_size : '570x641';
 if(count($tabs_list_2) > 0){
 	$tab_bd_ids = [];
     ?>
-    <div class="pxl-tabs layout-15 row overflow-hidden">
+    <div class="sntravel-tabs layout-15 row overflow-hidden">
         <?php if (!empty($link_to_carousel)) : ?>
             <div class="link-to-tabs-carousel-id d-none">
                 <?php echo esc_attr($link_to_carousel); ?>
@@ -46,16 +46,16 @@ if(count($tabs_list_2) > 0){
                         }
                         $link_attributes = $widget->get_render_attribute_string( $link_key );
                     ?>
-                    <div href="javascript:void(0)" <?php pxl_print_html($widget->get_render_attribute_string( $title_key )); ?> data-slide="<?php echo esc_attr($key); ?>">
-                        <span><?php echo pxl_print_html($tab['tab_title_2']); ?></span>
+                    <div href="javascript:void(0)" <?php sntravel_print_html($widget->get_render_attribute_string( $title_key )); ?> data-slide="<?php echo esc_attr($key); ?>">
+                        <span><?php echo sntravel_print_html($tab['tab_title_2']); ?></span>
                         <div class="box-content">
-                            <span class="item-des"><?php echo pxl_print_html($tab['description']); ?></span>
+                            <span class="item-des"><?php echo sntravel_print_html($tab['description']); ?></span>
                             <?php if(!empty($tab['position'])) { ?>
-                            <span class="item-position"><?php echo pxl_print_html($tab['position']); ?></span>
+                            <span class="item-position"><?php echo sntravel_print_html($tab['position']); ?></span>
                             <?php } ?>
                             <div class="button-more">
                                 <?php if ( ! empty( $link['url'] ) ): ?><a class="btn-more" <?php echo implode( ' ', [ $link_attributes ] ); ?>><?php endif; ?>
-                                    <span><?php echo pxl_print_html($tab['button_text']); ?></span>
+                                    <span><?php echo sntravel_print_html($tab['button_text']); ?></span>
                                     <i class="zmdi zmdi-long-arrow-right"></i>
                                 <?php if ( ! empty( $link['url'] ) ): ?></a><?php endif; ?>
                             </div>
@@ -78,7 +78,7 @@ if(count($tabs_list_2) > 0){
                 }
                 $thumbnail = '';
                 if(!empty($image)) {
-                    $img = pxl_get_image_by_size( array(
+                    $img = sntravel_get_image_by_size( array(
                         'attach_id'  => $image['id'],
                         'thumb_size' => $img_size,
                         'class' => 'no-lazyload',
@@ -87,7 +87,7 @@ if(count($tabs_list_2) > 0){
                 }
                 ?>
                  <?php if(!empty($thumbnail)) { ?>
-                <div <?php pxl_print_html($widget->get_render_attribute_string( $content_key )); ?>><?php pxl_print_html($tabs_content); ?>
+                <div <?php sntravel_print_html($widget->get_render_attribute_string( $content_key )); ?>><?php sntravel_print_html($tabs_content); ?>
                     <div class="item-image scale-hover-x">
                         <?php echo wp_kses_post($thumbnail); ?>
                     </div>

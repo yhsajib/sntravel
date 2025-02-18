@@ -3,7 +3,7 @@
 defined( 'ABSPATH' ) || exit;
 class Pxl_Woo_Query {
 	protected static $instance = null;
-	public $pxl_query_args = array();
+	public $sntravel_query_args = array();
 	public static function instance() {
 		if ( null === self::$instance ) {
 			self::$instance = new self();
@@ -67,7 +67,7 @@ class Pxl_Woo_Query {
 		$args = $wp_query->query_vars;
 
 		if( !$page_shop){
-			$args = $this->pxl_query_args;
+			$args = $this->sntravel_query_args;
 		}
 
 		$sql = [
@@ -184,7 +184,7 @@ class Pxl_Woo_Query {
 		$meta_query = isset( $meta_args['meta_query'] ) ? $meta_args['meta_query'] : array();
 
 		if( !$page_shop){
-			$args = $this->pxl_query_args;
+			$args = $this->sntravel_query_args;
 			 
 			$tax_query  = isset( $args['tax_query'] ) ? $args['tax_query'] : array();
 			$meta_query = isset( $args['meta_query'] ) ? $args['meta_query'] : array();
@@ -264,7 +264,7 @@ class Pxl_Woo_Query {
 		$meta_query = $this->get_main_meta_query();
 
 		if( !$page_shop){
-			$args = $this->pxl_query_args;
+			$args = $this->sntravel_query_args;
 			 
 			$tax_query  = isset( $args['tax_query'] ) ? $args['tax_query'] : array();
 			$meta_query = isset( $args['meta_query'] ) ? $args['meta_query'] : array();
@@ -339,21 +339,21 @@ class Pxl_Woo_Query {
  
 
 	        if (get_query_var('paged')) {
-	            $pxl_paged = get_query_var('paged');
+	            $sntravel_paged = get_query_var('paged');
 	        } elseif (get_query_var('page')) {
-	            $pxl_paged = get_query_var('page');
+	            $sntravel_paged = get_query_var('page');
 	        } elseif (get_query_var('product-page')) {
-	            $pxl_paged = get_query_var('product-page');
+	            $sntravel_paged = get_query_var('product-page');
 	        } else {
-	            $pxl_paged = 1;
+	            $sntravel_paged = 1;
 	        }
 
 	        if ( isset( $_GET['product-page'] ) ) {
-				$pxl_paged = intval( sanitize_text_field( $_GET['product-page'] ) );
+				$sntravel_paged = intval( sanitize_text_field( $_GET['product-page'] ) );
 			}
 	         
 
-	        $pxl_query = new WP_Query(array(
+	        $sntravel_query = new WP_Query(array(
 	            'post_type' => 'product',
 	            'post__in' => array_map('intval', explode(',', $product_ids)),
 	            'tax_query' => array(
@@ -366,7 +366,7 @@ class Pxl_Woo_Query {
 	            ),
 	        ));
 	         
-	        $posts = $pxl_query;
+	        $posts = $sntravel_query;
 
 	        $categories = [];
 
@@ -536,23 +536,23 @@ class Pxl_Woo_Query {
 			}
 			 
 	        if (get_query_var('paged')){ 
-	            $pxl_paged = get_query_var('paged'); 
+	            $sntravel_paged = get_query_var('paged'); 
 	        }elseif(get_query_var('page')){ 
-	            $pxl_paged = get_query_var('page'); 
+	            $sntravel_paged = get_query_var('page'); 
 	        }elseif (get_query_var('product-page')) {
-	            $pxl_paged = get_query_var('product-page');
+	            $sntravel_paged = get_query_var('product-page');
 	        }else{ 
-	            $pxl_paged = 1; 
+	            $sntravel_paged = 1; 
 	        }
 	        if ( isset( $_GET['product-page'] ) ) {
-				$pxl_paged = intval( sanitize_text_field( $_GET['product-page'] ) );
+				$sntravel_paged = intval( sanitize_text_field( $_GET['product-page'] ) );
 			}
-	        if($pxl_paged > 1){
-	            $args['paged'] = $pxl_paged;
+	        if($sntravel_paged > 1){
+	            $args['paged'] = $sntravel_paged;
 	        }
  			 
-	        $pxl_query = new WP_Query($args);
-            $posts = $pxl_query->query($pxl_query->query_vars);
+	        $sntravel_query = new WP_Query($args);
+            $posts = $sntravel_query->query($sntravel_query->query_vars);
 	 
 	        if (empty($categories)) {
 	            $product_categories = get_categories(array( 'taxonomy' => 'product_cat' ));
@@ -565,21 +565,21 @@ class Pxl_Woo_Query {
 	         
 	    }
 	    global $wp_query;
-	    $wp_query = $pxl_query;
+	    $wp_query = $sntravel_query;
 	    global $paged;
-	    $paged = $pxl_paged; 
+	    $paged = $sntravel_paged; 
 
-	    $this->pxl_query_args = $args;
+	    $this->sntravel_query_args = $args;
 	    wp_reset_query(); 
 	    return array(
 	        'posts' => $posts,
 	        'categories' => $categories,
-	        'query' => $pxl_query,
+	        'query' => $sntravel_query,
 	        'args' => $args,
 	        'paged' => $paged,
-	        'max' => $pxl_query->max_num_pages,
-	        'next_link' => next_posts($pxl_query->max_num_pages, false),
-	        'total' => $pxl_query->found_posts,
+	        'max' => $sntravel_query->max_num_pages,
+	        'next_link' => next_posts($sntravel_query->max_num_pages, false),
+	        'total' => $sntravel_query->found_posts,
 	        //'pagination' => $pagination
 	    );
 	 
@@ -705,19 +705,19 @@ class Pxl_Woo_Query {
 
           
         if (get_query_var('paged')){ 
-            $pxl_paged = get_query_var('paged'); 
+            $sntravel_paged = get_query_var('paged'); 
         }elseif(get_query_var('page')){ 
-            $pxl_paged = get_query_var('page'); 
+            $sntravel_paged = get_query_var('page'); 
         }elseif (get_query_var('product-page')) {
-            $pxl_paged = get_query_var('product-page');
+            $sntravel_paged = get_query_var('product-page');
         }else{ 
-            $pxl_paged = 1; 
+            $sntravel_paged = 1; 
         }
         if ( isset( $_GET['product-page'] ) ) {
-			$pxl_paged = intval( sanitize_text_field( $_GET['product-page'] ) );
+			$sntravel_paged = intval( sanitize_text_field( $_GET['product-page'] ) );
 		}
-        if($pxl_paged > 1){
-            $args['paged'] = $pxl_paged;
+        if($sntravel_paged > 1){
+            $args['paged'] = $sntravel_paged;
         }
 
         
@@ -729,32 +729,32 @@ class Pxl_Woo_Query {
 		 	add_filter( 'posts_join', 'basilico_sku_join_filter', 10, 2 );
 		}
 		 
-        $posts = $pxl_query = new WP_Query($args);   $test = "Last SQL-Query: {$posts->request}";
+        $posts = $sntravel_query = new WP_Query($args);   $test = "Last SQL-Query: {$posts->request}";
         
         if( !empty($param_args['sku']) || !empty($param_args['title']) || !empty($param_args['excerpt']) || !empty($param_args['content'])){	 
-	 		pxl_remove_theme_filter( 'posts_where', 'basilico_search_where_product_filter', 10, 2 );
+	 		sntravel_remove_theme_filter( 'posts_where', 'basilico_search_where_product_filter', 10, 2 );
 	 	}
 	 	if( !empty($param_args['sku']) ){	 
-		 	pxl_remove_theme_filter( 'posts_join', 'basilico_sku_join_filter', 10, 2 );
+		 	sntravel_remove_theme_filter( 'posts_join', 'basilico_sku_join_filter', 10, 2 );
 		}
 
           
 	    global $wp_query;
-	    $wp_query = $pxl_query;
+	    $wp_query = $sntravel_query;
 	   
 	    global $paged;
-	    $paged = $pxl_paged; 
+	    $paged = $sntravel_paged; 
 
-	    $this->pxl_query_args = $args;
+	    $this->sntravel_query_args = $args;
 	    wp_reset_query(); 
 	    return array(
 	        'posts' => $posts,
-	        'query' => $pxl_query,
+	        'query' => $sntravel_query,
 	        'args' => $args,
 	        'paged' => $paged,
-	        'max' => $pxl_query->max_num_pages,
-	        'next_link' => next_posts($pxl_query->max_num_pages, false),
-	        'total' => $pxl_query->found_posts,
+	        'max' => $sntravel_query->max_num_pages,
+	        'next_link' => next_posts($sntravel_query->max_num_pages, false),
+	        'total' => $sntravel_query->found_posts,
 	        'test' => $test
 	        //'pagination' => $pagination
 	    );

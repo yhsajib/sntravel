@@ -1,14 +1,14 @@
 <?php
 if (isset($settings['links']) && !empty($settings['links']) && count($settings['links'])) : ?>
-    <div class="pxl-dropdown-links layout-1">
+    <div class="sntravel-dropdown-links layout-1">
         <div class="container-label d-flex align-items-center">
             <?php if (!empty($settings['selected_icon']['value'])) : ?>
                 <div class="box-icon d-flex align-items-center">
-                    <?php \Elementor\Icons_Manager::render_icon($settings['selected_icon'], ['aria-hidden' => 'true', 'class' => 'pxl-dropdown-links pxl-icon'], 'i'); ?>
+                    <?php \Elementor\Icons_Manager::render_icon($settings['selected_icon'], ['aria-hidden' => 'true', 'class' => 'sntravel-dropdown-links sntravel-icon'], 'i'); ?>
                 </div>
             <?php endif; ?>
-            <?php pxl_print_html($settings['container-label']); ?>
-            <div class="dropdown-icon pxli pxli-angle-down"></div>
+            <?php sntravel_print_html($settings['container-label']); ?>
+            <div class="dropdown-icon sntraveli sntraveli-angle-down"></div>
         </div>
         <ul class="links-group <?php echo esc_attr($settings['link_position']); ?>">
             <?php
@@ -29,7 +29,7 @@ if (isset($settings['links']) && !empty($settings['links']) && count($settings['
             ?>
                 <li>
                     <a <?php echo implode(' ', [$link_attributes]); ?>>
-                        <span><?php pxl_print_html($link['text']); ?></span>
+                        <span><?php sntravel_print_html($link['text']); ?></span>
                     </a>
                 </li>
             <?php endforeach; ?>

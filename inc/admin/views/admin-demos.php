@@ -3,7 +3,7 @@
 	<?php 
 	$installed_plugins = get_plugins();
 	$plugins = TGM_Plugin_Activation::$instance->plugins;
-	$pxl_import_demo_id = get_option('pxl_import_demo_id','');
+	$sntravel_import_demo_id = get_option('sntravel_import_demo_id','');
 	$plugin_requires = array();
 	foreach( $plugins as $plugin ){
 		$file_path = $plugin['file_path'];
@@ -16,15 +16,15 @@
 	}  
 	?>
 	<?php 
- 	$dev_mode = apply_filters( 'pxl_set_dev_mode', (defined('DEV_MODE') && DEV_MODE)) ;
+ 	$dev_mode = apply_filters( 'sntravel_set_dev_mode', (defined('DEV_MODE') && DEV_MODE)) ;
 	if ( 'valid' != get_option( sntravel()->get_slug().'_purchase_code_status', false ) && !$dev_mode ) :
 		
 		echo '<div class="error"><p>' .
-				sprintf( wp_kses_post( esc_html__( 'The %s theme needs to be registered. %sRegister Now%s', 'sntravel' ) ), sntravel()->get_name(), '<a href="' . admin_url( 'admin.php?page=pxlart') . '">' , '</a>' ) . '</p></div>';
+				sprintf( wp_kses_post( esc_html__( 'The %s theme needs to be registered. %sRegister Now%s', 'sntravel' ) ), sntravel()->get_name(), '<a href="' . admin_url( 'admin.php?page=sntravelart') . '">' , '</a>' ) . '</p></div>';
 	elseif( !empty($plugin_requires) && sizeof($plugin_requires) >= 1 ):
 
 		echo '<div class="error">';
-		echo sprintf( wp_kses_post( esc_html__( 'Make sure to activate required plugins prior to import a demo to %s. %sActive Now%s', 'sntravel' ) ), sntravel()->get_name(), '<a class="nt-atpli" href="' . admin_url( 'admin.php?page=pxlart-plugins') . '">' , '</a>' );
+		echo sprintf( wp_kses_post( esc_html__( 'Make sure to activate required plugins prior to import a demo to %s. %sActive Now%s', 'sntravel' ) ), sntravel()->get_name(), '<a class="nt-atpli" href="' . admin_url( 'admin.php?page=sntravelart-plugins') . '">' , '</a>' );
 		echo '<ul class="plugin-not-active">';
 			foreach( $plugin_requires as $pr ){
 				echo '<li>'.$pr.'</li>';
@@ -47,7 +47,7 @@
 
 		require locate_template( 'inc/admin/demo-data/demo-config.php' );
 		$i = 0;
-		wp_localize_script( 'pxlart-admin', 'pxlart_demos', $demos );
+		wp_localize_script( 'sntravelart-admin', 'sntravelart_demos', $demos );
 
 		?>
 		<div id="sntravel-demos" class="sntravel-demos sntravel-solid-wrap">

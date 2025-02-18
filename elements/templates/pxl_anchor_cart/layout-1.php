@@ -7,7 +7,7 @@ $custom_cls = $widget->get_setting('custom_class','');
 $style = $widget->get_setting('cart_style', 'layout-1');
 
 $wrap_cls = [
-	'pxl-anchor-cart d-inline-flex align-items-center align-content-center relative',
+	'sntravel-anchor-cart d-inline-flex align-items-center align-content-center relative',
 	$link_target,
 	$layout_type,
 	$custom_cls
@@ -16,7 +16,7 @@ $wrap_cls = [
 $cart_page = $link_target == 'cart-page' ? true : false;
 $cart_page = (is_cart() || is_checkout()) ? true : $cart_page;
 
-$target = '.pxl-cart-dropdown';
+$target = '.sntravel-cart-dropdown';
 
 ?>
 <div class="<?php echo implode(' ', $wrap_cls) ?>">
@@ -25,12 +25,12 @@ $target = '.pxl-cart-dropdown';
 	?>
 	<a class="cart-anchor" href="<?php echo esc_url($cart_page_url) ?>">
 	<?php else: ?>
-	<a class="pxl-anchor cart-anchor" href="#" data-target="<?php echo esc_attr($target) ?>">
+	<a class="sntravel-anchor cart-anchor" href="#" data-target="<?php echo esc_attr($target) ?>">
 	<?php endif;
 	if( $layout_type == 'layout-text'){
-		echo '<span class="pxl-anchor-text d-inline-flex transition">'.$settings['text_title'].'</span>';
+		echo '<span class="sntravel-anchor-text d-inline-flex transition">'.$settings['text_title'].'</span>';
 	} else {
-		echo '<span class="pxl-anchor-icon d-inline-flex transition">';
+		echo '<span class="sntravel-anchor-icon d-inline-flex transition">';
 		\Elementor\Icons_Manager::render_icon( $settings['selected_icon'], [ 'aria-hidden' => 'true', 'class' => '' ], 'span' );
 		echo '</span>';
 	}
@@ -45,8 +45,8 @@ $target = '.pxl-cart-dropdown';
 	<?php endif; ?>	
 	</a>
 	<?php if( $link_target == 'cart-dropdown' && !\Elementor\Plugin::$instance->editor->is_edit_mode()): ?>
-		<div class="pxl-cart-dropdown widget_shopping_cart">
-			<div class="pxl-cart-widget <?php echo esc_attr($style) ?>">
+		<div class="sntravel-cart-dropdown widget_shopping_cart">
+			<div class="sntravel-cart-widget <?php echo esc_attr($style) ?>">
 				<?php woocommerce_mini_cart(); ?>
 				<div class="cart-content-footer">
 					<div class="cart-footer-wrap">

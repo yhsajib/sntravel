@@ -17,13 +17,13 @@ if ( ! class_exists( 'Merlin' ) ) {
 /**
  * Set directory locations, text strings, and settings.
  */
-$pxl_server_info = apply_filters( 'pxl_server_info', ['docs_url' => '', 'email_support' => ''] ) ;
+$sntravel_server_info = apply_filters( 'sntravel_server_info', ['docs_url' => '', 'email_support' => ''] ) ;
 $wizard = new Merlin(
 
 	$config = array(
 		'directory'            => 'merlin', // Location / directory where Merlin WP is placed in your theme.
-		'merlin_url'           => 'pxlart-setup', // The wp-admin page slug where Merlin WP loads.
-		'parent_slug'          => 'pxlart', // The wp-admin parent page slug for the admin menu item.
+		'merlin_url'           => 'sntravelart-setup', // The wp-admin page slug where Merlin WP loads.
+		'parent_slug'          => 'sntravelart', // The wp-admin parent page slug for the admin menu item.
 		'capability'           => 'manage_options', // The capability required for this menu to be displayed to the user.
 		'child_action_btn_url' => 'https://codex.wordpress.org/child_themes', // URL for the 'child-action-link'.
 		'dev_mode'             => false, // Enable development mode for testing.
@@ -96,8 +96,8 @@ $wizard = new Merlin(
 		'ready%s'                  => esc_html__( 'Your theme has been all set up. Enjoy your new theme by %s.', 'sntravel' ),
 		'ready-action-link'        => esc_html__( 'Extras', 'sntravel' ),
 		'ready-big-button'         => esc_html__( 'View your website', 'sntravel' ),
-		'ready-link-1'             => sprintf( '<a href="%1$s" target="_blank">%2$s</a>', $pxl_server_info['docs_url'], esc_html__( 'Help center', 'sntravel' ) ),
-		'ready-link-2'             => sprintf( '<a href="%1$s" target="_blank">%2$s</a>', $pxl_server_info['email_support'], esc_html__( 'Get Theme Support', 'sntravel' ) ),
-		'ready-link-3'             => sprintf( '<a href="%1$s">%2$s</a>', admin_url( 'admin.php?page=pxlart-theme-options' ), esc_html__( 'Theme Options', 'sntravel' ) ),
+		'ready-link-1'             => sprintf( '<a href="%1$s" target="_blank">%2$s</a>', $sntravel_server_info['docs_url'], esc_html__( 'Help center', 'sntravel' ) ),
+		'ready-link-2'             => sprintf( '<a href="%1$s" target="_blank">%2$s</a>', $sntravel_server_info['email_support'], esc_html__( 'Get Theme Support', 'sntravel' ) ),
+		'ready-link-3'             => sprintf( '<a href="%1$s">%2$s</a>', admin_url( 'admin.php?page=sntravelart-theme-options' ), esc_html__( 'Theme Options', 'sntravel' ) ),
 	)
 );

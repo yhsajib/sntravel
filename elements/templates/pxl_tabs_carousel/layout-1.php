@@ -24,7 +24,7 @@ $widget->add_render_attribute('link_id', 'id', $link_to_tabs);
 
 <div class="sntravel-tabs-carousel-container">
     <div class="sntravel-swiper-slider-wrap sntravel-carousel-inner">
-        <div class="sntravel-tabs-carousel overflow-hidden" <?php pxl_print_html($widget->get_render_attribute_string('link_id')); ?> <?php pxl_print_html($widget->get_render_attribute_string('opts')); ?>>
+        <div class="sntravel-tabs-carousel overflow-hidden" <?php sntravel_print_html($widget->get_render_attribute_string('link_id')); ?> <?php sntravel_print_html($widget->get_render_attribute_string('opts')); ?>>
             <?php foreach ($tabs_list_carousel as $key => $tab_carousel) : ?>
                 <div class="sntravel-carousel-item">
                     <?php
@@ -44,7 +44,7 @@ $widget->add_render_attribute('link_id', 'id', $link_to_tabs);
                         $widget->add_inline_editing_attributes($content_key_carousel, 'advanced');
                     }
                     ?>
-                    <?php pxl_print_html($tabs_content_carousel); ?>
+                    <?php sntravel_print_html($tabs_content_carousel); ?>
                 </div>
             <?php endforeach; ?>
         </div>

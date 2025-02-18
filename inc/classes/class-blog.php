@@ -112,19 +112,19 @@ if (!class_exists('Sntravel_Blog')) {
                     <div class="meta-inner d-flex">
                         <?php if ($post_date_on) : ?>
                             <div class="post-date d-flex align-items-center">
-                                <i class="pxli pxli-calendar-minus"></i>
+                                <i class="sntraveli sntraveli-calendar-minus"></i>
                                 <span><?php echo get_the_date($post_id); ?></span>
                             </div>
                         <?php endif; ?>
                         <?php if ($post_author_on) : ?>
                             <div class="post-author d-flex align-items-center">
-                                <i class="pxli pxli-user"></i>
+                                <i class="sntraveli sntraveli-user"></i>
                                 <span><?php echo esc_html__('By', 'sntravel'); ?> <?php the_author_posts_link(); ?></span>
                             </div>
                         <?php endif; ?>
                         <?php if ($post_categories_on && has_category()) : ?>
                             <div class="post-category d-flex align-items-center">
-                                <i class="pxli pxli-folder1"></i>
+                                <i class="sntraveli sntraveli-folder1"></i>
                                 <span><?php the_terms($post_id, 'category', '', ', '); ?></span>
                             </div>
                         <?php endif; ?>
@@ -132,7 +132,7 @@ if (!class_exists('Sntravel_Blog')) {
                         $posttags = get_the_tags($post_id);
                         if ($post_tags_on && $posttags) : ?>
                             <div class="post-tags d-flex align-items-center">
-                                <i class="pxli pxli-tag1"></i>
+                                <i class="sntraveli sntraveli-tag1"></i>
                                 <?php if ($posttags) {
                                     $last_key = array_key_last($posttags);
                                     foreach ($posttags as $key => $tag) {
@@ -162,7 +162,7 @@ if (!class_exists('Sntravel_Blog')) {
                     <div class="meta-inner d-flex">
                         <?php if ($post_date_on) : ?>
                             <div class="post-date d-flex align-items-center">
-                                <i class="pxli pxli-calendar-days"></i>
+                                <i class="sntraveli sntraveli-calendar-days"></i>
                                 <span><?php echo get_the_date($post_id); ?></span>
                             </div>
                         <?php endif; ?>
@@ -170,7 +170,7 @@ if (!class_exists('Sntravel_Blog')) {
                         $posttags = get_the_tags($post_id);
                         if ($post_tags_on && $posttags) : ?>
                             <div class="post-tags d-flex align-items-center">
-                                <i class="pxli pxli-tag1"></i>
+                                <i class="sntraveli sntraveli-tag1"></i>
                                 <?php if ($posttags) {
                                     $last_key = array_key_last($posttags);
                                     foreach ($posttags as $key => $tag) {
@@ -184,13 +184,13 @@ if (!class_exists('Sntravel_Blog')) {
                         <?php endif; ?>
                         <?php if ($post_categories_on && has_category()) : ?>
                             <div class="post-category d-flex align-items-center">
-                                <i class="pxli pxli-folder1"></i>
+                                <i class="sntraveli sntraveli-folder1"></i>
                                 <span><?php the_terms($post_id, 'category', '', ', '); ?></span>
                             </div>
                         <?php endif; ?>
                         <?php if ($post_author_on) : ?>
                             <div class="post-author d-flex align-items-center">
-                                <i class="pxli pxli-user"></i>
+                                <i class="sntraveli sntraveli-user"></i>
                                 <span><?php echo esc_html__('By', 'sntravel'); ?> <?php the_author_posts_link(); ?></span>
                             </div>
                         <?php endif; ?>
@@ -201,9 +201,9 @@ if (!class_exists('Sntravel_Blog')) {
 
         public function get_excerpt($length = 25)
         {
-            $pxl_the_excerpt = get_the_excerpt();
-            if (!empty($pxl_the_excerpt)) {
-                echo esc_html(wp_trim_words($pxl_the_excerpt, $length));
+            $sntravel_the_excerpt = get_the_excerpt();
+            if (!empty($sntravel_the_excerpt)) {
+                echo esc_html(wp_trim_words($sntravel_the_excerpt, $length));
             } else {
                 echo wp_kses_post($this->get_excerpt_more($length));
             }
@@ -343,19 +343,19 @@ if (!class_exists('Sntravel_Blog')) {
                     <div class="meta-inner d-flex">
                         <?php if ($post_date_on) : ?>
                             <div class="post-date d-flex align-items-center">
-                                <i class="pxli pxli-calendar-minus"></i>
+                                <i class="sntraveli sntraveli-calendar-minus"></i>
                                 <span><?php echo get_the_date(); ?></span>
                             </div>
                         <?php endif; ?>
                         <?php if ($post_author_on) : ?>
                             <div class="post-author d-flex align-items-center">
-                                <i class="pxli pxli-user"></i>
+                                <i class="sntraveli sntraveli-user"></i>
                                 <span><?php echo esc_html__('By', 'sntravel'); ?> <?php the_author_posts_link(); ?></span>
                             </div>
                         <?php endif; ?>
                         <?php if ($post_categories_on && has_category()) : ?>
                             <div class="post-category d-flex align-items-center">
-                                <i class="pxli pxli-folder1"></i>
+                                <i class="sntraveli sntraveli-folder1"></i>
                                 <span><?php the_terms(get_the_ID(), 'category', '', ', '); ?></span>
                             </div>
                         <?php endif; ?>
@@ -363,7 +363,7 @@ if (!class_exists('Sntravel_Blog')) {
                         $posttags = get_the_tags(get_the_ID());
                         if ($post_tags_on && $posttags) : ?>
                             <div class="post-tags d-flex align-items-center">
-                                <i class="pxli pxli-tag1"></i>
+                                <i class="sntraveli sntraveli-tag1"></i>
                                 <?php if ($posttags) {
                                     $last_key = array_key_last($posttags);
                                     foreach ($posttags as $key => $tag) {
@@ -393,7 +393,7 @@ if (!class_exists('Sntravel_Blog')) {
                     <div class="meta-inner d-flex">
                         <?php if ($post_date_on) : ?>
                             <div class="post-date d-flex align-items-center">
-                                <i class="pxli pxli-calendar-days"></i>
+                                <i class="sntraveli sntraveli-calendar-days"></i>
                                 <span><?php echo get_the_date(); ?></span>
                             </div>
                         <?php endif; ?>
@@ -401,7 +401,7 @@ if (!class_exists('Sntravel_Blog')) {
                         $posttags = get_the_tags(get_the_ID());
                         if ($post_tags_on && $posttags) : ?>
                             <div class="post-tags d-flex align-items-center">
-                                <i class="pxli pxli-tag1"></i>
+                                <i class="sntraveli sntraveli-tag1"></i>
                                 <?php
                                 $last_key = array_key_last($posttags);
                                 foreach ($posttags as $key => $tag) {
@@ -415,13 +415,13 @@ if (!class_exists('Sntravel_Blog')) {
                         <?php endif; ?>
                         <?php if ($post_categories_on && has_category()) : ?>
                             <div class="post-category d-flex align-items-center">
-                                <i class="pxli pxli-folder1"></i>
+                                <i class="sntraveli sntraveli-folder1"></i>
                                 <span><?php the_terms(get_the_ID(), 'category', '', ', '); ?></span>
                             </div>
                         <?php endif; ?>
                         <?php if ($post_author_on) : ?>
                             <div class="post-author d-flex align-items-center">
-                                <i class="pxli pxli-user"></i>
+                                <i class="sntraveli sntraveli-user"></i>
                                 <span><?php echo esc_html__('By', 'sntravel'); ?> <?php the_author_posts_link(); ?></span>
                             </div>
                         <?php endif; ?>
@@ -443,7 +443,7 @@ if (!class_exists('Sntravel_Blog')) {
                     <div class="meta-inner d-flex justify-content-center">
                         <?php if ($post_author_on) : ?>
                             <div class="post-author d-flex align-items-center">
-                                <i class="pxli pxli-user"></i>
+                                <i class="sntraveli sntraveli-user"></i>
                                 <span><?php echo esc_html__('By', 'sntravel'); ?> <?php the_author_posts_link(); ?></span>
                             </div>
                         <?php endif; ?>
@@ -451,7 +451,7 @@ if (!class_exists('Sntravel_Blog')) {
                         $posttags = get_the_tags(get_the_ID());
                         if ($post_tags_on && $posttags) : ?>
                             <div class="post-tags d-flex align-items-center">
-                                <i class="pxli pxli-tag1"></i>
+                                <i class="sntraveli sntraveli-tag1"></i>
                                 <?php
                                 $last_key = array_key_last($posttags);
                                 foreach ($posttags as $key => $tag) {
@@ -465,13 +465,13 @@ if (!class_exists('Sntravel_Blog')) {
                         <?php endif; ?>
                         <?php if ($post_categories_on && has_category()) : ?>
                             <div class="post-category d-flex align-items-center">
-                                <i class="pxli pxli-folder1"></i>
+                                <i class="sntraveli sntraveli-folder1"></i>
                                 <span><?php the_terms(get_the_ID(), 'category', '', ', '); ?></span>
                             </div>
                         <?php endif; ?>
                         <?php if ($post_date_on) : ?>
                             <div class="post-date d-flex align-items-center">
-                                <i class="pxli pxli-calendar3"></i>
+                                <i class="sntraveli sntraveli-calendar3"></i>
                                 <span><?php echo get_the_date(); ?></span>
                             </div>
                         <?php endif; ?>
@@ -496,13 +496,13 @@ if (!class_exists('Sntravel_Blog')) {
                         <?php endif; ?>
                         <?php if ($post_categories_on && has_category()) : ?>
                             <div class="post-category d-flex align-items-center">
-                                <i class="pxli pxli-ice-cream"></i>
+                                <i class="sntraveli sntraveli-ice-cream"></i>
                                 <span><?php the_terms(get_the_ID(), 'category', '', ', '); ?></span>
                             </div>
                         <?php endif; ?>
                         <?php if ($post_date_on) : ?>
                             <div class="post-date d-flex align-items-center">
-                                <i class="pxli pxli-ice-cream"></i>
+                                <i class="sntraveli sntraveli-ice-cream"></i>
                                 <span><?php echo get_the_date('j, M Y'); ?></span>
                             </div>
                         <?php endif; ?>
@@ -523,19 +523,19 @@ if (!class_exists('Sntravel_Blog')) {
                     <div class="meta-inner d-flex">
                         <?php if ($post_author_on) : ?>
                             <div class="post-author d-flex align-items-center">
-                                <i class="pxli pxli-user"></i>
+                                <i class="sntraveli sntraveli-user"></i>
                                 <span><?php echo esc_html__('By', 'sntravel'); ?> <?php the_author_posts_link(); ?></span>
                             </div>
                         <?php endif; ?>
                         <?php if ($post_categories_on && has_category()) : ?>
                             <div class="post-category d-flex align-items-center">
-                                <i class="pxli pxli-tag1"></i>
+                                <i class="sntraveli sntraveli-tag1"></i>
                                 <span><?php the_terms(get_the_ID(), 'category', '', ', '); ?></span>
                             </div>
                         <?php endif; ?>
                         <?php if ($post_date_on) : ?>
                             <div class="post-date d-flex align-items-center">
-                                <i class="pxli pxli-calendar3"></i>
+                                <i class="sntraveli sntraveli-calendar3"></i>
                                 <span><?php echo get_the_date('j M, Y'); ?></span>
                             </div>
                         <?php endif; ?>
@@ -570,22 +570,22 @@ if (!class_exists('Sntravel_Blog')) {
                     <div class="d-flex">
                         <?php if (in_array('facebook', $share_icons)) : ?>
                             <div class="social-item">
-                                <a class="sntravel-icon icon-facebook pxli-facebook-f" title="<?php echo esc_attr__('Facebook', 'sntravel'); ?>" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_the_permalink($post_id)); ?>"></a>
+                                <a class="sntravel-icon icon-facebook sntraveli-facebook-f" title="<?php echo esc_attr__('Facebook', 'sntravel'); ?>" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_the_permalink($post_id)); ?>"></a>
                             </div>
                         <?php endif; ?>
                         <?php if (in_array('twitter', $share_icons)) : ?>
                             <div class="social-item">
-                                <a class="sntravel-icon icon-twitter pxli-twitter" title="<?php echo esc_attr__('Twitter', 'sntravel'); ?>" target="_blank" href="https://twitter.com/intent/tweet?original_referer=<?php echo urldecode(home_url('/')); ?>&url=<?php echo urlencode(get_the_permalink($post_id)); ?>&text=<?php the_title(); ?>%20"></a>
+                                <a class="sntravel-icon icon-twitter sntraveli-twitter" title="<?php echo esc_attr__('Twitter', 'sntravel'); ?>" target="_blank" href="https://twitter.com/intent/tweet?original_referer=<?php echo urldecode(home_url('/')); ?>&url=<?php echo urlencode(get_the_permalink($post_id)); ?>&text=<?php the_title(); ?>%20"></a>
                             </div>
                         <?php endif; ?>
                         <?php if (in_array('linkedin', $share_icons)) : ?>
                             <div class="social-item">
-                                <a class="sntravel-icon icon-linkedin pxli-linkedin-in" title="<?php echo esc_attr__('Linkedin', 'sntravel'); ?>" target="_blank" href="https://www.linkedin.com/cws/share?url=<?php echo urlencode(get_the_permalink($post_id)); ?>"></a>
+                                <a class="sntravel-icon icon-linkedin sntraveli-linkedin-in" title="<?php echo esc_attr__('Linkedin', 'sntravel'); ?>" target="_blank" href="https://www.linkedin.com/cws/share?url=<?php echo urlencode(get_the_permalink($post_id)); ?>"></a>
                             </div>
                         <?php endif; ?>
                         <?php if (in_array('pinterest', $share_icons)) : ?>
                             <div class="social-item">
-                                <a class="sntravel-icon icon-pinterest pxli-pinterest-p" title="<?php echo esc_attr__('Pinterest', 'sntravel'); ?>" target="_blank" href="https://pinterest.com/pin/create/button/?url=<?php echo urlencode(get_the_post_thumbnail_url($post_id, 'full')); ?>&media=&description=<?php echo urlencode(the_title_attribute(array('echo' => false, 'post' => $post))); ?>"></a>
+                                <a class="sntravel-icon icon-pinterest sntraveli-pinterest-p" title="<?php echo esc_attr__('Pinterest', 'sntravel'); ?>" target="_blank" href="https://pinterest.com/pin/create/button/?url=<?php echo urlencode(get_the_post_thumbnail_url($post_id, 'full')); ?>&media=&description=<?php echo urlencode(the_title_attribute(array('echo' => false, 'post' => $post))); ?>"></a>
                             </div>
                         <?php endif; ?>
                     </div>
@@ -616,7 +616,7 @@ if (!class_exists('Sntravel_Blog')) {
                     $prev_img_id = get_post_thumbnail_id($previous_post->ID);
                     $prev_img_url = wp_get_attachment_image_src($prev_img_id, 'thumbnail');
 
-                    $img = pxl_get_image_by_size(array(
+                    $img = sntravel_get_image_by_size(array(
                         'attach_id'  => $prev_img_id,
                         'thumb_size' => '108x108',
                         'class' => 'no-lazyload',
@@ -656,7 +656,7 @@ if (!class_exists('Sntravel_Blog')) {
                     $next_img_id = get_post_thumbnail_id($next_post->ID);
                     $next_img_url = wp_get_attachment_image_src($next_img_id, 'thumbnail');
 
-                    $img = pxl_get_image_by_size(array(
+                    $img = sntravel_get_image_by_size(array(
                         'attach_id'  => $next_img_id,
                         'thumb_size' => '108x108',
                         'class' => 'no-lazyload',

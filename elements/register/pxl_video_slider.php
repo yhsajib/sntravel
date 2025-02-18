@@ -1,10 +1,10 @@
 <?php
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name'       => 'pxl_video_slider',
+        'name'       => 'sntravel_video_slider',
         'title'      => esc_html__('PXL Video Slider', 'sntravel'),
         'icon'       => 'eicon-slider-video',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'scripts'    => array(
             'swiper',
             'sntravel-swiper',
@@ -24,7 +24,7 @@ pxl_add_custom_widget(
                             'options' => [
                                 '1' => [
                                     'label' => esc_html__('Layout 1', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_video_slider-1.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_video_slider-1.jpg'
                                 ]
                             ],
                         )

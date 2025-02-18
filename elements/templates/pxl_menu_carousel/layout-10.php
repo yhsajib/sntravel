@@ -33,16 +33,16 @@ $opts = [
   
 $img_size = !empty($img_size) ? $img_size : '443x413';
 $widget->add_render_attribute( 'carousel', [
-    'class'         => 'pxl-swiper-container',
+    'class'         => 'sntravel-swiper-container',
     'dir'           => is_rtl() ? 'rtl' : 'ltr',
     'data-settings' => wp_json_encode($opts)
 ]);
 ?>
 <?php if(isset($list_food_2) && !empty($list_food_2) && count($list_food_2)): ?>
-    <div class="pxl-swiper-slider pxl-menu-carousel layout-<?php echo esc_attr($settings['layout'])?>">
-        <div class="pxl-swiper-slider-wrap pxl-carousel-inner relative">
-            <div <?php pxl_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
-                <div class="pxl-swiper-wrapper swiper-wrapper">
+    <div class="sntravel-swiper-slider sntravel-menu-carousel layout-<?php echo esc_attr($settings['layout'])?>">
+        <div class="sntravel-swiper-slider-wrap sntravel-carousel-inner relative">
+            <div <?php sntravel_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
+                <div class="sntravel-swiper-wrapper swiper-wrapper">
                 <?php foreach ($list_food_2 as $key => $value) :
                     $link_food_2 = isset($value['link_food_2']) ? $value['link_food_2'] : '';
                     $link_key = $widget->get_repeater_setting_key( 'content', 'value', $key );
@@ -59,11 +59,11 @@ $widget->add_render_attribute( 'carousel', [
                     }
                     $link_attributes = $widget->get_render_attribute_string( $link_key );
                 ?>
-                    <div class="pxl-swiper-slide swiper-slide">
+                    <div class="sntravel-swiper-slide swiper-slide">
                         <div class="item-inner">
                             <?php if (!empty( $value['selected_img_2']['id'])) :
                                 $thumbnail = '';
-                                $img  = pxl_get_image_by_size(array(
+                                $img  = sntravel_get_image_by_size(array(
                                     'attach_id'  => $value['selected_img_2']['id'],
                                     'thumb_size' => $img_size,
                                     'class' => 'no-lazyload',
@@ -78,12 +78,12 @@ $widget->add_render_attribute( 'carousel', [
                                 <?php if (!empty($value['title_food_2'])) : ?>
                                     <div class="menu-title">
                                         <span>
-                                            <?php echo pxl_print_html($value['title_food_2']); ?>
+                                            <?php echo sntravel_print_html($value['title_food_2']); ?>
                                         </span>
                                     </div>
                                 <?php endif; ?>
                                 <?php if (!empty($value['description_food_2'])) : ?>
-                                    <div class="pxl-divider"></div>
+                                    <div class="sntravel-divider"></div>
                                     <div class="menu-description">
                                         <?php echo esc_html($value['description_food_2']); ?>
                                     </div>
@@ -104,7 +104,7 @@ $widget->add_render_attribute( 'carousel', [
                                 <?php if (!empty($value['title_food_2'])) : ?>
                                     <div class="menu-title">
                                         <span>
-                                            <?php echo pxl_print_html($value['title_food_2']); ?>
+                                            <?php echo sntravel_print_html($value['title_food_2']); ?>
                                         </span>
                                     </div>
                                 <?php endif;?>
@@ -115,7 +115,7 @@ $widget->add_render_attribute( 'carousel', [
                 </div>
             </div>
             <?php  basilico_arrow_template($settings); ?>
-            <div class="pxl-swiper-dots"></div>
+            <div class="sntravel-swiper-dots"></div>
         </div>
     </div>
 <?php endif; ?>

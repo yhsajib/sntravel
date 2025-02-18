@@ -1,11 +1,11 @@
 <?php
 // Register Fancy Box Widget
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name'       => 'pxl_fancy_box',
+        'name'       => 'sntravel_fancy_box',
         'title'      => esc_html__( 'PXL Fancy Box', 'sntravel' ),
         'icon'       => 'eicon-icon-box',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'params' => array(
             'sections' => array(
                 array(
@@ -21,63 +21,63 @@ pxl_add_custom_widget(
                             'options' => [
                                 '1' => [
                                     'label' => esc_html__( 'Layout 1', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_fancy_box-1.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_fancy_box-1.jpg'
                                 ],
                                 '2' => [
                                     'label' => esc_html__( 'Layout 2', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_fancy_box-2.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_fancy_box-2.jpg'
                                 ],
                                 '3' => [
                                     'label' => esc_html__( 'Layout 3', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_fancy_box-3.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_fancy_box-3.jpg'
                                 ],
                                 '4' => [
                                     'label' => esc_html__( 'Layout 4', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_fancy_box-4.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_fancy_box-4.jpg'
                                 ],
                                 '5' => [
                                     'label' => esc_html__( 'Layout 5', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_fancy_box-5.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_fancy_box-5.jpg'
                                 ],
                                 '6' => [
                                     'label' => esc_html__( 'Layout 6', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_fancy_box-6.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_fancy_box-6.jpg'
                                 ],
                                 '7' => [
                                     'label' => esc_html__( 'Layout 7', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_fancy_box-7.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_fancy_box-7.jpg'
                                 ],
                                 '8' => [
                                     'label' => esc_html__( 'Layout 8', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_fancy_box-8.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_fancy_box-8.jpg'
                                 ],
                                 '9' => [
                                     'label' => esc_html__( 'Layout 9', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_fancy_box-9.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_fancy_box-9.jpg'
                                 ],
                                 '10' => [
                                     'label' => esc_html__( 'Layout 10', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_fancy_box-10.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_fancy_box-10.jpg'
                                 ],
                                 '11' => [
                                     'label' => esc_html__( 'Layout 11', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_fancy_box-11.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_fancy_box-11.jpg'
                                 ],
                                 '12' => [
                                     'label' => esc_html__( 'Layout 12', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_fancy_box-12.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_fancy_box-12.jpg'
                                 ],
                                 '13' => [
                                     'label' => esc_html__( 'Layout 13', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_fancy_box-13.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_fancy_box-13.jpg'
                                 ],
                                 '14' => [
                                     'label' => esc_html__( 'Layout 14', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_fancy_box-14.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_fancy_box-14.jpg'
                                 ],
                                 '15' => [
                                     'label' => esc_html__( 'Layout 15', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_fancy_box-15.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_fancy_box-15.jpg'
                                 ],
                             ]
                         )
@@ -105,8 +105,8 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box .box-icon i' => 'font-size: {{SIZE}}{{UNIT}};',
-                                '{{WRAPPER}} .pxl-fancy-box .box-icon > svg' => 'width: {{SIZE}}{{UNIT}} !important;',
+                                '{{WRAPPER}} .sntravel-fancy-box .box-icon i' => 'font-size: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-fancy-box .box-icon > svg' => 'width: {{SIZE}}{{UNIT}} !important;',
                             ],
                             'condition' => ['layout!' => ['9', '14', '15']]
                         ),
@@ -121,8 +121,8 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box .box-icon .pxl-icon i, {{WRAPPER}} .pxl-fancy-box.layout-14 .box-icon i' => 'font-size: {{SIZE}}{{UNIT}};',
-                                '{{WRAPPER}} .pxl-fancy-box .box-icon .pxl-icon svg, {{WRAPPER}} .pxl-fancy-box.layout-14 .box-icon > svg' => 'width: {{SIZE}}{{UNIT}} !important;',
+                                '{{WRAPPER}} .sntravel-fancy-box .box-icon .sntravel-icon i, {{WRAPPER}} .sntravel-fancy-box.layout-14 .box-icon i' => 'font-size: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-fancy-box .box-icon .sntravel-icon svg, {{WRAPPER}} .sntravel-fancy-box.layout-14 .box-icon > svg' => 'width: {{SIZE}}{{UNIT}} !important;',
                             ],
                             'condition' => ['layout' => ['9', '14', '15']],
                             'control_type' => 'responsive',
@@ -133,8 +133,8 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::DIMENSIONS,
                             'size_units' => [ 'px' ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box .box-icon i' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                                '{{WRAPPER}} .pxl-fancy-box .box-icon svg' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-fancy-box .box-icon i' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-fancy-box .box-icon svg' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                             'control_type' => 'responsive',
                         ),
@@ -149,7 +149,7 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box .box-inner' => 'max-width: {{SIZE}}{{UNIT}}; margin: 0 auto;',
+                                '{{WRAPPER}} .sntravel-fancy-box .box-inner' => 'max-width: {{SIZE}}{{UNIT}}; margin: 0 auto;',
                             ],
                         ),
                         array(
@@ -166,7 +166,7 @@ pxl_add_custom_widget(
                                 'layout'    => ['7']
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box.layout-7' => 'background-image: url( {{URL}} );',
+                                '{{WRAPPER}} .sntravel-fancy-box.layout-7' => 'background-image: url( {{URL}} );',
                             ],
                         ),
                         array(
@@ -266,7 +266,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Icon Background', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box .box-icon' => 'background-color: {{VALUE}};'
+                                '{{WRAPPER}} .sntravel-fancy-box .box-icon' => 'background-color: {{VALUE}};'
                             ],
                             'condition' => [
                                 'layout!' => ['9','10','11','12']
@@ -277,7 +277,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Icon Background Hover', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box .box-icon:hover::after' => 'color: {{VALUE}};'
+                                '{{WRAPPER}} .sntravel-fancy-box .box-icon:hover::after' => 'color: {{VALUE}};'
                             ],
                             'condition' => [
                                 'layout' => ['13']
@@ -289,7 +289,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::DIMENSIONS,
                             'size_units' => [ 'px' ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box .box-inner' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-fancy-box .box-inner' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                             'control_type' => 'responsive',
                             'condition' => [
@@ -302,7 +302,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::DIMENSIONS,
                             'size_units' => [ 'px' ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box .box-inner' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-fancy-box .box-inner' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                             'control_type' => 'responsive',
                             'condition' => [
@@ -315,8 +315,8 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'default' => '',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box .box-icon i' => 'color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-fancy-box .box-icon svg' => 'fill: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-fancy-box .box-icon i' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-fancy-box .box-icon svg' => 'fill: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -325,7 +325,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'default' => '',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box .box-subtitle' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-fancy-box .box-subtitle' => 'color: {{VALUE}};',
                             ],
                             'condition' => [
                                 'layout!' => ['11','12','15']
@@ -336,7 +336,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Sub Title Typography', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-fancy-box .box-subtitle',
+                            'selector' => '{{WRAPPER}} .sntravel-fancy-box .box-subtitle',
                             'condition' => [
                                 'layout!' => ['11','12','15']
                             ]
@@ -347,9 +347,9 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'default' => '',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box .box-title' => 'color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-fancy-box .box-title a' => 'color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-fancy-box .box-title a::after' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-fancy-box .box-title' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-fancy-box .box-title a' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-fancy-box .box-title a::after' => 'background-color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -357,7 +357,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Title Typography', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-fancy-box .box-title',
+                            'selector' => '{{WRAPPER}} .sntravel-fancy-box .box-title',
                         ),
                         array(
                             'name' => 'title_margin',
@@ -365,7 +365,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::DIMENSIONS,
                             'size_units' => [ 'px' ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box .box-title' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-fancy-box .box-title' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                             'control_type' => 'responsive',
                             'condition' => [
@@ -384,7 +384,7 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box .box-title' => 'max-width: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-fancy-box .box-title' => 'max-width: {{SIZE}}{{UNIT}};',
                             ],
                             'condition' => [
                                 'layout' => ['9','10']
@@ -396,7 +396,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'default' => '',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box .box-description' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-fancy-box .box-description' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -404,14 +404,14 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Description Typography', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-fancy-box .box-description',
+                            'selector' => '{{WRAPPER}} .sntravel-fancy-box .box-description',
                         ),
                         array(
                             'name' => 'box_background',
                             'label' => esc_html__('Box Background', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box .box-inner' => 'background-color: {{VALUE}};'
+                                '{{WRAPPER}} .sntravel-fancy-box .box-inner' => 'background-color: {{VALUE}};'
                             ],
                             'condition' => [
                                 'layout!' => ['6','11', '15']
@@ -422,7 +422,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Boxshadow Color', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box .box-inner' => 'box-shadow: 0 10px 0 {{VALUE}};'
+                                '{{WRAPPER}} .sntravel-fancy-box .box-inner' => 'box-shadow: 0 10px 0 {{VALUE}};'
                             ],
                             'condition' => [
                                 'layout' => '9'
@@ -433,7 +433,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Border Inner Color', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box.layout-6 .back-card:before,{{WRAPPER}} .pxl-fancy-box.layout-12 .box-inner' => 'border-color: {{VALUE}};'
+                                '{{WRAPPER}} .sntravel-fancy-box.layout-6 .back-card:before,{{WRAPPER}} .sntravel-fancy-box.layout-12 .box-inner' => 'border-color: {{VALUE}};'
                             ],
                             'condition' => [
                                 'layout!' => ['6','9','10','11','15']
@@ -444,7 +444,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Border Hover Color', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box .box-inner:hover' => 'border-color: {{VALUE}};'
+                                '{{WRAPPER}} .sntravel-fancy-box .box-inner:hover' => 'border-color: {{VALUE}};'
                             ],
                             'condition' => [
                                 'layout' => ['14']
@@ -472,7 +472,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Button Text Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box .btn' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-fancy-box .btn' => 'color: {{VALUE}};',
                             ],
                             'condition' => [
                                 'layout'    => ['2']
@@ -483,7 +483,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Button Text Color Hover', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box .btn:hover' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-fancy-box .btn:hover' => 'color: {{VALUE}};',
                             ],
                             'condition' => [
                                 'layout'    => ['2']
@@ -494,8 +494,8 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Button Background Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box .btn' => 'background-image: none; background-color: {{VALUE}}; border-color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-fancy-box .btn::after' => 'background-image: none; background-color: {{VALUE}};'
+                                '{{WRAPPER}} .sntravel-fancy-box .btn' => 'background-image: none; background-color: {{VALUE}}; border-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-fancy-box .btn::after' => 'background-image: none; background-color: {{VALUE}};'
                             ],
                             'condition' => [
                                 'layout' => '2',
@@ -506,8 +506,8 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Button Background Color Hover', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box .btn:hover' => 'border-color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-fancy-box .btn:hover::before' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-fancy-box .btn:hover' => 'border-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-fancy-box .btn:hover::before' => 'background-color: {{VALUE}};',
                             ],
                             'condition' => [
                                 'layout' => '2',
@@ -518,7 +518,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Button Text Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box .box-readmore' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-fancy-box .box-readmore' => 'color: {{VALUE}};',
                             ],
                             'condition' => [
                                 'layout'    => ['9']
@@ -529,7 +529,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Button Text Typography', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-fancy-box .box-readmore',
+                            'selector' => '{{WRAPPER}} .sntravel-fancy-box .box-readmore',
                             'condition' => [
                                 'layout'    => ['9'],
                                 'layout!'    => ['10']
@@ -548,7 +548,7 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box .box-icon i' => 'transform: rotate({{SIZE}}deg);',
+                                '{{WRAPPER}} .sntravel-fancy-box .box-icon i' => 'transform: rotate({{SIZE}}deg);',
                             ],
                             'condition' => [
                                 'layout' => ['11'],
@@ -561,7 +561,7 @@ pxl_add_custom_widget(
                             'size_units' => ['px'],
                            'control_type' => 'responsive',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box .box-icon i::after' => 'top: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-fancy-box .box-icon i::after' => 'top: {{SIZE}}{{UNIT}};',
                             ],
                             'condition' => [
                                 'layout' => ['11'],
@@ -574,7 +574,7 @@ pxl_add_custom_widget(
                             'size_units' => ['px'],
                             'control_type' => 'responsive',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box .box-icon i::after' => 'left: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-fancy-box .box-icon i::after' => 'left: {{SIZE}}{{UNIT}};',
                             ],
                             'condition' => [
                                 'layout' => ['11'],
@@ -593,7 +593,7 @@ pxl_add_custom_widget(
                                 'row-reverse' => esc_html__( 'Row Reverse', 'sntravel' ),
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box .box-inner' => 'display: flex; flex-direction: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-fancy-box .box-inner' => 'display: flex; flex-direction: {{VALUE}};',
                             ],
                             'condition' => [
                                 'layout' => ['13'],
@@ -619,7 +619,7 @@ pxl_add_custom_widget(
                                 ]
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box .box-inner' => 'align-items: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-fancy-box .box-inner' => 'align-items: {{VALUE}};',
                             ],
                             'condition' => [
                                 'icon_position' => ['row','column','row-reverse'],
@@ -645,7 +645,7 @@ pxl_add_custom_widget(
                                 ]
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box .box-inner' => 'text-align: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-fancy-box .box-inner' => 'text-align: {{VALUE}};',
                             ],
                             'condition' => [
                                 'icon_position' => ['row','column','row-reverse'],
@@ -671,8 +671,8 @@ pxl_add_custom_widget(
                                 ]
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box .box-inner, {{WRAPPER}} .pxl-fancy-box .box-content' => 'text-align: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-fancy-box .box-content' => 'align-items: {{VALUE}};'
+                                '{{WRAPPER}} .sntravel-fancy-box .box-inner, {{WRAPPER}} .sntravel-fancy-box .box-content' => 'text-align: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-fancy-box .box-content' => 'align-items: {{VALUE}};'
                             ],
                             'condition' => [
                                 'layout' => ['14', '15'],

@@ -123,7 +123,7 @@ if (!class_exists('Sntravel_Woo')) {
 														<?php endif; ?>
 														<?php 
 
-														Sntravel_Image::pxl_image_by_size( array(
+														Sntravel_Image::sntravel_image_by_size( array(
 															'attach_id'  => $ga_id,
 															'thumb_size' => $image_size,
 															'class'      => 'main-img-item',
@@ -133,7 +133,7 @@ if (!class_exists('Sntravel_Woo')) {
 														) );
 													 	?>
 													 	<?php if(!empty( $video_output) && $k == 1 && $video_light_gallery == 'on'):?>
-													 		<?php echo '<span class="sntravel-item-video zoom" data-src="'.esc_url($video_url).'"><span class="pxli-play"></span></span>'; ?>
+													 		<?php echo '<span class="sntravel-item-video zoom" data-src="'.esc_url($video_url).'"><span class="sntraveli-play"></span></span>'; ?>
 													 	<?php endif; ?> 
 													 	<?php if($zoom_img_hover == 'on'): ?>
 													 	</div>
@@ -150,7 +150,7 @@ if (!class_exists('Sntravel_Woo')) {
 					            </div>
 								<?php 
 							}else{
-								pxl_print_html($this->get_product_image( $product, $image_size ));
+								sntravel_print_html($this->get_product_image( $product, $image_size ));
 							}
 							?>
 							<?php if( empty( $video_output) ): ?>
@@ -191,7 +191,7 @@ if (!class_exists('Sntravel_Woo')) {
 														<span class="draw-top-right"></span>
 														<span class="draw-bottom-left"></span>
 													<?php 
-													Sntravel_Image::pxl_image_by_size( array(
+													Sntravel_Image::sntravel_image_by_size( array(
 														'attach_id'  => $ga_id,
 														'thumb_size' => '270x330',
 														'class'      => 'p-img-hover-gal',
@@ -201,7 +201,7 @@ if (!class_exists('Sntravel_Woo')) {
 													) );
 												 	?>
 												 	<?php if(!empty( $video_output) && $k == 1):?>
-												 		<?php echo '<span class="sntravel-item-video" data-src="'.esc_url($video_url).'"><span class="pxli-play"></span></span>'; ?>
+												 		<?php echo '<span class="sntravel-item-video" data-src="'.esc_url($video_url).'"><span class="sntraveli-play"></span></span>'; ?>
 												 	<?php endif; ?> 
 												 	</div>
 											 	</div>
@@ -249,7 +249,7 @@ if (!class_exists('Sntravel_Woo')) {
 											<span class="draw-top-right"></span>
 											<span class="draw-bottom-left"></span>
 											<?php 
-											Sntravel_Image::pxl_image_by_size( array(
+											Sntravel_Image::sntravel_image_by_size( array(
 												'attach_id'  => $ga_id,
 												'thumb_size' => '270x330',
 												'class'      => 'p-img-hover-gal',
@@ -259,7 +259,7 @@ if (!class_exists('Sntravel_Woo')) {
 											) );
 										 	?>
 										 	<?php if(!empty( $video_output) && $k == 1):?>
-										 		<?php echo '<span class="sntravel-item-video" data-src="'.esc_url($video_url).'"><span class="pxli-play"></span></span>'; ?>
+										 		<?php echo '<span class="sntravel-item-video" data-src="'.esc_url($video_url).'"><span class="sntraveli-play"></span></span>'; ?>
 										 	<?php endif; ?> 
 									 	</div>
 								 	</div>
@@ -308,7 +308,7 @@ if (!class_exists('Sntravel_Woo')) {
 													<div class="zoom-hover" style="--zoom-bg-img:url('<?php echo esc_url($data_src) ?>');">
 												<?php endif; ?>
 												<?php 
-													Sntravel_Image::pxl_image_by_size( array(
+													Sntravel_Image::sntravel_image_by_size( array(
 														'attach_id'  => $ga_id,
 														'thumb_size' => $image_size,
 														'class'      => 'main-img-item main-img-sticky',
@@ -318,7 +318,7 @@ if (!class_exists('Sntravel_Woo')) {
 													) );
 											 	?>
 											 	<?php if(!empty( $video_output) && $k == 1 && $video_light_gallery == 'on'):?>
-											 		<?php echo '<span class="sntravel-item-video zoom" data-src="'.esc_url($video_url).'"><span class="pxli-play"></span></span>'; ?>
+											 		<?php echo '<span class="sntravel-item-video zoom" data-src="'.esc_url($video_url).'"><span class="sntraveli-play"></span></span>'; ?>
 											 	<?php endif; ?> 	
 											 	<?php if($zoom_img_hover == 'on'): ?>
 											 		</div>
@@ -329,7 +329,7 @@ if (!class_exists('Sntravel_Woo')) {
 				                </div>
 								<?php 
 							}else{
-								pxl_print_html($this->get_product_image( $product, $image_size )); 
+								sntravel_print_html($this->get_product_image( $product, $image_size )); 
 							}
 							?>
 							<?php wc_get_template( 'single-product/sntravel-sale-flash.php');?>
@@ -416,7 +416,7 @@ if (!class_exists('Sntravel_Woo')) {
 														<?php endif; ?>
 														<?php 
 
-														Sntravel_Image::pxl_image_by_size( array(
+														Sntravel_Image::sntravel_image_by_size( array(
 															'attach_id'  => $ga_id,
 															'thumb_size' => $image_size,
 															'class'      => 'main-img-item',
@@ -426,7 +426,7 @@ if (!class_exists('Sntravel_Woo')) {
 														) );
 													 	?>
 													 	<?php if(!empty( $video_output) && $k == 1 && $video_light_gallery == 'on'):?>
-													 		<?php echo '<span class="sntravel-item-video zoom" data-src="'.esc_url($video_url).'"><span class="pxli-play"></span></span>'; ?>
+													 		<?php echo '<span class="sntravel-item-video zoom" data-src="'.esc_url($video_url).'"><span class="sntraveli-play"></span></span>'; ?>
 													 	<?php endif; ?> 
 													 	<?php if($zoom_img_hover == 'on'): ?>
 													 	</div>
@@ -443,7 +443,7 @@ if (!class_exists('Sntravel_Woo')) {
 					            </div>
 								<?php 
 							}else{
-								pxl_print_html($this->get_product_image( $product, $image_size )); 
+								sntravel_print_html($this->get_product_image( $product, $image_size )); 
 							}
 							?>
 							<?php wc_get_template( 'single-product/sntravel-sale-flash.php');?>
@@ -485,7 +485,7 @@ if (!class_exists('Sntravel_Woo')) {
 														<span class="draw-top-right"></span>
 														<span class="draw-bottom-left"></span>
 													<?php 
-													Sntravel_Image::pxl_image_by_size( array(
+													Sntravel_Image::sntravel_image_by_size( array(
 														'attach_id'  => $ga_id,
 														'thumb_size' => '270x330',
 														'class'      => 'p-img-hover-gal',
@@ -562,7 +562,7 @@ if (!class_exists('Sntravel_Woo')) {
 												<div class="zoom-hover" style="--zoom-bg-img:url('<?php echo esc_url($data_src) ?>');">
 												<?php endif; ?>
 												<?php 
-												Sntravel_Image::pxl_image_by_size( array(
+												Sntravel_Image::sntravel_image_by_size( array(
 													'attach_id'  => $ga_id,
 													'thumb_size' => $image_size,
 													'class'      => 'main-img-item',
@@ -572,7 +572,7 @@ if (!class_exists('Sntravel_Woo')) {
 												) );
 											 	?>
 											 	<?php if(!empty( $video_output) && $k == 1 && $video_light_gallery == 'on'):?>
-											 		<?php echo '<span class="sntravel-item-video zoom" data-src="'.esc_url($video_url).'"><span class="pxli-play"></span></span>'; ?>
+											 		<?php echo '<span class="sntravel-item-video zoom" data-src="'.esc_url($video_url).'"><span class="sntraveli-play"></span></span>'; ?>
 											 	<?php endif; ?> 
 											 	<?php if($zoom_img_hover == 'on'): ?>
 											 	</div>
@@ -583,7 +583,7 @@ if (!class_exists('Sntravel_Woo')) {
 				                </div>
 								<?php 
 							}else{
-								pxl_print_html($this->get_product_image( $product, $image_size ));
+								sntravel_print_html($this->get_product_image( $product, $image_size ));
 							}
 							?>
 							<?php wc_get_template( 'single-product/sntravel-sale-flash.php');?>
@@ -660,7 +660,7 @@ if (!class_exists('Sntravel_Woo')) {
 												<div class="zoom-hover" style="--zoom-bg-img:url('<?php echo esc_url($data_src) ?>');">
 												<?php endif; ?>
 												<?php 
-												Sntravel_Image::pxl_image_by_size( array(
+												Sntravel_Image::sntravel_image_by_size( array(
 													'attach_id'  => $ga_id,
 													'thumb_size' => $image_size,
 													'class'      => 'main-img-item',
@@ -670,7 +670,7 @@ if (!class_exists('Sntravel_Woo')) {
 												) );
 											 	?>
 											 	<?php if(!empty( $video_output) && $k == 1 && $video_light_gallery == 'on'):?>
-											 		<?php echo '<span class="sntravel-item-video zoom" data-src="'.esc_url($video_url).'"><span class="pxli-play"></span></span>'; ?>
+											 		<?php echo '<span class="sntravel-item-video zoom" data-src="'.esc_url($video_url).'"><span class="sntraveli-play"></span></span>'; ?>
 											 	<?php endif; ?> 
 											 	<?php if($zoom_img_hover == 'on'): ?>
 											 	</div>
@@ -681,7 +681,7 @@ if (!class_exists('Sntravel_Woo')) {
 				                </div>
 								<?php 
 							}else{
-								pxl_print_html($this->get_product_image( $product, $image_size )); 
+								sntravel_print_html($this->get_product_image( $product, $image_size )); 
 							}
 							?>
 							<?php wc_get_template( 'single-product/sntravel-sale-flash.php');?>
@@ -738,13 +738,13 @@ if (!class_exists('Sntravel_Woo')) {
     		<div class="thumb-wrap <?php echo esc_attr($thumb_class) ?>">
 				<?php woocommerce_template_loop_product_link_open(); ?>
 				<div class="product-main-img">
-					<?php pxl_print_html($this->get_product_image( $product, $thumbnail_size )); ?>
+					<?php sntravel_print_html($this->get_product_image( $product, $thumbnail_size )); ?>
 				</div>
 				<?php if ( $has_hover_thumbnail ) { ?>
 					<div class="product-hover-img sntravel-absoluted">
 						<?php if($shop_archive_hover_image == '1'): ?>
 							<?php 
-							Sntravel_Image::pxl_image_by_size( array(
+							Sntravel_Image::sntravel_image_by_size( array(
 								'attach_id'  => $gallery_ids[0],
 								'thumb_size' => $thumbnail_size,
 								'class'      => 'p-img-hover',
@@ -762,7 +762,7 @@ if (!class_exists('Sntravel_Woo')) {
 											<?php foreach ($gallery_ids as $ga_id) : ?>
 												<div class="sntravel-swiper-slide swiper-slide">
 													<?php 
-													Sntravel_Image::pxl_image_by_size( array(
+													Sntravel_Image::sntravel_image_by_size( array(
 														'attach_id'  => $ga_id,
 														'thumb_size' => $thumbnail_size,
 														'class'      => 'p-img-hover-gal',
@@ -795,7 +795,7 @@ if (!class_exists('Sntravel_Woo')) {
 			] );
 
 			if ( $product_image_id = $product->get_image_id() ) {  
-				return Sntravel_Image::pxl_image_by_size( array(
+				return Sntravel_Image::sntravel_image_by_size( array(
 					'attach_id'  => $product_image_id,
 					'thumb_size' => $size,
 					'alt'        => $product->get_name(),
@@ -808,7 +808,7 @@ if (!class_exists('Sntravel_Woo')) {
 			} elseif ( $product->get_parent_id() ) {
 				$parent_product = wc_get_product( $product->get_parent_id() );
 				if ( $parent_product && $product_parent_image_id = $parent_product->get_image_id() ) {
-					return Sntravel_Image::pxl_image_by_size( array(
+					return Sntravel_Image::sntravel_image_by_size( array(
 						'attach_id'  => $product_parent_image_id,
 						'thumb_size' => $size,
 						'alt'        => $parent_product->get_name(),
@@ -823,7 +823,7 @@ if (!class_exists('Sntravel_Woo')) {
 			$placeholder_image = get_option( 'woocommerce_placeholder_image', 0 );
 
 			if ( ! empty( $placeholder_image ) && is_numeric( $placeholder_image ) ) {
-				return Sntravel_Image::pxl_image_by_size( array(
+				return Sntravel_Image::sntravel_image_by_size( array(
 					'attach_id'  => $placeholder_image,
 					'thumb_size' => $size,
 					'alt'        => $product->get_name(),
@@ -1575,7 +1575,7 @@ if (!class_exists('Sntravel_Woo')) {
   		public function get_filtered_price() {
 			global $wpdb;
 			 
-			$args = Pxl_Woo_Query::instance()->pxl_query_args;
+			$args = Pxl_Woo_Query::instance()->sntravel_query_args;
 			 
 			$tax_query  = isset( $args['tax_query'] ) ? $args['tax_query'] : array();
 			$meta_query = isset( $args['meta_query'] ) ? $args['meta_query'] : array();
@@ -1788,7 +1788,7 @@ if (!class_exists('Sntravel_Woo')) {
 
 									echo '<li class="woocommerce-widget-layered-nav-list__item wc-layered-nav-term ' . ( $option_is_set ? 'woocommerce-widget-layered-nav-list__item--chosen chosen' : '' ) . '">';
 									// phpcs:ignore WordPress.Security.NonceVerification.Recommended, WordPress.Security.EscapeOutput.OutputNotEscaped
-									echo apply_filters( 'pxl_wc_layered_nav_term_html', $term_html, $term, $link, $count );
+									echo apply_filters( 'sntravel_wc_layered_nav_term_html', $term_html, $term, $link, $count );
 									echo '</li>';
 								}
                     		?>

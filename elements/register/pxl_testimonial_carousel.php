@@ -1,10 +1,10 @@
 <?php
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name' => 'pxl_testimonial_carousel',
+        'name' => 'sntravel_testimonial_carousel',
         'title' => esc_html__('PXL Testimonial Carousel', 'sntravel'),
         'icon' => 'eicon-blockquote',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'scripts' => [
             'swiper',
             'sntravel-swiper',
@@ -24,70 +24,70 @@ pxl_add_custom_widget(
                             'options' => [
                                 '1' => [
                                     'label' => esc_html__( 'Layout 1', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_testimonial_carousel-1.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_testimonial_carousel-1.jpg'
                                 ],
                                 '2' => [
                                     'label' => esc_html__( 'Layout 2', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_testimonial_carousel-2.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_testimonial_carousel-2.jpg'
                                 ],
                                 '3' => [
                                     'label' => esc_html__( 'Layout 3', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_testimonial_carousel-3.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_testimonial_carousel-3.jpg'
                                 ],
                                 '4' => [
                                     'label' => esc_html__( 'Layout 4', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_testimonial_carousel-4.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_testimonial_carousel-4.jpg'
                                 ],
                                 '5' => [
                                     'label' => esc_html__( 'Layout 5', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_testimonial_carousel-5.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_testimonial_carousel-5.jpg'
                                 ],
                                 '6' => [
                                     'label' => esc_html__( 'Layout 6', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_testimonial_carousel-6.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_testimonial_carousel-6.jpg'
                                 ],
                                 '7' => [
                                     'label' => esc_html__( 'Layout 7', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_testimonial_carousel-7.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_testimonial_carousel-7.jpg'
                                 ],
                                 '8' => [
                                     'label' => esc_html__( 'Layout 8', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_testimonial_carousel-8.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_testimonial_carousel-8.jpg'
                                 ],
                                 '9' => [
                                     'label' => esc_html__( 'Layout 9', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_testimonial_carousel-9.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_testimonial_carousel-9.jpg'
                                 ],
                                 '10' => [
                                     'label' => esc_html__( 'Layout 10', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_testimonial_carousel-10.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_testimonial_carousel-10.jpg'
                                 ],
                                 '11' => [
                                     'label' => esc_html__( 'Layout 11', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_testimonial_carousel-11.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_testimonial_carousel-11.jpg'
                                 ],
                                 '12' => [
                                     'label' => esc_html__( 'Layout 12', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_testimonial_carousel-12.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_testimonial_carousel-12.jpg'
                                 ],
                                 '13' => [
                                     'label' => esc_html__( 'Layout 13', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_testimonial_carousel-13.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_testimonial_carousel-13.jpg'
                                 ],
                                 '14' => [
                                     'label' => esc_html__( 'Layout 14', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_testimonial_carousel-14.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_testimonial_carousel-14.jpg'
                                 ],
                                 '15' => [
                                     'label' => esc_html__( 'Layout 15', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_testimonial_carousel-15.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_testimonial_carousel-15.jpg'
                                 ],
                                 '16' => [
                                     'label' => esc_html__( 'Layout 16', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_testimonial_carousel-16.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_testimonial_carousel-16.jpg'
                                 ],
                             ],
-                            'prefix_class' => 'pxl-testimonial-carousel-layout-',
+                            'prefix_class' => 'sntravel-testimonial-carousel-layout-',
                         ),
                         
                     ),
@@ -181,7 +181,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Quote Typography', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-testimonial-carousel .item-quote-icon',
+                            'selector' => '{{WRAPPER}} .sntravel-testimonial-carousel .item-quote-icon',
                             'condition' => [
                                 'quote_icon_type' => 'text',
                                 'layout!' => '13'
@@ -291,7 +291,7 @@ pxl_add_custom_widget(
                                 'label' => esc_html__('Arrow Color', 'sntravel' ),
                                 'type' => \Elementor\Controls_Manager::COLOR,
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-testimonial-carousel .pxl-swiper-arrows .pxl-swiper-arrow' => 'color: {{VALUE}}; border-color: {{VALUE}};',
+                                    '{{WRAPPER}} .sntravel-testimonial-carousel .sntravel-swiper-arrows .sntravel-swiper-arrow' => 'color: {{VALUE}}; border-color: {{VALUE}};',
                                 ],
                             ),
                             array(
@@ -299,7 +299,7 @@ pxl_add_custom_widget(
                                 'label' => esc_html__('Arrow Color Active', 'sntravel' ),
                                 'type' => \Elementor\Controls_Manager::COLOR,
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-testimonial-carousel .pxl-swiper-arrows .pxl-swiper-arrow::after' => 'background-color: {{VALUE}};',
+                                    '{{WRAPPER}} .sntravel-testimonial-carousel .sntravel-swiper-arrows .sntravel-swiper-arrow::after' => 'background-color: {{VALUE}};',
                                 ],
                             ),
                         ),
@@ -325,8 +325,8 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::NUMBER,
                             'control_type' => 'responsive',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-testimonial-carousel .item-quote-icon' => 'font-size: {{VALUE}}px;',
-                                '{{WRAPPER}} .pxl-testimonial-carousel .icon-wrapper svg' => 'width: {{VALUE}}; height: {{VALUE}}px;',
+                                '{{WRAPPER}} .sntravel-testimonial-carousel .item-quote-icon' => 'font-size: {{VALUE}}px;',
+                                '{{WRAPPER}} .sntravel-testimonial-carousel .icon-wrapper svg' => 'width: {{VALUE}}; height: {{VALUE}}px;',
                             ],
                             'condition' => ['layout!' => '13'],
                         ),
@@ -335,8 +335,8 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Quote Icon Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-testimonial-carousel .item-quote-icon' => 'color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-testimonial-carousel .icon-wrapper svg' => 'fill: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-testimonial-carousel .item-quote-icon' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-testimonial-carousel .icon-wrapper svg' => 'fill: {{VALUE}};',
                             ],
                             'condition' => ['layout!' => '13'],
                         ),
@@ -346,7 +346,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::DIMENSIONS,
                             'size_units' => [ 'px' ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-testimonial-carousel .item-inner .item-quote-icon' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-testimonial-carousel .item-inner .item-quote-icon' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                             'control_type' => 'responsive',
                             'condition' => ['layout' => '2'],
@@ -356,7 +356,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Background Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-testimonial-carousel' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-testimonial-carousel' => 'background-color: {{VALUE}};',
                             ],
                             'condition' => ['layout!' => '13'],
                         ),
@@ -365,7 +365,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Title Typography', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-testimonial-carousel .testimonial-title',
+                            'selector' => '{{WRAPPER}} .sntravel-testimonial-carousel .testimonial-title',
                             'condition' => ['layout' => '14'],
                         ),
                         array(
@@ -373,7 +373,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Title', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-testimonial-carousel .testimonial-title, .pxl-testimonial-carousel .tes-title' => 'color: {{VALUE}};'
+                                '{{WRAPPER}} .sntravel-testimonial-carousel .testimonial-title, .sntravel-testimonial-carousel .tes-title' => 'color: {{VALUE}};'
                             ],
                             'condition' => ['layout' => ['14', '16']],
                         ),
@@ -382,7 +382,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Name Typography', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-testimonial-carousel .item-inner .item-title',
+                            'selector' => '{{WRAPPER}} .sntravel-testimonial-carousel .item-inner .item-title',
                             'condition' => ['layout' => '2'],
                         ),
                         array(
@@ -390,10 +390,10 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Name Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-testimonial-carousel .item-title' => 'color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-testimonial-carousel.layout-8 .item-title:before,
-                                {{WRAPPER}} .pxl-testimonial-carousel.layout-8 .item-title:after' => 'color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-testimonial-carousel.layout-14 .item-title::before' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-testimonial-carousel .item-title' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-testimonial-carousel.layout-8 .item-title:before,
+                                {{WRAPPER}} .sntravel-testimonial-carousel.layout-8 .item-title:after' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-testimonial-carousel.layout-14 .item-title::before' => 'background-color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -402,7 +402,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::DIMENSIONS,
                             'size_units' => [ 'px' ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-testimonial-carousel .item-inner .item-info' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-testimonial-carousel .item-inner .item-info' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                             'control_type' => 'responsive',
                             'condition' => ['layout' => '2'],
@@ -412,7 +412,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Box Description Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-testimonial-carousel .item-desc' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-testimonial-carousel .item-desc' => 'background-color: {{VALUE}};',
                             ],
                             'condition' => ['layout' => '13'],
                         ),
@@ -421,7 +421,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Title Typography', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-testimonial-carousel .item-inner .testimonial-title',
+                            'selector' => '{{WRAPPER}} .sntravel-testimonial-carousel .item-inner .testimonial-title',
                             'condition' => ['layout' => '2'],
                         ),
                         array(
@@ -429,7 +429,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Title Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-testimonial-carousel .testimonial-title' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-testimonial-carousel .testimonial-title' => 'color: {{VALUE}};',
                             ],
                             'condition' => [
                                 'layout' => ['2', '3', '4']
@@ -448,7 +448,7 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-testimonial-carousel .item-inner .testimonial-title' => 'margin-bottom: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-testimonial-carousel .item-inner .testimonial-title' => 'margin-bottom: {{SIZE}}{{UNIT}};',
                             ],
                             'condition' => [
                                 'layout' => ['2']
@@ -459,7 +459,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Position Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-testimonial-carousel .item-position' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-testimonial-carousel .item-position' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -467,7 +467,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Description Typography', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-testimonial-carousel .item-inner .item-desc',
+                            'selector' => '{{WRAPPER}} .sntravel-testimonial-carousel .item-inner .item-desc',
                             'condition' => ['layout' => '2'],
                         ),
                         array(
@@ -475,7 +475,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Description Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-testimonial-carousel .item-desc' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-testimonial-carousel .item-desc' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -491,7 +491,7 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-testimonial-carousel .item-inner .item-desc' => 'margin-bottom: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-testimonial-carousel .item-inner .item-desc' => 'margin-bottom: {{SIZE}}{{UNIT}};',
                             ],
                             'condition' => [
                                 'layout' => ['2']
@@ -502,7 +502,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Star icon Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-testimonial-carousel .item-rating' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-testimonial-carousel .item-rating' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -510,7 +510,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Divider Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-testimonial-carousel .pxl-divider::before' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-testimonial-carousel .sntravel-divider::before' => 'background-color: {{VALUE}};',
                             ],
                             'condition' => [
                                 'layout' => ['15']
@@ -534,7 +534,7 @@ pxl_add_custom_widget(
                             ],
                             'condition' => ['layout' => '2'],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-swiper-slider .pxl-swiper-slide .item-desc' => 'max-width: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-swiper-slider .sntravel-swiper-slide .item-desc' => 'max-width: {{SIZE}}{{UNIT}};',
                             ],
                         ),
                         array(
@@ -557,9 +557,9 @@ pxl_add_custom_widget(
                                 ]
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-testimonial-carousel .item-inner' => 'text-align: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-testimonial-carousel .pxl-swiper-slide' => 'justify-content: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-testimonial-carousel .item-inner .item-wrap' => 'justify-content: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-testimonial-carousel .item-inner' => 'text-align: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-testimonial-carousel .sntravel-swiper-slide' => 'justify-content: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-testimonial-carousel .item-inner .item-wrap' => 'justify-content: {{VALUE}};',
                             ],
                             'condition' => ['layout' => ['2', '15']],
                         ),

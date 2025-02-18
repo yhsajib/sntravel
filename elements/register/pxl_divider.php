@@ -1,10 +1,10 @@
 <?php
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name' => 'pxl_divider',
+        'name' => 'sntravel_divider',
         'title' => esc_html__('PXL Divider', 'sntravel' ),
         'icon' => 'eicon-divider',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'params' => array(
             'sections' => array(
                 array(
@@ -44,7 +44,7 @@ pxl_add_custom_widget(
                                 'unit' => '%',
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-divider' => 'width: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-divider' => 'width: {{SIZE}}{{UNIT}};',
                             ],
                         ),
                         array(
@@ -69,7 +69,7 @@ pxl_add_custom_widget(
                                 'unit' => '%',
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-divider::before' => 'width: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-divider::before' => 'width: {{SIZE}}{{UNIT}};',
                             ],
                             'condition' => [
                                 'style' => 'style-1'
@@ -80,7 +80,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__( 'Alignment', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::CHOOSE,
                             'control_type' => 'responsive',
-                            'prefix_class' => 'pxl-divider-align-%s',
+                            'prefix_class' => 'sntravel-divider-align-%s',
                             'options' => [
                                 'left' => [
                                     'title' => esc_html__( 'Left', 'sntravel' ),
@@ -108,9 +108,9 @@ pxl_add_custom_widget(
                             'label' => esc_html__( 'Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-divider' => 'background-color: {{VALUE}}',
-                                '{{WRAPPER}} .pxl-divider .diamond-icon' => 'border-color: {{VALUE}}',
-                                '{{WRAPPER}} .pxl-divider .diamond-icon:before' => 'background-color: {{VALUE}}',
+                                '{{WRAPPER}} .sntravel-divider' => 'background-color: {{VALUE}}',
+                                '{{WRAPPER}} .sntravel-divider .diamond-icon' => 'border-color: {{VALUE}}',
+                                '{{WRAPPER}} .sntravel-divider .diamond-icon:before' => 'background-color: {{VALUE}}',
                             ],
                         ),
                         array(
@@ -118,7 +118,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__( 'Fill Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-divider:before' => 'background-color: {{VALUE}}',
+                                '{{WRAPPER}} .sntravel-divider:before' => 'background-color: {{VALUE}}',
                             ],
                             'condition' => [
                                 'style' => 'style-1'
@@ -129,7 +129,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__( 'Icon Gap Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-divider .diamond-icon' => 'background-color: {{VALUE}}',
+                                '{{WRAPPER}} .sntravel-divider .diamond-icon' => 'background-color: {{VALUE}}',
                             ],
                             'condition' => [
                                 'style' => 'style-2'
@@ -150,8 +150,8 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-divider' => 'height: {{SIZE}}{{UNIT}}',
-                                '{{WRAPPER}} .pxl-divider:before' => 'height: {{SIZE}}{{UNIT}}',
+                                '{{WRAPPER}} .sntravel-divider' => 'height: {{SIZE}}{{UNIT}}',
+                                '{{WRAPPER}} .sntravel-divider:before' => 'height: {{SIZE}}{{UNIT}}',
                             ],
                         ),
                         array(
@@ -165,7 +165,7 @@ pxl_add_custom_widget(
                                 'BOTTOM' => 15,
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-divider' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-divider' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                         ),
                         array(
@@ -175,7 +175,7 @@ pxl_add_custom_widget(
                             'control_type' => 'responsive',
                             'size_units' => [ 'px' ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-divider' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}; overflow: hidden;',
+                                '{{WRAPPER}} .sntravel-divider' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}; overflow: hidden;',
                             ],
                         ),
                         array(

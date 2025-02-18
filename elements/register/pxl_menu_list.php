@@ -1,10 +1,10 @@
 <?php
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name' => 'pxl_menu_list',
+        'name' => 'sntravel_menu_list',
         'title' => esc_html__('PXL Food Menu', 'sntravel' ),
         'icon' => 'eicon-bullet-list',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'scripts'    => array(),
         'params' => array(
             'sections' => array(
@@ -21,39 +21,39 @@ pxl_add_custom_widget(
                             'options' => [
                                 '1' => [
                                     'label' => esc_html__( 'Layout 1', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_menu_list-1.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_menu_list-1.jpg'
                                 ],
                                 '2' => [
                                     'label' => esc_html__( 'Layout 2', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_menu_list-2.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_menu_list-2.jpg'
                                 ],
                                 '3' => [
                                     'label' => esc_html__( 'Layout 3', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_menu_list-3.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_menu_list-3.jpg'
                                 ],
                                 '4' => [
                                     'label' => esc_html__( 'Layout 4', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_menu_list-4.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_menu_list-4.jpg'
                                 ],
                                 '5' => [
                                     'label' => esc_html__( 'Layout 5', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_menu_list-5.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_menu_list-5.jpg'
                                 ],
                                 '6' => [
                                     'label' => esc_html__( 'Layout 6', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_menu_list-6.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_menu_list-6.jpg'
                                 ],
                                 '7' => [
                                     'label' => esc_html__( 'Layout 7', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_menu_list-7.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_menu_list-7.jpg'
                                 ],
                                 '8' => [
                                     'label' => esc_html__( 'Layout 8', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_menu_list-8.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_menu_list-8.jpg'
                                 ],
                                 '9' => [
                                     'label' => esc_html__( 'Layout 9', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_menu_list-9.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_menu_list-9.jpg'
                                 ],
                             ],
                         )
@@ -203,8 +203,8 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Heading Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-menu-list .pxl-menu-item .menu-title' => 'color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-menu-list .pxl-menu-item .menu-title a' => 'color: {{VALUE}}; background-image: linear-gradient(transparent calc(100% - 1px), {{VALUE}} 1px);'
+                                '{{WRAPPER}} .sntravel-menu-list .sntravel-menu-item .menu-title' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-menu-list .sntravel-menu-item .menu-title a' => 'color: {{VALUE}}; background-image: linear-gradient(transparent calc(100% - 1px), {{VALUE}} 1px);'
                             ],
                         ),
                         array(
@@ -212,14 +212,14 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Heading Typography', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-menu-list .pxl-menu-item .menu-title',
+                            'selector' => '{{WRAPPER}} .sntravel-menu-list .sntravel-menu-item .menu-title',
                         ),
                         array(
                             'name' => 'sub_heading_color',
                             'label' => esc_html__('Sub Heading Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-menu-list .pxl-menu-item .menu-sub-title' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-menu-list .sntravel-menu-item .menu-sub-title' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -227,14 +227,14 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Sub Heading Typography', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-menu-list .pxl-menu-item .menu-sub-title',
+                            'selector' => '{{WRAPPER}} .sntravel-menu-list .sntravel-menu-item .menu-sub-title',
                         ),
                         array(
                             'name' => 'price_color',
                             'label' => esc_html__('Price Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-menu-list .pxl-menu-item .menu-price' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-menu-list .sntravel-menu-item .menu-price' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -242,14 +242,14 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Price Typography', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-menu-list .pxl-menu-item .menu-price',
+                            'selector' => '{{WRAPPER}} .sntravel-menu-list .sntravel-menu-item .menu-price',
                         ),
                         array(
                             'name' => 'description_color',
                             'label' => esc_html__('Description Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-menu-list .menu-description' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-menu-list .menu-description' => 'color: {{VALUE}};',
                             ],
                             'condition' => [
                                 'layout' => ['8']
@@ -260,7 +260,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Description Typography', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-menu-list .menu-description',
+                            'selector' => '{{WRAPPER}} .sntravel-menu-list .menu-description',
                             'condition' => [
                                 'layout' => ['8']
                             ]
@@ -270,7 +270,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Icon Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-menu-list .main-content .featured .menu-title::after' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-menu-list .main-content .featured .menu-title::after' => 'color: {{VALUE}};',
                             ],
                             'condition' => [
                                 'layout' => ['8']
@@ -292,7 +292,7 @@ pxl_add_custom_widget(
                                 'unit' => 'px',
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-menu-list .main-content .featured .menu-title::after' => 'font-size: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-menu-list .main-content .featured .menu-title::after' => 'font-size: {{SIZE}}{{UNIT}};',
                             ],
                             'condition' => [
                                 'layout' => ['8']
@@ -304,7 +304,7 @@ pxl_add_custom_widget(
                             'description' => esc_html__('Vertical deviation from the original position (Unit: px)', 'sntravel'),
                             'type' => \Elementor\Controls_Manager::NUMBER,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-menu-list .pxl-menu-item .pxl-separator' => 'transform: translateY({{VALUE}}px);',
+                                '{{WRAPPER}} .sntravel-menu-list .sntravel-menu-item .sntravel-separator' => 'transform: translateY({{VALUE}}px);',
                             ],
                             'condition' => [
                                 'layout!' => ['7']
@@ -315,9 +315,9 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Divider Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-menu-list .pxl-menu-item .pxl-separator' => 'border-color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-menu-list .pxl-divider' => 'background-color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-menu-list.layout-3 .pxl-menu-item .pxl-separator' => 'background-image: radial-gradient({{VALUE}} 1px, transparent 0);',
+                                '{{WRAPPER}} .sntravel-menu-list .sntravel-menu-item .sntravel-separator' => 'border-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-menu-list .sntravel-divider' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-menu-list.layout-3 .sntravel-menu-item .sntravel-separator' => 'background-image: radial-gradient({{VALUE}} 1px, transparent 0);',
                             ],
                         ),
                         array(
@@ -333,7 +333,7 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-menu-list .pxl-menu-item + .pxl-menu-item' => 'margin-top: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-menu-list .sntravel-menu-item + .sntravel-menu-item' => 'margin-top: {{SIZE}}{{UNIT}};',
                             ],
                         ),
                         array(
@@ -356,7 +356,7 @@ pxl_add_custom_widget(
                                 'unit' => 'px',
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-menu-list .pxl-item-list' => 'max-height: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-menu-list .sntravel-item-list' => 'max-height: {{SIZE}}{{UNIT}};',
                             ],
                             'condition' => [
                                 'layout' => ['8']

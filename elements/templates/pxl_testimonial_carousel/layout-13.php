@@ -40,7 +40,7 @@ $widget->add_render_attribute('carousel', [
 <?php if (isset($content_list) && !empty($content_list) && count($content_list)) : ?>
 <div class="sntravel-swiper-slider sntravel-testimonial-carousel layout-<?php echo esc_attr($settings['layout']) ?>">
     <div class="sntravel-swiper-slider-wrap sntravel-carousel-inner relative d-flex">
-        <div <?php pxl_print_html($widget->get_render_attribute_string('carousel')); ?>>
+        <div <?php sntravel_print_html($widget->get_render_attribute_string('carousel')); ?>>
             <div class="sntravel-swiper-wrapper swiper-wrapper">
                 <?php foreach ($content_list as $key => $value) :
                     $image       = isset($value['image']) ? $value['image'] : [];
@@ -49,7 +49,7 @@ $widget->add_render_attribute('carousel', [
                     $testimonial_title = isset($value['testimonial_title']) ? $value['testimonial_title'] : '';
                     $description = isset($value['description']) ? $value['description'] : '';
                     if (!empty($image['id'])) {
-                        $img = pxl_get_image_by_size(array(
+                        $img = sntravel_get_image_by_size(array(
                             'attach_id'  => $image['id'],
                             'thumb_size' => '69x69',
                             'class' => 'no-lazyload',
@@ -61,7 +61,7 @@ $widget->add_render_attribute('carousel', [
                         <div class="item-inner d-flex">
                             <div class="item-content">
                                 <?php if (!empty($description)) : ?>
-                                    <div class="item-desc"><?php echo pxl_print_html($description); ?></div>
+                                    <div class="item-desc"><?php echo sntravel_print_html($description); ?></div>
                                 <?php endif; ?>
                                 <div class="content-wrapper">
                                     <?php if (!empty($thumbnail)) : ?>

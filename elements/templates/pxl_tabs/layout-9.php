@@ -4,7 +4,7 @@ extract($settings);
 if(count($tabs_list) > 0){
 	$tab_bd_ids = [];
     ?>
-    <div class="pxl-tabs layout-9">
+    <div class="sntravel-tabs layout-9">
         <?php if (!empty($link_to_carousel)) : ?>
             <div class="link-to-tabs-carousel-id d-none">
                 <?php echo esc_attr($link_to_carousel); ?>
@@ -24,14 +24,14 @@ if(count($tabs_list) > 0){
                         $widget->add_render_attribute( $title_key, 'class', 'active');
                     }
                     ?>
-                    <div <?php pxl_print_html($widget->get_render_attribute_string( $title_key )); ?> data-slide="<?php echo esc_attr($key); ?>">
-                        <span><?php echo pxl_print_html($tab['tab_title']); ?></span>
+                    <div <?php sntravel_print_html($widget->get_render_attribute_string( $title_key )); ?> data-slide="<?php echo esc_attr($key); ?>">
+                        <span><?php echo sntravel_print_html($tab['tab_title']); ?></span>
                     </div>
                 <?php endforeach; ?>
             </div>
-            <div class="pxl-tab-arrows">
-                <div class="pxl-tab-arrow pxl-tab-arrow-next"><span class="pxl-icon pxli-arrow-next"></span></div>
-                <div class="pxl-tab-arrow pxl-tab-arrow-prev"><span class="pxl-icon pxli-arrow-prev"></span></div>
+            <div class="sntravel-tab-arrows">
+                <div class="sntravel-tab-arrow sntravel-tab-arrow-next"><span class="sntravel-icon sntraveli-arrow-next"></span></div>
+                <div class="sntravel-tab-arrow sntravel-tab-arrow-prev"><span class="sntravel-icon sntraveli-arrow-prev"></span></div>
             </div>
         </div>
         <div class="tabs-content <?php echo esc_attr($tab_animation); ?>">
@@ -58,7 +58,7 @@ if(count($tabs_list) > 0){
                     $widget->add_render_attribute( $content_key, 'class', 'active');
                 }
                 ?>
-                <div <?php pxl_print_html($widget->get_render_attribute_string( $content_key )); ?>><?php pxl_print_html($tabs_content); ?></div>
+                <div <?php sntravel_print_html($widget->get_render_attribute_string( $content_key )); ?>><?php sntravel_print_html($tabs_content); ?></div>
             <?php endforeach; ?>
         </div>
     </div>

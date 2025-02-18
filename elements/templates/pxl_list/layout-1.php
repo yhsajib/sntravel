@@ -7,8 +7,8 @@ extract($settings);
 $is_new = \Elementor\Icons_Manager::is_migration_allowed();
 ?>
 <?php if(isset($list) && !empty($list) && count($list)): ?>
-    <div class="pxl-list layout-1">
-        <div class="pxl-item-list">
+    <div class="sntravel-list layout-1">
+        <div class="sntravel-item-list">
             <?php
             foreach ($list as $key => $value):
                 $link = isset($value['link']) ? $value['link'] : '';
@@ -27,10 +27,10 @@ $is_new = \Elementor\Icons_Manager::is_migration_allowed();
                 }
                 $link_attributes = $widget->get_render_attribute_string( $link_key );
                 ?>
-                <div class="pxl-list-content">
+                <div class="sntravel-list-content">
                     <?php
                     if ($has_icon){
-                        echo '<div class="pxl-list-icon">';
+                        echo '<div class="sntravel-list-icon">';
                         if ($is_new){
                             \Elementor\Icons_Manager::render_icon( $value['list_icon'], [ 'aria-hidden' => 'true' ] );
                         }else{
@@ -40,7 +40,7 @@ $is_new = \Elementor\Icons_Manager::is_migration_allowed();
                     }
                     ?>
                     <?php if (!empty( $value['link']['url'] ) ) { ?><a <?php echo implode( ' ', [ $link_attributes ] ); ?>><?php } ?>
-                    <span><?php echo pxl_print_html($value['content']); ?></span>
+                    <span><?php echo sntravel_print_html($value['content']); ?></span>
                     <?php if (!empty( $value['link']['url'] ) ) { ?></a><?php } ?>
                 </div>
             <?php endforeach; ?>

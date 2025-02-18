@@ -1,11 +1,11 @@
 <?php
 //Register Counter Widget
- pxl_add_custom_widget(
+ sntravel_add_custom_widget(
     array(
-        'name'       => 'pxl_counter',
+        'name'       => 'sntravel_counter',
         'title'      => esc_html__('PXL Counter', 'sntravel'),
         'icon'       => 'eicon-counter-circle',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'scripts'    => array(
             'odometer',
             'sntravel-counter'
@@ -101,7 +101,7 @@
                                 ]
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-counter' => 'text-align: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-counter' => 'text-align: {{VALUE}};',
                                 '{{WRAPPER}} .counter-content' => 'justify-content: {{VALUE}};'
                             ],
                         ),

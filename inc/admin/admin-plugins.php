@@ -10,10 +10,10 @@ class Sntravel_Admin_Plugins extends Sntravel_Admin_Page {
 
 	public function __construct() {
 
-		$this->id = 'pxlart-plugins';
+		$this->id = 'sntravelart-plugins';
 		$this->page_title = esc_html__( 'Install Plugins', 'sntravel' );
 		$this->menu_title = esc_html__( 'Install Plugins', 'sntravel' );
-		$this->parent = 'pxlart';
+		$this->parent = 'sntravelart';
 
 		parent::__construct();
 	}

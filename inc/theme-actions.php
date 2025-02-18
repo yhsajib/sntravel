@@ -109,7 +109,7 @@ add_action( 'wp_enqueue_scripts', 'basilico_scripts' );
 function basilico_scripts() {
     $js_variables = array(
         'ajaxurl'          => admin_url( 'admin-ajax.php' ),
-        'pxl_ajax_url'     => class_exists('Sntravel_Ajax') ? Sntravel_Ajax::get_endpoint( '%%endpoint%%' ) : '#',
+        'sntravel_ajax_url'     => class_exists('Sntravel_Ajax') ? Sntravel_Ajax::get_endpoint( '%%endpoint%%' ) : '#',
         'variation_alert'  => esc_html__( 'Please select some product options before add to cart or buy now', 'sntravel' ),
         'is_single'                  => is_singular(),
         'post_id'                    => is_singular() ? get_the_ID() : 0,
@@ -249,19 +249,19 @@ function basilico_backtotop($args = []){
             <svg class="sntravel-scroll-progress-circle" width="100%" height="100%" viewBox="-1 -1 102 102">
                 <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
             </svg>
-            <i class="pxli pxli-angle-up"></i>
+            <i class="sntraveli sntraveli-angle-up"></i>
         <?php endif; ?>
         <?php if ($back_totop_on_style === 'custom-style-1') : ?>
             <svg class="sntravel-scroll-progress-circle" width="100%" height="100%" viewBox="-1 -1 102 102">
                 <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
             </svg>
-            <i class="pxli pxli-angle-up"></i>
+            <i class="sntraveli sntraveli-angle-up"></i>
         <?php endif; ?>
         <?php if ($back_totop_on_style === 'custom-style-2') : ?>
             <svg class="sntravel-scroll-progress-circle" width="100%" height="100%" viewBox="-1 -1 102 102">
                 <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
             </svg>
-            <i class="pxli pxli-angle-up"></i>
+            <i class="sntraveli sntraveli-angle-up"></i>
         <?php endif; ?>
         <?php if ($back_totop_on_style === 'default') : ?>
             <i class="zmdi zmdi-long-arrow-up"></i>
@@ -270,7 +270,7 @@ function basilico_backtotop($args = []){
     <?php 
 }
 
-add_action( 'pxltheme_anchor_target', 'basilico_hook_anchor_side_mobile_default');
+add_action( 'sntraveltheme_anchor_target', 'basilico_hook_anchor_side_mobile_default');
 function basilico_hook_anchor_side_mobile_default(){
     $header_mobile_layout = (int)sntravel()->get_opt('header_mobile_layout'); 
     if( $header_mobile_layout > 0 ) return;
@@ -279,7 +279,7 @@ function basilico_hook_anchor_side_mobile_default(){
         <div class="sntravel-panel-header">
             <div class="panel-header-inner">
                 <a href="#" class="sntravel-close" data-target=".sntravel-side-mobile" title="<?php echo esc_attr__( 'Close', 'sntravel' ) ?>">
-                    <i class="pxli pxli-remove1"></i>
+                    <i class="sntraveli sntraveli-remove1"></i>
                 </a>
             </div>
         </div> 
@@ -314,7 +314,7 @@ function basilico_hook_anchor_side_mobile_default(){
     <?php 
 }
 
-add_action( 'pxltheme_anchor_target', 'basilico_hook_anchor_templates_hidden_panel');
+add_action( 'sntraveltheme_anchor_target', 'basilico_hook_anchor_templates_hidden_panel');
 function basilico_hook_anchor_templates_hidden_panel(){
 
     $hidden_templates = basilico_get_templates_slug('hidden-panel');
@@ -325,8 +325,8 @@ function basilico_hook_anchor_templates_hidden_panel(){
             'post_id' => $values['post_id'],
             'position' => !empty($values['position']) ? $values['position'] : 'custom-pos'
         ];
-        if (did_action('pxl_anchor_target_hidden_panel_'.$values['post_id']) <= 0){
-            do_action( 'pxl_anchor_target_hidden_panel_'.$values['post_id'], $args );
+        if (did_action('sntravel_anchor_target_hidden_panel_'.$values['post_id']) <= 0){
+            do_action( 'sntravel_anchor_target_hidden_panel_'.$values['post_id'], $args );
         }
     }
 }
@@ -356,7 +356,7 @@ function basilico_hook_anchor_custom(){
     return;
 }
 
-add_action( 'pxltheme_anchor_target', 'basilico_output_popup' );
+add_action( 'sntraveltheme_anchor_target', 'basilico_output_popup' );
 function basilico_output_popup(){
     $enable_popup = sntravel()->get_page_opt('enable_popup', 'off');
     $close_btn_style = sntravel()->get_theme_opt('template_close_button', 'style-df');
@@ -382,7 +382,7 @@ function basilico_output_popup(){
     }
 }
 
-add_action( 'pxltheme_anchor_target', 'basilico_header_popup_cart');
+add_action( 'sntraveltheme_anchor_target', 'basilico_header_popup_cart');
 function basilico_header_popup_cart(){  
     if(!class_exists('Woocommerce')) return;
     $close_btn_style = sntravel()->get_theme_opt('template_close_button', 'style-df');
@@ -408,21 +408,21 @@ function basilico_header_popup_cart(){
 }
 
 //* Custom archive link
-function pxl_custom_archive_post_type_link() {
-    $pxl_portfolio_archive_link = sntravel()->get_theme_opt('pxl_portfolio_archive_link', '');
-    $pxl_service_archive_link = sntravel()->get_theme_opt('pxl_service_archive_link', '');
-    $pxl_food_archive_link = sntravel()->get_theme_opt('pxl_food_archive_link', '');
-    if( is_post_type_archive( 'sntravel-portfolio' ) && !empty($pxl_portfolio_archive_link) ) {
-        wp_redirect( $pxl_portfolio_archive_link, 301 );
+function sntravel_custom_archive_post_type_link() {
+    $sntravel_portfolio_archive_link = sntravel()->get_theme_opt('sntravel_portfolio_archive_link', '');
+    $sntravel_service_archive_link = sntravel()->get_theme_opt('sntravel_service_archive_link', '');
+    $sntravel_food_archive_link = sntravel()->get_theme_opt('sntravel_food_archive_link', '');
+    if( is_post_type_archive( 'sntravel-portfolio' ) && !empty($sntravel_portfolio_archive_link) ) {
+        wp_redirect( $sntravel_portfolio_archive_link, 301 );
         exit();
     }
-    if( is_post_type_archive( 'sntravel-service' ) && !empty($pxl_service_archive_link) ) {
-        wp_redirect( $pxl_service_archive_link, 301 );
+    if( is_post_type_archive( 'sntravel-service' ) && !empty($sntravel_service_archive_link) ) {
+        wp_redirect( $sntravel_service_archive_link, 301 );
         exit();
     }
-    if( is_post_type_archive( 'sntravel-food' ) && !empty($pxl_food_archive_link) ) {
-        wp_redirect( $pxl_food_archive_link, 301 );
+    if( is_post_type_archive( 'sntravel-food' ) && !empty($sntravel_food_archive_link) ) {
+        wp_redirect( $sntravel_food_archive_link, 301 );
         exit();
     }
 }
-add_action( 'template_redirect', 'pxl_custom_archive_post_type_link' );
+add_action( 'template_redirect', 'sntravel_custom_archive_post_type_link' );

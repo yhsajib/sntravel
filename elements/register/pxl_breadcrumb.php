@@ -1,10 +1,10 @@
 <?php
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name' => 'pxl_breadcrumb',
+        'name' => 'sntravel_breadcrumb',
         'title' => esc_html__('PXL Breadcrumb', 'sntravel' ),
         'icon' => 'eicon-navigation-horizontal',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'params' => array(
             'sections' => array(
                 array(
@@ -20,11 +20,11 @@ pxl_add_custom_widget(
                             'options' => [
                                 '1' => [
                                     'label' => esc_html__( 'Layout 1', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_fancy_box-1.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_fancy_box-1.jpg'
                                 ],
                                 '2' => [
                                     'label' => esc_html__( 'Layout 2', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_fancy_box-1.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_fancy_box-1.jpg'
                                 ],
                             ],
                         )
@@ -55,7 +55,7 @@ pxl_add_custom_widget(
                                 ]
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-breadcrumb' => 'text-align: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-breadcrumb' => 'text-align: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -63,7 +63,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Text Color', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-breadcrumb, .pxl-breadcrumb .br-item' => 'color: {{VALUE}} !important;',
+                                '{{WRAPPER}} .sntravel-breadcrumb, .sntravel-breadcrumb .br-item' => 'color: {{VALUE}} !important;',
                             ],
                         ),
                         array(
@@ -71,7 +71,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Link Color', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-breadcrumb a' => 'color: {{VALUE}} !important;',
+                                '{{WRAPPER}} .sntravel-breadcrumb a' => 'color: {{VALUE}} !important;',
                             ],
                         ),
                         array(
@@ -79,7 +79,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Link Color Hover', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-breadcrumb a:hover' => 'color: {{VALUE}} !important;',
+                                '{{WRAPPER}} .sntravel-breadcrumb a:hover' => 'color: {{VALUE}} !important;',
                             ],
                         ),
                         array(
@@ -101,8 +101,8 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-breadcrumb .pxli' => 'font-size: {{SIZE}}{{UNIT}} !important;',
-                                '{{WRAPPER}} .pxl-breadcrumb svg' => 'width: {{SIZE}}{{UNIT}} !important;',
+                                '{{WRAPPER}} .sntravel-breadcrumb .sntraveli' => 'font-size: {{SIZE}}{{UNIT}} !important;',
+                                '{{WRAPPER}} .sntravel-breadcrumb svg' => 'width: {{SIZE}}{{UNIT}} !important;',
                             ],
                             'condition'        => [
                                 'layout'       => '1' 
@@ -116,7 +116,7 @@ pxl_add_custom_widget(
                                 'layout!'       => '2' 
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-breadcrumb .br-divider' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-breadcrumb .br-divider' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -124,7 +124,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Typography', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-breadcrumb, {{WRAPPER}} .pxl-breadcrumb a, {{WRAPPER}} .pxl-breadcrumb .br-item, {{WRAPPER}} .pxl-breadcrumb .br-divider, {{WRAPPER}} .pxl-breadcrumb .br-item',
+                            'selector' => '{{WRAPPER}} .sntravel-breadcrumb, {{WRAPPER}} .sntravel-breadcrumb a, {{WRAPPER}} .sntravel-breadcrumb .br-item, {{WRAPPER}} .sntravel-breadcrumb .br-divider, {{WRAPPER}} .sntravel-breadcrumb .br-item',
                         ),
                         array(
                             'name' => 'btn_padding',
@@ -132,7 +132,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::DIMENSIONS,
                             'size_units' => [ 'px' ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-breadcrumb .br-divider' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-breadcrumb .br-divider' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                             'control_type' => 'responsive',
                             'condition'        => [

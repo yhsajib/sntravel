@@ -6,6 +6,6 @@ if ( empty( $sidebar ) ) {
 	return;
 }
 ?>
-<div id="pxl-sidebar-area" class="pxl-sidebar-area <?php echo esc_attr($style); ?>">
+<div id="sntravel-sidebar-area" class="sntravel-sidebar-area <?php echo esc_attr($style); ?>">
 	<?php dynamic_sidebar( $sidebar );?>
 </div>

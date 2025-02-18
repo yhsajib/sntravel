@@ -1,16 +1,16 @@
 <?php
 get_header();
 if (is_singular('product')){
-    $pxl_sidebar = sntravel()->get_sidebar_args(['type' => 'product', 'content_col'=> '8']); // type: blog, post, page, shop, product
+    $sntravel_sidebar = sntravel()->get_sidebar_args(['type' => 'product', 'content_col'=> '8']); // type: blog, post, page, shop, product
 } else {
-    $pxl_sidebar = sntravel()->get_sidebar_args(['type' => 'shop', 'content_col'=> '8']); // type: blog, post, page, shop, product
+    $sntravel_sidebar = sntravel()->get_sidebar_args(['type' => 'shop', 'content_col'=> '8']); // type: blog, post, page, shop, product
 }
 
 $product_layout = sntravel()->get_theme_opt('product_layout', 'layout-1');
 ?>
     <div class="container">
-        <div class="row <?php echo esc_attr($pxl_sidebar['wrap_class']); ?> <?php echo 'sntravel-shop-'.esc_attr($product_layout); ?>">
-            <div id="sntravel-content-area" class="<?php echo esc_attr($pxl_sidebar['content_class']) ?>">
+        <div class="row <?php echo esc_attr($sntravel_sidebar['wrap_class']); ?> <?php echo 'sntravel-shop-'.esc_attr($product_layout); ?>">
+            <div id="sntravel-content-area" class="<?php echo esc_attr($sntravel_sidebar['content_class']) ?>">
                 <main id="sntravel-content-main" class="sntravel-content-main">
                     <?php
                     if ( is_singular( 'product' ) ) {
@@ -44,8 +44,8 @@ $product_layout = sntravel()->get_theme_opt('product_layout', 'layout-1');
                 </main>
             </div>
 
-            <?php if ($pxl_sidebar['sidebar_class']) : ?>
-                <aside id="sntravel-sidebar-area" class="<?php echo esc_attr($pxl_sidebar['sidebar_class']) ?>">
+            <?php if ($sntravel_sidebar['sidebar_class']) : ?>
+                <aside id="sntravel-sidebar-area" class="<?php echo esc_attr($sntravel_sidebar['sidebar_class']) ?>">
                     <div class="sidebar-sticky-wrap">
                         <?php get_sidebar(); ?>
                     </div>

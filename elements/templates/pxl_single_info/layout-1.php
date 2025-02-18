@@ -5,7 +5,7 @@ $default_settings = [
 ];
 $settings = array_merge($default_settings, $settings);
 extract($settings);
-$html_id = pxl_get_element_id($settings);
+$html_id = sntravel_get_element_id($settings);
 $info_items = $widget->get_settings('single_info_items');
 if(!empty($info_items)) : ?>
     <div id="<?php echo esc_attr($html_id); ?>" class="sntravel-single-info e-sidebar-widget <?php echo esc_attr($el_style); ?>">

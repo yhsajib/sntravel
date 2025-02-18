@@ -1,11 +1,11 @@
 <?php
-$pt_supports = ['post', 'pxl-portfolio', 'pxl-service', 'pxl-food'];
-pxl_add_custom_widget(
+$pt_supports = ['post', 'sntravel-portfolio', 'sntravel-service', 'sntravel-food'];
+sntravel_add_custom_widget(
     array(
-        'name' => 'pxl_post_carousel',
+        'name' => 'sntravel_post_carousel',
         'title' => esc_html__('PXL Post Carousel', 'sntravel' ),
         'icon' => 'eicon-posts-carousel',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'scripts' => array(
             'swiper',
             'sntravel-swiper',
@@ -241,7 +241,7 @@ pxl_add_custom_widget(
                                 ]
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-post-carousel.layout-post-6 .item-content' => 'display: flex; flex-direction: column; align-items: {{VALUE}}; text-align: {{VALUE}};'
+                                '{{WRAPPER}} .sntravel-post-carousel.layout-post-6 .item-content' => 'display: flex; flex-direction: column; align-items: {{VALUE}}; text-align: {{VALUE}};'
                             ],
                             'condition' => ['layout_post' => 'post-6']
                         ),
@@ -316,7 +316,7 @@ pxl_add_custom_widget(
                                 'label' => esc_html__('Show Drag Cursor', 'sntravel'),
                                 'type' => \Elementor\Controls_Manager::SWITCHER,
                                 'condition' => [
-                                    'post_type' => 'pxl-portfolio'
+                                    'post_type' => 'sntravel-portfolio'
                                 ],
                                 'default' => "true"
                             ),
@@ -326,7 +326,7 @@ pxl_add_custom_widget(
                                 'type' => \Elementor\Controls_Manager::TEXT,
                                 'default' => esc_html('Drag', 'sntravel'),
                                 'condition' => [
-                                    'post_type' => 'pxl-portfolio'
+                                    'post_type' => 'sntravel-portfolio'
                                 ],
                             ),
                         )

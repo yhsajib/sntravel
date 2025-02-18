@@ -252,7 +252,7 @@
 			height: 14px;
 			margin-right: 10px;
 			color: #d74d29;
-			font-family: $pxli_font;
+			font-family: $sntraveli_font;
 			font-size: 16px;
 			text-indent: 0;
 			line-height: 1;
@@ -263,7 +263,7 @@
 			&:before {
 				display: inline-table;
 				content: "\e95b";
-				font-family: $pxli_font;
+				font-family: $sntraveli_font;
 				@include animation(sntravel-spin 2s linear infinite);
 			}
 			&:after {
@@ -865,13 +865,13 @@
 			&.flex-nav-prev{
 				left: 20px;
 				.flex-prev-icon:before{
-					@include font-pxli("\e9a1",14);
+					@include font-sntraveli("\e9a1",14);
 				}
 			}
 			&.flex-nav-next{
 				right: 20px;
 				.flex-next-icon:before{
-					@include font-pxli("\e9a0",14);
+					@include font-sntraveli("\e9a0",14);
 				}
 			}
 		}
@@ -900,13 +900,13 @@
 				&.flex-nav-prev{
 					top: 20px;
 					.flex-prev-icon:before{
-						@include font-pxli("\e99f",14);
+						@include font-sntraveli("\e99f",14);
 					}
 				}
 				&.flex-nav-next{
 					bottom: 20px;
 					.flex-next-icon:before{
-						@include font-pxli("\e99e",14);
+						@include font-sntraveli("\e99e",14);
 					}
 				}
 			}
@@ -918,13 +918,13 @@
 				&.flex-nav-prev{
 					left: 20px;
 					.flex-prev-icon:before{
-						@include font-pxli("\e9a1",14);
+						@include font-sntraveli("\e9a1",14);
 					}
 				}
 				&.flex-nav-next{
 					right: 20px;
 					.flex-next-icon:before{
-						@include font-pxli("\e9a0",14);
+						@include font-sntraveli("\e9a0",14);
 					}
 				}
 			}
@@ -1097,7 +1097,7 @@
 		margin-bottom: 0;
 		span{
 			&:after{
-				font-family: "pxli" !important;
+				font-family: "sntraveli" !important;
 				content: "";
 				margin-left: 10px;
 				font-size: 13px;
@@ -1364,12 +1364,12 @@
 			letter-spacing: 0;
 			&:before {
 				content: "\e948\e948\e948\e948\e948";
-				font-family: $pxli_font;
+				font-family: $sntraveli_font;
 				color: $secondary_color;
 			}
 			> span:before {
 				content: "\e949\e949\e949\e949\e949";
-				font-family: $pxli_font;	
+				font-family: $sntraveli_font;	
 				color: $secondary_color;
 			}
 		}
@@ -1546,7 +1546,7 @@
 			}
 			> span:before {
 				content: "\e999\e999\e999\e999\e999";
-				font-family: $pxli_font;
+				font-family: $sntraveli_font;
 				color: $divider_color;
 			}
 		}
@@ -2480,7 +2480,7 @@
 			content: "\e985";
 			color: #fff;
 			margin-right: 0;
-			font-family: $pxli_font;
+			font-family: $sntraveli_font;
 			font-size: 15px;
 			text-indent: 0;
 			line-height: 1;
@@ -2488,7 +2488,7 @@
 		&.woosw-adding {
 			&:before {
 				content: "\e95b";
-				font-family: $pxli_font;
+				font-family: $sntraveli_font;
 				@include animation(sntravel-spin 2s linear infinite);
 			}
 		}
@@ -2520,7 +2520,7 @@
 			height: 16px;
 			margin-right: 10px;
 			color: $primary_color;
-			font-family: $pxli_font;
+			font-family: $sntraveli_font;
 			font-size: 16px;
 			text-indent: 0;
 			line-height: 1;
@@ -2529,7 +2529,7 @@
 		&.woosw-adding {
 			&:before {
 				content: "\e95b";
-				font-family: $pxli_font;
+				font-family: $sntraveli_font;
 				@include animation(sntravel-spin 2s linear infinite);
 			}
 			&:after {
@@ -2565,7 +2565,7 @@
 			height: 14px;
 			margin-right: 10px;
 			color: $primary_color;
-			font-family: $pxli_font;
+			font-family: $sntraveli_font;
 			font-size: 16px;
 			text-indent: 0;
 			line-height: 1;
@@ -2575,7 +2575,7 @@
 		&.woosw-adding {
 			&:before {
 				content: "\e95b";
-				font-family: $pxli_font;
+				font-family: $sntraveli_font;
 				@include animation(sntravel-spin 2s linear infinite);
 			}
 			&:after {
@@ -2636,7 +2636,7 @@
 			height: 14px;
 			margin-right: 10px;
 			color: #d74d29;
-			font-family: $pxli_font;
+			font-family: $sntraveli_font;
 			font-size: 16px;
 			text-indent: 0;
 			line-height: 1;
@@ -2647,7 +2647,7 @@
 			&:before {
 				display: inline-table;
 				content: "\e95b";
-				font-family: $pxli_font;
+				font-family: $sntraveli_font;
 				@include animation(sntravel-spin 2s linear infinite);
 			}
 			&:after {
@@ -2708,7 +2708,7 @@
 			height: 14px;
 			margin-right: 10px;
 			color: #d74d29;
-			font-family: $pxli_font;
+			font-family: $sntraveli_font;
 			font-size: 16px;
 			text-indent: 0;
 			line-height: 1;
@@ -2719,7 +2719,7 @@
 			&:before {
 				display: inline-table;
 				content: "\e95b";
-				font-family: $pxli_font;
+				font-family: $sntraveli_font;
 				@include animation(sntravel-spin 2s linear infinite);
 			}
 			&:after {
@@ -2781,7 +2781,7 @@
 			height: 14px;
 			margin-right: 10px;
 			color: $primary_color;
-			font-family: $pxli_font;
+			font-family: $sntraveli_font;
 			font-size: 16px;
 			text-indent: 0;
 			line-height: 1;
@@ -2792,7 +2792,7 @@
 			&:before {
 				display: inline-table;
 				content: "\e95b";
-				font-family: $pxli_font;
+				font-family: $sntraveli_font;
 				@include animation(sntravel-spin 2s linear infinite);
 			}
 			&:after {
@@ -2853,7 +2853,7 @@
 			height: 14px;
 			margin-right: 10px;
 			color: $primary_color;
-			font-family: $pxli_font;
+			font-family: $sntraveli_font;
 			font-size: 16px;
 			text-indent: 0;
 			line-height: 1;
@@ -2864,7 +2864,7 @@
 			&:before {
 				display: inline-table;
 				content: "\e95b";
-				font-family: $pxli_font;
+				font-family: $sntraveli_font;
 				@include animation(sntravel-spin 2s linear infinite);
 			}
 			&:after {
@@ -2926,7 +2926,7 @@
 			height: 14px;
 			margin-right: 10px;
 			color: $primary_color;
-			font-family: $pxli_font;
+			font-family: $sntraveli_font;
 			font-size: 16px;
 			text-indent: 0;
 			line-height: 1;
@@ -2937,7 +2937,7 @@
 			&:before {
 				display: inline-table;
 				content: "\e95b";
-				font-family: $pxli_font;
+				font-family: $sntraveli_font;
 				@include animation(sntravel-spin 2s linear infinite);
 			}
 			&:after {
@@ -2999,7 +2999,7 @@
 			height: 14px;
 			margin-right: 10px;
 			color: $primary_color;
-			font-family: $pxli_font;
+			font-family: $sntraveli_font;
 			font-size: 16px;
 			text-indent: 0;
 			line-height: 1;
@@ -3010,7 +3010,7 @@
 			&:before {
 				display: inline-table;
 				content: "\e95b";
-				font-family: $pxli_font;
+				font-family: $sntraveli_font;
 				@include animation(sntravel-spin 2s linear infinite);
 			}
 			&:after {
@@ -3487,12 +3487,12 @@ table.shop_attributes{
 			letter-spacing: 0;
 			&:before {
 				content: "\e948\e948\e948\e948\e948";
-				font-family: $pxli_font;
+				font-family: $sntraveli_font;
 				color: $secondary_color;
 			}
 			> span:before {
 				content: "\e949\e949\e949\e949\e949";
-				font-family: $pxli_font;	
+				font-family: $sntraveli_font;	
 				color: $secondary_color;
 			}
 		}
@@ -3503,7 +3503,7 @@ table.shop_attributes{
 				width: 18px;
 				&::before {
 					font-size: 20px;
-					font-family: $pxli_font;
+					font-family: $sntraveli_font;
 					content: '\e948';
 				}
 				&:hover ~ a::before {
@@ -3652,12 +3652,12 @@ table.shop_attributes{
 			letter-spacing: 0;
 			&:before {
 				content: "\e948\e948\e948\e948\e948";
-				font-family: $pxli_font;
+				font-family: $sntraveli_font;
 				color: $secondary_color;
 			}
 			> span:before {
 				content: "\e949\e949\e949\e949\e949";
-				font-family: $pxli_font;	
+				font-family: $sntraveli_font;	
 				color: $secondary_color;
 			}
 		}
@@ -3668,7 +3668,7 @@ table.shop_attributes{
 				width: 18px;
 				&::before {
 					font-size: 20px;
-					font-family: $pxli_font;
+					font-family: $sntraveli_font;
 					content: '\e948';
 				}
 				&:hover ~ a::before {
@@ -3757,12 +3757,12 @@ table.shop_attributes{
 			letter-spacing: 0;
 			&:before {
 				content: "\e948\e948\e948\e948\e948";
-				font-family: $pxli_font;
+				font-family: $sntraveli_font;
 				color: $secondary_color;
 			}
 			> span:before {
 				content: "\e949\e949\e949\e949\e949";
-				font-family: $pxli_font;	
+				font-family: $sntraveli_font;	
 				color: $secondary_color;
 			}
 		}
@@ -3773,7 +3773,7 @@ table.shop_attributes{
 				width: 18px;
 				&::before {
 					font-size: 20px;
-					font-family: $pxli_font;
+					font-family: $sntraveli_font;
 					content: '\e948';
 				}
 				&:hover ~ a::before {
@@ -3865,12 +3865,12 @@ table.shop_attributes{
 			letter-spacing: 0;
 			&:before {
 				content: "\e948\e948\e948\e948\e948";
-				font-family: $pxli_font;
+				font-family: $sntraveli_font;
 				color: $secondary_color;
 			}
 			> span:before {
 				content: "\e949\e949\e949\e949\e949";
-				font-family: $pxli_font;	
+				font-family: $sntraveli_font;	
 				color: $secondary_color;
 			}
 		}
@@ -3881,7 +3881,7 @@ table.shop_attributes{
 				width: 18px;
 				&::before {
 					font-size: 20px;
-					font-family: $pxli_font;
+					font-family: $sntraveli_font;
 					content: '\e948';
 				}
 				&:hover ~ a::before {
@@ -3974,12 +3974,12 @@ table.shop_attributes{
 			letter-spacing: 0;
 			&:before {
 				content: "\e948\e948\e948\e948\e948";
-				font-family: $pxli_font;
+				font-family: $sntraveli_font;
 				color: $secondary_color;
 			}
 			> span:before {
 				content: "\e949\e949\e949\e949\e949";
-				font-family: $pxli_font;	
+				font-family: $sntraveli_font;	
 				color: $secondary_color;
 			}
 		}
@@ -3990,7 +3990,7 @@ table.shop_attributes{
 				width: 18px;
 				&::before {
 					font-size: 20px;
-					font-family: $pxli_font;
+					font-family: $sntraveli_font;
 					content: '\e948';
 				}
 				&:hover ~ a::before {
@@ -4086,12 +4086,12 @@ table.shop_attributes{
 			letter-spacing: 0;
 			&:before {
 				content: "\e948\e948\e948\e948\e948";
-				font-family: $pxli_font;
+				font-family: $sntraveli_font;
 				color: $secondary_color;
 			}
 			> span:before {
 				content: "\e949\e949\e949\e949\e949";
-				font-family: $pxli_font;	
+				font-family: $sntraveli_font;	
 				color: $secondary_color;
 			}
 		}
@@ -4102,7 +4102,7 @@ table.shop_attributes{
 				width: 18px;
 				&::before {
 					font-size: 20px;
-					font-family: $pxli_font;
+					font-family: $sntraveli_font;
 					content: '\e948';
 				}
 				&:hover ~ a::before {
@@ -4193,12 +4193,12 @@ table.shop_attributes{
 			letter-spacing: 0;
 			&:before {
 				content: "\e948\e948\e948\e948\e948";
-				font-family: $pxli_font;
+				font-family: $sntraveli_font;
 				color: $secondary_color;
 			}
 			> span:before {
 				content: "\e949\e949\e949\e949\e949";
-				font-family: $pxli_font;	
+				font-family: $sntraveli_font;	
 				color: $secondary_color;
 			}
 		}
@@ -4209,7 +4209,7 @@ table.shop_attributes{
 				width: 18px;
 				&::before {
 					font-size: 20px;
-					font-family: $pxli_font;
+					font-family: $sntraveli_font;
 					content: '\e948';
 				}
 				&:hover ~ a::before {
@@ -4298,12 +4298,12 @@ table.shop_attributes{
 			letter-spacing: 0;
 			&:before {
 				content: "\e948\e948\e948\e948\e948";
-				font-family: $pxli_font;
+				font-family: $sntraveli_font;
 				color: $secondary_color;
 			}
 			> span:before {
 				content: "\e949\e949\e949\e949\e949";
-				font-family: $pxli_font;	
+				font-family: $sntraveli_font;	
 				color: $secondary_color;
 			}
 		}
@@ -4314,7 +4314,7 @@ table.shop_attributes{
 				width: 18px;
 				&::before {
 					font-size: 20px;
-					font-family: $pxli_font;
+					font-family: $sntraveli_font;
 					content: '\e948';
 				}
 				&:hover ~ a::before {
@@ -4555,7 +4555,7 @@ table.shop_attributes{
 			&:after {
 				content: "\e9e6";
 				position: relative;
-				font-family: $pxli_font;
+				font-family: $sntraveli_font;
 				font-size: 15px;
 				background-color: transparent;
 			}
@@ -4587,7 +4587,7 @@ table.shop_attributes{
 			&:after {
 				content: "\e9e6";
 				position: relative;
-				font-family: $pxli_font;
+				font-family: $sntraveli_font;
 				font-size: 15px;
 				background-color: transparent;
 			}
@@ -4919,7 +4919,7 @@ table.shop_attributes{
 			bottom: -16px;
 			font-size: 38px;
 			color: $primary_color;
-			font-family: "pxli";
+			font-family: "sntraveli";
 			z-index: 1;
 			background-color: #fff;
 			padding: 0 14px;

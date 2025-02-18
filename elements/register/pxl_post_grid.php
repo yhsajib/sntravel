@@ -1,12 +1,12 @@
 <?php
-$pt_supports = ['post','pxl-portfolio'];
+$pt_supports = ['post','sntravel-portfolio'];
 use Elementor\Controls_Manager;
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name'       => 'pxl_post_grid',
+        'name'       => 'sntravel_post_grid',
         'title'      => esc_html__('PXL Post Grid', 'sntravel' ),
         'icon'       => 'eicon-posts-grid',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'scripts'    => [
             'imagesloaded',
             'isotope',
@@ -222,7 +222,7 @@ pxl_add_custom_widget(
                                     ]
                                 ],
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-grid-pagination, {{WRAPPER}} .pxl-load-more' => 'justify-content: {{VALUE}};'
+                                    '{{WRAPPER}} .sntravel-grid-pagination, {{WRAPPER}} .sntravel-load-more' => 'justify-content: {{VALUE}};'
                                 ],
                                 'default'      => 'start',
                                 'condition' => [
@@ -241,9 +241,9 @@ pxl_add_custom_widget(
                                     'left' => '15'
                                 ],
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-grid-inner' => 'margin-top: -{{TOP}}{{UNIT}}; margin-right: -{{RIGHT}}{{UNIT}}; margin-bottom: -{{BOTTOM}}{{UNIT}}; margin-left: -{{LEFT}}{{UNIT}};',
-                                    '{{WRAPPER}} .pxl-grid-inner .grid-item' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                                    '{{WRAPPER}} .pxl-grid.layout-pxl-portfolio-5' => 'padding-left: {{LEFT}}{{UNIT}}; padding-right: {{RIGHT}}{{UNIT}};',
+                                    '{{WRAPPER}} .sntravel-grid-inner' => 'margin-top: -{{TOP}}{{UNIT}}; margin-right: -{{RIGHT}}{{UNIT}}; margin-bottom: -{{BOTTOM}}{{UNIT}}; margin-left: -{{LEFT}}{{UNIT}};',
+                                    '{{WRAPPER}} .sntravel-grid-inner .grid-item' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                    '{{WRAPPER}} .sntravel-grid.layout-sntravel-portfolio-5' => 'padding-left: {{LEFT}}{{UNIT}}; padding-right: {{RIGHT}}{{UNIT}};',
                                 ],
                                 'control_type' => 'responsive',
                             ),
@@ -256,7 +256,7 @@ pxl_add_custom_widget(
                                 'default'      => 0,
                                 'control_type' => 'responsive',
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-grid-inner .grid-item' => 'margin-bottom: {{VALUE}}px;',
+                                    '{{WRAPPER}} .sntravel-grid-inner .grid-item' => 'margin-bottom: {{VALUE}}px;',
                                 ],
                             )
                         ),
@@ -323,7 +323,7 @@ pxl_add_custom_widget(
                             'label'     => esc_html__('Show Category / Tags', 'sntravel' ),
                             'type'      => \Elementor\Controls_Manager::SWITCHER,
                             'default'   => 'true',
-                            'condition' => ['post_type' => array('post', 'pxl-portfolio')]
+                            'condition' => ['post_type' => array('post', 'sntravel-portfolio')]
                         ),
                         array(
                             'name'      => 'show_divider',
@@ -372,7 +372,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::DIMENSIONS,
                             'size_units' => [ 'px' ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-grid .grid-item-inner' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-grid .grid-item-inner' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                         ),
                     ),

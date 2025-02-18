@@ -6,7 +6,7 @@ $entries = $breadcrumb->get_entries();
 
 $brc_divider = '<span class="br-divider"></span>';
 ?>
-<div class="pxl-breadcrumb hover-underline layout-2">
+<div class="sntravel-breadcrumb hover-underline layout-2">
     <?php
     foreach ( $entries as $entry ){
         $entry = wp_parse_args( $entry, array(

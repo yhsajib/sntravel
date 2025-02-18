@@ -49,7 +49,7 @@ $theme_style = sntravel()->get_theme_opt('theme_style', 'default');
                 <div class="format-wrap">
                     <div class="link-inner">
                         <div class="link-icon">
-                            <a href="<?php echo esc_url($link_url); ?>"><span class="pxli-link"></span></a>
+                            <a href="<?php echo esc_url($link_url); ?>"><span class="sntraveli-link"></span></a>
                         </div>
                         <a class="link-text" target="_blank" href="<?php echo esc_url($link_url); ?>"><?php echo esc_html($link_text); ?></a>
                         <?php if (!empty($link_cite)) : ?>
@@ -75,7 +75,7 @@ $theme_style = sntravel()->get_theme_opt('theme_style', 'default');
                         <div class="sntravel-media-popup">
                             <div class="content-inner">
                                 <a class="media-play-button media-default" href="<?php echo esc_url($featured_video); ?>">
-                                    <i class="pxli-play-2 sntravel-icon-outline"></i>
+                                    <i class="sntraveli-play-2 sntravel-icon-outline"></i>
                                 </a>
                             </div>
                         </div>
@@ -96,14 +96,14 @@ $theme_style = sntravel()->get_theme_opt('theme_style', 'default');
                         <div class="sntravel-media-popup">
                             <div class="content-inner">
                                 <a class="media-play-button media-default" href="<?php echo esc_url($audio_url); ?>">
-                                    <i class="pxli-volume"></i>
+                                    <i class="sntraveli-volume"></i>
                                 </a>
                             </div>
                         </div>
                 <?php }
                 } else {
                     global $wp_embed;
-                    pxl_print_html($wp_embed->run_shortcode('[embed]' . $audio_url . '[/embed]'));
+                    sntravel_print_html($wp_embed->run_shortcode('[embed]' . $audio_url . '[/embed]'));
                 }
             } else {
                 ?>
@@ -125,7 +125,7 @@ $theme_style = sntravel()->get_theme_opt('theme_style', 'default');
             <h2 class="post-title">
                 <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php the_title_attribute(); ?>">
                     <?php if (is_sticky()) { ?>
-                        <i class="pxli-thumbtack"></i>
+                        <i class="sntraveli-thumbtack"></i>
                     <?php } ?>
                     <?php the_title(); ?>
                 </a>

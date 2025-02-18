@@ -1,12 +1,12 @@
 <?php
 $pt_supports = ['post'];
 use Elementor\Controls_Manager;
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name'       => 'pxl_post_list',
+        'name'       => 'sntravel_post_list',
         'title'      => esc_html__('PXL Post List', 'sntravel' ),
         'icon'       => 'eicon-post-list',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'scripts'    => [
             'imagesloaded',
             'isotope',
@@ -211,7 +211,7 @@ pxl_add_custom_widget(
                                     ]
                                 ],
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-grid-pagination, {{WRAPPER}} .pxl-load-more' => 'justify-content: {{VALUE}};'
+                                    '{{WRAPPER}} .sntravel-grid-pagination, {{WRAPPER}} .sntravel-load-more' => 'justify-content: {{VALUE}};'
                                 ],
                                 'default'      => 'start',
                                 'condition' => [

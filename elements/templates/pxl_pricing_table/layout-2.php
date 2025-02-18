@@ -13,9 +13,9 @@ if($link_type == 'link'){
     $rel = !empty($settings['pricing_table_button_link']['nofollow'])?'nofollow':'';
 }
 $is_new = \Elementor\Icons_Manager::is_migration_allowed();
-$pxl_animate = $widget->get_setting('pxl_animate');
+$sntravel_animate = $widget->get_setting('sntravel_animate');
 ?>
-<div class="pxl-pricing-wrap layout-2 <?php if (!empty($pxl_animate)){echo esc_attr($pxl_animate);} ?> <?php echo esc_attr($settings['style']);?>" data-wow-duration="1.4s" data-wow-delay="0.25s">
+<div class="sntravel-pricing-wrap layout-2 <?php if (!empty($sntravel_animate)){echo esc_attr($sntravel_animate);} ?> <?php echo esc_attr($settings['style']);?>" data-wow-duration="1.4s" data-wow-delay="0.25s">
     <?php
     if ( $settings['show_highlight_text'] == 'true' ){
         ?><span class="pricing-price-note"><?php echo esc_html($settings['highlight_text']);?></span><?php
@@ -26,7 +26,7 @@ $pxl_animate = $widget->get_setting('pxl_animate');
             <div class="pricing-price-container">
                 <div class="box-price-title">
                     <h3 class="pricing-table-title">
-                        <span <?php pxl_print_html($widget->get_render_attribute_string( 'pricing_table_title_text' )); ?>><?php echo esc_html($settings['pricing_table_title_text']);?></span>
+                        <span <?php sntravel_print_html($widget->get_render_attribute_string( 'pricing_table_title_text' )); ?>><?php echo esc_html($settings['pricing_table_title_text']);?></span>
                     </h3>
                     <div class="price-money-inner">
                         <span class="pricing-price-value">
@@ -60,9 +60,9 @@ $pxl_animate = $widget->get_setting('pxl_animate');
                         </li>
                     <?php endforeach; ?>
                 </ul>
-                <div class="pricing-button-container pxl-button-wrapper">
+                <div class="pricing-button-container sntravel-button-wrapper">
                     <a class="pricing-price-button btn btn-outline-secondary-2 btn-fullwidth" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr($target); ?>" rel="<?php echo esc_attr($rel); ?>">
-                        <span <?php pxl_print_html($widget->get_render_attribute_string('pricing_table_button_text')); ?>><?php echo esc_html($settings['pricing_table_button_text']); ?></span>
+                        <span <?php sntravel_print_html($widget->get_render_attribute_string('pricing_table_button_text')); ?>><?php echo esc_html($settings['pricing_table_button_text']); ?></span>
                     </a>
                 </div>
             </div>

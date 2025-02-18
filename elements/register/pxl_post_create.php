@@ -1,12 +1,12 @@
 <?php
 $pt_supports = ['post'];
 use Elementor\Controls_Manager;
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name'       => 'pxl_post_create',
+        'name'       => 'sntravel_post_create',
         'title'      => esc_html__('PXL Post Create', 'sntravel' ),
         'icon'       => 'eicon-post-list',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'scripts'    => [
             'sntravel-post-create'
         ],
@@ -123,7 +123,7 @@ pxl_add_custom_widget(
                             'label'     => esc_html__('Show Tag', 'sntravel' ),
                             'type'      => \Elementor\Controls_Manager::SWITCHER,
                             'default'   => 'true',
-                            'condition' => ['post_type' => 'pxl-portfolio']
+                            'condition' => ['post_type' => 'sntravel-portfolio']
                         ),
                         array(
                             'name'      => 'show_author',

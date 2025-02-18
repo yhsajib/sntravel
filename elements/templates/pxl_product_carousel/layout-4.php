@@ -69,7 +69,7 @@ if ( !empty( $item_animation) ) {
 <div class="sntravel-swiper-slider sntravel-product-carousel sntravel-shop-layout-4">
     <div class="sntravel-swiper-slider-wrap sntravel-carousel-inner relative">
         <div class="sntravel-swiper-arrow sntravel-swiper-arrow-prev"><?php echo esc_html('Previous', 'sntravel'); ?></div>
-        <div <?php pxl_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
+        <div <?php sntravel_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
             <div class="sntravel-swiper-wrapper swiper-wrapper">
                 <?php
                 while ($query->have_posts()) {

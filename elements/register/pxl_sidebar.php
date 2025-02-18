@@ -15,12 +15,12 @@ if ( ! $wp_registered_sidebars ) {
 $default_key = array_keys( $options );
 $default_key = array_shift( $default_key );
 
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name'       => 'pxl_sidebar',
+        'name'       => 'sntravel_sidebar',
         'title'      => esc_html__( 'PXL Sidebar', 'sntravel' ),
         'icon' => 'eicon-nav-menu',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'params' => array(
             'sections' => array(
                 array(

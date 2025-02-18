@@ -107,9 +107,9 @@
             if (meta) $(postMeta).html(meta);
             if (date) {
                 $(postExcerpt).html(excerpt);
-                $scope.find(".item-content-large .pxl-divider").css("display", "block");
+                $scope.find(".item-content-large .sntravel-divider").css("display", "block");
             } else {
-                $scope.find(".item-content-large .pxl-divider").css("display", "none");
+                $scope.find(".item-content-large .sntravel-divider").css("display", "none");
             }
             if (readmore) $(postReadMore).html(readmore);
         }
@@ -117,7 +117,7 @@
 
     $(window).on("elementor/frontend/init", function () {
         elementorFrontend.hooks.addAction(
-            "frontend/element_ready/pxl_post_create.default",
+            "frontend/element_ready/sntravel_post_create.default",
             PXLPostCreateHandler
         );
     });

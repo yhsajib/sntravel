@@ -1,14 +1,14 @@
 <?php
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name'       => 'pxl_heading',
+        'name'       => 'sntravel_heading',
         'title'      => esc_html__( 'PXL Heading', 'sntravel' ),
         'icon'       => 'eicon-t-letter',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'scripts'    => array(
             'sntravel-typewrite',
             'scroll-trigger',
-            'pxl-split-text'
+            'sntravel-split-text'
         ),
         'params' => array(
             'sections' => array(
@@ -25,10 +25,10 @@ pxl_add_custom_widget(
                             'options' => [
                                 '1' => [
                                     'label' => esc_html__( 'Layout 1', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_heading-1.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_heading-1.jpg'
                                 ],
                             ],
-                            'prefix_class' => 'pxl-heading-layout-',
+                            'prefix_class' => 'sntravel-heading-layout-',
                         ),
                     )
                 ),
@@ -67,7 +67,7 @@ pxl_add_custom_widget(
                                 'label' => esc_html__('Title Color', 'sntravel' ),
                                 'type' => 'color',
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-heading-wrap .heading-title' => 'color: {{VALUE}};',
+                                    '{{WRAPPER}} .sntravel-heading-wrap .heading-title' => 'color: {{VALUE}};',
                                 ],
                             ),
                             array(
@@ -75,13 +75,13 @@ pxl_add_custom_widget(
                                 'label' => esc_html__('Title Typography', 'sntravel' ),
                                 'type' => \Elementor\Group_Control_Typography::get_type(),
                                 'control_type' => 'group',
-                                'selector' => '{{WRAPPER}} .pxl-heading-wrap .heading-title',
+                                'selector' => '{{WRAPPER}} .sntravel-heading-wrap .heading-title',
                             ),
                             array(
                                 'name' => 'text_align',
                                 'label' => esc_html__('Alignment', 'sntravel' ),
                                 'type' => 'choose',
-                                'prefix_class' => 'pxl-heading-align-%s',
+                                'prefix_class' => 'sntravel-heading-align-%s',
                                 'control_type' => 'responsive',
                                 'options' => [
                                     'left' => [
@@ -147,10 +147,10 @@ pxl_add_custom_widget(
                                     'title_highlighted_style' => 'style-2'
                                 ],
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-heading-inner .heading-title span:before,
-                                     {{WRAPPER}} .pxl-heading-inner .heading-title span:after,
-                                     {{WRAPPER}} .pxl-heading-inner .heading-title a:before,
-                                     {{WRAPPER}} .pxl-heading-inner .heading-title a:after'
+                                    '{{WRAPPER}} .sntravel-heading-inner .heading-title span:before,
+                                     {{WRAPPER}} .sntravel-heading-inner .heading-title span:after,
+                                     {{WRAPPER}} .sntravel-heading-inner .heading-title a:before,
+                                     {{WRAPPER}} .sntravel-heading-inner .heading-title a:after'
                                      => 'font-size: {{VALUE}}px;'
                                 ],
                             ),
@@ -166,7 +166,7 @@ pxl_add_custom_widget(
                                     ],
                                 ],
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-heading-inner .heading-title' => 'max-width: {{SIZE}}{{UNIT}};',
+                                    '{{WRAPPER}} .sntravel-heading-inner .heading-title' => 'max-width: {{SIZE}}{{UNIT}};',
                                 ]
                             ),
                             array(
@@ -199,7 +199,7 @@ pxl_add_custom_widget(
                                 'label' => esc_html__('Color', 'sntravel' ),
                                 'type' => 'color',
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-heading-wrap .heading-subtitle' => 'color: {{VALUE}};',
+                                    '{{WRAPPER}} .sntravel-heading-wrap .heading-subtitle' => 'color: {{VALUE}};',
                                 ],
                             ),
                             array(
@@ -207,7 +207,7 @@ pxl_add_custom_widget(
                                 'label' => esc_html__('Typography', 'sntravel' ),
                                 'type' => \Elementor\Group_Control_Typography::get_type(),
                                 'control_type' => 'group',
-                                'selector' => '{{WRAPPER}} .pxl-heading-wrap .heading-subtitle',
+                                'selector' => '{{WRAPPER}} .sntravel-heading-wrap .heading-subtitle',
                             ),
                             array(
                                 'name' => 'subtitle_highlighted_line',
@@ -237,7 +237,7 @@ pxl_add_custom_widget(
                                 'control_type' => 'responsive',
                                 'size_units' => [ 'px' ],
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-heading-wrap .heading-subtitle' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                    '{{WRAPPER}} .sntravel-heading-wrap .heading-subtitle' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                                 ],
                             ),
                             basilico_split_text_option('subtitle_'),
@@ -265,7 +265,7 @@ pxl_add_custom_widget(
                                 'label' => esc_html__('Color', 'sntravel' ),
                                 'type' => 'color',
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-heading-wrap .heading-description' => 'color: {{VALUE}};',
+                                    '{{WRAPPER}} .sntravel-heading-wrap .heading-description' => 'color: {{VALUE}};',
                                 ],
                             ),
                             array(
@@ -273,7 +273,7 @@ pxl_add_custom_widget(
                                 'label' => esc_html__('Typography', 'sntravel' ),
                                 'type' => \Elementor\Group_Control_Typography::get_type(),
                                 'control_type' => 'group',
-                                'selector' => '{{WRAPPER}} .pxl-heading-wrap .heading-description',
+                                'selector' => '{{WRAPPER}} .sntravel-heading-wrap .heading-description',
                             ),
                             array(
                                 'name' => 'description_space',
@@ -284,7 +284,7 @@ pxl_add_custom_widget(
                                 'control_type' => 'responsive',
                                 'size_units' => [ 'px' ],
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-heading-wrap .heading-description' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                    '{{WRAPPER}} .sntravel-heading-wrap .heading-description' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                                 ],
                             ),
                             array(
@@ -299,7 +299,7 @@ pxl_add_custom_widget(
                                     ],
                                 ],
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-heading-inner .heading-description span' => 'max-width: {{SIZE}}{{UNIT}};',
+                                    '{{WRAPPER}} .sntravel-heading-inner .heading-description span' => 'max-width: {{SIZE}}{{UNIT}};',
                                 ]
                             ),
                             basilico_split_text_option('description_'),
@@ -335,7 +335,7 @@ pxl_add_custom_widget(
                                 'label' => esc_html__('Highlight Color', 'sntravel' ),
                                 'type' => 'color',
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-heading-wrap .heading-highlight' => 'color: {{VALUE}};',
+                                    '{{WRAPPER}} .sntravel-heading-wrap .heading-highlight' => 'color: {{VALUE}};',
                                 ],
                             ),
                             array(
@@ -343,7 +343,7 @@ pxl_add_custom_widget(
                                 'label' => esc_html__('Highlight Typography', 'sntravel' ),
                                 'type' => \Elementor\Group_Control_Typography::get_type(),
                                 'control_type' => 'group',
-                                'selector' => '{{WRAPPER}} .pxl-heading-wrap .heading-highlight',
+                                'selector' => '{{WRAPPER}} .sntravel-heading-wrap .heading-highlight',
                             ),
                         )
                     ),

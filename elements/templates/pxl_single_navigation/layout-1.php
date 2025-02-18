@@ -22,7 +22,7 @@ if (!is_single()) return false;
             $prev_img_id = get_post_thumbnail_id($previous_post->ID);
             $prev_img_url = wp_get_attachment_image_src($prev_img_id, 'thumbnail');
 
-            $img = pxl_get_image_by_size(array(
+            $img = sntravel_get_image_by_size(array(
                 'attach_id'  => $prev_img_id,
                 'thumb_size' => '108x108',
                 'class' => 'no-lazyload',
@@ -62,7 +62,7 @@ if (!is_single()) return false;
             $next_img_id = get_post_thumbnail_id($next_post->ID);
             $next_img_url = wp_get_attachment_image_src($next_img_id, 'thumbnail');
 
-            $img = pxl_get_image_by_size(array(
+            $img = sntravel_get_image_by_size(array(
                 'attach_id'  => $next_img_id,
                 'thumb_size' => '108x108',
                 'class' => 'no-lazyload',

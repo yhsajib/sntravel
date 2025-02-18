@@ -18,9 +18,9 @@ class Sntravel_Updater {
 	protected $strings = null;
 
 	function __construct( $args = array(), $strings = array() ) {
-		$pxl_server_info = apply_filters( 'pxl_server_info', ['api_url' => ''] ) ;
+		$sntravel_server_info = apply_filters( 'sntravel_server_info', ['api_url' => ''] ) ;
 		$args = wp_parse_args( $args, array(
-			'remote_api_url' => $pxl_server_info['api_url'],
+			'remote_api_url' => $sntravel_server_info['api_url'],
 			'request_data' => array(),
 			'theme_slug' => sntravel()->get_slug(),
 			'item_name' => '',

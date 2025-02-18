@@ -6,9 +6,9 @@
 
     'use strict';
     var PXLCountdownHandler = function( $scope, $ ) {
-        $scope.find(".pxl-countdown").each(function(){
-            if ($('.pxl-countdown-container').length > 0) {
-                $('.pxl-countdown-container').each(function () {
+        $scope.find(".sntravel-countdown").each(function(){
+            if ($('.sntravel-countdown-container').length > 0) {
+                $('.sntravel-countdown-container').each(function () {
                     var $this = $(this);
                     var div = $this;
                     var timeout = $this.data('time');
@@ -40,6 +40,6 @@
 
     // Make sure you run this code under Elementor.
     $( window ).on( 'elementor/frontend/init', function() {
-        elementorFrontend.hooks.addAction( 'frontend/element_ready/pxl_countdown.default', PXLCountdownHandler );
+        elementorFrontend.hooks.addAction( 'frontend/element_ready/sntravel_countdown.default', PXLCountdownHandler );
     } );
 } )( jQuery );

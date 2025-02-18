@@ -1,6 +1,6 @@
 <?php 
 if(isset($settings['links']) && !empty($settings['links']) && count($settings['links'])): ?>
-    <ul class="pxl-links d-flex flex-column layout-1">
+    <ul class="sntravel-links d-flex flex-column layout-1">
         <?php
             foreach ($settings['links'] as $key => $link):
                 $link_key = $widget->get_repeater_setting_key( 'link', 'links', $key );
@@ -19,7 +19,7 @@ if(isset($settings['links']) && !empty($settings['links']) && count($settings['l
                 ?>
                 <li>
                     <a <?php echo implode( ' ', [ $link_attributes ] ); ?>>
-                        <span><?php pxl_print_html($link['text']); ?></span>
+                        <span><?php sntravel_print_html($link['text']); ?></span>
                     </a>
                 </li>
         <?php endforeach; ?>

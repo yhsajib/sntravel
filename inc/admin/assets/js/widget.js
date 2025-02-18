@@ -1,6 +1,6 @@
 ;(function ($) {
     /* Start Widget Free Resource */
-    $(document).on('click', '.pxl-select-image',  function (e) {
+    $(document).on('click', '.sntravel-select-image',  function (e) {
         e.preventDefault();
         var $this = $(this);
         var image = wp.media({
@@ -15,21 +15,21 @@
                 var image_url = uploaded_image.toJSON().id;
                 // Let's assign the url value to the input field
                 $this.parent().find('.hide-image-url').val(image_url);
-                $this.parent().find('.pxl-wg-show-image').empty();
-                $this.parent().find('.pxl-wg-show-image').append('<img src = "' + uploaded_image.toJSON().url + '">');
+                $this.parent().find('.sntravel-wg-show-image').empty();
+                $this.parent().find('.sntravel-wg-show-image').append('<img src = "' + uploaded_image.toJSON().url + '">');
                 $this.hide();
-                $this.parent().find('.pxl-wg-remove-image').show();
+                $this.parent().find('.sntravel-wg-remove-image').show();
                 $this.parents('form').find('input[name="savewidget"]').removeAttr('disabled');
             });
     });
 
-    $(document).on('click', '.pxl-remove-image', function (e) {
+    $(document).on('click', '.sntravel-remove-image', function (e) {
         e.preventDefault();
         var $this = $(this);
         $this.parent().find('.hide-image-url').val('');
-        $this.parent().find('.pxl-show-image').empty();
+        $this.parent().find('.sntravel-show-image').empty();
         $this.hide();
-        $this.parent().find('.pxl-select-image').show();
+        $this.parent().find('.sntravel-select-image').show();
         $this.parents('form').find('input[name="savewidget"]').removeAttr('disabled');
     });
     /* End Widget Free Resource */

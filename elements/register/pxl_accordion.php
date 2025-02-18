@@ -1,12 +1,12 @@
 <?php
 // Register Accordion Widget
 $templates = basilico_get_templates_option('default', []) ;
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name'       => 'pxl_accordion',
+        'name'       => 'sntravel_accordion',
         'title'      => esc_html__( 'PXL Accordion', 'sntravel' ),
         'icon'       => 'eicon-accordion',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'scripts'    => array(
             'sntravel-accordion'
         ),
@@ -74,7 +74,7 @@ pxl_add_custom_widget(
                                 array(
                                     'name' => 'ac_content_template',
                                     'label' => esc_html__('Select Templates', 'sntravel'),
-                                    'description'        => sprintf(esc_html__('Please create your layout before choosing. %sClick Here%s','sntravel'),'<a href="' . esc_url( admin_url( 'edit.php?post_type=pxl-template' ) ) . '">','</a>'),
+                                    'description'        => sprintf(esc_html__('Please create your layout before choosing. %sClick Here%s','sntravel'),'<a href="' . esc_url( admin_url( 'edit.php?post_type=sntravel-template' ) ) . '">','</a>'),
                                     'type' => \Elementor\Controls_Manager::SELECT,
                                     'default' => '',
                                     'options' => $templates,
@@ -87,7 +87,7 @@ pxl_add_custom_widget(
                                     'label' => esc_html__('Background Color', 'sntravel' ),
                                     'type' => \Elementor\Controls_Manager::COLOR,
                                     'selectors' => [
-                                        '{{WRAPPER}} .pxl-accordion.style8 {{CURRENT_ITEM}} .pxl-ac-title' => 'background-color: {{VALUE}};',
+                                        '{{WRAPPER}} .sntravel-accordion.style8 {{CURRENT_ITEM}} .sntravel-ac-title' => 'background-color: {{VALUE}};',
                                     ],
                                 ),
                                 array(
@@ -96,7 +96,7 @@ pxl_add_custom_widget(
                                     'type' => \Elementor\Controls_Manager::COLOR,
                                     'description' => esc_html__('Background Use for Style 8', 'sntravel'),
                                     'selectors' => [
-                                        '{{WRAPPER}} .pxl-accordion.style8 {{CURRENT_ITEM}} .pxl-ac-title.active' => 'background-color: {{VALUE}};',
+                                        '{{WRAPPER}} .sntravel-accordion.style8 {{CURRENT_ITEM}} .sntravel-ac-title.active' => 'background-color: {{VALUE}};',
                                     ],
                                 ),
                             ),
@@ -127,7 +127,7 @@ pxl_add_custom_widget(
                                 'label' => esc_html__('Title Color', 'sntravel' ),
                                 'type' => \Elementor\Controls_Manager::COLOR,
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-accordion .pxl-ac-item .pxl-ac-title' => 'color: {{VALUE}};',
+                                    '{{WRAPPER}} .sntravel-accordion .sntravel-ac-item .sntravel-ac-title' => 'color: {{VALUE}};',
                                 ],
                             ),
                             array(
@@ -135,14 +135,14 @@ pxl_add_custom_widget(
                                 'label' => esc_html__('Title Typography', 'sntravel' ),
                                 'type' => \Elementor\Group_Control_Typography::get_type(),
                                 'control_type' => 'group',
-                                'selector' => '{{WRAPPER}} .pxl-accordion .pxl-ac-item .pxl-ac-title',
+                                'selector' => '{{WRAPPER}} .sntravel-accordion .sntravel-ac-item .sntravel-ac-title',
                             ),
                             array(
                                 'name' => 'title_color_active',
                                 'label' => esc_html__('Title Color Active', 'sntravel' ),
                                 'type' => \Elementor\Controls_Manager::COLOR,
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-accordion .pxl-ac-title.active' => 'color: {{VALUE}};',
+                                    '{{WRAPPER}} .sntravel-accordion .sntravel-ac-title.active' => 'color: {{VALUE}};',
                                 ],
                                 'condition' => [
                                     'style' => 'style8'
@@ -153,7 +153,7 @@ pxl_add_custom_widget(
                                 'label' => esc_html__('Description Color', 'sntravel' ),
                                 'type' => \Elementor\Controls_Manager::COLOR,
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-accordion .pxl-ac-item .pxl-ac-desc' => 'color: {{VALUE}};',
+                                    '{{WRAPPER}} .sntravel-accordion .sntravel-ac-item .sntravel-ac-desc' => 'color: {{VALUE}};',
                                 ],
                                 'condition' => [
                                     'style!' => 'style8'
@@ -164,7 +164,7 @@ pxl_add_custom_widget(
                                 'label' => esc_html__('Description Typography', 'sntravel' ),
                                 'type' => \Elementor\Group_Control_Typography::get_type(),
                                 'control_type' => 'group',
-                                'selector' => '{{WRAPPER}} .pxl-accordion .pxl-ac-item .pxl-ac-content',
+                                'selector' => '{{WRAPPER}} .sntravel-accordion .sntravel-ac-item .sntravel-ac-content',
                                 'condition' => [
                                     'style!' => 'style8'
                                 ]
@@ -174,10 +174,10 @@ pxl_add_custom_widget(
                                 'label' => esc_html__('Icon Color', 'sntravel' ),
                                 'type' => \Elementor\Controls_Manager::COLOR,
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-accordion .pxl-ac-item .pxl-ac-title:before,
-                                     {{WRAPPER}} .pxl-accordion.style9 .pxl-ac-title.active > span:before,
-                                     {{WRAPPER}} .pxl-accordion.style9 .pxl-ac-title.active > span:after' => 'color: {{VALUE}};',
-                                    '{{WRAPPER}} .pxl-accordion .pxl-ac-item .pxl-ac-title:after' => 'color: {{VALUE}};',
+                                    '{{WRAPPER}} .sntravel-accordion .sntravel-ac-item .sntravel-ac-title:before,
+                                     {{WRAPPER}} .sntravel-accordion.style9 .sntravel-ac-title.active > span:before,
+                                     {{WRAPPER}} .sntravel-accordion.style9 .sntravel-ac-title.active > span:after' => 'color: {{VALUE}};',
+                                    '{{WRAPPER}} .sntravel-accordion .sntravel-ac-item .sntravel-ac-title:after' => 'color: {{VALUE}};',
                                 ],
                             ),
                             array(
@@ -185,7 +185,7 @@ pxl_add_custom_widget(
                                 'label' => esc_html__('Icon Color Active', 'sntravel' ),
                                 'type' => \Elementor\Controls_Manager::COLOR,
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-accordion .pxl-ac-title.active:after' => 'color: {{VALUE}};',
+                                    '{{WRAPPER}} .sntravel-accordion .sntravel-ac-title.active:after' => 'color: {{VALUE}};',
                                 ],
                                 'condition' => [
                                     'style' => 'style8'
@@ -199,7 +199,7 @@ pxl_add_custom_widget(
                                     'style' => 'style9'
                                 ],
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-accordion.style9 .pxl-ac-title.active > span:before, {{WRAPPER}} .pxl-accordion.style9 .pxl-ac-title.active > span:after'
+                                    '{{WRAPPER}} .sntravel-accordion.style9 .sntravel-ac-title.active > span:before, {{WRAPPER}} .sntravel-accordion.style9 .sntravel-ac-title.active > span:after'
                                      => 'font-size: {{VALUE}}px;'
                                 ],
                             ),
@@ -208,8 +208,8 @@ pxl_add_custom_widget(
                                 'label' => esc_html__('Divider Color', 'sntravel' ),
                                 'type' => \Elementor\Controls_Manager::COLOR,
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-accordion .pxl-ac-title' => 'border-bottom-color: {{VALUE}};',
-                                    '{{WRAPPER}} .pxl-accordion .pxl-ac-content' => 'border-color: {{VALUE}};',
+                                    '{{WRAPPER}} .sntravel-accordion .sntravel-ac-title' => 'border-bottom-color: {{VALUE}};',
+                                    '{{WRAPPER}} .sntravel-accordion .sntravel-ac-content' => 'border-color: {{VALUE}};',
                                 ],
                                 'condition' => [
                                     'style' => 'style1'
@@ -220,7 +220,7 @@ pxl_add_custom_widget(
                                 'label' => esc_html__('Divider Color Active', 'sntravel' ),
                                 'type' => \Elementor\Controls_Manager::COLOR,
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-accordion .pxl-ac-title.active' => 'border-bottom-color: {{VALUE}};',
+                                    '{{WRAPPER}} .sntravel-accordion .sntravel-ac-title.active' => 'border-bottom-color: {{VALUE}};',
                                 ],
                                 'condition' => [
                                     'style' => 'style1'
@@ -232,7 +232,7 @@ pxl_add_custom_widget(
                                 'type' => \Elementor\Controls_Manager::DIMENSIONS,
                                 'size_units' => [ 'px' ],
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-accordion .pxl-ac-content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                    '{{WRAPPER}} .sntravel-accordion .sntravel-ac-content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                                 ],
                                 'control_type' => 'responsive',
                             ),
@@ -258,7 +258,7 @@ pxl_add_custom_widget(
                                 'prefix_class' => 'elementor-align-',
                                 'default' => '',
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-accordion.style9' => 'text-align: {{VALUE}};'
+                                    '{{WRAPPER}} .sntravel-accordion.style9' => 'text-align: {{VALUE}};'
                                 ],
                                 'condition' => [
                                     'style' => 'style9'

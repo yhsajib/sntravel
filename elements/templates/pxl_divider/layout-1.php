@@ -3,8 +3,8 @@
 	$draw = $widget->get_setting('draw', '');
 ?>
 
-<div class="pxl-widget-divider">
-	<div class="pxl-divider <?php echo esc_html($style); ?><?php echo esc_html($draw) == 'true' ? ' pxl-scroll' : ''; ?>">
+<div class="sntravel-widget-divider">
+	<div class="sntravel-divider <?php echo esc_html($style); ?><?php echo esc_html($draw) == 'true' ? ' sntravel-scroll' : ''; ?>">
 		<?php if ($style == 'style-2') : ?>
 			<div class="diamond-icon"></div>
 		<?php endif; ?>

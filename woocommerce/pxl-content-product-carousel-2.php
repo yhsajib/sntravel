@@ -15,7 +15,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
             $image_size = !empty($img_size) ? $img_size : '768x677';
             $img_id       = get_post_thumbnail_id( get_the_ID() );
             if (has_post_thumbnail(get_the_ID()) && wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), false)){
-                $img          = pxl_get_image_by_size( array(
+                $img          = sntravel_get_image_by_size( array(
                     'attach_id'  => $img_id,
                     'thumb_size' => $image_size
                 ) );

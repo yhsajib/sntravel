@@ -8,7 +8,7 @@ $settings = array_merge($default_settings, $settings);
 extract($settings);
 ?>
 <?php if(isset($boxs) && !empty($boxs) && count($boxs)): ?>
-    <div class="pxl-fancy-box-accordion layout-<?php echo esc_attr($settings['layout'])?>">
+    <div class="sntravel-fancy-box-accordion layout-<?php echo esc_attr($settings['layout'])?>">
         <div class="box-items">
             <?php
             foreach ($settings['boxs'] as $index => $item){
@@ -41,7 +41,7 @@ extract($settings);
                     $button_text = $item['button_text'];
                 }
                 ?>
-                <div <?php pxl_print_html($class_attributes); ?>>
+                <div <?php sntravel_print_html($class_attributes); ?>>
                     <div class="box-image">
                         <div class="image-background" style="background-image: url(<?php echo esc_url($item['box_image']['url']); ?>);">
                         </div>
@@ -59,7 +59,7 @@ extract($settings);
                             if (!empty($item['title_text'])){
                                 ?>
                                 <h3 class="item-title">
-                                    <?php pxl_print_html($item['title_text']); ?>
+                                    <?php sntravel_print_html($item['title_text']); ?>
                                 </h3>
                                 <?php
                             }
@@ -81,7 +81,7 @@ extract($settings);
                             if (!empty($item['title_text'])){
                                 ?>
                                 <h3 class="item-title">
-                                    <?php pxl_print_html($item['title_text']); ?>
+                                    <?php sntravel_print_html($item['title_text']); ?>
                                 </h3>
                                 <?php
                             }
@@ -97,7 +97,7 @@ extract($settings);
                         }
                         ?>
                         <div class="content-button">
-                            <a class="btn-more" <?php pxl_print_html($link_attributes); ?>>
+                            <a class="btn-more" <?php sntravel_print_html($link_attributes); ?>>
                                 <?php echo esc_html($button_text); ?>
                                 <i class="zmdi zmdi-long-arrow-right"></i>
                             </a>

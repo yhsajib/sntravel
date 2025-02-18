@@ -1,10 +1,10 @@
 <?php
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name' => 'pxl_product_carousel',
+        'name' => 'sntravel_product_carousel',
         'title' => esc_html__('PXL Product Carousel', 'sntravel' ),
         'icon' => 'eicon-product-categories',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'scripts' => array(
             'swiper',
             'sntravel-swiper',
@@ -24,51 +24,51 @@ pxl_add_custom_widget(
                             'options' => [
                                 '1' => [
                                     'label' => esc_html__( 'Layout 1', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_product_carousel-1.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_product_carousel-1.jpg'
                                 ],
                                 '2' => [
                                     'label' => esc_html__( 'Layout 2', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_product_carousel-2.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_product_carousel-2.jpg'
                                 ],
                                 '3' => [
                                     'label' => esc_html__( 'Layout 3', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_product_carousel-3.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_product_carousel-3.jpg'
                                 ],
                                 '4' => [
                                     'label' => esc_html__( 'Layout 4', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_product_carousel-4.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_product_carousel-4.jpg'
                                 ],
                                 '5' => [
                                     'label' => esc_html__( 'Layout 5', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_product_carousel-5.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_product_carousel-5.jpg'
                                 ],
                                 '6' => [
                                     'label' => esc_html__( 'Layout 6', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_product_carousel-6.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_product_carousel-6.jpg'
                                 ],
                                 '7' => [
                                     'label' => esc_html__( 'Layout 7', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_product_carousel-7.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_product_carousel-7.jpg'
                                 ],
                                 '8' => [
                                     'label' => esc_html__( 'Layout 8', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_product_carousel-8.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_product_carousel-8.jpg'
                                 ],
                                 '9' => [
                                     'label' => esc_html__( 'Layout 9', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_product_carousel-9.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_product_carousel-9.jpg'
                                 ],
                                 '10' => [
                                     'label' => esc_html__( 'Layout 10', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_product_carousel-10.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_product_carousel-10.jpg'
                                 ],
                                 '11' => [
                                     'label' => esc_html__( 'Layout 11', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_product_carousel-11.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_product_carousel-11.jpg'
                                 ],
                                 '12' => [
                                     'label' => esc_html__( 'Layout 12', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_product_carousel-12.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_product_carousel-12.jpg'
                                 ],
                             ]
                         )
@@ -100,7 +100,7 @@ pxl_add_custom_widget(
                             'label'    => esc_html__( 'Select Term of Product', 'sntravel' ),
                             'type'     => 'select2',
                             'multiple' => true,
-                            'options'  => pxl_get_product_grid_term_options()
+                            'options'  => sntravel_get_product_grid_term_options()
                         ),
                         array(
                             'name'     => 'product_ids',

@@ -1,10 +1,10 @@
 <?php
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-		'name'       => 'pxl_social_icons',
+		'name'       => 'sntravel_social_icons',
 		'title'      => esc_html__( 'PXL Social', 'sntravel' ),
 		'icon'       => 'eicon-social-icons',
-		'categories' => array('pxltheme-core'),
+		'categories' => array('sntraveltheme-core'),
 		'scripts'    => array(),
 		'params'     => array(
             'sections' => array(
@@ -21,14 +21,14 @@ pxl_add_custom_widget(
 							'options' => [
                                 '1' => [
                                     'label' => esc_html__( 'Layout 1', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_social-1.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_social-1.jpg'
                                 ],
                                 '2' => [
                                     'label' => esc_html__( 'Layout 2', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_social-2.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_social-2.jpg'
                                 ], 
                             ],
-                            'prefix_class' => 'pxl-social-icons-layout-'
+                            'prefix_class' => 'sntravel-social-icons-layout-'
                         ),
                     ),
                 ),
@@ -58,7 +58,7 @@ pxl_add_custom_widget(
                                 ]
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-social-icons' => 'text-align: {{VALUE}};'
+                                '{{WRAPPER}} .sntravel-social-icons' => 'text-align: {{VALUE}};'
                             ],
                         ),
                         array(
@@ -97,8 +97,8 @@ pxl_add_custom_widget(
                                         'is_external' => 'on'
                                     ],
                                     'social_icon' => [
-                                        'value'   => 'pxli-facebook-f',
-                                        'library' => 'pxli',
+                                        'value'   => 'sntraveli-facebook-f',
+                                        'library' => 'sntraveli',
                                     ]
                                 ],
                                 [
@@ -108,8 +108,8 @@ pxl_add_custom_widget(
                                         'is_external' => 'on'
                                     ],
                                     'social_icon' => [
-                                        'value'   => 'pxli-twitter',
-                                        'library' => 'pxli',
+                                        'value'   => 'sntraveli-twitter',
+                                        'library' => 'sntraveli',
                                     ]
                                 ],
                                 [
@@ -119,8 +119,8 @@ pxl_add_custom_widget(
                                         'is_external' => 'on'
                                     ],
                                     'social_icon' => [
-                                        'value'   => 'pxli-linkedin-in',
-                                        'library' => 'pxli',
+                                        'value'   => 'sntraveli-linkedin-in',
+                                        'library' => 'sntraveli',
                                     ]
                                 ],
                                 [
@@ -130,8 +130,8 @@ pxl_add_custom_widget(
                                         'is_external' => 'on'
                                     ],
                                     'social_icon' => [
-                                        'value'   => 'pxli-pinterest-p',
-                                        'library' => 'pxli',
+                                        'value'   => 'sntraveli-pinterest-p',
+                                        'library' => 'sntraveli',
                                     ]
                                 ]
                             ],
@@ -152,7 +152,7 @@ pxl_add_custom_widget(
                                 'size' => '',
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-icon' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-icon' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
                             ],
                             'condition' => [
                                 'layout' => ['1'],
@@ -173,7 +173,7 @@ pxl_add_custom_widget(
 								'size' => '',
 							],
 			                'selectors' => [
-			                    '{{WRAPPER}} .social-item, {{WRAPPER}} .pxl-social-icons .pxl-icon' => 'font-size: {{SIZE}}{{UNIT}};',
+			                    '{{WRAPPER}} .social-item, {{WRAPPER}} .sntravel-social-icons .sntravel-icon' => 'font-size: {{SIZE}}{{UNIT}};',
 			                ]
 			            ),
                         array(
@@ -191,7 +191,7 @@ pxl_add_custom_widget(
 								'size' => '',
 							],
 			                'selectors' => [
-			                    '{{WRAPPER}} .pxl-social-icons .pxl-icon' => 'top: {{SIZE}}{{UNIT}};',
+			                    '{{WRAPPER}} .sntravel-social-icons .sntravel-icon' => 'top: {{SIZE}}{{UNIT}};',
                             ],
                             'condition' => [
                                 'layout' => ['2'],
@@ -203,7 +203,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::DIMENSIONS,
                             'size_units' => [ 'px' ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-social-icons.layout-1 > *' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-social-icons.layout-1 > *' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                             'control_type' => 'responsive',
                             'condition' => [
@@ -215,7 +215,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Icon Color', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .social-item, {{WRAPPER}} .pxl-social-icons .pxl-icon' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .social-item, {{WRAPPER}} .sntravel-social-icons .sntravel-icon' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -231,7 +231,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Name Typography', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-social-icons .title-name',
+                            'selector' => '{{WRAPPER}} .sntravel-social-icons .title-name',
                             'condition' => [
                                 'layout' => ['2']
                             ],
@@ -241,7 +241,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Name Color', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-social-icons .title-name' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-social-icons .title-name' => 'color: {{VALUE}};',
                             ],
                             'condition' => [
                                 'layout' => ['2']
@@ -252,7 +252,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Name Hover Color', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-social-icons .box-item:hover .title-name' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-social-icons .box-item:hover .title-name' => 'color: {{VALUE}};',
                             ],
                             'condition' => [
                                 'layout' => ['2']

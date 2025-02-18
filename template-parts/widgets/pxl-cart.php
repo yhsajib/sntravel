@@ -2,9 +2,9 @@
 defined( 'ABSPATH' ) || exit;
 if (!class_exists('Woocommerce')) return;
 
-if (!function_exists('pxl_register_wp_widget')) return;
+if (!function_exists('sntravel_register_wp_widget')) return;
 add_action('widgets_init', function () {
-	pxl_register_wp_widget('PXL_Cart_Widget');
+	sntravel_register_wp_widget('PXL_Cart_Widget');
 });
 
 class PXL_Cart_Widget extends WC_Widget {
@@ -12,7 +12,7 @@ class PXL_Cart_Widget extends WC_Widget {
 	public function __construct() {
 		$this->widget_cssclass    = 'woocommerce widget_shopping_cart';
 		$this->widget_description = __( 'Display the customer shopping cart.', 'sntravel' );
-		$this->widget_id          = 'pxl_cart_widget';
+		$this->widget_id          = 'sntravel_cart_widget';
 		$this->widget_name        = __( '* PXL Cart', 'sntravel' );
 		$this->settings           = array(
 			'title'         => array(

@@ -48,7 +48,7 @@ $image_layout14    = isset($settings['image_layout14']) ? $settings['image_layou
                 <?php \Elementor\Icons_Manager::render_icon($settings['selected_icon'], ['aria-hidden' => 'true', 'class' => 'item-quote-icon sntravel-icon'], 'i'); ?>
             </div>
         <?php } ?>
-        <div <?php pxl_print_html($widget->get_render_attribute_string('carousel')); ?>>
+        <div <?php sntravel_print_html($widget->get_render_attribute_string('carousel')); ?>>
             <div class="sntravel-swiper-wrapper swiper-wrapper">
                 <?php foreach ($content_list as $key => $value) :
                     $title       = isset($value['title']) ? $value['title'] : '';
@@ -64,7 +64,7 @@ $image_layout14    = isset($settings['image_layout14']) ? $settings['image_layou
                             <?php if (!empty($testimonial_title)) { ?>
                                 <h4 class="testimonial-title"><span><?php echo esc_html($testimonial_title); ?></span></h4>
                             <?php } ?>
-                            <div class="item-desc"><?php echo pxl_print_html($description); ?></div>
+                            <div class="item-desc"><?php echo sntravel_print_html($description); ?></div>
                             <div class="item-wrap row gx-20 justify-content-center">
                                 <?php if (!empty($value['rating']) && $value['rating'] != 'none') : ?>
                                     <div class="item-rating-star">

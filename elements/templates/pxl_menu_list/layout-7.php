@@ -7,14 +7,14 @@ extract($settings);
 
 $animate_cls = '';
 if (!empty($item_animation)) {
-    $animate_cls = ' pxl-animate pxl-invisible animated-' . $item_animation_duration;
+    $animate_cls = ' sntravel-animate sntravel-invisible animated-' . $item_animation_duration;
 }
 $item_animation_delay = !empty($item_animation_delay) ? $item_animation_delay : '200';
 
 ?>
 <?php if(isset($list) && !empty($list) && count($list)): ?>
-<div class="pxl-menu-list layout-7">
-    <div class="pxl-item-list">
+<div class="sntravel-menu-list layout-7">
+    <div class="sntravel-item-list">
         <?php
         foreach ($list as $key => $value):
             $link = isset($value['link']) ? $value['link'] : '';
@@ -40,7 +40,7 @@ $item_animation_delay = !empty($item_animation_delay) ? $item_animation_delay : 
                 $data_settings = 'data-settings="' . esc_attr($data_animation) . '"';
             }
             ?>
-            <div class="pxl-menu-item <?php echo esc_attr($animate_cls); ?> <?php echo 'elementor-repeater-item-' . $value['_id'] ?>" <?php pxl_print_html($data_settings); ?>>
+            <div class="sntravel-menu-item <?php echo esc_attr($animate_cls); ?> <?php echo 'elementor-repeater-item-' . $value['_id'] ?>" <?php sntravel_print_html($data_settings); ?>>
                 <?php if ($value['tag_1'] === 'yes' || $value['tag_2'] === 'yes') : ?>
                     <div class="custom-tags d-flex">
                         <?php if ($value['tag_1'] === 'yes' && !empty($value['tag_1_text'])) : ?>
@@ -61,7 +61,7 @@ $item_animation_delay = !empty($item_animation_delay) ? $item_animation_delay : 
                             <a <?php echo implode( ' ', [ $link_attributes ] ); ?>>
                             <?php endif; ?>
                             <span>
-                                <?php echo pxl_print_html($value['title']); ?>
+                                <?php echo sntravel_print_html($value['title']); ?>
                             </span>
                             <?php if (!empty( $value['link']['url'])) : ?>
                             </a>
@@ -70,15 +70,15 @@ $item_animation_delay = !empty($item_animation_delay) ? $item_animation_delay : 
                     <?php if (!empty( $value['price'] )) : ?>
                         <div class="menu-price">
                             <span>
-                                <?php echo pxl_print_html($value['price']); ?>
+                                <?php echo sntravel_print_html($value['price']); ?>
                             </span>
                         </div>
                     <?php endif; ?>
                 </div>
-                <div class="pxl-divider"></div>
+                <div class="sntravel-divider"></div>
                 <?php if (!empty( $value['sub_title'] )) : ?>
                     <div class="menu-sub-title">
-                        <?php echo pxl_print_html($value['sub_title']); ?>
+                        <?php echo sntravel_print_html($value['sub_title']); ?>
                     </div>
                 <?php endif; ?>
             </div>

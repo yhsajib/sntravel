@@ -11,7 +11,7 @@ class Sntravel_Admin_Templates extends Sntravel_Base{
  
 	public function register_page() {
 		add_submenu_page(
-			'pxlart',
+			'sntravelart',
 		    esc_html__( 'Templates', 'sntravel' ),
 		    esc_html__( 'Templates', 'sntravel' ),
 		    'manage_options',

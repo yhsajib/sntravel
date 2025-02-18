@@ -9,7 +9,7 @@ extract($settings);
 $is_new = \Elementor\Icons_Manager::is_migration_allowed();
 ?>
 <?php if(isset($download) && !empty($download) && count($download)): ?>
-    <div class="pxl-download e-sidebar-widget">
+    <div class="sntravel-download e-sidebar-widget">
         <?php if(!empty($el_title)) : ?>
             <h3 class="widget-title"><?php echo esc_html($el_title); ?></h3>
         <?php endif; ?>
@@ -32,7 +32,7 @@ $is_new = \Elementor\Icons_Manager::is_migration_allowed();
             $link_attributes = $widget->get_render_attribute_string( $link_key );
             $has_icon = !empty( $cms_download['file_type_icon'] );
             ?>
-            <a class="item-download d-flex" <?php pxl_print_html($link_attributes); ?>>
+            <a class="item-download d-flex" <?php sntravel_print_html($link_attributes); ?>>
                 <div class="file-name">
                     <?php
                     if ($has_icon){

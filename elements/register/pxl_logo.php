@@ -1,10 +1,10 @@
 <?php
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name' => 'pxl_logo',
+        'name' => 'sntravel_logo',
         'title' => esc_html__('PXL Logo', 'sntravel' ),
         'icon' => 'eicon-image',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'params' => array(
             'sections' => array(
                 array(
@@ -30,7 +30,7 @@ pxl_add_custom_widget(
                             ],
                             'control_type' => 'responsive',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-logo img' => 'max-width: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-logo img' => 'max-width: {{SIZE}}{{UNIT}};',
                             ],
                         ),
                         array(
@@ -53,7 +53,7 @@ pxl_add_custom_widget(
                                 ]
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-logo' => 'justify-content: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-logo' => 'justify-content: {{VALUE}};',
                             ],
                         ),
                         array(

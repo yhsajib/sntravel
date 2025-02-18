@@ -20,19 +20,19 @@ if(!empty($settings['link']['url'])){
 $link_attributes = $widget->get_render_attribute_string( 'link' );
 ?>
 
-<div class="pxl-fancy-box layout-6">
+<div class="sntravel-fancy-box layout-6">
     <div class="box-inner">
         <div class="front-card" style="background-image: url(<?php echo esc_url($settings['selected_img']['url']); ?>);">
             <div class="box-content">
                 <?php if(! empty( $settings['selected_icon']['value'] )): ?>
                     <div class="box-icon">
-                        <?php \Elementor\Icons_Manager::render_icon( $settings['selected_icon'], [ 'aria-hidden' => 'true', 'class' => 'pxl-fancy-icon pxl-icon' ], 'i' );?>
+                        <?php \Elementor\Icons_Manager::render_icon( $settings['selected_icon'], [ 'aria-hidden' => 'true', 'class' => 'sntravel-fancy-icon sntravel-icon' ], 'i' );?>
                     </div>
                 <?php endif; ?>
                 <?php if(!empty($widget->get_setting('title'))): ?>
                     <h3 class="box-title">
                         <?php if ( $link_attributes ) echo '<a '. implode( ' ', [ $link_attributes ] ).'>'; ?>
-                        <?php pxl_print_html( nl2br($widget->get_setting('title'))); ?>
+                        <?php sntravel_print_html( nl2br($widget->get_setting('title'))); ?>
                         <?php if ( $link_attributes ) echo '</a>'; ?> 
                     </h3>
                 <?php endif; ?>
@@ -42,19 +42,19 @@ $link_attributes = $widget->get_render_attribute_string( 'link' );
             <div class="box-content">
                 <?php if(! empty( $settings['selected_icon']['value'] )): ?>
                     <div class="box-icon">
-                        <?php \Elementor\Icons_Manager::render_icon( $settings['selected_icon'], [ 'aria-hidden' => 'true', 'class' => 'pxl-fancy-icon pxl-icon' ], 'i' );?>
+                        <?php \Elementor\Icons_Manager::render_icon( $settings['selected_icon'], [ 'aria-hidden' => 'true', 'class' => 'sntravel-fancy-icon sntravel-icon' ], 'i' );?>
                     </div>
                 <?php endif; ?>
                 <?php if(!empty($widget->get_setting('title'))): ?>
                     <h3 class="box-title">
                         <?php if ( $link_attributes ) echo '<a '. implode( ' ', [ $link_attributes ] ).'>'; ?>
-                        <?php pxl_print_html( nl2br($widget->get_setting('title'))); ?>
+                        <?php sntravel_print_html( nl2br($widget->get_setting('title'))); ?>
                         <?php if ( $link_attributes ) echo '</a>'; ?> 
                     </h3>
                 <?php endif; ?>
                 <?php if(!empty($widget->get_setting('description'))): ?>
                     <div class="box-description">
-                        <?php pxl_print_html($widget->get_setting('description')); ?>
+                        <?php sntravel_print_html($widget->get_setting('description')); ?>
                     </div>
                 <?php endif; ?>
             </div>

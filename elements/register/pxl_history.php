@@ -1,10 +1,10 @@
 <?php
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name'       => 'pxl_history',
+        'name'       => 'sntravel_history',
         'title'      => esc_html__('PXL History', 'sntravel'),
         'icon'       => 'eicon-slider-push',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'scripts'    => array(),
         'params' => array(
             'sections' => array(
@@ -21,14 +21,14 @@ pxl_add_custom_widget(
                             'options' => [
                                 '1' => [
                                     'label' => esc_html__('Layout 1', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_history-1.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_history-1.jpg'
                                 ],
                                 '2' => [
                                     'label' => esc_html__('Layout 2', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_history-2.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_history-2.jpg'
                                 ]
                             ],
-                            'prefix_class' => 'pxl-history-layout-'
+                            'prefix_class' => 'sntravel-history-layout-'
                         )
                     ),
                 ),
@@ -86,8 +86,8 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Diamond Icon Background', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-history .diamond-icon:before' => 'border-color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-history .diamond-icon:after' => 'background-color: {{VALUE}};'
+                                '{{WRAPPER}} .sntravel-history .diamond-icon:before' => 'border-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-history .diamond-icon:after' => 'background-color: {{VALUE}};'
                             ],
                         ),
                         array(
@@ -95,7 +95,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Diamond Icon Space Color', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-history .diamond-icon:before' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-history .diamond-icon:before' => 'background-color: {{VALUE}};',
                             ],
                         ),
                     ),

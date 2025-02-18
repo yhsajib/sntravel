@@ -69,7 +69,7 @@ $widget->add_render_attribute( 'carousel', [
         <div class="item-quote-icon">“</div>
     <?php } ?>
     <div class="sntravel-swiper-slider-wrap sntravel-carousel-inner relative overflow-hidden">
-        <div <?php pxl_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
+        <div <?php sntravel_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
             <div class="sntravel-swiper-wrapper swiper-wrapper">
                 <?php foreach ($content_list as $key => $value):
                     $description = isset($value['description']) ? $value['description'] : '';
@@ -78,7 +78,7 @@ $widget->add_render_attribute( 'carousel', [
                     ?>
                     <div class="sntravel-swiper-slide swiper-slide">
                         <div class="item-inner">
-                            <div class="item-desc"><?php echo pxl_print_html($description); ?></div>
+                            <div class="item-desc"><?php echo sntravel_print_html($description); ?></div>
                             <div class="item-info d-flex align-items-center">
                                 <div class="item-info-wrapper">
                                     <h4 class="item-title"><?php echo esc_html($title); ?></h4>
@@ -87,11 +87,11 @@ $widget->add_render_attribute( 'carousel', [
                                 <?php if(!empty($value['rating']) && $value['rating'] != 'none') : ?>
                                     <div class="item-rating-star">
                                         <div class="item-rating <?php echo esc_attr($value['rating']); ?>">
-                                            <i class="pxli-star1"></i>
-                                            <i class="pxli-star1"></i>
-                                            <i class="pxli-star1"></i>
-                                            <i class="pxli-star1"></i>
-                                            <i class="pxli-star1"></i>
+                                            <i class="sntraveli-star1"></i>
+                                            <i class="sntraveli-star1"></i>
+                                            <i class="sntraveli-star1"></i>
+                                            <i class="sntraveli-star1"></i>
+                                            <i class="sntraveli-star1"></i>
                                         </div>
                                     </div>
                                 <?php endif; ?>
@@ -135,7 +135,7 @@ $widget->add_render_attribute( 'carousel', [
                         $image       = isset($value['image']) ? $value['image'] : [];
                         $thumbnail = '';
                         if(!empty($image['id'])) {
-                            $img = pxl_get_image_by_size( array(
+                            $img = sntravel_get_image_by_size( array(
                                 'attach_id'  => $image['id'],
                                 'thumb_size' => '250x250',
                                 'class' => 'no-lazyload',

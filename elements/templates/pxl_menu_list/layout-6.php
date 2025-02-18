@@ -7,14 +7,14 @@ extract($settings);
 
 $animate_cls = '';
 if (!empty($item_animation)) {
-    $animate_cls = ' pxl-animate pxl-invisible animated-' . $item_animation_duration;
+    $animate_cls = ' sntravel-animate sntravel-invisible animated-' . $item_animation_duration;
 }
 $item_animation_delay = !empty($item_animation_delay) ? $item_animation_delay : '200';
 
 ?>
 <?php if(isset($list) && !empty($list) && count($list)): ?>
-<div class="pxl-menu-list layout-6">
-    <div class="pxl-item-list">
+<div class="sntravel-menu-list layout-6">
+    <div class="sntravel-item-list">
         <?php
         foreach ($list as $key => $value):
             $link = isset($value['link']) ? $value['link'] : '';
@@ -42,7 +42,7 @@ $item_animation_delay = !empty($item_animation_delay) ? $item_animation_delay : 
                 $data_settings = 'data-settings="' . esc_attr($data_animation) . '"';
             }
             ?>
-            <div class="pxl-menu-item<?php echo esc_attr($value['is_featured'] == 'yes' ? ' featured' : ''); ?> <?php echo esc_attr($animate_cls); ?> <?php echo 'elementor-repeater-item-' . $value['_id'] ?>" <?php pxl_print_html($data_settings); ?>>
+            <div class="sntravel-menu-item<?php echo esc_attr($value['is_featured'] == 'yes' ? ' featured' : ''); ?> <?php echo esc_attr($animate_cls); ?> <?php echo 'elementor-repeater-item-' . $value['_id'] ?>" <?php sntravel_print_html($data_settings); ?>>
                 <?php if ($value['tag_1'] === 'yes' || $value['tag_2'] === 'yes') : ?>
                     <div class="custom-tags d-flex">
                         <?php if ($value['tag_1'] === 'yes' && !empty($value['tag_1_text'])) : ?>
@@ -60,7 +60,7 @@ $item_animation_delay = !empty($item_animation_delay) ? $item_animation_delay : 
                 <div class="item-content d-flex align-items-center">
                     <?php if (!empty($value['selected_img']['id'])) :
                         $thumbnail = '';
-                        $img  = pxl_get_image_by_size(array(
+                        $img  = sntravel_get_image_by_size(array(
                             'attach_id'  => $value['selected_img']['id'],
                             'thumb_size' => '75x75',
                         ) );
@@ -78,22 +78,22 @@ $item_animation_delay = !empty($item_animation_delay) ? $item_animation_delay : 
                                     <a <?php echo implode( ' ', [ $link_attributes ] ); ?>>
                                     <?php endif; ?>
                                     <span>
-                                        <?php echo pxl_print_html($value['title']); ?>
+                                        <?php echo sntravel_print_html($value['title']); ?>
                                     </span>
                                     <?php if (!empty( $value['link']['url'])) : ?>
                                     </a>
                                 <?php endif; ?>
                             </div>
                             <?php if (!empty( $value['price'] )) : ?>
-                                <div class="pxl-separator"></div>
+                                <div class="sntravel-separator"></div>
                                 <div class="menu-price">
-                                    <?php echo pxl_print_html($value['price']); ?>
+                                    <?php echo sntravel_print_html($value['price']); ?>
                                 </div>
                             <?php endif; ?>
                         </div>
                         <?php if (!empty( $value['sub_title'] )) : ?>
                             <div class="menu-sub-title">
-                                <?php echo pxl_print_html($value['sub_title']); ?>
+                                <?php echo sntravel_print_html($value['sub_title']); ?>
                             </div>
                         <?php endif; ?>
                     </div>

@@ -6,9 +6,9 @@ defined( 'ABSPATH' ) or exit( -1 );
  *
  */
 
-if(!function_exists('pxl_register_wp_widget')) return;
+if(!function_exists('sntravel_register_wp_widget')) return;
 add_action( 'widgets_init', function(){
-    pxl_register_wp_widget( 'Pxl_Recent_Posts_Widget' );
+    sntravel_register_wp_widget( 'Pxl_Recent_Posts_Widget' );
 });
 
 class Pxl_Recent_Posts_Widget extends WP_Widget
@@ -16,7 +16,7 @@ class Pxl_Recent_Posts_Widget extends WP_Widget
     function __construct()
     {
         parent::__construct(
-            'pxl_recent_posts',
+            'sntravel_recent_posts',
             esc_html__( '* PXL Recent Posts', 'sntravel' ),
             array(
                 'description' => esc_attr__( 'Shows your most recent posts.', 'sntravel' ),

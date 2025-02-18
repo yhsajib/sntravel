@@ -7,8 +7,8 @@ extract($settings);
 $is_new = \Elementor\Icons_Manager::is_migration_allowed();
 ?>
 <?php if(isset($list_layout3) && !empty($list_layout3) && count($list_layout3)): ?>
-    <div class="pxl-list layout-3">
-        <div class="pxl-item-list">
+    <div class="sntravel-list layout-3">
+        <div class="sntravel-item-list">
             <?php
             foreach ($list_layout3 as $key => $value):
                 $link = isset($value['link_layout3']) ? $value['link_layout3'] : '';
@@ -27,10 +27,10 @@ $is_new = \Elementor\Icons_Manager::is_migration_allowed();
                 }
                 $link_attributes = $widget->get_render_attribute_string( $link_key );
                 ?>
-                <div class="pxl-list-content elementor-repeater-item-<?php echo esc_attr($value['_id']); ?>">
+                <div class="sntravel-list-content elementor-repeater-item-<?php echo esc_attr($value['_id']); ?>">
                     <?php
                     if ($has_icon){
-                        echo '<div class="pxl-list-icon">';
+                        echo '<div class="sntravel-list-icon">';
                         if ($is_new){
                             \Elementor\Icons_Manager::render_icon( $value['list_icon_layout3'], [ 'aria-hidden' => 'true' ] );
                         }else{
@@ -40,9 +40,9 @@ $is_new = \Elementor\Icons_Manager::is_migration_allowed();
                     }
                     ?>
                     <span class="box-content">
-                        <?php echo pxl_print_html($value['content_layout3']); ?>
+                        <?php echo sntravel_print_html($value['content_layout3']); ?>
                         <?php if (!empty( $value['link_layout3']['url'] ) ) { ?><a <?php echo implode( ' ', [ $link_attributes ] ); ?>><?php } ?>
-                            <?php echo pxl_print_html($value['content_link']); ?>
+                            <?php echo sntravel_print_html($value['content_link']); ?>
                         <?php if (!empty( $value['link_layout3']['url'] ) ) { ?></a><?php } ?>
                     </span>
                 </div>

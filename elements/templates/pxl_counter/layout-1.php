@@ -1,6 +1,6 @@
 <?php
 $widget->add_render_attribute( 'counter', [
-    'class' => 'pxl-counter-number-value',
+    'class' => 'sntravel-counter-number-value',
     'data-startnumber' => $widget->get_setting('starting_number', 0),
     'data-endnumber' => $settings['ending_number'],
 ] );
@@ -11,21 +11,21 @@ if ( ! empty( $settings['thousand_separator'] ) ) {
 }
  
 ?>
-<div class="pxl-counter layout1">
+<div class="sntravel-counter layout1">
     <div class="counter-inner">
         <div class="counter-content">
             <div class="counter-number">
                 <?php if(!empty($settings['prefix'])) : ?>
-                    <span class="counter-number-prefix"><?php echo pxl_print_html($settings['prefix']); ?></span>
+                    <span class="counter-number-prefix"><?php echo sntravel_print_html($settings['prefix']); ?></span>
                 <?php endif; ?>
-                <div <?php pxl_print_html($widget->get_render_attribute_string( 'counter' )); ?>><?php echo esc_html($settings['starting_number']); ?></div>
+                <div <?php sntravel_print_html($widget->get_render_attribute_string( 'counter' )); ?>><?php echo esc_html($settings['starting_number']); ?></div>
                 <?php if(!empty($settings['suffix'])) : ?>
-                    <span class="counter-number-suffix"><?php echo pxl_print_html($settings['suffix']); ?></span>
+                    <span class="counter-number-suffix"><?php echo sntravel_print_html($settings['suffix']); ?></span>
                 <?php endif; ?>
             </div>
             <?php if ( $settings['title'] ) : ?>
                 <div class="counter-title <?php echo esc_attr($settings['style']); ?>">
-                    <span><?php pxl_print_html($settings['title']); ?></span>
+                    <span><?php sntravel_print_html($settings['title']); ?></span>
                 </div>
             <?php endif; ?>
         </div>

@@ -1,13 +1,13 @@
 <?php
 // Register Circle Text Widget
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name'       => 'pxl_circle_text',
+        'name'       => 'sntravel_circle_text',
         'title'      => esc_html__( 'PXL Circle Text', 'sntravel' ),
         'icon'       => 'eicon-text',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'scripts'    => array(
-            'pxl-circle-text'
+            'sntravel-circle-text'
         ),
         'params' => array(
             'sections' => array(
@@ -34,14 +34,14 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Title Typography', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-circle-text .circle-text',
+                            'selector' => '{{WRAPPER}} .sntravel-circle-text .circle-text',
                         ),
                         array(
                             'name' => 'title_color',
                             'label' => esc_html__('Title Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-circle-text .circle-text' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-circle-text .circle-text' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -66,7 +66,7 @@ pxl_add_custom_widget(
                             'prefix_class' => 'elementor-align-',
                             'default' => '',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-circle-text .circle-text' => 'text-align: {{VALUE}};'
+                                '{{WRAPPER}} .sntravel-circle-text .circle-text' => 'text-align: {{VALUE}};'
                             ],
                         ),
                     ),

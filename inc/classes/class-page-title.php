@@ -22,7 +22,7 @@ if (!class_exists('Sntravel_Page_Title')) {
                 $pll_cls = 'overflow-hidden';
             }
  
-            $brc_divider = '<span class="br-divider pxli-long-arrow-right1 rtl-flip"></span>';
+            $brc_divider = '<span class="br-divider sntraveli-long-arrow-right1 rtl-flip"></span>';
 
             if(class_exists('WooCommerce')) {
                 if (is_shop() || is_singular('product')) {
@@ -55,8 +55,8 @@ if (!class_exists('Sntravel_Page_Title')) {
                         <div class="sntravel-page-title-inner text-center">
                             <div class="sntravel-page-title col-12">
                                 <h1 class="main-title"><?php
-                                    if (function_exists('pxl_print_html'))
-                                        pxl_print_html($titles['title']);
+                                    if (function_exists('sntravel_print_html'))
+                                        sntravel_print_html($titles['title']);
                                     else
                                         echo esc_html($titles['title']);
                                 ?></h1>

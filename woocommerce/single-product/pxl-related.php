@@ -103,14 +103,14 @@ if ( $related_products ) : ?>
                 		<?php if (in_array($arrow_style, ['style-related-3', 'style-related-4'])) : ?>
                 			<span class="sntravel-icon zmdi zmdi-arrow-left"></span>
                 		<?php else : ?>
-                			<span class="sntravel-icon pxli pxli-arrow-prev"></span>
+                			<span class="sntravel-icon sntraveli sntraveli-arrow-prev"></span>
                 		<?php endif; ?>
                 	</div>
                 	<div class="sntravel-swiper-arrow sntravel-swiper-arrow-next default">
                 		<?php if (in_array($arrow_style, ['style-related-3', 'style-related-4'])) : ?>
                 			<span class="sntravel-icon zmdi zmdi-arrow-right"></span>
                 		<?php else : ?>
-                			<span class="sntravel-icon pxli pxli-arrow-next"></span>
+                			<span class="sntravel-icon sntraveli sntraveli-arrow-next"></span>
                 		<?php endif; ?>
                 	</div>
                 </div>

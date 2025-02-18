@@ -1,10 +1,10 @@
 <?php
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name'       => 'pxl_clients',
+        'name'       => 'sntravel_clients',
         'title'      => esc_html__('PXL Clients', 'sntravel'),
         'icon'       => 'eicon-slider-push',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'scripts'    => array(
             'swiper',
             'sntravel-swiper',
@@ -24,19 +24,19 @@ pxl_add_custom_widget(
                             'options' => [
                                 '1' => [
                                     'label' => esc_html__('Layout 1', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_client-1.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_client-1.jpg'
                                 ],
                                 '2' => [
                                     'label' => esc_html__('Layout 2', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_client-2.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_client-2.jpg'
                                 ],
                                 '3' => [
                                     'label' => esc_html__('Layout 3', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_client-3.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_client-3.jpg'
                                 ],
                                 '4' => [
                                     'label' => esc_html__('Layout 4', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_client-4.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_client-4.jpg'
                                 ]
                             ],
                             'prefix_class' => 'sntravel-clients-layout-'

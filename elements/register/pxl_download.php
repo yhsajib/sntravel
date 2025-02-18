@@ -1,11 +1,11 @@
 <?php
 // Register Widget
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name'       => 'pxl_download',
+        'name'       => 'sntravel_download',
         'title'      => esc_html__( 'PXL Download', 'sntravel' ),
         'icon' => 'eicon-file-download',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'scripts'    => [],
         'params'     => array(
             'sections' => array(
@@ -22,10 +22,10 @@ pxl_add_custom_widget(
                             'options' => [
                                 '1' => [
                                     'label' => esc_html__( 'Layout 1', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_download-1.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_download-1.jpg'
                                 ],
                             ],
-                            'prefix_class' => 'pxl-download-layout-',
+                            'prefix_class' => 'sntravel-download-layout-',
                         ),
                     )
                 ),

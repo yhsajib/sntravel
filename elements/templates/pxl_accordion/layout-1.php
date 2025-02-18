@@ -6,11 +6,11 @@ $default_settings = [
 ];
 $settings = array_merge($default_settings, $settings);
 extract($settings);
-$html_id = pxl_get_element_id($settings);
+$html_id = sntravel_get_element_id($settings);
 $active_section = intval($active_section);
 $accordions = $widget->get_settings('ac_items');
 if(!empty($accordions)) : ?>
-<div id="<?php echo esc_attr($html_id); ?>" class="pxl-accordion <?php echo esc_attr($style); ?>">
+<div id="<?php echo esc_attr($html_id); ?>" class="sntravel-accordion <?php echo esc_attr($style); ?>">
     <?php foreach ($accordions as $key => $value):
         $content_key = $widget->get_repeater_setting_key( 'ac_content', 'ac_items', $key );
         $is_active = ($key + 1) == $active_section;
@@ -29,24 +29,24 @@ if(!empty($accordions)) : ?>
 
         $title_key = $widget->get_repeater_setting_key( 'ac_title', 'ac_items', $key );
         $widget->add_render_attribute( $title_key, [
-            'class' => [ 'pxl-ac-title-text' ],
+            'class' => [ 'sntravel-ac-title-text' ],
         ] );
         $widget->add_inline_editing_attributes( $title_key, 'basic' );
         $widget->add_render_attribute( $content_key, [
             'id' => $_id.$html_id,
-            'class' => [ 'pxl-ac-content' ],
+            'class' => [ 'sntravel-ac-content' ],
         ] );
         if($is_active){
             $widget->add_render_attribute( $content_key, 'style', 'display:block;' );
         }
         $widget->add_inline_editing_attributes( $content_key, 'basic' ); ?>
-        <div class="pxl-ac-item elementor-repeater-item-<?php echo esc_attr($value['_id']); ?> <?php echo esc_attr($is_active?'active':''); ?>">
-            <div class="pxl-ac-title <?php echo esc_attr($is_active?'active':''); ?>" data-target="<?php echo esc_attr('#' . $_id.$html_id); ?>">
-                <span <?php pxl_print_html($widget->get_render_attribute_string( $title_key )); ?>><?php pxl_print_html($ac_title); ?></span>
+        <div class="sntravel-ac-item elementor-repeater-item-<?php echo esc_attr($value['_id']); ?> <?php echo esc_attr($is_active?'active':''); ?>">
+            <div class="sntravel-ac-title <?php echo esc_attr($is_active?'active':''); ?>" data-target="<?php echo esc_attr('#' . $_id.$html_id); ?>">
+                <span <?php sntravel_print_html($widget->get_render_attribute_string( $title_key )); ?>><?php sntravel_print_html($ac_title); ?></span>
             </div>
-            <div <?php pxl_print_html($widget->get_render_attribute_string( $content_key )); ?>>
-                <div class="pxl-ac-content-inner">
-                    <?php pxl_print_html($ac_content); ?>
+            <div <?php sntravel_print_html($widget->get_render_attribute_string( $content_key )); ?>>
+                <div class="sntravel-ac-content-inner">
+                    <?php sntravel_print_html($ac_content); ?>
                 </div>
             </div>
         </div>

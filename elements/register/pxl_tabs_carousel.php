@@ -1,13 +1,13 @@
 <?php
 $templates = basilico_get_templates_option('default', []) ;
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name' => 'pxl_tabs_carousel',
+        'name' => 'sntravel_tabs_carousel',
         'title' => esc_html__('PXL Tabs Carousel', 'sntravel'),
         'icon' => 'eicon-slider-push',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'scripts' => [
-            'pxl-tabs-carousel',
+            'sntravel-tabs-carousel',
         ],
         'params' => array(
             'sections' => array(
@@ -40,7 +40,7 @@ pxl_add_custom_widget(
                                 array(
                                     'name' => 'content_template',
                                     'label' => esc_html__('Select Templates', 'sntravel'),
-                                    'description' => sprintf(esc_html__('Please create your layout before choosing. %sClick Here%s','sntravel'),'<a href="' . esc_url( admin_url( 'edit.php?post_type=pxl-template' ) ) . '">','</a>'),
+                                    'description' => sprintf(esc_html__('Please create your layout before choosing. %sClick Here%s','sntravel'),'<a href="' . esc_url( admin_url( 'edit.php?post_type=sntravel-template' ) ) . '">','</a>'),
                                     'type' => Elementor\Controls_Manager::SELECT,
                                     'options' => $templates,
                                     'default' => 'df',

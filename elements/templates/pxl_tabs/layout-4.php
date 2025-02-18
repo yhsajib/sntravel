@@ -4,7 +4,7 @@ extract($settings);
 if(count($tabs_list) > 0){
 	$tab_bd_ids = [];
     ?>
-    <div class="pxl-tabs layout-4">
+    <div class="sntravel-tabs layout-4">
         <?php if (!empty($link_to_carousel)) : ?>
             <div class="link-to-tabs-carousel-id d-none">
                 <?php echo esc_attr($link_to_carousel); ?>
@@ -25,8 +25,8 @@ if(count($tabs_list) > 0){
                             $widget->add_render_attribute( $title_key, 'class', 'active');
                         }
                         ?>
-                        <span <?php pxl_print_html($widget->get_render_attribute_string( $title_key )); ?> data-slide="<?php echo esc_attr($key); ?>">
-                            <span><?php echo pxl_print_html($tab['tab_title']); ?></span>
+                        <span <?php sntravel_print_html($widget->get_render_attribute_string( $title_key )); ?> data-slide="<?php echo esc_attr($key); ?>">
+                            <span><?php echo sntravel_print_html($tab['tab_title']); ?></span>
                         </span>
                     <?php endforeach; ?>
                 </div>
@@ -55,7 +55,7 @@ if(count($tabs_list) > 0){
                         $widget->add_render_attribute( $content_key, 'class', 'active');
                     }
                     ?>
-                    <div <?php pxl_print_html($widget->get_render_attribute_string( $content_key )); ?>><?php pxl_print_html($tabs_content); ?></div>
+                    <div <?php sntravel_print_html($widget->get_render_attribute_string( $content_key )); ?>><?php sntravel_print_html($tabs_content); ?></div>
                 <?php endforeach; ?>
             </div>
         </div>

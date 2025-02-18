@@ -6,9 +6,9 @@ defined('ABSPATH') or exit(-1);
  *
  */
 
-if (!function_exists('pxl_register_wp_widget')) return;
+if (!function_exists('sntravel_register_wp_widget')) return;
 add_action('widgets_init', function () {
-    pxl_register_wp_widget('PXL_Author_Info_Widget');
+    sntravel_register_wp_widget('PXL_Author_Info_Widget');
 });
 class PXL_Author_Info_Widget extends WP_Widget
 {
@@ -16,7 +16,7 @@ class PXL_Author_Info_Widget extends WP_Widget
     function __construct()
     {
         parent::__construct(
-            'pxl_author_info_widget',
+            'sntravel_author_info_widget',
             esc_html__('* Pxl Author Information', 'sntravel'),
             array('description' => esc_html__('Show Author Information', 'sntravel'),)
         );
@@ -31,21 +31,21 @@ class PXL_Author_Info_Widget extends WP_Widget
         $author_position = isset($instance['author_position']) ? (!empty($instance['author_position']) ? $instance['author_position'] : '') : '';
         $description = isset($instance['description']) ? (!empty($instance['description']) ? $instance['description'] : '') : '';
         //* Social Info
-        $icon_facebook = 'pxli-facebook-f';
+        $icon_facebook = 'sntraveli-facebook-f';
         $link_facebook = isset($instance['link_facebook']) ? $instance['link_facebook'] : '';
-        $icon_twitter = 'pxli-twitter';
+        $icon_twitter = 'sntraveli-twitter';
         $link_twitter = isset($instance['link_twitter']) ? $instance['link_twitter'] : '';
-        $icon_telegram = 'pxli-telegram';
+        $icon_telegram = 'sntraveli-telegram';
         $link_telegram = isset($instance['link_telegram']) ? $instance['link_telegram'] : '';
-        $icon_tiktok = 'pxli-tiktok';
+        $icon_tiktok = 'sntraveli-tiktok';
         $link_tiktok = isset($instance['link_tiktok']) ? $instance['link_tiktok'] : '';
-        $icon_skype = 'pxli-skype';
+        $icon_skype = 'sntraveli-skype';
         $link_skype = isset($instance['link_skype']) ? $instance['link_skype'] : '';
-        $icon_instagram = 'pxli-instagram1';
+        $icon_instagram = 'sntraveli-instagram1';
         $link_instagram = isset($instance['link_instagram']) ? $instance['link_instagram'] : '';
-        $icon_youtube = 'pxli-youtube-brands';
+        $icon_youtube = 'sntraveli-youtube-brands';
         $link_youtube = isset($instance['link_youtube']) ? $instance['link_youtube'] : '';
-        $icon_pinterest = 'pxli-pinterest-p';
+        $icon_pinterest = 'sntraveli-pinterest-p';
         $link_pinterest = isset($instance['link_pinterest']) ? $instance['link_pinterest'] : '';
         $social_list = array($link_facebook, $link_twitter, $link_telegram, $link_tiktok, $link_skype, $link_instagram, $link_youtube, $link_pinterest);
 ?>

@@ -1,11 +1,11 @@
 <?php
 // Register Moving Path Widget
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name'       => 'pxl_moving_path',
+        'name'       => 'sntravel_moving_path',
         'title'      => esc_html__( 'PXL Moving Path', 'sntravel' ),
         'icon'       => 'eicon-lottie',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'scripts'    => array(
             'gsMotionPath',
             'sntravel-moving-path'
@@ -25,7 +25,7 @@ pxl_add_custom_widget(
                             'options' => [
                                 '1' => [
                                     'label' => esc_html__( 'Layout 1', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_moving_path-1.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_moving_path-1.jpg'
                                 ],
                             ],
                         )
@@ -66,7 +66,7 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-moving-path svg' => 'height: {{SIZE}}{{UNIT}} !important;',
+                                '{{WRAPPER}} .sntravel-moving-path svg' => 'height: {{SIZE}}{{UNIT}} !important;',
                             ],
                         ),
                         array(
@@ -75,7 +75,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'default' => '',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-moving-path svg path' => 'stroke: {{VALUE}} !important;',
+                                '{{WRAPPER}} .sntravel-moving-path svg path' => 'stroke: {{VALUE}} !important;',
                             ],
                         ),
                         array(

@@ -39,7 +39,7 @@ if (class_exists('\Elementor\Plugin') && \Elementor\Plugin::$instance->documents
                         <div class="sntravel-media-popup">
                             <div class="content-inner">
                                 <a class="media-play-button media-default" href="<?php echo esc_url($audio_url); ?>">
-                                    <i class="pxli-volume"></i>
+                                    <i class="sntraveli-volume"></i>
                                 </a>
                             </div>
                         </div>
@@ -48,7 +48,7 @@ if (class_exists('\Elementor\Plugin') && \Elementor\Plugin::$instance->documents
                     <div class="sntravel-media-popup">
                         <div class="content-inner">
                             <a class="media-play-button media-default" href="<?php echo esc_url($featured_video); ?>">
-                                <i class="pxli-play-2 sntravel-icon-outline"></i>
+                                <i class="sntraveli-play-2 sntravel-icon-outline"></i>
                             </a>
                         </div>
                     </div>

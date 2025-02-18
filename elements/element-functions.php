@@ -44,8 +44,8 @@ function basilico_register_custom_icon_library( $settings ) {
         'label' => esc_html__('Sntravel', 'sntravel'),
         'url' => false,
         'enqueue' => false,
-        'prefix' => 'pxli-',
-        'displayPrefix' => 'pxli',
+        'prefix' => 'sntraveli-',
+        'displayPrefix' => 'sntraveli',
         'labelIcon' => 'fas fa-user-plus',
         'ver' => '1.0.0',
         'fetchJson' => get_template_directory_uri() . '/assets/fonts/pixelart/pixelarts.js',
@@ -349,7 +349,7 @@ function basilico_get_grid_term_by_post_type($pt_supports = [], $args = []){
             'description' => esc_html__('Get all when no term selected', 'sntravel'),
             'type' => Controls_Manager::SELECT2,
             'multiple' => true,
-            'options' => pxl_get_grid_term_options($name, $taxonomy),
+            'options' => sntravel_get_grid_term_options($name, $taxonomy),
             'condition' => array_merge(
                 [
                     $args['condition'] => [$name]
@@ -565,7 +565,7 @@ function basilico_get_carousel_term_by_post_type($pt_supports = [], $args = []){
             'label' => sprintf(esc_html__('Select Term', 'sntravel'), $label),
             'type' => Controls_Manager::SELECT2,
             'multiple' => true,
-            'options' => pxl_get_grid_term_options($name, $taxonomy),
+            'options' => sntravel_get_grid_term_options($name, $taxonomy),
             'condition' => array_merge(
                 [
                     $args['condition'] => [$name]
@@ -1542,9 +1542,9 @@ function basilico_gradient_option($args = []){
             'condition'   => $args['condition'],
         ),
         array(
-            'name'        => $args['prefix'] .'pxl_start_popover',
+            'name'        => $args['prefix'] .'sntravel_start_popover',
             'label'       => ucfirst( str_replace('_', '', $args['prefix']) ).' '. esc_html__( 'Start Popover', 'sntravel' ),
-            'type'        => 'pxl_start_popover',
+            'type'        => 'sntravel_start_popover',
             'condition'   => $args['condition'],
         ),
         array(
@@ -1582,9 +1582,9 @@ function basilico_gradient_option($args = []){
             ],
         ),
         array(
-            'name'        => $args['prefix'] .'pxl_end_popover',
+            'name'        => $args['prefix'] .'sntravel_end_popover',
             'label'       => ucfirst( str_replace('_', '', $args['prefix']) ).' '. esc_html__( 'End Popover', 'sntravel' ),
-            'type'        => 'pxl_end_popover',
+            'type'        => 'sntravel_end_popover',
             'condition'   => $args['condition'],
         )
     );
@@ -1609,7 +1609,7 @@ function basilico_get_img_link_url( $settings ) {
     ];
 }
 
-function pxl_get_product_grid_term_options($args=[]){
+function sntravel_get_product_grid_term_options($args=[]){
     $product_categories = get_categories(array( 'taxonomy' => 'product_cat' ));
     $options = array();
     foreach($product_categories as $category){
@@ -1619,7 +1619,7 @@ function pxl_get_product_grid_term_options($args=[]){
 }
 
 function basilico_get_parallax_effect_settings($settings){
-    if(!empty($settings['pxl_bg_parallax']) && $settings['pxl_bg_parallax'] == 'transform'){
+    if(!empty($settings['sntravel_bg_parallax']) && $settings['sntravel_bg_parallax'] == 'transform'){
         $effects = [];
         if(!empty($settings['parallax_effect_x'])){
             $effects['x'] = (int)$settings['parallax_effect_x'];
@@ -1675,9 +1675,9 @@ function basilico_position_option_base($args = []){
             'condition'    => $args['condition'],
         ),
         array(
-            'name'        => $args['prefix'] .'pxl_start_popover',
+            'name'        => $args['prefix'] .'sntravel_start_popover',
             'label'       => ucfirst( str_replace('_', '', $args['prefix']) ).' '. esc_html__( 'Start Popover', 'sntravel' ),
-            'type'        => 'pxl_start_popover',
+            'type'        => 'sntravel_start_popover',
             'condition'   => $args['condition'],
         ), 
 
@@ -1728,9 +1728,9 @@ function basilico_position_option_base($args = []){
             'condition'   => $args['condition'],
         ),
         array(
-            'name'        => $args['prefix'] .'pxl_end_popover',
+            'name'        => $args['prefix'] .'sntravel_end_popover',
             'label'       => ucfirst( str_replace('_', '', $args['prefix']) ).' '. esc_html__( 'End Popover', 'sntravel' ),
-            'type'        => 'pxl_end_popover',
+            'type'        => 'sntravel_end_popover',
             'condition'   => $args['condition'],
         )
         
@@ -1755,9 +1755,9 @@ function basilico_parallax_effect_option($args = []){
             'condition'    => $args['condition'],
         ),
         array(
-            'name'        => $args['prefix'] .'pxl_start_popover',
+            'name'        => $args['prefix'] .'sntravel_start_popover',
             'label'       => ucfirst( str_replace('_', '', $args['prefix']) ).' '. esc_html__( 'Start Popover', 'sntravel' ),
-            'type'        => 'pxl_start_popover',
+            'type'        => 'sntravel_start_popover',
             'condition'   => $args['condition'],
         ),
         array(
@@ -1831,9 +1831,9 @@ function basilico_parallax_effect_option($args = []){
             'condition' => $args['condition'],
         ),
         array(
-            'name'        => $args['prefix'] .'pxl_end_popover',
+            'name'        => $args['prefix'] .'sntravel_end_popover',
             'label'       => ucfirst( str_replace('_', '', $args['prefix']) ).' '. esc_html__( 'End Popover', 'sntravel' ),
-            'type'        => 'pxl_end_popover',
+            'type'        => 'sntravel_end_popover',
             'condition'   => $args['condition'],
         ), 
 

@@ -7,7 +7,7 @@ if (!class_exists('Sntravel_Comment')) {
         private $show_subject = '0';
         private $show_rating = '0';
         function __construct(){
-            add_filter( 'pxl_comment_extra_control', [$this,'comment_extra_control'] );
+            add_filter( 'sntravel_comment_extra_control', [$this,'comment_extra_control'] );
             add_action( 'edit_comment', [$this,'comment_edit_metafields'] );
             add_action( 'comment_post', [$this,'comment_save_comment_meta'] );
             add_filter( 'preprocess_comment', [$this,'comment_rating_require_rating'] );
@@ -17,7 +17,7 @@ if (!class_exists('Sntravel_Comment')) {
         public function comment_extra_control ( $comment ) {
  
             $phone = get_comment_meta( $comment->comment_ID, 'phone', true );
-            wp_nonce_field( 'pxl_comment_update', 'pxl_comment_update', false );
+            wp_nonce_field( 'sntravel_comment_update', 'sntravel_comment_update', false );
  
             ob_start();
             if($this->show_phone == '1'): ?>
@@ -57,7 +57,7 @@ if (!class_exists('Sntravel_Comment')) {
         }
 
         public function comment_edit_metafields( $comment_id ) {
-            if( ! isset( $_POST['pxl_comment_update'] ) || ! wp_verify_nonce( sanitize_text_field($_POST['pxl_comment_update']), 'pxl_comment_update' ) ) return;
+            if( ! isset( $_POST['sntravel_comment_update'] ) || ! wp_verify_nonce( sanitize_text_field($_POST['sntravel_comment_update']), 'sntravel_comment_update' ) ) return;
          
             if ( ( isset( $_POST['phone'] ) ) && ( $_POST['phone'] != '') ) :
                 $phone = sanitize_text_field($_POST['phone']);
@@ -257,7 +257,7 @@ if (!class_exists('Sntravel_Comment')) {
 
             $button_style = sntravel()->get_theme_opt('post_comments_button', 'default');
 
-            $pxl_comment_fields = array(
+            $sntravel_comment_fields = array(
                 'id_form'              => 'commentform',
                 'title_reply'          => esc_attr__( 'Post A Comment', 'sntravel'),
                 'title_reply_to'       => esc_attr__( 'Post A Comment To ', 'sntravel') . '%s',
@@ -272,15 +272,15 @@ if (!class_exists('Sntravel_Comment')) {
                 'comment_field'        =>  '',
             );
 
-            $pxl_fields = [];
-            $pxl_fields['open'] = '';
+            $sntravel_fields = [];
+            $sntravel_fields['open'] = '';
             if($this->show_rating == '1'){
                 if(!is_user_logged_in()){
-                    $pxl_fields['open'] .= $this->comment_rating_fields([
+                    $sntravel_fields['open'] .= $this->comment_rating_fields([
                         'echo' => false,
                         'class' => 'mb-20'
                     ]);
-                    $pxl_fields['open'] .= $this->wc_comment_rating_fields([
+                    $sntravel_fields['open'] .= $this->wc_comment_rating_fields([
                         'echo' => false,
                         'class' => 'mb-20'
                     ]);
@@ -288,34 +288,34 @@ if (!class_exists('Sntravel_Comment')) {
             }
             
             //open
-            $pxl_fields['open'] .= '<div class="sntravel-comment-form-fields-wrap row">';
+            $sntravel_fields['open'] .= '<div class="sntravel-comment-form-fields-wrap row">';
             // author
-            $pxl_fields['author'] = '<div class="comment-form-field comment-form-author col-lg-6 col-md-6 col-sm-12">'.
+            $sntravel_fields['author'] = '<div class="comment-form-field comment-form-author col-lg-6 col-md-6 col-sm-12">'.
                 '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
                 '" size="30" required placeholder="'.esc_attr__('Name*', 'sntravel').'"/></div>';
 
             // email 
-            $pxl_fields['email'] = '<div class="comment-form-field comment-form-email col-lg-6 col-md-6 col-sm-12">'.
+            $sntravel_fields['email'] = '<div class="comment-form-field comment-form-email col-lg-6 col-md-6 col-sm-12">'.
                 '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
                 '" size="30" required placeholder="'.esc_attr__('Email*', 'sntravel').'"/></div>';
 
             //phone
             if($this->show_phone == '1'){
-                $pxl_fields['phone'] = '<div class="comment-form-field comment-form-phone col-lg-12 col-md-12 col-sm-12">'.
+                $sntravel_fields['phone'] = '<div class="comment-form-field comment-form-phone col-lg-12 col-md-12 col-sm-12">'.
                 '<input id="phone" name="phone" type="text" size="30" placeholder="'.esc_attr__('Phone', 'sntravel').'"/></div>';
             }
             
             // subject   
             if($this->show_subject == '1'){
-                $pxl_fields['subject'] = '<div class="comment-form-field comment-form-subject col-lg-4 col-md-4 col-sm-12">'.
+                $sntravel_fields['subject'] = '<div class="comment-form-field comment-form-subject col-lg-4 col-md-4 col-sm-12">'.
                     '<input id="subject" name="subject" type="text" value="' . $commenter['comment_subject'] .
                 '" size="30" placeholder="'.esc_attr__('Subject', 'sntravel').'"/></div>';
             } 
-            $pxl_fields['close'] = '</div>';
+            $sntravel_fields['close'] = '</div>';
 
             if ( has_action( 'set_comment_cookies', 'wp_set_comment_cookies' ) && get_option( 'show_comments_cookies_opt_in' ) ) {
                 $consent = empty( $commenter['comment_author_email'] ) ? '' : ' checked="checked"';
-                $pxl_fields['cookies'] = sprintf(
+                $sntravel_fields['cookies'] = sprintf(
                     '<p class="comment-form-cookies-consent">%s %s</p>',
                     sprintf(
                         '<input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"%s />',
@@ -328,25 +328,25 @@ if (!class_exists('Sntravel_Comment')) {
                 );
             }
 
-            $fields =  apply_filters( 'comment_form_default_fields', $pxl_fields);
-            $pxl_comment_fields['fields'] = $fields;
+            $fields =  apply_filters( 'comment_form_default_fields', $sntravel_fields);
+            $sntravel_comment_fields['fields'] = $fields;
 
             // Comment Field Message
-            $pxl_comment_fields['comment_field'] = '';
+            $sntravel_comment_fields['comment_field'] = '';
                 if($this->show_rating == '1'){
                 if(is_user_logged_in()){
-                    $pxl_comment_fields['comment_field'] .= $this->comment_rating_fields([
+                    $sntravel_comment_fields['comment_field'] .= $this->comment_rating_fields([
                         'echo' => false,
                         'class' => 'mt-20'
                     ]);
-                    $pxl_comment_fields['comment_field'] .= $this->wc_comment_rating_fields([
+                    $sntravel_comment_fields['comment_field'] .= $this->wc_comment_rating_fields([
                         'echo' => false,
                         'class' => 'mt-20'
                     ]);
                 }
             }
-            $pxl_comment_fields['comment_field'] .= '<div class="sntravel-comment-form-fields-wrap sntravel-comment-form-fields-message row"><div class="comment-form-field comment-form-comment col-12"><textarea id="comment-msg" name="comment" cols="45" rows="8" required placeholder="'.esc_attr__('Write comment...', 'sntravel').'" aria-required="true">' .'</textarea></div></div>';
-            return $pxl_comment_fields;
+            $sntravel_comment_fields['comment_field'] .= '<div class="sntravel-comment-form-fields-wrap sntravel-comment-form-fields-message row"><div class="comment-form-field comment-form-comment col-12"><textarea id="comment-msg" name="comment" cols="45" rows="8" required placeholder="'.esc_attr__('Write comment...', 'sntravel').'" aria-required="true">' .'</textarea></div></div>';
+            return $sntravel_comment_fields;
         }
         function comment_product_form_args($args = []){
             $args = wp_parse_args($args, []);
@@ -358,7 +358,7 @@ if (!class_exists('Sntravel_Comment')) {
             ];
 
             $button_style = sntravel()->get_theme_opt('post_comments_button', 'btn-outline');
-            $pxl_comment_fields = array(
+            $sntravel_comment_fields = array(
                 'id_form'              => 'commentform',
                 'title_reply'          => esc_attr__( 'Leave a Review', 'sntravel'),
                 'title_reply_to'       => esc_attr__( 'Leave a Review To ', 'sntravel') . '%s',
@@ -373,61 +373,61 @@ if (!class_exists('Sntravel_Comment')) {
                 'comment_field'        =>  '',
             );
 
-            $pxl_fields = [];
-            $pxl_fields['open'] = '';
+            $sntravel_fields = [];
+            $sntravel_fields['open'] = '';
 
             if(!is_user_logged_in()){
-                $pxl_fields['open'] .= $this->comment_rating_fields([
+                $sntravel_fields['open'] .= $this->comment_rating_fields([
                     'echo' => false,
                     'class' => 'mb-20'
                 ]);
-                $pxl_fields['open'] .= $this->wc_comment_rating_fields([
+                $sntravel_fields['open'] .= $this->wc_comment_rating_fields([
                     'echo' => false,
                     'class' => 'mb-20'
                 ]);
             }
 
             //open
-            $pxl_fields['open'] .= '<div class="sntravel-comment-form-fields-wrap row gx-12">';
+            $sntravel_fields['open'] .= '<div class="sntravel-comment-form-fields-wrap row gx-12">';
             // author
-            $pxl_fields['author'] = '<div class="comment-form-field comment-form-author col-lg-4 col-md-4 col-sm-12">'.
+            $sntravel_fields['author'] = '<div class="comment-form-field comment-form-author col-lg-4 col-md-4 col-sm-12">'.
                 '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
                 '" size="30" placeholder="'.esc_attr__('Name*', 'sntravel').'"/></div>';
 
             // email
-            $pxl_fields['email'] = '<div class="comment-form-field comment-form-email col-lg-4 col-md-4 col-sm-12">'.
+            $sntravel_fields['email'] = '<div class="comment-form-field comment-form-email col-lg-4 col-md-4 col-sm-12">'.
                 '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
                 '" size="30" placeholder="'.esc_attr__('Email*', 'sntravel').'"/></div>';
 
-            $pxl_fields['phone'] = '<div class="comment-form-field comment-form-phone col-lg-4 col-md-4 col-sm-12">'.
+            $sntravel_fields['phone'] = '<div class="comment-form-field comment-form-phone col-lg-4 col-md-4 col-sm-12">'.
                 '<input id="phone" name="phone" type="text" size="30" placeholder="'.esc_attr__('Mobile*', 'sntravel').'"/></div>';
 
-            $pxl_fields['close'] = '</div>';
+            $sntravel_fields['close'] = '</div>';
 
 
-            $fields =  apply_filters( 'comment_form_default_fields', $pxl_fields);
-            $pxl_comment_fields['fields'] = $fields;
+            $fields =  apply_filters( 'comment_form_default_fields', $sntravel_fields);
+            $sntravel_comment_fields['fields'] = $fields;
 
 
 
             // Comment Field Message
-            $pxl_comment_fields['comment_field'] = '';
+            $sntravel_comment_fields['comment_field'] = '';
 
             if(is_user_logged_in()){
-                $pxl_comment_fields['comment_field'] .= $this->comment_rating_fields([
+                $sntravel_comment_fields['comment_field'] .= $this->comment_rating_fields([
                     'echo' => false,
                     'class' => 'mt-20'
                 ]);
-                $pxl_comment_fields['comment_field'] .= $this->wc_comment_rating_fields([
+                $sntravel_comment_fields['comment_field'] .= $this->wc_comment_rating_fields([
                     'echo' => false,
                     'class' => 'mt-20'
                 ]);
             }
 
-            $pxl_comment_fields['comment_field'] .= '<div class="sntravel-comment-form-fields-wrap sntravel-comment-form-fields-message row"><div class="comment-form-field comment-form-comment col-12"><textarea id="comment-msg" name="comment" cols="45" rows="8" placeholder="'.esc_attr__('Write your review...', 'sntravel').'" aria-required="true">' .'</textarea></div></div>';
+            $sntravel_comment_fields['comment_field'] .= '<div class="sntravel-comment-form-fields-wrap sntravel-comment-form-fields-message row"><div class="comment-form-field comment-form-comment col-12"><textarea id="comment-msg" name="comment" cols="45" rows="8" placeholder="'.esc_attr__('Write your review...', 'sntravel').'" aria-required="true">' .'</textarea></div></div>';
 
 
-            return $pxl_comment_fields;
+            return $sntravel_comment_fields;
 
         }
  

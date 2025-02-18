@@ -1,11 +1,11 @@
 <?php
 // Register PXL Widget
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name'       => 'pxl_button',
+        'name'       => 'sntravel_button',
         'title'      => esc_html__( 'PXL Button', 'sntravel' ),
         'icon'       => 'eicon-button',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'params'     => array(
             'sections' => array(
                 array(
@@ -70,7 +70,7 @@ pxl_add_custom_widget(
                             'name' => 'page_link',
                             'label' => esc_html__('Existing Page', 'sntravel'),
                             'type' => \Elementor\Controls_Manager::SELECT2,
-                            'options'       => pxl_get_all_page(),
+                            'options'       => sntravel_get_all_page(),
                             'condition'     => [
                                 'button_url_type'     => 'page',
                             ],
@@ -115,7 +115,7 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-button-wrapper .icon-ps-right .pxl-button-icon' => 'margin-left: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-button-wrapper .icon-ps-right .sntravel-button-icon' => 'margin-left: {{SIZE}}{{UNIT}};',
                             ],
                             'condition' => [
                                 'icon_align' => ['right'],
@@ -134,7 +134,7 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-button-wrapper .icon-ps-left .pxl-button-icon' => 'margin-right: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-button-wrapper .icon-ps-left .sntravel-button-icon' => 'margin-right: {{SIZE}}{{UNIT}};',
                             ],
                             'condition' => [
                                 'icon_align' => ['left'],
@@ -153,7 +153,7 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-button-wrapper .pxl-icon' => 'font-size: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-button-wrapper .sntravel-icon' => 'font-size: {{SIZE}}{{UNIT}};',
                             ],
                         ),
                     ),
@@ -208,7 +208,7 @@ pxl_add_custom_widget(
                                 'prefix_class' => 'elementor-align-',
                                 'default' => '',
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-button-wrapper' => 'justify-content: {{VALUE}};'
+                                    '{{WRAPPER}} .sntravel-button-wrapper' => 'justify-content: {{VALUE}};'
                                 ],
                             ),
                             array(
@@ -217,7 +217,7 @@ pxl_add_custom_widget(
                                 'type' => \Elementor\Controls_Manager::DIMENSIONS,
                                 'size_units' => [ 'px' ],
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-button-wrapper .btn' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                    '{{WRAPPER}} .sntravel-button-wrapper .btn' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                                 ],
                                 'control_type' => 'responsive',
                             ),
@@ -233,14 +233,14 @@ pxl_add_custom_widget(
                                 'label' => esc_html__('Typography', 'sntravel' ),
                                 'type' => \Elementor\Group_Control_Typography::get_type(),
                                 'control_type' => 'group',
-                                'selector' => '{{WRAPPER}} .pxl-button-wrapper .btn',
+                                'selector' => '{{WRAPPER}} .sntravel-button-wrapper .btn',
                             ),
                             array(
                                 'name' => 'btn_color',
                                 'label' => esc_html__('Text Color', 'sntravel' ),
                                 'type' => \Elementor\Controls_Manager::COLOR,
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-button-wrapper .btn' => 'color: {{VALUE}};',
+                                    '{{WRAPPER}} .sntravel-button-wrapper .btn' => 'color: {{VALUE}};',
                                 ],
                             ),
                             array(
@@ -248,7 +248,7 @@ pxl_add_custom_widget(
                                 'label' => esc_html__('Text Color Hover', 'sntravel' ),
                                 'type' => \Elementor\Controls_Manager::COLOR,
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-button-wrapper .btn:hover' => 'color: {{VALUE}};',
+                                    '{{WRAPPER}} .sntravel-button-wrapper .btn:hover' => 'color: {{VALUE}};',
                                 ],
                             ),
                             array(
@@ -256,7 +256,7 @@ pxl_add_custom_widget(
                                 'label' => esc_html__('Icon Color', 'sntravel' ),
                                 'type' => \Elementor\Controls_Manager::COLOR,
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-button-wrapper .btn .pxl-button-icon' => 'color: {{VALUE}};',
+                                    '{{WRAPPER}} .sntravel-button-wrapper .btn .sntravel-button-icon' => 'color: {{VALUE}};',
                                 ],
                             ),
                             array(
@@ -264,7 +264,7 @@ pxl_add_custom_widget(
                                 'label' => esc_html__('Icon Color Hover', 'sntravel' ),
                                 'type' => \Elementor\Controls_Manager::COLOR,
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-button-wrapper .btn:hover .pxl-button-icon' => 'color: {{VALUE}};',
+                                    '{{WRAPPER}} .sntravel-button-wrapper .btn:hover .sntravel-button-icon' => 'color: {{VALUE}};',
                                 ],
                             ),
                             array(
@@ -272,8 +272,8 @@ pxl_add_custom_widget(
                                 'label' => esc_html__('Background Color', 'sntravel' ),
                                 'type' => \Elementor\Controls_Manager::COLOR,
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-button-wrapper .btn' => 'background-image: none; background-color: {{VALUE}}; border-color: {{VALUE}};',
-                                    '{{WRAPPER}} .pxl-button-wrapper .btn::after' => 'background-image: none; background-color: {{VALUE}};'
+                                    '{{WRAPPER}} .sntravel-button-wrapper .btn' => 'background-image: none; background-color: {{VALUE}}; border-color: {{VALUE}};',
+                                    '{{WRAPPER}} .sntravel-button-wrapper .btn::after' => 'background-image: none; background-color: {{VALUE}};'
                                 ],
                                 'condition' => [
                                     'style!' => ['btn-gradient'],
@@ -284,10 +284,10 @@ pxl_add_custom_widget(
                                 'label' => esc_html__('Background Color Hover', 'sntravel' ),
                                 'type' => \Elementor\Controls_Manager::COLOR,
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-button-wrapper .btn:hover' => 'border-color: {{VALUE}};',
-                                    '{{WRAPPER}} .pxl-button-wrapper .btn.btn-additional-6:hover, {{WRAPPER}} .pxl-button-wrapper .btn.btn-additional-7:hover, {{WRAPPER}} .pxl-button-wrapper .btn.btn-additional-5:hover' => 'background-color: {{VALUE}};',
-                                    '{{WRAPPER}} .pxl-button-wrapper .btn:before' => 'background-color: {{VALUE}};',
-                                    '{{WRAPPER}} .pxl-button-wrapper .btn.btn-additional-10::after' => 'border-left-color: {{VALUE}};'
+                                    '{{WRAPPER}} .sntravel-button-wrapper .btn:hover' => 'border-color: {{VALUE}};',
+                                    '{{WRAPPER}} .sntravel-button-wrapper .btn.btn-additional-6:hover, {{WRAPPER}} .sntravel-button-wrapper .btn.btn-additional-7:hover, {{WRAPPER}} .sntravel-button-wrapper .btn.btn-additional-5:hover' => 'background-color: {{VALUE}};',
+                                    '{{WRAPPER}} .sntravel-button-wrapper .btn:before' => 'background-color: {{VALUE}};',
+                                    '{{WRAPPER}} .sntravel-button-wrapper .btn.btn-additional-10::after' => 'border-left-color: {{VALUE}};'
                                 ],
                                 'condition' => [
                                     'style!' => ['btn-additional-9'],
@@ -298,7 +298,7 @@ pxl_add_custom_widget(
                                 'label' => esc_html__('Background Color Hover', 'sntravel' ),
                                 'type' => \Elementor\Controls_Manager::COLOR,
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-button-wrapper .btn:before' => 'background-color: {{VALUE}};',
+                                    '{{WRAPPER}} .sntravel-button-wrapper .btn:before' => 'background-color: {{VALUE}};',
                                 ],
                                 'condition' => [
                                     'style' => ['btn-additional-9'],
@@ -319,7 +319,7 @@ pxl_add_custom_widget(
                                     'groove' => esc_html__( 'Groove', 'sntravel' ),
                                 ],
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-button-wrapper .btn' => 'border-style: {{VALUE}};',
+                                    '{{WRAPPER}} .sntravel-button-wrapper .btn' => 'border-style: {{VALUE}};',
                                 ],
                             ),
                             array(
@@ -327,7 +327,7 @@ pxl_add_custom_widget(
                                 'label' => esc_html__( 'Border Width', 'sntravel' ),
                                 'type' => \Elementor\Controls_Manager::DIMENSIONS,
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-button-wrapper .btn' => 'border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                    '{{WRAPPER}} .sntravel-button-wrapper .btn' => 'border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                                 ],
                                 'responsive' => true,
                             ),
@@ -337,9 +337,9 @@ pxl_add_custom_widget(
                                 'type' => \Elementor\Controls_Manager::COLOR,
                                 'default' => '',
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-button-wrapper .btn' => 'border-color: {{VALUE}};',
-                                    '{{WRAPPER}} .pxl-button-wrapper .btn.btn-additional-7' => 'box-shadow: 3px 3px 0px 0px {{VALUE}};',
-                                    '{{WRAPPER}} .pxl-button-wrapper .btn.btn-additional-7:hover' => 'box-shadow: 0px 0px 0px 0px {{VALUE}};',
+                                    '{{WRAPPER}} .sntravel-button-wrapper .btn' => 'border-color: {{VALUE}};',
+                                    '{{WRAPPER}} .sntravel-button-wrapper .btn.btn-additional-7' => 'box-shadow: 3px 3px 0px 0px {{VALUE}};',
+                                    '{{WRAPPER}} .sntravel-button-wrapper .btn.btn-additional-7:hover' => 'box-shadow: 0px 0px 0px 0px {{VALUE}};',
                                     '{{WRAPPER}} .btn.btn-outline:after' => 'background-color: {{VALUE}};'
                                 ],
                                 'condition' => [
@@ -352,7 +352,7 @@ pxl_add_custom_widget(
                                 'type' => \Elementor\Controls_Manager::COLOR,
                                 'default' => '',
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-button-wrapper .btn:hover' => 'border-color: {{VALUE}};'
+                                    '{{WRAPPER}} .sntravel-button-wrapper .btn:hover' => 'border-color: {{VALUE}};'
                                 ],
                                 'condition' => [
                                     'border_type!' => '',
@@ -364,7 +364,7 @@ pxl_add_custom_widget(
                                 'type' => \Elementor\Controls_Manager::DIMENSIONS,
                                 'size_units' => [ 'px' ],
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-button-wrapper .btn' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                    '{{WRAPPER}} .sntravel-button-wrapper .btn' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                                 ],
                             ),
                             array(
@@ -387,7 +387,7 @@ pxl_add_custom_widget(
                                                     'style' => ['btn-additional-9'],
                                                 ],
                                                 'selector' => 
-                                                    '{{WRAPPER}} .pxl-button-wrapper .btn'
+                                                    '{{WRAPPER}} .sntravel-button-wrapper .btn'
                                             ),
                                         )
                                     ),
@@ -407,7 +407,7 @@ pxl_add_custom_widget(
                                                     'style' => ['btn-additional-9'],
                                                 ],
                                                 'selector' => 
-                                                    '{{WRAPPER}} .pxl-button-wrapper .btn:hover'
+                                                    '{{WRAPPER}} .sntravel-button-wrapper .btn:hover'
                                             ),
                                         ),
                                     ),

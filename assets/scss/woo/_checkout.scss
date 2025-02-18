@@ -412,7 +412,7 @@
 			&:after {
 				content: "\e95b";
 				position: absolute;
-				font-family: $pxli_font;
+				font-family: $sntraveli_font;
 				color: #000;
 				@include animation(sntravel-spin 2s linear infinite);
 				top: 50%;

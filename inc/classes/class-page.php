@@ -78,8 +78,8 @@ if (!class_exists('Sntravel_Page')) {
             $pagenum_link = remove_query_arg( array_keys( $query_args ), $pagenum_link );
             $pagenum_link = trailingslashit( $pagenum_link ) . '%_%';
 
-            $html_prev = '<span class="pxli pxli-angle-double-left"></span>';
-            $html_next = '<span class="pxli pxli-angle-double-right"></span>';
+            $html_prev = '<span class="sntraveli sntraveli-angle-double-left"></span>';
+            $html_next = '<span class="sntraveli sntraveli-angle-double-right"></span>';
             $paginate_links_args = array(
                 'base'     => $pagenum_link,
                 'total'    => $query->max_num_pages,

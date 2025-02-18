@@ -1,11 +1,11 @@
 <?php
 //Register Counter Widget
- pxl_add_custom_widget(
+ sntravel_add_custom_widget(
     array(
-        'name'       => 'pxl_countdown',
+        'name'       => 'sntravel_countdown',
         'title'      => esc_html__('PXL Countdown', 'sntravel'),
         'icon' => 'eicon-countdown',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'scripts'    => array(
             'sntravel-countdown',
         ),
@@ -24,14 +24,14 @@
                             'options'      => [
                                 '1' => [
                                     'label' => esc_html__( 'Layout 1', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_countdown-1.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_countdown-1.jpg'
                                 ],
                                 '2' => [
                                     'label' => esc_html__( 'Layout 2', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_countdown-2.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_countdown-2.jpg'
                                 ],
                             ],
-                            'prefix_class' => 'pxl-counter-layout',
+                            'prefix_class' => 'sntravel-counter-layout',
                         ) 
                     ),
                 ),
@@ -60,7 +60,7 @@
                             'label' => esc_html__('Number Typography', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-countdown .pxl-countdown-container .inner-number',
+                            'selector' => '{{WRAPPER}} .sntravel-countdown .sntravel-countdown-container .inner-number',
                         ),
                         array(
                             'name' => 'number_color',
@@ -68,7 +68,7 @@
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'default' => '',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-countdown .pxl-countdown-container .inner-number' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-countdown .sntravel-countdown-container .inner-number' => 'color: {{VALUE}};',
                             ],
                         ),
                     ),
@@ -83,7 +83,7 @@
                             'label' => esc_html__('Text Typography', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-countdown .pxl-countdown-container .inner-text',
+                            'selector' => '{{WRAPPER}} .sntravel-countdown .sntravel-countdown-container .inner-text',
                         ),
                         array(
                             'name' => 'text_color',
@@ -91,7 +91,7 @@
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'default' => '',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-countdown .pxl-countdown-container .inner-text' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-countdown .sntravel-countdown-container .inner-text' => 'color: {{VALUE}};',
                             ],
                         ),
                     ),

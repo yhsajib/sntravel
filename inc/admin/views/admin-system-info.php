@@ -1,5 +1,5 @@
 <?php 
-	function pxl_convert_to_byte ($size){
+	function sntravel_convert_to_byte ($size){
 	    $label   = substr( $size, -1 );
 	    $num = substr( $size, 0, -1 );
 	    switch ( strtoupper( $label ) ) {
@@ -16,13 +16,13 @@
 	    }
 	    return $num;
 	}
-	function pxl_get_system_info() {
+	function sntravel_get_system_info() {
 	    $system_info = array();
 
 	    //Upload max size
 	    
 	    $upload_max_size = ini_get('upload_max_filesize');
-	    $upload_max_size_to_byte = pxl_convert_to_byte( $upload_max_size );
+	    $upload_max_size_to_byte = sntravel_convert_to_byte( $upload_max_size );
 	    
 	    array_push(
 	        $system_info,
@@ -35,7 +35,7 @@
 	    //Limit memory
 	    
 	    $memory_limit = ini_get( 'memory_limit' );
-	    $memory_limit_to_byte = pxl_convert_to_byte( $memory_limit );
+	    $memory_limit_to_byte = sntravel_convert_to_byte( $memory_limit );
 
 	    array_push(
 	        $system_info,
@@ -48,7 +48,7 @@
 	    //Post maxsize
 	    
 	    $post_maxsite = ini_get( 'post_max_size' );
-	    $post_maxsite_to_byte = pxl_convert_to_byte( $post_maxsite );
+	    $post_maxsite_to_byte = sntravel_convert_to_byte( $post_maxsite );
 
 	    array_push(
 	        $system_info,
@@ -79,7 +79,7 @@
 	    return $system_info;
 	}
 
-	$system_status = pxl_get_system_info();
+	$system_status = sntravel_get_system_info();
 	foreach ( $system_status as $item) :
 	?>
 		<div class="sntravel-iconbox">

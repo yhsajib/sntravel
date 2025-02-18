@@ -1,10 +1,10 @@
 <?php
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name' => 'pxl_page_title',
+        'name' => 'sntravel_page_title',
         'title' => esc_html__('PXL Page Title', 'sntravel' ),
         'icon' => 'eicon-t-letter',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'params' => array(
             'sections' => array(
                 array(
@@ -20,7 +20,7 @@ pxl_add_custom_widget(
                             'options' => [
                                 '1' => [
                                     'label' => esc_html__( 'Layout 1', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_fancy_box-1.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_fancy_box-1.jpg'
                                 ],
                             ],
                         )
@@ -62,7 +62,7 @@ pxl_add_custom_widget(
                                 ]
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-pt-wrap' => 'text-align: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-pt-wrap' => 'text-align: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -70,7 +70,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Title Color', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-pt-wrap .main-title' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-pt-wrap .main-title' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -78,7 +78,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Title Typography', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-pt-wrap .main-title',
+                            'selector' => '{{WRAPPER}} .sntravel-pt-wrap .main-title',
                         ),
                     ),
                 ),

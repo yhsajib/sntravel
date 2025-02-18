@@ -23,7 +23,7 @@ function basilico_product_style_layout_4() {
     return array();
 }
 
-add_action( 'pxl_post_metabox_register', 'basilico_page_options_register' );
+add_action( 'sntravel_post_metabox_register', 'basilico_page_options_register' );
 function basilico_page_options_register( $metabox ) {
 	$panels = [
 		'post' => [
@@ -141,7 +141,7 @@ function basilico_page_options_register( $metabox ) {
             ]
         ],
         'page' => [
-            'opt_name'            => 'pxl_page_options',
+            'opt_name'            => 'sntravel_page_options',
             'display_name'        => esc_html__( 'Page Settings', 'sntravel' ),
             'show_options_object' => false,
             'context'  => 'advanced',
@@ -290,7 +290,7 @@ function basilico_page_options_register( $metabox ) {
             ]
         ],
 		'product' => [ //product
-            'opt_name'            => 'pxl_product_options',
+            'opt_name'            => 'sntravel_product_options',
             'display_name'        => esc_html__( 'Product Settings', 'sntravel' ),
             'show_options_object' => false,
             'context'  => 'advanced',
@@ -390,7 +390,7 @@ function basilico_page_options_register( $metabox ) {
             ],
         ],
     	'sntravel-portfolio' => [ //post_type
-            'opt_name'            => 'pxl_portfolio_options',
+            'opt_name'            => 'sntravel_portfolio_options',
             'display_name'        => esc_html__( 'Page Settings', 'sntravel' ),
             'show_options_object' => false,
             'context'  => 'advanced',
@@ -470,7 +470,7 @@ function basilico_page_options_register( $metabox ) {
             ],
         ],
         'sntravel-service' => [ //post_type
-            'opt_name'            => 'pxl_service_options',
+            'opt_name'            => 'sntravel_service_options',
             'display_name'        => esc_html__( 'Page Settings', 'sntravel' ),
             'show_options_object' => false,
             'context'  => 'advanced',
@@ -543,7 +543,7 @@ function basilico_page_options_register( $metabox ) {
                         ),
                         array(
                             'id'       => 'area_icon',
-                            'type'     => 'pxl_iconpicker',
+                            'type'     => 'sntravel_iconpicker',
                             'title'    => esc_html__( 'Select Icon', 'sntravel' ),
                             'default'  => '',
                             'required' => array( 0 => 'area_icon_type', 1 => 'equals', 2 => 'icon' ),
@@ -561,7 +561,7 @@ function basilico_page_options_register( $metabox ) {
             ],            
         ],
         'sntravel-food' => [ //post_type
-            'opt_name'            => 'pxl_food_options',
+            'opt_name'            => 'sntravel_food_options',
             'display_name'        => esc_html__( 'Page Settings', 'sntravel' ),
             'show_options_object' => false,
             'context'  => 'advanced',
@@ -640,7 +640,7 @@ function basilico_page_options_register( $metabox ) {
             ],
         ],
     	'sntravel-template' => [ //post_type
-            'opt_name'            => 'pxl_hidden_template_options',
+            'opt_name'            => 'sntravel_hidden_template_options',
             'display_name'        => esc_html__( 'Template Settings', 'sntravel' ),
             'show_options_object' => false,
             'context'  => 'advanced',

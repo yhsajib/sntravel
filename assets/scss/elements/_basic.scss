@@ -263,7 +263,7 @@
                     &:after {
                         content: '\e9e6';
                         position: relative;
-                        font-family: $pxli_font;
+                        font-family: $sntraveli_font;
                         color: $primary_color;
                         font-size: inherit;
                         line-height: inherit;
@@ -350,7 +350,7 @@
                     &:before,
                     &:after {
                         position: relative;
-                        font-family: $pxli_font;
+                        font-family: $sntraveli_font;
                         color: $primary_color;
                         font-size: 20px;
                         line-height: inherit;
@@ -852,7 +852,7 @@
                                 color: $heading_color;
                                 &:after {
                                     content: '\e97c';
-                                    font-family: $pxli_font;
+                                    font-family: $sntraveli_font;
                                     font-size: 15px;
                                 }
                             }
@@ -963,7 +963,7 @@
                                 position: absolute;
                                 left: -24px;
                                 font-size: 15px;
-                                font-family: $pxli_font;
+                                font-family: $sntraveli_font;
                                 color: $primary_color;
                                 opacity: 0;
                                 @include transition();
@@ -1004,7 +1004,7 @@
                         &.menu-item-has-children{
                             &::after{
                                 content: '\e9eb';
-                                font-family: 'pxli';
+                                font-family: 'sntraveli';
                                 color: $secondary_color;
                                 transition: all 250ms ease 0s;
                                 font-size: 15px;
@@ -1140,7 +1140,7 @@
                                 color: $heading_color;
                                 &:after {
                                     content: '\e97c';
-                                    font-family: $pxli_font;
+                                    font-family: $sntraveli_font;
                                     font-size: 15px;
                                 }
                             }
@@ -1210,7 +1210,7 @@
                                 color: #fff;
                                 &:after {
                                     content: '\e97c';
-                                    font-family: $pxli_font;
+                                    font-family: $sntraveli_font;
                                     font-size: 15px;
                                 }
                             }
@@ -1326,7 +1326,7 @@
                                 color: #fff;
                                 &:after {
                                     content: '\e97c';
-                                    font-family: $pxli_font;
+                                    font-family: $sntraveli_font;
                                     font-size: 15px;
                                 }
                             }
@@ -1493,7 +1493,7 @@
                                 color: #fff;
                                 &:after {
                                     content: '\e97c';
-                                    font-family: $pxli_font;
+                                    font-family: $sntraveli_font;
                                     font-size: 15px;
                                 }
                             }
@@ -1838,7 +1838,7 @@
                 &:before{
                     position: absolute;
                     content: "\e973";
-                    font-family: "pxli";
+                    font-family: "sntraveli";
                     font-size: 18px;
                 }
             }
@@ -2439,7 +2439,7 @@
                         transform: translateY(-50%);
                         color: $primary_color;
                         font-size: 15px;
-                        font-family: 'pxli';
+                        font-family: 'sntraveli';
                         margin: 0 5px 0 4px;
                     }
                 }
@@ -3164,7 +3164,7 @@
             z-index: 5;
             color: inherit;
             font-size: 17px;
-            &.pxli-volume {
+            &.sntraveli-volume {
                 font-size: 30px;
             }
         }
@@ -3211,7 +3211,7 @@
             height: 65px;
             i {
                 font-size: 14px;
-                &.pxli-volume {
+                &.sntraveli-volume {
                     font-size: 26px;
                 }
             }
@@ -3259,7 +3259,7 @@
         }
         &:after {
             content: "\e93b";
-            font-family: $pxli_font;
+            font-family: $sntraveli_font;
             position: absolute;
             color: #fff;
             top: 50%;
@@ -4248,8 +4248,8 @@
         visibility: hidden;
         &.sntravel-animated{
             visibility: visible;
-            -webkit-animation-name:pxl_skew_in;
-            animation-name:pxl_skew_in;
+            -webkit-animation-name:sntravel_skew_in;
+            animation-name:sntravel_skew_in;
             -webkit-animation-fill-mode:both;
             animation-fill-mode:both;
             -webkit-animation-duration:1s!important;
@@ -4266,8 +4266,8 @@
         visibility: hidden;
         &.sntravel-animated{
             visibility: visible;
-            -webkit-animation-name:pxl_skew_in_right;
-            animation-name:pxl_skew_in_right;
+            -webkit-animation-name:sntravel_skew_in_right;
+            animation-name:sntravel_skew_in_right;
             -webkit-animation-fill-mode:both;
             animation-fill-mode:both;
             -webkit-animation-duration:1s!important;
@@ -5330,7 +5330,7 @@
                 content: "";
                 position: absolute;
                 font-size: 131px;
-                font-family: "pxli";
+                font-family: "sntraveli";
                 z-index: -1;
                 color: #171717;
                 transition: all 300ms ease-out 0s;
@@ -6050,7 +6050,7 @@
             }
             &:after {
                 content: "\e9f2";
-                font-family: "pxli";
+                font-family: "sntraveli";
                 font-size: 15px;
                 position: absolute;
                 top: 50%;
@@ -6117,7 +6117,7 @@
                 &::before, &::after{
                     content: '\ea25';
                     position: relative;
-                    font-family: $pxli_font;
+                    font-family: $sntraveli_font;
                     color: $primary_color;
                     line-height: inherit;
                     transition: all 400ms ease-in-out 0s;
@@ -6546,17 +6546,17 @@
         }
         &.fadeIn {
             .tab-content {
-                @include animation(pxlFadeIn 300ms linear 1 forwards);
+                @include animation(sntravelFadeIn 300ms linear 1 forwards);
             }
         }
         &.fadeInUp {
             .tab-content {
-                @include animation(pxlFadeInUp 300ms linear 1 forwards);
+                @include animation(sntravelFadeInUp 300ms linear 1 forwards);
             }
         }
         &.zoomIn {
             .tab-content {
-                @include animation(pxlZoomIn 450ms linear 1 forwards);
+                @include animation(sntravelZoomIn 450ms linear 1 forwards);
             }
         }
     }
@@ -7929,7 +7929,7 @@
 .anchor-inner-item {
     display: none;
     opacity: 0;
-    @include animation(pxlFadeInUp 300ms linear 1 forwards);
+    @include animation(sntravelFadeInUp 300ms linear 1 forwards);
     &.active {
         display: block;
     }
@@ -8112,7 +8112,7 @@
         svg {
             fill: $secondary_color;
         }
-        .pxli-quote {
+        .sntraveli-quote {
             transform: rotate(180deg);
             display: inline-flex;
         }

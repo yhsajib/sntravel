@@ -1,7 +1,7 @@
 <?php
 extract($settings);
 
-$tax = ['pxl-portfolio-category'];
+$tax = ['sntravel-portfolio-category'];
 $select_post_by = $widget->get_setting('select_post_by', 'term_selected');
 $source = $post_ids = [];
 
@@ -20,8 +20,8 @@ $settings['layout']    = $settings['layout_'.$settings['post_type']];
 
 $tab_style = sntravel()->get_theme_opt('tab_style', 'style-df');
 
-extract(pxl_get_posts_of_grid(
-    'pxl-portfolio',
+extract(sntravel_get_posts_of_grid(
+    'sntravel-portfolio',
     ['source' => $source, 'orderby' => $orderby, 'order' => $order, 'limit' => $limit, 'post_ids' => $post_ids], 
     $tax
 ));
@@ -55,7 +55,7 @@ $opts = [
 
 
 $widget->add_render_attribute( 'carousel', [
-    'class'         => 'pxl-swiper-container',
+    'class'         => 'sntravel-swiper-container',
     'dir'           => is_rtl() ? 'rtl' : 'ltr',
     'data-settings' => wp_json_encode($opts)
 ]);
@@ -76,7 +76,7 @@ if ( ! empty( $settings['loadmore_link']['url'] ) ) {
 $data_settings = $item_anm_cls = '';
 if ( !empty( $item_animation) ) {
 
-    $item_anm_cls= ' pxl-animate pxl-invisible animated-'.$item_animation_duration;
+    $item_anm_cls= ' sntravel-animate sntravel-invisible animated-'.$item_animation_duration;
     $item_animation_delay = !empty($item_animation_delay) ? $item_animation_delay : '150';
     $data_animations = [
         'animation' => $item_animation,
@@ -85,7 +85,7 @@ if ( !empty( $item_animation) ) {
 } 
 ?>
 <?php if(!empty($posts) && count($posts)): ?>
-<div class="pxl-swiper-slider pxl-portfolio-carousel layout-<?php echo esc_attr($settings['layout']);?> ">
+<div class="sntravel-swiper-slider sntravel-portfolio-carousel layout-<?php echo esc_attr($settings['layout']);?> ">
     <?php if ($drag_cursor == "true") : ?>
         <div class="circle-cursor">
             <span><?php echo esc_html($drag_text); ?></span>
@@ -108,16 +108,16 @@ if ( !empty( $item_animation) ) {
             <?php endforeach; ?>
         </div>
     <?php endif; ?>
-    <div class="pxl-swiper-slider-wrap pxl-carousel-inner relative add-custom-cursor">
-        <div <?php pxl_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
-            <div class="pxl-swiper-wrapper swiper-wrapper">
+    <div class="sntravel-swiper-slider-wrap sntravel-carousel-inner relative add-custom-cursor">
+        <div <?php sntravel_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
+            <div class="sntravel-swiper-wrapper swiper-wrapper">
                 <?php
                 $i = 0;
                 foreach ($posts as $post):
                     $i = $i + 50;
                     $thumbnail = '';
                     if (has_post_thumbnail($post->ID)){
-                        $img = pxl_get_image_by_size( array(
+                        $img = sntravel_get_image_by_size( array(
                             'post_id'  => $post->ID ,
                             'thumb_size' => $img_size,
                             'class' => 'no-lazyload',
@@ -127,14 +127,14 @@ if ( !empty( $item_animation) ) {
 
                     $filter_class = '';
                     if ($select_post_by === 'term_selected' && $filter == "true")
-                        $filter_class = pxl_get_term_of_post_to_class($post->ID, array_unique($tax));
+                        $filter_class = sntravel_get_term_of_post_to_class($post->ID, array_unique($tax));
 
                     $data_animations['animation_delay'] = ((float)$item_animation_delay + $i);
                     $data_animation =  json_encode($data_animations);
                     $data_settings = 'data-settings="'.esc_attr($data_animation).'"';
                     ?>
-                    <div class="pxl-swiper-slide swiper-slide" data-filter="<?php echo esc_attr($filter_class) ?>">
-                        <div class="item-inner relative <?php echo esc_attr($item_anm_cls) ?>" <?php pxl_print_html($data_settings); ?>>
+                    <div class="sntravel-swiper-slide swiper-slide" data-filter="<?php echo esc_attr($filter_class) ?>">
+                        <div class="item-inner relative <?php echo esc_attr($item_anm_cls) ?>" <?php sntravel_print_html($data_settings); ?>>
                             <?php if (isset($thumbnail)) : ?>
                                 <div class="item-featured">
                                     <div class="post-image">
@@ -151,7 +151,7 @@ if ( !empty( $item_animation) ) {
                                     if ($show_category == 'true') {
                                         ?>
                                         <div class="item-category">
-                                            <?php the_terms($post->ID, 'pxl-portfolio-category', '', ', ', ''); ?>
+                                            <?php the_terms($post->ID, 'sntravel-portfolio-category', '', ', ', ''); ?>
                                         </div>
                                         <?php
                                     }
@@ -163,11 +163,11 @@ if ( !empty( $item_animation) ) {
                 <?php endforeach; ?>
             </div>
         </div>
-        <div class="pxl-swiper-arrows style-default nav-horizontal">
-            <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"><span class="pxli pxli-arrow-prev"></span></div>
-            <div class="pxl-swiper-arrow pxl-swiper-arrow-next"><span class="pxli pxli-arrow-next"></span></div>
+        <div class="sntravel-swiper-arrows style-default nav-horizontal">
+            <div class="sntravel-swiper-arrow sntravel-swiper-arrow-prev"><span class="sntraveli sntraveli-arrow-prev"></span></div>
+            <div class="sntravel-swiper-arrow sntravel-swiper-arrow-next"><span class="sntraveli sntraveli-arrow-next"></span></div>
         </div>
-        <div class="pxl-swiper-dots"></div>
+        <div class="sntravel-swiper-dots"></div>
     </div>
 </div>
 <?php endif; ?>

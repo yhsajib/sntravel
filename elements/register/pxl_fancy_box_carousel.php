@@ -1,10 +1,10 @@
 <?php
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name' => 'pxl_fancy_box_carousel',
+        'name' => 'sntravel_fancy_box_carousel',
         'title' => esc_html__('PXL Fancy Box Carousel', 'sntravel'),
         'icon' => 'eicon-info-box',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'scripts' => [
             'swiper',
             'sntravel-swiper',
@@ -24,11 +24,11 @@ pxl_add_custom_widget(
                             'options' => [
                                 '1' => [
                                     'label' => esc_html__( 'Layout 1', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_fancy_box_carousel-1.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_fancy_box_carousel-1.jpg'
                                 ],
                                 '2' => [
                                     'label' => esc_html__( 'Layout 2', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_fancy_box_carousel-2.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_fancy_box_carousel-2.jpg'
                                 ],
                             ],
                         ),
@@ -115,7 +115,7 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box-carousel .item-image img' => 'height: {{SIZE}}{{UNIT}}; width: 100%; object-fit: cover;',
+                                '{{WRAPPER}} .sntravel-fancy-box-carousel .item-image img' => 'height: {{SIZE}}{{UNIT}}; width: 100%; object-fit: cover;',
                             ],
                         ),
                         array(
@@ -123,14 +123,14 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Title', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-fancy-box-carousel .item-title',
+                            'selector' => '{{WRAPPER}} .sntravel-fancy-box-carousel .item-title',
                         ),
                         array(
                             'name' => 'heading_color',
                             'label' => esc_html__('Heading Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box-carousel .item-title' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-fancy-box-carousel .item-title' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -138,14 +138,14 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Sub Title', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-fancy-box-carousel .item-sub-title',
+                            'selector' => '{{WRAPPER}} .sntravel-fancy-box-carousel .item-sub-title',
                         ),
                         array(
                             'name' => 'sub_title_color',
                             'label' => esc_html__('Sub Title Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box-carousel .item-sub-title' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-fancy-box-carousel .item-sub-title' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -153,14 +153,14 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Description', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-fancy-box-carousel .item-description',
+                            'selector' => '{{WRAPPER}} .sntravel-fancy-box-carousel .item-description',
                         ),
                         array(
                             'name' => 'desc_color',
                             'label' => esc_html__('Description Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box-carousel .item-description' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-fancy-box-carousel .item-description' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -168,7 +168,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Background Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box-carousel .item-inner .overlay-1, {{WRAPPER}} .pxl-fancy-box-carousel .item-inner .overlay-2' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-fancy-box-carousel .item-inner .overlay-1, {{WRAPPER}} .sntravel-fancy-box-carousel .item-inner .overlay-2' => 'background-color: {{VALUE}};',
                             ],
                             'condition' => [
                                 'layout' => '2'
@@ -212,7 +212,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::DIMENSIONS,
                             'size_units' => [ 'px' ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box-carousel .btn' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-fancy-box-carousel .btn' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                             'control_type' => 'responsive',
                             'condition' => [
@@ -224,7 +224,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Typography', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-fancy-box-carousel .btn',
+                            'selector' => '{{WRAPPER}} .sntravel-fancy-box-carousel .btn',
                             'condition' => [
                                 'layout' => '2'
                             ]
@@ -234,7 +234,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Text Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box-carousel .btn' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-fancy-box-carousel .btn' => 'color: {{VALUE}};',
                             ],
                             'condition' => [
                                 'layout' => '2'
@@ -245,7 +245,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Text Color Hover', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box-carousel .btn:hover' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-fancy-box-carousel .btn:hover' => 'color: {{VALUE}};',
                             ],
                             'condition' => [
                                 'layout' => '2'
@@ -256,7 +256,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Icon Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box-carousel .btn .pxl-button-icon' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-fancy-box-carousel .btn .sntravel-button-icon' => 'color: {{VALUE}};',
                             ],
                             'condition' => [
                                 'layout' => '2'
@@ -267,7 +267,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Icon Color Hover', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box-carousel .btn:hover .pxl-button-icon' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-fancy-box-carousel .btn:hover .sntravel-button-icon' => 'color: {{VALUE}};',
                             ],
                             'condition' => [
                                 'layout' => '2'
@@ -278,8 +278,8 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Background Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box-carousel .btn' => 'background-image: none; background-color: {{VALUE}}; border-color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-fancy-box-carousel .btn::after' => 'background-image: none; background-color: {{VALUE}};'
+                                '{{WRAPPER}} .sntravel-fancy-box-carousel .btn' => 'background-image: none; background-color: {{VALUE}}; border-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-fancy-box-carousel .btn::after' => 'background-image: none; background-color: {{VALUE}};'
                             ],
                             'condition' => [
                                 'layout' => '2'
@@ -290,10 +290,10 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Background Color Hover', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box-carousel .item-inner:hover .btn' => 'background-color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-fancy-box-carousel .item-inner:hover .btn:not(.btn-additional-7):before' => 'background-color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-fancy-box-carousel .item-inner:hover .btn.btn-additional-6' => 'background-color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-fancy-box-carousel .item-inner:hover .btn.btn-additional-7 .pxl-button-bg' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-fancy-box-carousel .item-inner:hover .btn' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-fancy-box-carousel .item-inner:hover .btn:not(.btn-additional-7):before' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-fancy-box-carousel .item-inner:hover .btn.btn-additional-6' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-fancy-box-carousel .item-inner:hover .btn.btn-additional-7 .sntravel-button-bg' => 'background-color: {{VALUE}};',
                             ],
                             'condition' => [
                                 'layout' => '2'

@@ -1,11 +1,11 @@
 <?php
 // Register Widget
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name' => 'pxl_shape',
+        'name' => 'sntravel_shape',
         'title' => esc_html__('Pxl Shape', 'sntravel'),
         'icon' => 'eicon-circle',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'params' => array(
             'sections' => array(
                 array(
@@ -21,7 +21,7 @@ pxl_add_custom_widget(
                             'options' => [
                                 '1' => [
                                     'label' => esc_html__('Layout 1', 'sntravel'),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_shape-1.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_shape-1.jpg'
                                 ]
                             ],
                         ),
@@ -48,7 +48,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Group_Control_Background::get_type(),
                             'control_type' => 'group',
                             'types' => ['classic', 'gradient'],
-                            'selector' => '{{WRAPPER}} .pxl-shape',
+                            'selector' => '{{WRAPPER}} .sntravel-shape',
                         ),
                         array(
                             'name' => 'shape_opacity',
@@ -62,7 +62,7 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-shape' => 'opacity: {{SIZE}};',
+                                '{{WRAPPER}} .sntravel-shape' => 'opacity: {{SIZE}};',
                             ],
                         ),
                         array(
@@ -82,7 +82,7 @@ pxl_add_custom_widget(
                                 'size' => 480,
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-shape' => 'width: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-shape' => 'width: {{SIZE}}{{UNIT}};',
                             ],
                         ),
                         array(
@@ -102,7 +102,7 @@ pxl_add_custom_widget(
                                 'size' => 340,
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-shape' => 'height: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-shape' => 'height: {{SIZE}}{{UNIT}};',
                             ],
                         ),
                         array(
@@ -111,7 +111,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'default' => '',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-shape' => 'border-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-shape' => 'border-color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -119,7 +119,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__( 'Border Width', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::DIMENSIONS,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-shape' => 'border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-shape' => 'border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                             'responsive' => true,
                         ),

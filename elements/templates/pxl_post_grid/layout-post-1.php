@@ -1,5 +1,5 @@
 <?php
-$html_id = pxl_get_element_id($settings);
+$html_id = sntravel_get_element_id($settings);
 $tax = ['category'];
 $select_post_by = $widget->get_setting('select_post_by', 'term_selected');
 $source = $post_ids = [];
@@ -17,7 +17,7 @@ $limit = $widget->get_setting('limit', 6);
 $filter_alignment = $widget->get_setting('filter_alignment', 'center');
 $tab_style = sntravel()->get_theme_opt('tab_style', 'style-df');
 
-extract(pxl_get_posts_of_grid(
+extract(sntravel_get_posts_of_grid(
     'post', 
     ['source' => $source, 'orderby' => $orderby, 'order' => $order, 'limit' => $limit, 'post_ids' => $post_ids], 
     $tax
@@ -75,7 +75,7 @@ $load_more = array(
 
 $widget->add_render_attribute( 'wrapper', [
     'id'               => $html_id,
-    'class'            => trim('pxl-grid pxl-post-grid layout-'.$layout),
+    'class'            => trim('sntravel-grid sntravel-post-grid layout-'.$layout),
     'data-layout-mode' => $layout_mode,
     'data-start-page'  => $paged,
     'data-max-pages'   => $max,
@@ -85,20 +85,20 @@ $widget->add_render_attribute( 'wrapper', [
 ]);
  
 if(is_admin())
-    $grid_class = 'pxl-grid-inner pxl-grid-masonry-adm row relative animation-time';
+    $grid_class = 'sntravel-grid-inner sntravel-grid-masonry-adm row relative animation-time';
 else
-    $grid_class = 'pxl-grid-inner pxl-grid-masonry row relative overflow-hidden animation-time';
+    $grid_class = 'sntravel-grid-inner sntravel-grid-masonry row relative overflow-hidden animation-time';
 
 $widget->add_render_attribute( 'grid', 'class', $grid_class);
  
 if( count($posts) <= 0){
-    echo '<div class="pxl-no-post-grid">'.esc_html__( 'No Post Found', 'sntravel' ). '</div>';
+    echo '<div class="sntravel-no-post-grid">'.esc_html__( 'No Post Found', 'sntravel' ). '</div>';
     return;
 }
 ?>
 
-<div <?php pxl_print_html($widget->get_render_attribute_string( 'wrapper' )) ?>>
-    <div class="pxl-grid-overlay"></div>
+<div <?php sntravel_print_html($widget->get_render_attribute_string( 'wrapper' )) ?>>
+    <div class="sntravel-grid-overlay"></div>
     <?php if ($select_post_by === 'term_selected' && $filter == "true"): ?>
         <div class="grid-filter-wrap d-flex <?php echo esc_html($filter_alignment);?> <?php echo esc_attr($tab_style); ?>">
             <span class="filter-item active" data-filter="*"><?php echo esc_html($filter_default_title); ?></span>
@@ -113,26 +113,26 @@ if( count($posts) <= 0){
         </div>
     <?php endif; ?>
 
-    <div <?php pxl_print_html($widget->get_render_attribute_string('grid')); ?>> 
+    <div <?php sntravel_print_html($widget->get_render_attribute_string('grid')); ?>> 
         <?php basilico_get_post_grid($posts, $load_more); ?>
     </div>
     
     <?php if ($pagination_type == 'pagination') { ?>
-        <div class="pxl-grid-pagination d-flex" data-loadmore="<?php echo esc_attr(json_encode($load_more)); ?>" data-query="<?php echo esc_attr(json_encode($args)); ?>">
+        <div class="sntravel-grid-pagination d-flex" data-loadmore="<?php echo esc_attr(json_encode($load_more)); ?>" data-query="<?php echo esc_attr(json_encode($args)); ?>">
             <?php sntravel()->page->get_pagination($query, true); ?>
         </div>
     <?php } ?>
     <?php if (!empty($next_link) && $pagination_type == 'loadmore'): 
         $icon_pos = ( !empty($settings['loadmore_icon']) && !empty($settings['icon_align'])) ? $settings['icon_align'] : ''; 
         ?>
-        <div class="pxl-load-more d-flex" data-loadmore="<?php echo esc_attr(json_encode($load_more)); ?>">
+        <div class="sntravel-load-more d-flex" data-loadmore="<?php echo esc_attr(json_encode($load_more)); ?>">
             <span class="btn btn-grid-loadmore btn-outline <?php echo esc_attr($icon_pos)?>">
                 <?php 
                 if(!empty($settings['loadmore_icon']))
                     \Elementor\Icons_Manager::render_icon( $settings['loadmore_icon'], [ 'aria-hidden' => 'true', 'class' => 'btn-icon '.$icon_pos ], 'span' ); 
                 ?>
                 <span class="btn-text"><?php echo esc_html($settings['loadmore_text']); ?></span>
-                <span class="pxl-btn-icon pxli-spinner"></span>
+                <span class="sntravel-btn-icon sntraveli-spinner"></span>
             </span>
         </div>
     <?php endif; ?>

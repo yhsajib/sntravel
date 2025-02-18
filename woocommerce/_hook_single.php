@@ -187,7 +187,7 @@ if(!function_exists('basilico_woocommerce_before_single_product_summary')){
 				<div class="<?php echo trim(implode(' ', $gallery_css_class));?>" data-thumb-w="<?php echo esc_attr($thumb_w);?>" data-thumb-h="<?php echo esc_attr($thumb_h);?>" data-thumb-margin="<?php echo esc_attr($thumb_margin); ?>">
 					<div class="wc-gallery-sync-slides flexslider <?php echo esc_attr($flex_class);?>">
 						<?php foreach ( $attachment_ids as $attachment_id ) {
-							$img = pxl_get_image_by_size( array(
+							$img = sntravel_get_image_by_size( array(
 								'attach_id'  => $attachment_id,
 								'thumb_size' => $thumbnail_size,
 								'class' => 'img-gal',

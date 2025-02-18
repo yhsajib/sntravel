@@ -26,18 +26,18 @@ $link_attributes = $widget->get_render_attribute_string( 'link' );
 
 ?>
  
-<div class="pxl-fancy-box layout-9">
+<div class="sntravel-fancy-box layout-9">
     <div class="box-inner">
         <div class="box-title-icon">
             <?php if(!empty($widget->get_setting('title'))): ?>
                 <h3 class="box-title">
-                        <?php pxl_print_html( nl2br($widget->get_setting('title'))); ?>
+                        <?php sntravel_print_html( nl2br($widget->get_setting('title'))); ?>
                 </h3>
             <?php endif; ?>
             <div class="box-icon">
-                <span class="pxl-icon">
+                <span class="sntravel-icon">
                     <?php if(! empty( $settings['selected_icon']['value'] )): ?>
-                        <?php \Elementor\Icons_Manager::render_icon( $settings['selected_icon'], [ 'aria-hidden' => 'true', 'class' => 'pxl-fancy-icon pxl-icon' ], 'i' );?>
+                        <?php \Elementor\Icons_Manager::render_icon( $settings['selected_icon'], [ 'aria-hidden' => 'true', 'class' => 'sntravel-fancy-icon sntravel-icon' ], 'i' );?>
                     <?php endif; ?>
                 </span>
             </div>
@@ -47,7 +47,7 @@ $link_attributes = $widget->get_render_attribute_string( 'link' );
                 <?php foreach ($boxs_des as $box): ?>
                     <?php if (!empty($box['des_layout9'])){ ?>
                         <span>
-                            <?php echo pxl_print_html($box['des_layout9']); ?>
+                            <?php echo sntravel_print_html($box['des_layout9']); ?>
                         </span>
                     <?php } ?>
                 <?php endforeach; ?>
@@ -57,9 +57,9 @@ $link_attributes = $widget->get_render_attribute_string( 'link' );
         <div class="box-readmore">
             <?php if ( $link_attributes ) echo '<a '. implode( ' ', [ $link_attributes ] ).'>'; ?>
             <?php
-                pxl_print_html($widget->get_setting('button_text'));
+                sntravel_print_html($widget->get_setting('button_text'));
             ?>
-            <i class="pxli-angle-right"></i>
+            <i class="sntraveli-angle-right"></i>
             <?php if ( $link_attributes ) echo '</a>'; ?> 
         </div>
         <?php endif; ?>

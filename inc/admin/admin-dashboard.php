@@ -9,7 +9,7 @@ if( !defined( 'ABSPATH' ) )
 class Sntravel_Admin_Dashboard extends Sntravel_Admin_Page {
 
 	public function __construct() {
-		$this->id = 'pxlart';
+		$this->id = 'sntravelart';
 		$this->page_title = sntravel()->get_name();
 		$this->menu_title = sntravel()->get_name();
 		$this->position = '50';

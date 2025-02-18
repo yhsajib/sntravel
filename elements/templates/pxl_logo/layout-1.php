@@ -12,7 +12,7 @@ extract($settings);
 $thumbnail    = '';
  
 if(!empty($logo['id'])){
-    $img  = pxl_get_image_by_size( array(
+    $img  = sntravel_get_image_by_size( array(
         'attach_id'  => $logo['id'],
         'thumb_size' => 'full',
     ) );
@@ -31,8 +31,8 @@ if ( ! empty( $logo_link['url'] ) ) {
 }
 
 if(!empty($logo['id'])) : ?>
-    <div class="pxl-logo d-flex align-items-center">
-        <?php if ( ! empty( $logo_link['url'] ) ) { ?><a <?php pxl_print_html($widget->get_render_attribute_string( 'logo_link' )); ?>><?php } ?>
+    <div class="sntravel-logo d-flex align-items-center">
+        <?php if ( ! empty( $logo_link['url'] ) ) { ?><a <?php sntravel_print_html($widget->get_render_attribute_string( 'logo_link' )); ?>><?php } ?>
             <?php if ( ! empty( $logo['url'] ) ) { echo wp_kses_post($thumbnail); } ?>
         <?php if ( ! empty( $logo_link['url'] ) ) { ?></a><?php } ?>
     </div>

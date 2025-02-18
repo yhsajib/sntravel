@@ -1,10 +1,10 @@
 <?php
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name'       => 'pxl_testimonial_single',
+        'name'       => 'sntravel_testimonial_single',
         'title'      => esc_html__( 'PXL Client Review', 'sntravel' ),
         'icon' => 'eicon-editor-quote',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'scripts'    => array(
         ),
         'params' => array(
@@ -22,7 +22,7 @@ pxl_add_custom_widget(
                             'options' => [
                                 '1' => [
                                     'label' => esc_html__( 'Layout 1', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_testimonial_single-1.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_testimonial_single-1.jpg'
                                 ],
                             ],
                         ),
@@ -59,8 +59,8 @@ pxl_add_custom_widget(
                             'label'            => esc_html__( 'Icon', 'sntravel' ),
                             'type'             => 'icons',
                             'default'          => [
-                                'library' => 'pxli',
-                                'value'   => 'pxli-quote'
+                                'library' => 'sntraveli',
+                                'value'   => 'sntraveli-quote'
                             ],
                         ),
                         array(
@@ -74,8 +74,8 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-testimonial-icon' => 'font-size: {{SIZE}}{{UNIT}};',
-                                '{{WRAPPER}} .pxl-testimonial-icon svg' => 'width: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-testimonial-icon' => 'font-size: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-testimonial-icon svg' => 'width: {{SIZE}}{{UNIT}};',
                             ],
                         ),
                         array(

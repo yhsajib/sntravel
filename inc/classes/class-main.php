@@ -6,7 +6,7 @@ if (!class_exists('Sntravel_Main')) {
     {
         private static $instance = null;
         protected static $options = [];
-        private $option_name = 'pxl_theme_options';
+        private $option_name = 'sntravel_theme_options';
         public $header;
         public $footer;
         public $page;
@@ -261,7 +261,7 @@ if (!class_exists('Sntravel_Main')) {
             $order_cls = $sidebar_pos == 'left' ? 'order-lg-2' : '';
             $sidebar_sticky = $this->get_theme_opt('sidebar_sticky','0');
             $sbs_cls = ($sidebar_sticky == '1') ? 'sidebar-sticky' : '';
-            $pxl_sidebar_style = $this->get_theme_opt('sidebar_style', 'default');
+            $sntravel_sidebar_style = $this->get_theme_opt('sidebar_style', 'default');
             if ($sidebar_pos === '0' || $sidebar_pos === 'none' || $sidebar_pos === '' || !$sidebar_active) {
                 $sidebars['wrap_class'] = 'sntravel-content-wrap no-sidebar';
                 $sidebars['content_class'] = 'sntravel-content-area content-'.$args['type']. ' col-12';
@@ -270,7 +270,7 @@ if (!class_exists('Sntravel_Main')) {
                 $sidebar_class = 12 - (int)$args['content_col'];
                 $sidebars['wrap_class'] = 'sntravel-content-wrap has-sidebar sidebar-'.$sidebar_pos;
                 $sidebars['content_class'] = 'sntravel-content-area content-'.$args['type']. ' col-12 col-lg-8 col-xl-'.$args['content_col']. ' '.$order_cls;
-                $sidebars['sidebar_class'] = 'sntravel-sidebar-area sidebar-'.$args['type'].' '.esc_attr($pxl_sidebar_style).' '.$sbs_cls.' col-12 col-lg-4 col-xl-'.$sidebar_class;
+                $sidebars['sidebar_class'] = 'sntravel-sidebar-area sidebar-'.$args['type'].' '.esc_attr($sntravel_sidebar_style).' '.$sbs_cls.' col-12 col-lg-4 col-xl-'.$sidebar_class;
             }
 
             return $sidebars;

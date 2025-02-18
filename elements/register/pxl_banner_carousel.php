@@ -1,10 +1,10 @@
 <?php
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name' => 'pxl_banner_carousel',
+        'name' => 'sntravel_banner_carousel',
         'title' => esc_html__('PXL Banner Carousel', 'sntravel'),
         'icon' => 'eicon-post-slider',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'scripts' => [
             'swiper',
             'sntravel-swiper',
@@ -24,7 +24,7 @@ pxl_add_custom_widget(
                             'options' => [
                                 '1' => [
                                     'label' => esc_html__( 'Layout 1', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_banner_carousel-1.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_banner_carousel-1.jpg'
                                 ],
                             ],
                         ),
@@ -94,7 +94,7 @@ pxl_add_custom_widget(
                                     'type' => \Elementor\Controls_Manager::DIMENSIONS,
                                     'size_units' => [ 'px' ],
                                     'selectors' => [
-                                        '{{WRAPPER}} .pxl-banner-carousel .pxl-swiper-slide {{CURRENT_ITEM}}' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                        '{{WRAPPER}} .sntravel-banner-carousel .sntravel-swiper-slide {{CURRENT_ITEM}}' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                                     ],
                                     'control_type' => 'responsive',
                                 ),
@@ -105,14 +105,14 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Title Typography', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-banner-carousel .item-text .item-title',
+                            'selector' => '{{WRAPPER}} .sntravel-banner-carousel .item-text .item-title',
                         ),
                         array(
                             'name' => 'heading_color',
                             'label' => esc_html__('Title Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-banner-carousel .item-text .item-title' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-banner-carousel .item-text .item-title' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -120,14 +120,14 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Description Typography', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-banner-carousel .item-description',
+                            'selector' => '{{WRAPPER}} .sntravel-banner-carousel .item-description',
                         ),
                         array(
                             'name' => 'desc_color',
                             'label' => esc_html__('Description Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-banner-carousel .item-description' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-banner-carousel .item-description' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -135,7 +135,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Text Button Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-banner-carousel .item-readmore .btn' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-banner-carousel .item-readmore .btn' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -143,14 +143,14 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Name Typography', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-banner-carousel .item-name',
+                            'selector' => '{{WRAPPER}} .sntravel-banner-carousel .item-name',
                         ),
                         array(
                             'name' => 'name_color',
                             'label' => esc_html__('Name Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-banner-carousel .item-name' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-banner-carousel .item-name' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -166,7 +166,7 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-banner-carousel .banner-item' => 'min-height: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-banner-carousel .banner-item' => 'min-height: {{SIZE}}{{UNIT}};',
                             ],
                         ),
                     ),

@@ -1,6 +1,6 @@
 <wpml-config>
     <admin-texts>
-        <key name="pxl_theme_options">
+        <key name="sntravel_theme_options">
             <key name="events_slug" />
             <key name="archive_custom_sub_title" />
         </key>

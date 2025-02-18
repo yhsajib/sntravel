@@ -1,11 +1,11 @@
 <?php
 // Register Widget
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name'       => 'pxl_single_info',
+        'name'       => 'sntravel_single_info',
         'title'      => esc_html__( 'PXL Single Info', 'sntravel' ),
         'icon' => 'eicon-price-list',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'scripts'    => [],
         'params'     => array(
             'sections' => array(

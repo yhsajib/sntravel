@@ -9,7 +9,7 @@ $drag_cursor_text   = sntravel()->get_theme_opt( 'drag_cursor_text', 'Drag' );
 </div><!-- #main -->
 <?php sntravel()->footer->getFooter(); ?>
 </div>
-<?php //do_action('pxl_anchor_target') 
+<?php //do_action('sntravel_anchor_target') 
 	basilico_action('anchor_target');
 ?>
 <?php wp_footer(); ?>

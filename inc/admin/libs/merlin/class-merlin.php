@@ -285,8 +285,8 @@ class Merlin {
 			}
 		}
 
-		$pxl_import_demo_id = get_option('pxl_import_demo_id',false);
-		if( !empty($pxl_import_demo_id) ){
+		$sntravel_import_demo_id = get_option('sntravel_import_demo_id',false);
+		if( !empty($sntravel_import_demo_id) ){
 			return;
 		}
 
@@ -389,8 +389,8 @@ class Merlin {
 
 		// Strings passed in from the config file.
 		$strings = $this->strings;
-		$pxl_server_info = apply_filters( 'pxl_server_info', ['api_url' => ''] ) ;
-		$theme_slug = apply_filters( 'pxl_demo_item_download', get_option( 'template' ) );
+		$sntravel_server_info = apply_filters( 'sntravel_server_info', ['api_url' => ''] ) ;
+		$theme_slug = apply_filters( 'sntravel_demo_item_download', get_option( 'template' ) );
 		// Do not proceed, if we're not on the right page.
 		if ( empty( $_GET['page'] ) || $this->merlin_url !== $_GET['page'] ) {
 			return;
@@ -407,11 +407,11 @@ class Merlin {
 
 		// Enqueue styles.
 		wp_enqueue_style( 'merlin', trailingslashit( $this->base_url ) . $this->directory . '/assets/css/merlin' . $suffix . '.css', array( 'wp-admin' ), MERLIN_VERSION );
-		wp_enqueue_style( 'pxlart-dashboard', get_template_directory_uri() . '/inc/admin/assets/css/dashboard.css' );
+		wp_enqueue_style( 'sntravelart-dashboard', get_template_directory_uri() . '/inc/admin/assets/css/dashboard.css' );
 		// Enqueue javascript.
 		wp_enqueue_script( 'merlin', trailingslashit( $this->base_url ) . $this->directory . '/assets/js/merlin' . $suffix . '.js', array( 'jquery-core' ), MERLIN_VERSION );
 		 
-		wp_enqueue_script( 'pxlart-admin', get_template_directory_uri() . '/inc/admin/assets/js/admin.js', array( 'jquery'), false, true );
+		wp_enqueue_script( 'sntravelart-admin', get_template_directory_uri() . '/inc/admin/assets/js/admin.js', array( 'jquery'), false, true );
 
 		$texts = array(
 			'something_went_wrong' => esc_html__( 'Something went wrong. Please refresh the page and try again!', 'sntravel' ),
@@ -429,7 +429,7 @@ class Merlin {
 					'tgm_bulk_url'     => $this->tgmpa->get_tgmpa_url(),
 					'ajaxurl'          => admin_url( 'admin-ajax.php' ),
 					'wpnonce'          => wp_create_nonce( 'merlin_nonce' ),
-					'api_url' 		 => $pxl_server_info['api_url'],
+					'api_url' 		 => $sntravel_server_info['api_url'],
 					'theme_slug'     => $theme_slug,
 					'texts'            => $texts,
 				)
@@ -440,7 +440,7 @@ class Merlin {
 				'merlin', 'merlin_params', array(
 					'ajaxurl' => admin_url( 'admin-ajax.php' ),
 					'wpnonce' => wp_create_nonce( 'merlin_nonce' ),
-					'api_url' 		 => $pxl_server_info['api_url'],
+					'api_url' 		 => $sntravel_server_info['api_url'],
 					'theme_slug'     => $theme_slug,
 					'texts'   => $texts,
 				)
@@ -734,7 +734,7 @@ class Merlin {
 		<?php 
 			$theme_slug = get_template(); 
 			if ( 'valid' == get_option( $theme_slug.'_purchase_code_status', false ) ) {
-				wp_redirect(admin_url('admin.php?page=pxlart-setup&step=plugins'));
+				wp_redirect(admin_url('admin.php?page=sntravelart-setup&step=plugins'));
 			}
 		?>
 		<div class="merlin__content--transition">
@@ -783,7 +783,7 @@ class Merlin {
 	 * @return boolean
 	 */
 	private function is_theme_registered() {
-		$dev_mode = apply_filters( 'pxl_set_dev_mode', (defined('DEV_MODE') && DEV_MODE)) ;
+		$dev_mode = apply_filters( 'sntravel_set_dev_mode', (defined('DEV_MODE') && DEV_MODE)) ;
 		if( $dev_mode === true) return true;
 		$is_registered = get_option( $this->edd_theme_slug . '_license_key_status', false ) === 'valid';
 		return apply_filters( 'merlin_is_theme_registered', $is_registered );

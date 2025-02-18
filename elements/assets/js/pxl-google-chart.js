@@ -6,7 +6,7 @@
 
     'use strict';
     var PXLGoogleChartHandler = function( $scope, $ ) {
-        $scope.find(".pxl-google-chart").each(function(){
+        $scope.find(".sntravel-google-chart").each(function(){
             var $this = $(this);
             var wrap_element = $this.children('.chart-div')[0];
             /* Chart Data */
@@ -53,6 +53,6 @@
 
     // Make sure you run this code under Elementor.
     $( window ).on( 'elementor/frontend/init', function() {
-        elementorFrontend.hooks.addAction( 'frontend/element_ready/pxl_google_chart.default', PXLGoogleChartHandler );
+        elementorFrontend.hooks.addAction( 'frontend/element_ready/sntravel_google_chart.default', PXLGoogleChartHandler );
     } );
 } )( jQuery );

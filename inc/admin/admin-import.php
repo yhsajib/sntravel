@@ -10,10 +10,10 @@ class Sntravel_Admin_Import extends Sntravel_Admin_Page {
 
 	public function __construct() {
 
-		$this->id = 'pxlart-import-demos';
+		$this->id = 'sntravelart-import-demos';
 		$this->page_title = esc_html__( 'Import Demos', 'sntravel' );
 		$this->menu_title = esc_html__( 'Import Demos', 'sntravel' );
-		$this->parent = 'pxlart';
+		$this->parent = 'sntravelart';
 		//$this->position = '10';
 
 		parent::__construct();

@@ -1,11 +1,11 @@
 <?php
 // Register Search Form Widget
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name' => 'pxl_search_form',
+        'name' => 'sntravel_search_form',
         'title' => esc_html__('Pxl Search Form', 'sntravel' ),
         'icon' => 'eicon-site-search',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'params' => array(
             'sections' => array(
                 array(
@@ -21,18 +21,18 @@ pxl_add_custom_widget(
                             'options' => [
                                 '1' => [
                                     'label' => esc_html__( 'Layout 1', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_search_form-1.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_search_form-1.jpg'
                                 ],
                                 '2' => [
                                     'label' => esc_html__( 'Layout 1', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_search_form-2.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_search_form-2.jpg'
                                 ],
                                 '3' => [
                                     'label' => esc_html__( 'Layout 3', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_search_form-3.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_search_form-3.jpg'
                                 ],
                             ],
-                            'prefix_class' => 'pxl-search-form-layout-'
+                            'prefix_class' => 'sntravel-search-form-layout-'
                         ),
                         array(
                             'name' => 'search_type',
@@ -79,7 +79,7 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-search-form' => 'width: {{SIZE}}{{UNIT}}'
+                                '{{WRAPPER}} .sntravel-search-form' => 'width: {{SIZE}}{{UNIT}}'
                             ],
                         ),
                         array(
@@ -87,7 +87,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__( 'Search Input/Button Height (px)', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::NUMBER,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-search-wrap .pxl-search-field, {{WRAPPER}} .pxl-search-wrap .pxl-search-submit' => 'height: {{VALUE}}px;',
+                                '{{WRAPPER}} .sntravel-search-wrap .sntravel-search-field, {{WRAPPER}} .sntravel-search-wrap .sntravel-search-submit' => 'height: {{VALUE}}px;',
                             ],
                         ),
                         array(
@@ -95,7 +95,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__( 'Border Width', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::NUMBER,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-search-wrap .pxl-search-field' => 'border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;',
+                                '{{WRAPPER}} .sntravel-search-wrap .sntravel-search-field' => 'border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;',
                             ],
                         ),
                         array(
@@ -104,7 +104,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'default' => '',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-search-wrap .pxl-search-field' => 'border-color: {{VALUE}} !important;',
+                                '{{WRAPPER}} .sntravel-search-wrap .sntravel-search-field' => 'border-color: {{VALUE}} !important;',
                             ],
                         ),
                         array(
@@ -112,7 +112,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__( 'Search Button Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-search-wrap .pxl-search-submit' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-search-wrap .sntravel-search-submit' => 'background-color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -121,7 +121,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::DIMENSIONS,
                             'size_units' => [ 'px' ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-search-wrap .pxl-search-field' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-search-wrap .sntravel-search-field' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                             'control_type' => 'responsive',
                         ),
@@ -146,7 +146,7 @@ pxl_add_custom_widget(
                                 ]
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-search-wrap' => 'text-align: {{VALUE}}; justify-content: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-search-wrap' => 'text-align: {{VALUE}}; justify-content: {{VALUE}};',
                             ],
                         ),
                     )

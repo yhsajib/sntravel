@@ -18,7 +18,7 @@ if(!empty($settings['link']['url'])){
 $link_attributes = $widget->get_render_attribute_string( 'link' );
 $thumbnail = '';
 if( ! empty( $settings['selected_img']['id'] ) ){
-    $img  = pxl_get_image_by_size( array(
+    $img  = sntravel_get_image_by_size( array(
         'attach_id'  => $settings['selected_img']['id'],
         'thumb_size' => 'full',
     ) );
@@ -26,19 +26,19 @@ if( ! empty( $settings['selected_img']['id'] ) ){
 }
 ?>
 
-<div class="pxl-fancy-box layout-7">
+<div class="sntravel-fancy-box layout-7">
     <div class="box-inner" <?php if($settings['background_img']['url']) : ?>style="background-image: url(<?php echo esc_url($settings['background_img']['url']); ?>);" <?php endif; ?>>
         <div class="box-content">
             <?php if(!empty($widget->get_setting('title'))): ?>
                 <h3 class="box-title">
                     <?php if ( $link_attributes ) echo '<a '. implode( ' ', [ $link_attributes ] ).'>'; ?>
-                    <?php pxl_print_html( nl2br($widget->get_setting('title'))); ?>
+                    <?php sntravel_print_html( nl2br($widget->get_setting('title'))); ?>
                     <?php if ( $link_attributes ) echo '</a>'; ?> 
                 </h3>
             <?php endif; ?>
             <?php if(!empty($widget->get_setting('description'))): ?>
                 <div class="box-description">
-                    <?php pxl_print_html($widget->get_setting('description')); ?>
+                    <?php sntravel_print_html($widget->get_setting('description')); ?>
                 </div>
             <?php endif; ?>
             <?php if($thumbnail) : ?>

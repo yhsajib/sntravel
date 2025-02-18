@@ -437,7 +437,7 @@
 }
 
 //* CMS Recent Posts
-.widget_pxl_recent_posts {
+.widget_sntravel_recent_posts {
     padding-bottom: 0;
     .sntravel-post-item {
         margin-bottom: 25px;
@@ -488,7 +488,7 @@
 
 .sntravel-sidebar-area.style-2,
 .elementor-widget-sidebar.style-2 {
-    .widget_pxl_recent_posts {
+    .widget_sntravel_recent_posts {
         .sntravel-post-item {
             position: relative;
             &:after {
@@ -527,7 +527,7 @@
     }
 }
 
-.site-layout-full-width .widget_pxl_recent_posts {
+.site-layout-full-width .widget_sntravel_recent_posts {
     .entry-title {
         font-size: 20px;
     }
@@ -767,7 +767,7 @@ ul.menu {
                     margin-left: -25px;
                     &:before {
                         content: "\e9e6";
-                        font-family: $pxli_font;
+                        font-family: $sntraveli_font;
                         display: inline-flex;
                         color: $primary_color;
                         margin-right: 12px;
@@ -822,7 +822,7 @@ ul.menu {
                     margin-left: -25px;
                     &:before {
                         content: "\e9e5";
-                        font-family: $pxli_font;
+                        font-family: $sntraveli_font;
                         display: inline-flex;
                         color: $primary_color;
                         margin-right: 6px;
@@ -892,7 +892,7 @@ ul.menu {
             margin-right: 10px;
             color: $secondary_color;
             content: "\e96b";
-            font-family: "pxli";
+            font-family: "sntraveli";
             display: inline-block;
         }
         &:last-child {
@@ -981,7 +981,7 @@ ul.menu {
 }
 
 //* Check Availability Widget
-.widget_pxl_check_availability {
+.widget_sntravel_check_availability {
     background-color: #fff;
     border: 1px solid #e5e5e5 !important;
     margin-bottom: 55px !important;
@@ -1129,7 +1129,7 @@ ul.menu {
                 }
             }
         }
-        &.widget_pxl_recent_posts{
+        &.widget_sntravel_recent_posts{
             .sntravel-post-item{
                 border-bottom-color: rgba(45, 39, 35, 0.102);
             }

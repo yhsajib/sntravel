@@ -1,10 +1,10 @@
 <?php
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name' => 'pxl_image_carousel',
+        'name' => 'sntravel_image_carousel',
         'title' => esc_html__('PXL Image Carousel', 'sntravel'),
         'icon' => 'eicon-posts-carousel',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'scripts' => [
             'swiper',
             'sntravel-swiper',
@@ -24,23 +24,23 @@ pxl_add_custom_widget(
                             'options' => [
                                 '1' => [
                                     'label' => esc_html__( 'Layout 1', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_image_carousel-1.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_image_carousel-1.jpg'
                                 ],
                                 '2' => [
                                     'label' => esc_html__( 'Layout 2', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_image_carousel-2.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_image_carousel-2.jpg'
                                 ],
                                 '3' => [
                                     'label' => esc_html__( 'Layout 3', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_image_carousel-3.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_image_carousel-3.jpg'
                                 ],
                                 '4' => [
                                     'label' => esc_html__( 'Layout 4', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_image_carousel-4.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_image_carousel-4.jpg'
                                 ],
                                 '5' => [
                                     'label' => esc_html__( 'Layout 5', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_image_carousel-5.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_image_carousel-5.jpg'
                                 ],
                             ],
                         ),
@@ -83,8 +83,8 @@ pxl_add_custom_widget(
                                 'label' => esc_html__( 'Icon Color', 'sntravel' ),
                                 'type' => \Elementor\Controls_Manager::COLOR,
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-image-carousel .box-icon i' => 'color: {{VALUE}};',
-                                    '{{WRAPPER}} .pxl-image-carousel .box-icon svg' => 'fill: {{VALUE}};',
+                                    '{{WRAPPER}} .sntravel-image-carousel .box-icon i' => 'color: {{VALUE}};',
+                                    '{{WRAPPER}} .sntravel-image-carousel .box-icon svg' => 'fill: {{VALUE}};',
                                 ],
                                 'condition' => [
                                     'layout' => ['3']
@@ -95,8 +95,8 @@ pxl_add_custom_widget(
                                 'label' => esc_html__( 'Icon Hover Color', 'sntravel' ),
                                 'type' => \Elementor\Controls_Manager::COLOR,
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-image-carousel .box-icon:hover i' => 'color: {{VALUE}};',
-                                    '{{WRAPPER}} .pxl-image-carousel .box-icon:hover svg' => 'fill: {{VALUE}};',
+                                    '{{WRAPPER}} .sntravel-image-carousel .box-icon:hover i' => 'color: {{VALUE}};',
+                                    '{{WRAPPER}} .sntravel-image-carousel .box-icon:hover svg' => 'fill: {{VALUE}};',
                                 ],
                                 'condition' => [
                                     'layout' => ['3']
@@ -113,8 +113,8 @@ pxl_add_custom_widget(
                                     ],
                                 ],
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-image-carousel .box-icon i' => 'font-size: {{SIZE}}{{UNIT}}',
-                                    '{{WRAPPER}} .pxl-image-carousel .box-icon svg' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+                                    '{{WRAPPER}} .sntravel-image-carousel .box-icon i' => 'font-size: {{SIZE}}{{UNIT}}',
+                                    '{{WRAPPER}} .sntravel-image-carousel .box-icon svg' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
                                 ],
                                 'condition' => [
                                     'layout' => ['3']
@@ -150,7 +150,7 @@ pxl_add_custom_widget(
                                 'type' => \Elementor\Controls_Manager::DIMENSIONS,
                                 'size_units' => [ 'px' ],
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-swiper-slider.pxl-image-carousel .item-inner img, {{WRAPPER}} .pxl-swiper-slider.pxl-image-carousel .item-inner' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                    '{{WRAPPER}} .sntravel-swiper-slider.sntravel-image-carousel .item-inner img, {{WRAPPER}} .sntravel-swiper-slider.sntravel-image-carousel .item-inner' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                                 ],
                             ),
                             array(
@@ -159,7 +159,7 @@ pxl_add_custom_widget(
                                 'type' => \Elementor\Controls_Manager::NUMBER,
                                 'control_type' => 'responsive',
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-swiper-slider.pxl-image-carousel .item-inner img' => 'width: {{VALUE}}px; object-fit: cover;',
+                                    '{{WRAPPER}} .sntravel-swiper-slider.sntravel-image-carousel .item-inner img' => 'width: {{VALUE}}px; object-fit: cover;',
                                 ],
                                 'condition' => [
                                     'layout!' => ['4']
@@ -195,7 +195,7 @@ pxl_add_custom_widget(
                                     ],
                                 ],
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-image-carousel .pxl-swiper-slide:nth-child(odd)' => 'min-width: {{SIZE}}{{UNIT}}; object-fit: cover;',
+                                    '{{WRAPPER}} .sntravel-image-carousel .sntravel-swiper-slide:nth-child(odd)' => 'min-width: {{SIZE}}{{UNIT}}; object-fit: cover;',
                                 ],
                                 'condition' => [
                                     'layout' => ['4']
@@ -231,7 +231,7 @@ pxl_add_custom_widget(
                                     ],
                                 ],
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-image-carousel .pxl-swiper-slide:nth-child(even)' => 'max-width: {{SIZE}}{{UNIT}}; object-fit: cover;',
+                                    '{{WRAPPER}} .sntravel-image-carousel .sntravel-swiper-slide:nth-child(even)' => 'max-width: {{SIZE}}{{UNIT}}; object-fit: cover;',
                                 ],
                                 'condition' => [
                                     'layout' => ['4']
@@ -243,7 +243,7 @@ pxl_add_custom_widget(
                                 'type' => \Elementor\Controls_Manager::NUMBER,
                                 'control_type' => 'responsive',
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-swiper-slider.pxl-image-carousel .item-inner img' => 'height: {{VALUE}}px; object-fit: cover;',
+                                    '{{WRAPPER}} .sntravel-swiper-slider.sntravel-image-carousel .item-inner img' => 'height: {{VALUE}}px; object-fit: cover;',
                                 ],
                             ),
                             array(

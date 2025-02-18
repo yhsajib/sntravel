@@ -1,10 +1,10 @@
 <?php
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name' => 'pxl_product_grid',
+        'name' => 'sntravel_product_grid',
         'title' => esc_html__('PXL Product Grid', 'sntravel' ),
         'icon' => 'eicon-products',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'scripts' => array(
             'imagesloaded',
             'isotope',
@@ -58,7 +58,7 @@ pxl_add_custom_widget(
                             'label'    => esc_html__( 'Select Term of Product', 'sntravel' ),
                             'type'     => 'select2',
                             'multiple' => true,
-                            'options'  => pxl_get_product_grid_term_options()
+                            'options'  => sntravel_get_product_grid_term_options()
                         ),
                         array(
                             'name'     => 'product_ids',
@@ -89,8 +89,8 @@ pxl_add_custom_widget(
                                 'size_units' => [ 'px' ],
                                 'default' => [],
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-grid-inner' => 'margin-top: -{{TOP}}{{UNIT}}; margin-right: -{{RIGHT}}{{UNIT}}; margin-bottom: -{{BOTTOM}}{{UNIT}}; margin-left: -{{LEFT}}{{UNIT}};',
-                                    '{{WRAPPER}} .pxl-grid-inner .grid-item' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                    '{{WRAPPER}} .sntravel-grid-inner' => 'margin-top: -{{TOP}}{{UNIT}}; margin-right: -{{RIGHT}}{{UNIT}}; margin-bottom: -{{BOTTOM}}{{UNIT}}; margin-left: -{{LEFT}}{{UNIT}};',
+                                    '{{WRAPPER}} .sntravel-grid-inner .grid-item' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                                 ],
                                 'control_type' => 'responsive',
                             ),
@@ -133,7 +133,7 @@ pxl_add_custom_widget(
                                     ]
                                 ],
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-grid-pagination, {{WRAPPER}} .pxl-load-more' => 'justify-content: {{VALUE}};'
+                                    '{{WRAPPER}} .sntravel-grid-pagination, {{WRAPPER}} .sntravel-load-more' => 'justify-content: {{VALUE}};'
                                 ]
                             ),
                         )

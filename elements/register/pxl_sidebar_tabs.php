@@ -1,10 +1,10 @@
 <?php
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name'       => 'pxl_sidebar_tabs',
+        'name'       => 'sntravel_sidebar_tabs',
         'title'      => esc_html__( 'PXL Sidebar Tabs', 'sntravel' ),
         'icon' => 'eicon-nav-menu',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'scripts' => [
           'sntravel-tabs',
         ],
@@ -23,7 +23,7 @@ pxl_add_custom_widget(
                             'options' => [
                                 '1' => [
                                     'label' => esc_html__( 'Layout 1', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_sidebar_tabs-1.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_sidebar_tabs-1.jpg'
                                 ],
                             ],
                         ),

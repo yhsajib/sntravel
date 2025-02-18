@@ -1,11 +1,11 @@
 <?php
 // Register Fancy Box Widget
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name'       => 'pxl_food_menu_single',
+        'name'       => 'sntravel_food_menu_single',
         'title'      => esc_html__( 'PXL Food Menu Single', 'sntravel' ),
         'icon'       => 'eicon-bullet-list',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'params' => array(
             'sections' => array(
                 array(
@@ -21,7 +21,7 @@ pxl_add_custom_widget(
                             'options' => [
                                 '1' => [
                                     'label' => esc_html__( 'Layout 1', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_food_menu_single-1.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_food_menu_single-1.jpg'
                                 ],
                             ]
                         )

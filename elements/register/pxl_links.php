@@ -1,10 +1,10 @@
 <?php
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name' => 'pxl_links',
+        'name' => 'sntravel_links',
         'title' => esc_html__('PXL Links', 'sntravel'),
         'icon' => 'eicon-editor-link',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'params' => array(
             'sections' => array(
                 array(
@@ -20,10 +20,10 @@ pxl_add_custom_widget(
                             'options' => [
                                 '1' => [
                                     'label' => esc_html__( 'Layout 1', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/widgets/img-layout/pxl_links-1.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/widgets/img-layout/sntravel_links-1.jpg'
                                 ],
                             ],
-                            'prefix_class' => 'pxl-links-layout-'
+                            'prefix_class' => 'sntravel-links-layout-'
                         ),
                     ),
                 ),
@@ -85,7 +85,7 @@ pxl_add_custom_widget(
                                 ]
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-links' => 'align-items: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-links' => 'align-items: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -94,7 +94,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'control_type' => 'responsive',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-links a' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-links a' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -103,7 +103,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'control_type' => 'responsive',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-links a:hover' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-links a:hover' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -111,7 +111,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Typography', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-links a',
+                            'selector' => '{{WRAPPER}} .sntravel-links a',
                         ),
                         array(
                             'name' => 'bottom_spacer',
@@ -126,7 +126,7 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-links li' => 'margin-bottom: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-links li' => 'margin-bottom: {{SIZE}}{{UNIT}};',
                             ],
                             'condition' => [
                                 'layout' => ['1']

@@ -9,7 +9,7 @@ if(! empty( $settings['selected_icon']['value'] ))
 else
 $brc_divider = '<span class="br-divider">/</span>';
 ?>
-<div class="pxl-breadcrumb hover-underline">
+<div class="sntravel-breadcrumb hover-underline">
     <?php
     foreach ( $entries as $entry ){
         $entry = wp_parse_args( $entry, array(

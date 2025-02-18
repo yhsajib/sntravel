@@ -42,7 +42,7 @@ $widget->add_render_attribute('carousel', [
 <?php if (isset($content_list) && !empty($content_list) && count($content_list)) : ?>
 <div class="sntravel-swiper-slider sntravel-testimonial-carousel layout-<?php echo esc_attr($settings['layout']) ?>">
     <div class="sntravel-swiper-slider-wrap sntravel-carousel-inner relative">
-        <div <?php pxl_print_html($widget->get_render_attribute_string('carousel')); ?>>
+        <div <?php sntravel_print_html($widget->get_render_attribute_string('carousel')); ?>>
             <div class="sntravel-swiper-wrapper swiper-wrapper">
                 <?php foreach ($content_list as $key => $value) :
                     $image       = isset($value['image']) ? $value['image'] : [];
@@ -52,7 +52,7 @@ $widget->add_render_attribute('carousel', [
                     $description = isset($value['description']) ? $value['description'] : '';
                     $thumbnail = '';
                     if (!empty($image['id'])) {
-                        $img = pxl_get_image_by_size(array(
+                        $img = sntravel_get_image_by_size(array(
                             'attach_id'  => $image['id'],
                             'thumb_size' => '78x78',
                             'class' => 'no-lazyload',
@@ -70,8 +70,8 @@ $widget->add_render_attribute('carousel', [
                             <?php if ($quote_icon_type == 'text') { ?>
                                 <div class="item-quote-icon">“</div>
                             <?php } ?>
-                            <h4 class="tes-title"><?php echo pxl_print_html($testimonial_title); ?></h4>
-                            <div class="item-desc"><?php echo pxl_print_html($description); ?></div>
+                            <h4 class="tes-title"><?php echo sntravel_print_html($testimonial_title); ?></h4>
+                            <div class="item-desc"><?php echo sntravel_print_html($description); ?></div>
                             <div class="item-wrap row gx-20 justify-content-start">
                                 <?php if (!empty($thumbnail)) : ?>
                                     <div class="item-image col-auto">

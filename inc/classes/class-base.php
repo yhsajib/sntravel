@@ -35,7 +35,7 @@ if( ! function_exists( 'basilico_action' ) ) :
 			return;
 		}
 
-		$action = 'pxltheme_' . $args[0];
+		$action = 'sntraveltheme_' . $args[0];
 		unset( $args[0] );
 
 		do_action_ref_array( $action, $args );

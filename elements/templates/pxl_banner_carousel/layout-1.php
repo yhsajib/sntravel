@@ -27,16 +27,16 @@ $opts = [
   
 
 $widget->add_render_attribute( 'carousel', [
-    'class'         => 'pxl-swiper-container overflow-hidden',
+    'class'         => 'sntravel-swiper-container overflow-hidden',
     'dir'           => is_rtl() ? 'rtl' : 'ltr',
     'data-settings' => wp_json_encode($opts)
 ]);
 ?>
 <?php if(isset($banners) && !empty($banners) && count($banners)): ?>
-    <div class="pxl-swiper-slider pxl-banner-carousel layout-<?php echo esc_attr($settings['layout'])?>">
-        <div class="pxl-swiper-slider-wrap pxl-carousel-inner relative">
-            <div <?php pxl_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
-                <div class="pxl-swiper-wrapper swiper-wrapper">
+    <div class="sntravel-swiper-slider sntravel-banner-carousel layout-<?php echo esc_attr($settings['layout'])?>">
+        <div class="sntravel-swiper-slider-wrap sntravel-carousel-inner relative">
+            <div <?php sntravel_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
+                <div class="sntravel-swiper-wrapper swiper-wrapper">
                 <?php foreach ($banners as $index => $item):
                     // Link Repeater Key
                     $link_key = $widget->get_repeater_setting_key( 'link', 'banners', $index );
@@ -67,14 +67,14 @@ $widget->add_render_attribute( 'carousel', [
                         $button_text = $item['button_text'];
                     }
                     ?>
-                    <div class="pxl-swiper-slide swiper-slide">
-                        <div <?php pxl_print_html($class_attributes); ?> style="background-image: url(<?php echo esc_url($item['item_background']['url']); ?>);">
+                    <div class="sntravel-swiper-slide swiper-slide">
+                        <div <?php sntravel_print_html($class_attributes); ?> style="background-image: url(<?php echo esc_url($item['item_background']['url']); ?>);">
                             <div class="item-text">
                                 <?php
                                 if (!empty($item['title_text'])){
                                     ?>
                                     <h3 class="item-title">
-                                        <?php echo pxl_print_html($item['title_text']); ?>
+                                        <?php echo sntravel_print_html($item['title_text']); ?>
                                     </h3>
                                     <?php
                                 }
@@ -87,7 +87,7 @@ $widget->add_render_attribute( 'carousel', [
                                 }
                                 ?>
                                 <div class="item-readmore">
-                                    <a class="btn btn-outline-secondary-2" <?php pxl_print_html($link_attributes); ?>>
+                                    <a class="btn btn-outline-secondary-2" <?php sntravel_print_html($link_attributes); ?>>
                                         <span><?php echo esc_html($button_text); ?></span>
                                     </a>
                                 </div>
@@ -96,7 +96,7 @@ $widget->add_render_attribute( 'carousel', [
                                 if (!empty($item['name_theme'])){
                                     ?>
                                     <div class="item-name">
-                                        <?php echo pxl_print_html($item['name_theme']); ?>
+                                        <?php echo sntravel_print_html($item['name_theme']); ?>
                                     </div>
                                     <?php
                                 }

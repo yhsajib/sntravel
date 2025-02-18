@@ -70,7 +70,7 @@ if ( !empty( $item_animation) ) {
 <?php if(!empty($posts) && count($posts)): ?>
 <div class="sntravel-swiper-slider sntravel-product-carousel sntravel-shop-layout-11">
     <div class="sntravel-swiper-slider-wrap sntravel-carousel-inner relative">
-        <div <?php pxl_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
+        <div <?php sntravel_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
             <div class="sntravel-swiper-wrapper swiper-wrapper">
                 <?php
                 while ($query->have_posts()) {

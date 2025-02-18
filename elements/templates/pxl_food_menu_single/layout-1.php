@@ -6,7 +6,7 @@ Icons_Manager::enqueue_shim();
 $is_new = \Elementor\Icons_Manager::is_migration_allowed();
 $img_size = !empty( $img_size ) ? $img_size : '387x387';
 ?>
-<div class="pxl-food-menu-single layout-1">
+<div class="sntravel-food-menu-single layout-1">
     <div class="content-inner overflow-hidden">
         <?php
         $image    = isset($settings['image']) ? $settings['image'] : [];
@@ -16,7 +16,7 @@ $img_size = !empty( $img_size ) ? $img_size : '387x387';
         $description = isset($settings['description']) ? $settings['description'] : '';
         $thumbnail = '';
         if(!empty($image)) {
-            $img = pxl_get_image_by_size( array(
+            $img = sntravel_get_image_by_size( array(
                 'attach_id'  => $image['id'],
                 'thumb_size' => $img_size,
                 'class' => 'no-lazyload',
@@ -34,11 +34,11 @@ $img_size = !empty( $img_size ) ? $img_size : '387x387';
         }
         ?>
         <div class="info-wrap">
-            <div class="item-price"><?php echo pxl_print_html($price); ?></div>
+            <div class="item-price"><?php echo sntravel_print_html($price); ?></div>
             <h3 class="item-name">
-                <?php pxl_print_html( nl2br($widget->get_setting('title'))); ?>
+                <?php sntravel_print_html( nl2br($widget->get_setting('title'))); ?>
             </h3>
-            <div class="item-sub-title"><?php echo pxl_print_html($sub_title); ?></div>
+            <div class="item-sub-title"><?php echo sntravel_print_html($sub_title); ?></div>
             <div class="item-icon">
             <?php
                 if($is_new):
@@ -48,7 +48,7 @@ $img_size = !empty( $img_size ) ? $img_size : '387x387';
                     <i class="<?php echo esc_attr( $settings['icon'] ); ?>"></i>
                 <?php endif; ?>
             </div>
-            <div class="item-description"><?php echo pxl_print_html($description); ?></div>
+            <div class="item-description"><?php echo sntravel_print_html($description); ?></div>
         </div>
     </div>
 </div>

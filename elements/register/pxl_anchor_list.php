@@ -7,12 +7,12 @@ $templates_df = [
 ];
 $templates = $templates_df + basilico_get_templates_option('hidden-panel');
 
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name'       => 'pxl_anchor_list',
+        'name'       => 'sntravel_anchor_list',
         'title'      => esc_html__( 'PXL Anchor List', 'sntravel' ),
         'icon'       => 'eicon-anchor',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'scripts'    => array(),
         'params' => array(
             'sections' => array(
@@ -29,7 +29,7 @@ pxl_add_custom_widget(
                             'options' => [
                                 '1' => [
                                     'label' => esc_html__( 'Layout 1', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_banner_carousel-1.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_banner_carousel-1.jpg'
                                 ],
                             ],
                         ),
@@ -72,8 +72,8 @@ pxl_add_custom_widget(
                                     'label'            => esc_html__( 'Icon', 'sntravel' ),
                                     'type'             => 'icons',
                                     'default'          => [
-                                        'library' => 'pxli',
-                                        'value'   => 'pxli-search-400'
+                                        'library' => 'sntraveli',
+                                        'value'   => 'sntraveli-search-400'
                                     ],
                                 ),
                                 array(

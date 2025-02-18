@@ -1,5 +1,5 @@
 <?php
-	$dev_mode = apply_filters( 'pxl_set_dev_mode', (defined('DEV_MODE') && DEV_MODE)) ;
+	$dev_mode = apply_filters( 'sntravel_set_dev_mode', (defined('DEV_MODE') && DEV_MODE)) ;
 	 
 	$license = trim( get_option( sntravel()->get_slug() . '_purchase_code' ) );
 
@@ -17,7 +17,7 @@
 		</div> 
 
 		<div class="sntravel-dsb-deactive">
-			<form method="POST" action="<?php echo admin_url( 'admin.php?page=pxlart' )?>">
+			<form method="POST" action="<?php echo admin_url( 'admin.php?page=sntravelart' )?>">
 				<input type="hidden" name="action" value="removekey"/>
 				<button class="btn button" type="submit"><?php esc_html_e( 'Remove Purchase Code', 'sntravel' ) ?></button>
 			</form>

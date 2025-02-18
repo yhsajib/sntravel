@@ -1,10 +1,10 @@
 <?php
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name'       => 'pxl_anchor_cart',
+        'name'       => 'sntravel_anchor_cart',
         'title'      => esc_html__( 'PXL Cart', 'sntravel' ),
         'icon'       => 'eicon-anchor',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'scripts'    => array(),
         'params' => array(
             'sections' => array(
@@ -70,8 +70,8 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-anchor-cart.layout-df a.cart-anchor .pxl-anchor-icon' => 'font-size: {{SIZE}}{{UNIT}};',
-                                '{{WRAPPER}} .pxl-anchor-cart.layout-df a.cart-anchor .pxl-anchor-icon svg' => 'width: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-anchor-cart.layout-df a.cart-anchor .sntravel-anchor-icon' => 'font-size: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-anchor-cart.layout-df a.cart-anchor .sntravel-anchor-icon svg' => 'width: {{SIZE}}{{UNIT}};',
                             ],
                             'condition' => ['layout_type' => 'layout-df']
                         ),
@@ -87,7 +87,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Title Typography', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-anchor',
+                            'selector' => '{{WRAPPER}} .sntravel-anchor',
                         ),
                         array(
                             'name' => 'icon_margin',
@@ -96,7 +96,7 @@ pxl_add_custom_widget(
                             'control_type' => 'responsive',
                             'size_units' => [ 'px' ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-anchor-icon' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-anchor-icon' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                             'condition' => ['icon_type!' => 'none'],
                         ),
@@ -106,7 +106,7 @@ pxl_add_custom_widget(
                             'type' => 'color',
                             'control_type' => 'responsive',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-anchor, {{WRAPPER}} .pxl-anchor-icon' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-anchor, {{WRAPPER}} .sntravel-anchor-icon' => 'color: {{VALUE}};',
                             ],
                         ), 
                         array(
@@ -115,7 +115,7 @@ pxl_add_custom_widget(
                             'type' => 'color',
                             'control_type' => 'responsive',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-anchor:hover, {{WRAPPER}} .pxl-anchor:hover .pxl-anchor-icon' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-anchor:hover, {{WRAPPER}} .sntravel-anchor:hover .sntravel-anchor-icon' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -124,7 +124,7 @@ pxl_add_custom_widget(
                             'type' => 'color',
                             'control_type' => 'responsive',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-anchor-cart a.cart-anchor .mini-cart-count' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-anchor-cart a.cart-anchor .mini-cart-count' => 'background-color: {{VALUE}};',
                             ],
                             'condition' => ['layout_type' => 'layout-df']
                         ),  
@@ -134,7 +134,7 @@ pxl_add_custom_widget(
                             'type' => 'color',
                             'control_type' => 'responsive',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-anchor-cart a.cart-anchor .mini-cart-count' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-anchor-cart a.cart-anchor .mini-cart-count' => 'color: {{VALUE}};',
                             ],
                         ), 
                         array(
@@ -148,7 +148,7 @@ pxl_add_custom_widget(
                             'default'      => 'inline-flex', 
                             'control_type' => 'responsive',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-anchor-cart a.cart-anchor .mini-cart-total' => 'display: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-anchor-cart a.cart-anchor .mini-cart-total' => 'display: {{VALUE}};',
                             ],
                             'prefix_class' => 'show-cart-totals%s-',
                         ),
@@ -159,7 +159,7 @@ pxl_add_custom_widget(
                             'control_type' => 'responsive',
                             'size_units' => [ 'px' ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-anchor-cart' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-anchor-cart' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                         ),
                         array(
@@ -175,7 +175,7 @@ pxl_add_custom_widget(
                                 'groove' => esc_html__( 'Groove', 'sntravel' ),
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-anchor-cart' => 'border-style: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-anchor-cart' => 'border-style: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -183,7 +183,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__( 'Border Width', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::DIMENSIONS,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-anchor-cart' => 'border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-anchor-cart' => 'border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                             'responsive' => true,
                         ),
@@ -193,7 +193,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'default' => '',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-anchor-cart' => 'border-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-anchor-cart' => 'border-color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -202,7 +202,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::DIMENSIONS,
                             'size_units' => [ 'px' ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-anchor-cart' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-anchor-cart' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                         ),
                         array(
@@ -225,7 +225,7 @@ pxl_add_custom_widget(
                                 ]
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-anchor-wrap' => 'justify-content: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-anchor-wrap' => 'justify-content: {{VALUE}};',
                             ],
                             'prefix_class' => 'anchor-align-'
                         ),
@@ -236,7 +236,7 @@ pxl_add_custom_widget(
                             'default'      => '',
                             'control_type' => 'responsive',
                             'selectors'    => [
-                                '{{WRAPPER}} .pxl-cart-dropdown' => 'top: {{VALUE}}',
+                                '{{WRAPPER}} .sntravel-cart-dropdown' => 'top: {{VALUE}}',
                             ],
                             'condition' => ['link_target' => 'cart-dropdown'] 
                         ),
@@ -247,7 +247,7 @@ pxl_add_custom_widget(
                             'default'      => '',
                             'control_type' => 'responsive',
                             'selectors'    => [
-                                '{{WRAPPER}} .pxl-cart-dropdown' => 'right: {{VALUE}}',
+                                '{{WRAPPER}} .sntravel-cart-dropdown' => 'right: {{VALUE}}',
                             ],
                             'condition' => ['link_target' => 'cart-dropdown'] 
                         ),

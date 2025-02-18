@@ -41,8 +41,8 @@ class Sntravel_CSS_Generator {
 		}
 		$this->dev_mode = (defined('THEME_DEV_MODE_SCSS') && THEME_DEV_MODE_SCSS);  
 
-        add_filter( 'pxl_scssc_lib', function(){ return 'new';} );
-		add_filter( 'pxl_scssc_on', '__return_true' );
+        add_filter( 'sntravel_scssc_lib', function(){ return 'new';} );
+		add_filter( 'sntravel_scssc_on', '__return_true' );
 		add_action( 'init', array( $this, 'init' ) );
 	}
 

@@ -70,7 +70,7 @@ if ( !empty( $item_animation) ) {
 <?php if(!empty($posts) && count($posts)): ?>
 <div class="sntravel-swiper-slider sntravel-product-carousel sntravel-shop-layout-9">
     <div class="sntravel-swiper-slider-wrap sntravel-carousel-inner relative">
-        <div <?php pxl_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
+        <div <?php sntravel_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
             <div class="sntravel-swiper-wrapper swiper-wrapper">
                 <?php
                 while ($query->have_posts()) {
@@ -83,7 +83,7 @@ if ( !empty( $item_animation) ) {
                 ?>
             </div>
         </div>
-        <?php basilico_arrow_template($settings, 'pxli pxli-arrow-left', 'pxli pxli-arrow-right'); ?>
+        <?php basilico_arrow_template($settings, 'sntraveli sntraveli-arrow-left', 'sntraveli sntraveli-arrow-right'); ?>
         <div class="sntravel-swiper-dots"></div>
     </div>
 </div>

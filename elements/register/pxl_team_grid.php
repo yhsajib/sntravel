@@ -1,12 +1,12 @@
 <?php
 use Elementor\Icons_Manager;
 Icons_Manager::enqueue_shim();
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name' => 'pxl_team_grid',
+        'name' => 'sntravel_team_grid',
         'title' => esc_html__('PXL Team Grid', 'sntravel'),
         'icon' => 'eicon-person',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'scripts' => [
             'imagesloaded',
             'isotope',
@@ -27,18 +27,18 @@ pxl_add_custom_widget(
                             'options' => [
                                 '1' => [
                                     'label' => esc_html__( 'Layout 1', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_team_grid-1.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_team_grid-1.jpg'
                                 ],
                                 '2' => [
                                     'label' => esc_html__( 'Layout 2', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_team_grid-2.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_team_grid-2.jpg'
                                 ],
                                 '3' => [
                                     'label' => esc_html__( 'Layout 3', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_team_grid-3.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_team_grid-3.jpg'
                                 ],
                             ],
-                            'prefix_class' => 'pxl-team-grid-layout-',
+                            'prefix_class' => 'sntravel-team-grid-layout-',
                         ),
                     ),
                 ),
@@ -87,13 +87,13 @@ pxl_add_custom_widget(
                                     'type' => \Elementor\Controls_Manager::COLOR,
                                     'description' => esc_html__('Background Use for Layout 2', 'sntravel'),
                                     'selectors' => [
-                                        '{{WRAPPER}} .pxl-team-grid.layout-2 {{CURRENT_ITEM}}' => 'background-color: {{VALUE}};',
+                                        '{{WRAPPER}} .sntravel-team-grid.layout-2 {{CURRENT_ITEM}}' => 'background-color: {{VALUE}};',
                                     ],
                                 ),
                                 array(
                                     'name' => 'social',
                                     'label' => esc_html__( 'Social', 'sntravel' ),
-                                    'type' => 'pxl_icons',
+                                    'type' => 'sntravel_icons',
                                 ),
                             ),
                             'title_field' => '{{{ title }}}',
@@ -130,8 +130,8 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Title Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-team-grid .item-title' => 'color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-team-grid.layout-2 .item-title a::before' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-team-grid .item-title' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-team-grid.layout-2 .item-title a::before' => 'background-color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -139,7 +139,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Position Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-team-grid .item-position' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-team-grid .item-position' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -147,7 +147,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Icon Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-team-grid .item-social a i' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-team-grid .item-social a i' => 'color: {{VALUE}};',
                             ],
                             'condition' => [
                                'layout' => ['2', '3']
@@ -158,7 +158,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Icon Hover Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-team-grid .item-social a::after' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-team-grid .item-social a::after' => 'background-color: {{VALUE}};',
                             ],
                             'condition' => [
                                'layout' => ['2', '3']
@@ -180,7 +180,7 @@ pxl_add_custom_widget(
                                 'size' => 423, 
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-team-grid .item-inner' => 'height: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-team-grid .item-inner' => 'height: {{SIZE}}{{UNIT}};',
                             ],
                             'condition' => [
                                'layout' => ['2']
@@ -191,7 +191,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Background Color Icon', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-team-grid .item-social' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-team-grid .item-social' => 'background-color: {{VALUE}};',
                             ],
                             'condition' => [
                                'layout' => ['3']

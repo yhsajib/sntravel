@@ -26,7 +26,7 @@
 						<div class="title-name">
 							<?php if (!empty($value['social_name'])) : ?>
 								<span>
-									<?php echo pxl_print_html($value['social_name']); ?>
+									<?php echo sntravel_print_html($value['social_name']); ?>
 								</span>
 							<?php endif; ?>
 						</div>

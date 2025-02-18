@@ -1,10 +1,10 @@
 <?php
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name' => 'pxl_image_landing',
+        'name' => 'sntravel_image_landing',
         'title' => esc_html__('PXL Image Landing', 'sntravel' ),
         'icon' => 'eicon-image',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'params' => array(
             'sections' => array(
                 array(
@@ -20,7 +20,7 @@ pxl_add_custom_widget(
                             'options' => [
                                 '1' => [
                                     'label' => esc_html__( 'Layout 1', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_image_landing-1.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_image_landing-1.jpg'
                                 ],
                             ],
                         ),
@@ -68,7 +68,7 @@ pxl_add_custom_widget(
                             'name' => 'page_link',
                             'label' => esc_html__('Existing Page', 'sntravel'),
                             'type' => \Elementor\Controls_Manager::SELECT2,
-                            'options'       => pxl_get_all_page(),
+                            'options'       => sntravel_get_all_page(),
                             'condition'     => [
                                 'link_type'     => 'page',
                             ],
@@ -87,7 +87,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Border Color', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-image-landing .image-wrap' => 'border-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-image-landing .image-wrap' => 'border-color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -95,7 +95,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Border Hover Color', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-image-landing:hover .image-wrap' => 'border-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-image-landing:hover .image-wrap' => 'border-color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -103,14 +103,14 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Title Typography', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-image-landing .image-title',
+                            'selector' => '{{WRAPPER}} .sntravel-image-landing .image-title',
                         ),
                         array(
                             'name' => 'title_color',
                             'label' => esc_html__('Title Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-image-landing .image-title' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-image-landing .image-title' => 'color: {{VALUE}};',
                             ],
                         ),
                     ),

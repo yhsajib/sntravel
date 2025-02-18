@@ -4,15 +4,15 @@ use \Elementor\Group_Control_Typography;
 $text_columns = range( 1, 10 );
 $text_columns = array_combine( $text_columns, $text_columns );
 $text_columns[''] = esc_html__( 'Default', 'sntravel' );
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name' => 'pxl_text_editor',
+        'name' => 'sntravel_text_editor',
         'title' => esc_html__( 'PXL Text Editor', 'sntravel' ),
         'icon' => 'eicon-text',
         'scripts'    => array(
-            'pxl-split-text'
+            'sntravel-split-text'
         ),
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'params' => array(
             'sections' => array(
                 array(
@@ -41,7 +41,7 @@ pxl_add_custom_widget(
                                 'dropcap' => 'true',
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-text-editor .pxl-dropcap::first-letter, {{WRAPPER}} .pxl-text-editor .pxl-dropcap > *:first-child::first-letter' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-text-editor .sntravel-dropcap::first-letter, {{WRAPPER}} .sntravel-text-editor .sntravel-dropcap > *:first-child::first-letter' => 'color: {{VALUE}};',
                             ],
                         ),
                         basilico_split_text_option()
@@ -64,7 +64,7 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-text-editor' => 'max-width: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-text-editor' => 'max-width: {{SIZE}}{{UNIT}};',
                             ],
                         ),
                         array(
@@ -87,8 +87,8 @@ pxl_add_custom_widget(
                                 ]
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-text-editor-wrap' => 'justify-content: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-text-editor' => 'text-align: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-text-editor-wrap' => 'justify-content: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-text-editor' => 'text-align: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -103,7 +103,7 @@ pxl_add_custom_widget(
                             'type' => Controls_Manager::COLOR,
                             'default' => '',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-text-editor' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-text-editor' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -112,8 +112,8 @@ pxl_add_custom_widget(
                             'type' => Controls_Manager::COLOR,
                             'default' => '',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-text-editor a' => 'color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-text-editor a.link-underline' => 'border-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-text-editor a' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-text-editor a.link-underline' => 'border-color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -122,21 +122,21 @@ pxl_add_custom_widget(
                             'type' => Controls_Manager::COLOR,
                             'default' => '',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-text-editor a:hover' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-text-editor a:hover' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
                             'name' => 'typography',
                             'type' => Group_Control_Typography::get_type(),
                             'label' => esc_html__( 'Text Typography', 'sntravel' ),
-                            'selector' => '{{WRAPPER}} .pxl-text-editor, {{WRAPPER}} .pxl-text-editor h1, {{WRAPPER}} .pxl-text-editor h2, {{WRAPPER}} .pxl-text-editor h3, {{WRAPPER}} .pxl-text-editor h4, {{WRAPPER}} .pxl-text-editor h5, {{WRAPPER}} .pxl-text-editor h6',
+                            'selector' => '{{WRAPPER}} .sntravel-text-editor, {{WRAPPER}} .sntravel-text-editor h1, {{WRAPPER}} .sntravel-text-editor h2, {{WRAPPER}} .sntravel-text-editor h3, {{WRAPPER}} .sntravel-text-editor h4, {{WRAPPER}} .sntravel-text-editor h5, {{WRAPPER}} .sntravel-text-editor h6',
                             'control_type' => 'group',
                         ),
                         array(
                             'name' => 'link_typography',
                             'type' => Group_Control_Typography::get_type(),
                             'label' => esc_html__( 'Link Typography', 'sntravel' ),
-                            'selector' => '{{WRAPPER}} .pxl-text-editor a',
+                            'selector' => '{{WRAPPER}} .sntravel-text-editor a',
                             'control_type' => 'group',
                         ),
                     ),

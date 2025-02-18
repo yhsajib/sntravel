@@ -33,23 +33,23 @@ $opts = [
 
 
 $widget->add_render_attribute( 'carousel', [
-    'class'         => 'pxl-swiper-container overflow-hidden',
+    'class'         => 'sntravel-swiper-container overflow-hidden',
     'dir'           => is_rtl() ? 'rtl' : 'ltr',
     'data-settings' => wp_json_encode($opts)
 ]);
 ?>
 <?php if(isset($boxs) && !empty($boxs) && count($boxs)): ?>
-<div class="pxl-swiper-slider pxl-fancy-box-carousel layout-<?php echo esc_attr($settings['layout'])?>">
-    <div class="pxl-swiper-slider-wrap pxl-carousel-inner relative">
-        <div <?php pxl_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
-            <div class="pxl-swiper-wrapper swiper-wrapper">
+<div class="sntravel-swiper-slider sntravel-fancy-box-carousel layout-<?php echo esc_attr($settings['layout'])?>">
+    <div class="sntravel-swiper-slider-wrap sntravel-carousel-inner relative">
+        <div <?php sntravel_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
+            <div class="sntravel-swiper-wrapper swiper-wrapper">
                 <?php foreach ($boxs as $box): ?>
-                    <div class="pxl-swiper-slide swiper-slide">
+                    <div class="sntravel-swiper-slide swiper-slide">
                         <div class="item-inner">
                             <?php
                             if(!empty( $box['selected_img']['id'])){
                                 $thumbnail = '';
-                                $img  = pxl_get_image_by_size( array(
+                                $img  = sntravel_get_image_by_size( array(
                                     'attach_id'  => $box['selected_img']['id'],
                                     'thumb_size' => 'full',
                                 ) );
@@ -67,21 +67,21 @@ $widget->add_render_attribute( 'carousel', [
                                     if (!empty($box['title_text'])){
                                         ?>
                                         <h3 class="item-title">
-                                            <span><?php echo pxl_print_html($box['title_text']); ?></span>
+                                            <span><?php echo sntravel_print_html($box['title_text']); ?></span>
                                         </h3>
                                         <?php
                                     }
                                     if (!empty($box['sub_title_text'])){
                                         ?>
                                         <span class="item-sub-title">
-                                            <?php echo pxl_print_html($box['sub_title_text']); ?>
+                                            <?php echo sntravel_print_html($box['sub_title_text']); ?>
                                         </span>
                                         <?php
                                     }
                                     if (!empty($box['description_text'])){
                                         ?>
                                         <div class="item-description">
-                                            <?php echo pxl_print_html($box['description_text']); ?>
+                                            <?php echo sntravel_print_html($box['description_text']); ?>
                                         </div>
                                         <?php
                                     }
@@ -93,14 +93,14 @@ $widget->add_render_attribute( 'carousel', [
                                 if (!empty($box['title_text'])){
                                     ?>
                                     <h3 class="item-title">
-                                        <span><?php echo pxl_print_html($box['title_text']); ?></span>
+                                        <span><?php echo sntravel_print_html($box['title_text']); ?></span>
                                     </h3>
                                     <?php
                                 }
                                 if (!empty($box['sub_title_text'])){
                                     ?>
                                     <span class="item-sub-title">
-                                        <?php echo pxl_print_html($box['sub_title_text']); ?>
+                                        <?php echo sntravel_print_html($box['sub_title_text']); ?>
                                     </span>
                                     <?php
                                 }
@@ -112,7 +112,7 @@ $widget->add_render_attribute( 'carousel', [
             </div>
         </div>
         <?php basilico_arrow_template($settings); ?>
-        <div class="pxl-swiper-dots"></div>
+        <div class="sntravel-swiper-dots"></div>
     </div>
 </div>
 <?php endif; ?>

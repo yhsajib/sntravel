@@ -6,7 +6,7 @@
 
     'use strict';
     var PXLProgressBarHandler = function( $scope, $ ) {
-        elementorFrontend.waypoint($scope.find('.pxl-progress-bar'), function () {
+        elementorFrontend.waypoint($scope.find('.sntravel-progress-bar'), function () {
             $(this).progressbar();
         });
 
@@ -14,6 +14,6 @@
 
     // Make sure you run this code under Elementor.
     $( window ).on( 'elementor/frontend/init', function() {
-        elementorFrontend.hooks.addAction( 'frontend/element_ready/pxl_progressbar.default', PXLProgressBarHandler );
+        elementorFrontend.hooks.addAction( 'frontend/element_ready/sntravel_progressbar.default', PXLProgressBarHandler );
     } );
 } )( jQuery );

@@ -40,7 +40,7 @@ $opts = [
 ];
 
 $widget->add_render_attribute( 'carousel', [
-    'class'         => 'pxl-swiper-container products',
+    'class'         => 'sntravel-swiper-container products',
     'dir'           => is_rtl() ? 'rtl' : 'ltr',
     'data-settings' => wp_json_encode($opts)
 ]);
@@ -60,7 +60,7 @@ if ( ! empty( $settings['loadmore_link']['url'] ) ) {
 $data_settings = $item_anm_cls = '';
 if ( !empty( $item_animation) ) {
 
-    $item_anm_cls= ' pxl-animate pxl-invisible animated-'.$item_animation_duration;
+    $item_anm_cls= ' sntravel-animate sntravel-invisible animated-'.$item_animation_duration;
     $item_animation_delay = !empty($item_animation_delay) ? $item_animation_delay : '150';
     $data_animations = [
         'animation' => $item_animation,
@@ -69,23 +69,23 @@ if ( !empty( $item_animation) ) {
 }
 ?>
 <?php if(!empty($posts) && count($posts)): ?>
-<div class="pxl-swiper-slider pxl-product-carousel pxl-shop-layout-1">
-    <div class="pxl-swiper-slider-wrap pxl-carousel-inner relative">
-        <div <?php pxl_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
-            <div class="pxl-swiper-wrapper swiper-wrapper">
+<div class="sntravel-swiper-slider sntravel-product-carousel sntravel-shop-layout-1">
+    <div class="sntravel-swiper-slider-wrap sntravel-carousel-inner relative">
+        <div <?php sntravel_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
+            <div class="sntravel-swiper-wrapper swiper-wrapper">
                 <?php
                 while ($query->have_posts()) {
                     $query->the_post();
-                    echo '<div class="pxl-swiper-slide swiper-slide">';
-                    wc_get_template( 'pxl-content-product-layout-1.php' );
+                    echo '<div class="sntravel-swiper-slide swiper-slide">';
+                    wc_get_template( 'sntravel-content-product-layout-1.php' );
                     echo '</div>';
                 }
                 wp_reset_postdata();
                 ?>
             </div>
         </div>
-        <?php basilico_arrow_template($settings, 'pxli pxli-arrow-left', 'pxli pxli-arrow-right'); ?>
-        <div class="pxl-swiper-dots"></div>
+        <?php basilico_arrow_template($settings, 'sntraveli sntraveli-arrow-left', 'sntraveli sntraveli-arrow-right'); ?>
+        <div class="sntravel-swiper-dots"></div>
     </div>
 </div>
 <?php endif; ?>

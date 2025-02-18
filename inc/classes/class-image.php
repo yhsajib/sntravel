@@ -3,7 +3,7 @@ defined( 'ABSPATH' ) || exit;
 
 class Sntravel_Image {
  
-	public static function pxl_resize( $attach_id = null, $img_url = null, $width = '', $height = '', $crop = false ) {
+	public static function sntravel_resize( $attach_id = null, $img_url = null, $width = '', $height = '', $crop = false ) {
         // this is an attachment, so we have the ID
         $image_src = array();
         if ( $attach_id ) {
@@ -115,7 +115,7 @@ class Sntravel_Image {
 
         return false;
     }
-	public static function pxl_image_by_size( $params = array() ) {
+	public static function sntravel_image_by_size( $params = array() ) {
         $params = array_merge( array(
 			'post_id'    => null,
 			'attach_id'  => null,
@@ -138,7 +138,7 @@ class Sntravel_Image {
         $post_id = $params['post_id'];
 
         $attach_id = $post_id ? get_post_thumbnail_id( $post_id ) : $params['attach_id'];
-        $attach_id = apply_filters( 'pxl_object_id', $attach_id );
+        $attach_id = apply_filters( 'sntravel_object_id', $attach_id );
         $thumb_size = $params['thumb_size'];
         $thumb_class = ( isset( $params['class'] ) && '' !== $params['class'] ) ? $params['class'] . ' ' : '';
 
@@ -177,7 +177,7 @@ class Sntravel_Image {
 
             if ( is_array( $thumb_size ) ) {
                 // Resize image to custom size
-                $p_img = self::pxl_resize( $attach_id, null, $thumb_size[0], $thumb_size[1], true );
+                $p_img = self::sntravel_resize( $attach_id, null, $thumb_size[0], $thumb_size[1], true );
                 $alt = trim( wp_strip_all_tags( get_post_meta( $attach_id, '_wp_attachment_image_alt', true ) ) );
                 $attachment = get_post( $attach_id );
                 if ( ! empty( $attachment ) ) {

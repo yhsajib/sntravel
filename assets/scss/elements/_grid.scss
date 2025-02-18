@@ -176,7 +176,7 @@
                 @include transition();
                 &:before {
                     content: '\e9e5';
-                    font-family: $pxli_font;
+                    font-family: $sntraveli_font;
                     font-size: 17px;
                     line-height: 1;
                     opacity: 0;
@@ -382,7 +382,7 @@
                     transform: scale(1.1);
                 }
             }
-            .pxli-play-2 {
+            .sntraveli-play-2 {
                 color: inherit !important;
                 -webkit-text-stroke: unset;
             }
@@ -579,7 +579,7 @@
                 }
                 &::after{
                     content: "\e9eb";
-                    font-family: 'pxli';
+                    font-family: 'sntraveli';
                 }
             }
             .post-category{
@@ -911,7 +911,7 @@
                     transform: scale(1.1);
                 }
             }
-            .pxli-play-2 {
+            .sntraveli-play-2 {
                 color: inherit !important;
                 -webkit-text-stroke: unset;
             }
@@ -1339,7 +1339,7 @@
                     transform: scale(1.1);
                 }
             }
-            .pxli-play-2 {
+            .sntraveli-play-2 {
                 color: inherit !important;
                 -webkit-text-stroke: unset;
             }
@@ -1561,7 +1561,7 @@
                     transform: scale(1.1);
                 }
             }
-            .pxli-play-2 {
+            .sntraveli-play-2 {
                 color: inherit !important;
                 -webkit-text-stroke: unset;
             }
@@ -2109,10 +2109,10 @@
             .media-play-button {
                 width: 58px;
                 height: 58px;
-                .pxli-play-2 {
+                .sntraveli-play-2 {
                     font-size: 16px;
                 }
-                .pxli-volume {
+                .sntraveli-volume {
                     font-size: 20px;
                 }
                 &:hover {
@@ -3222,7 +3222,7 @@
                     &:before {
                         content: "\e9e6";
                         font-size: 20px;
-                        font-family: $pxli_font;
+                        font-family: $sntraveli_font;
                         color: #fff;
                     }
                 }
@@ -4002,7 +4002,7 @@
                     opacity: 0;
                     transition: all 400ms ease-in-out 0s;
                     font-size: 24px;
-                    font-family: "pxli";
+                    font-family: "sntraveli";
                 }
                 &:hover{
                     color: $primary_color;

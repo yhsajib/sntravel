@@ -20,7 +20,7 @@ $archive_readmore_text = sntravel()->get_theme_opt( 'archive_readmore_text', esc
         <h3 class="post-title">
             <a href="<?php echo esc_url( get_permalink()); ?>" title="<?php the_title_attribute(); ?>">
                 <?php if(is_sticky()): ?>
-                    <i class="pxli-star"></i>
+                    <i class="sntraveli-star"></i>
                 <?php endif; ?>
                 <?php the_title(); ?>
             </a>
@@ -39,7 +39,7 @@ $archive_readmore_text = sntravel()->get_theme_opt( 'archive_readmore_text', esc
         <?php if( $archive_readmore == '1'): ?>
             <div class="post-readmore">
                 <a class="btn <?php echo esc_html($archive_readmore_btn_style); ?>" href="<?php echo esc_url( get_permalink()); ?>">
-                    <span><?php pxl_print_html($archive_readmore_text); ?></span>
+                    <span><?php sntravel_print_html($archive_readmore_text); ?></span>
                 </a>
             </div>
         <?php endif; ?>

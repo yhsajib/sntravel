@@ -1,11 +1,11 @@
 <?php
 // Register Fancy Box Widget
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name'       => 'pxl_single_navigation',
+        'name'       => 'sntravel_single_navigation',
         'title'      => esc_html__( 'PXL Single Navigation', 'sntravel' ),
         'icon'       => 'eicon-icon-box',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'params' => array(
             'sections' => array(
                 array(

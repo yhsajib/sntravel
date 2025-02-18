@@ -16,12 +16,12 @@ if ( is_array( $menus ) && ! empty( $menus ) ) {
     $custom_menus = '';
 }
 
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name' => 'pxl_menu',
+        'name' => 'sntravel_menu',
         'title' => esc_html__('Pxl Menu', 'sntravel'),
         'icon' => 'eicon-nav-menu',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'scripts' => array(),
         'params' => array(
             'sections' => array(
@@ -114,8 +114,8 @@ pxl_add_custom_widget(
                                 ]
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-nav-menu .pxl-primary-menu' => 'justify-content: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-nav-menu.style-3 .menu-item' => 'justify-content: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-nav-menu .sntravel-primary-menu' => 'justify-content: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-nav-menu.style-3 .menu-item' => 'justify-content: {{VALUE}};',
                             ],
                             'condition' => [
                                 'type' => ['1','3'],
@@ -155,12 +155,12 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Color', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-nav-menu .pxl-primary-menu > li > a' => 'color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-nav-menu .pxl-mobile-menu > li > a' => 'color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-nav-menu .pxl-primary-menu > li .main-menu-toggle:before' => 'color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-nav-menu .pxl-mobile-menu > li .main-menu-toggle:before' => 'color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-nav-menu.pxl-nav-menu-main.style-8 .pxl-primary-menu > li:not(:last-child):after' => 'background-color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-nav-menu .pxl-custom-menu > li > a' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-nav-menu .sntravel-primary-menu > li > a' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-nav-menu .sntravel-mobile-menu > li > a' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-nav-menu .sntravel-primary-menu > li .main-menu-toggle:before' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-nav-menu .sntravel-mobile-menu > li .main-menu-toggle:before' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-nav-menu.sntravel-nav-menu-main.style-8 .sntravel-primary-menu > li:not(:last-child):after' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-nav-menu .sntravel-custom-menu > li > a' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -168,16 +168,16 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Color Hover', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-nav-menu .pxl-primary-menu > li > a:hover'                      => 'color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-nav-menu .pxl-primary-menu > li.current-menu-item > a'          => 'color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-nav-menu:not(.style-6) .pxl-primary-menu > li.current-menu-ancestor > a'      => 'color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-nav-menu .pxl-primary-menu > li:hover:before'                   => 'background-color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-nav-menu .pxl-primary-menu > li.current-menu-item:before'       => 'background-color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-nav-menu .pxl-primary-menu > li.current-menu-ancestor:before'   => 'background-color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-nav-menu .pxl-mobile-menu > li > a:hover'                       => 'color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-nav-menu .pxl-primary-menu > li:hover .main-menu-toggle:before' => 'color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-nav-menu .pxl-mobile-menu > li:hover .main-menu-toggle:before'  => 'color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-nav-menu .pxl-custom-menu > li > a:hover'                      => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-nav-menu .sntravel-primary-menu > li > a:hover'                      => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-nav-menu .sntravel-primary-menu > li.current-menu-item > a'          => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-nav-menu:not(.style-6) .sntravel-primary-menu > li.current-menu-ancestor > a'      => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-nav-menu .sntravel-primary-menu > li:hover:before'                   => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-nav-menu .sntravel-primary-menu > li.current-menu-item:before'       => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-nav-menu .sntravel-primary-menu > li.current-menu-ancestor:before'   => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-nav-menu .sntravel-mobile-menu > li > a:hover'                       => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-nav-menu .sntravel-primary-menu > li:hover .main-menu-toggle:before' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-nav-menu .sntravel-mobile-menu > li:hover .main-menu-toggle:before'  => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-nav-menu .sntravel-custom-menu > li > a:hover'                      => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -185,12 +185,12 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Underline Color', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-nav-menu .pxl-primary-menu > li:before' => 'background-color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-nav-menu .pxl-primary-menu > li:before, {{WRAPPER}} .pxl-nav-menu.pxl-nav-menu-main.style-2 .pxl-primary-menu > li a:before,
-                                {{WRAPPER}} .pxl-nav-menu.pxl-nav-menu-main.style-10 .pxl-primary-menu > li > a:before,
-                                {{WRAPPER}} .pxl-nav-menu.pxl-nav-menu-main.style-11 .pxl-primary-menu > li > a:before,
-                                {{WRAPPER}} .pxl-nav-menu.pxl-nav-menu-main.style-11 .pxl-primary-menu > li.menu-item-has-children > a > span::before,
-                                {{WRAPPER}} .pxl-nav-menu.pxl-nav-menu-main.style-11 .pxl-primary-menu > li.menu-item-has-children > a > span::after' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-nav-menu .sntravel-primary-menu > li:before' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-nav-menu .sntravel-primary-menu > li:before, {{WRAPPER}} .sntravel-nav-menu.sntravel-nav-menu-main.style-2 .sntravel-primary-menu > li a:before,
+                                {{WRAPPER}} .sntravel-nav-menu.sntravel-nav-menu-main.style-10 .sntravel-primary-menu > li > a:before,
+                                {{WRAPPER}} .sntravel-nav-menu.sntravel-nav-menu-main.style-11 .sntravel-primary-menu > li > a:before,
+                                {{WRAPPER}} .sntravel-nav-menu.sntravel-nav-menu-main.style-11 .sntravel-primary-menu > li.menu-item-has-children > a > span::before,
+                                {{WRAPPER}} .sntravel-nav-menu.sntravel-nav-menu-main.style-11 .sntravel-primary-menu > li.menu-item-has-children > a > span::after' => 'background-color: {{VALUE}};',
                             ],
                             'condition' => [
                                 'type!' => ['5'],
@@ -201,7 +201,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Underline Color', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-nav-menu.pxl-nav-menu-custom.style-3 .main-menu-toggle:before' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-nav-menu.sntravel-nav-menu-custom.style-3 .main-menu-toggle:before' => 'background-color: {{VALUE}};',
                             ],
                             'condition' => [
                                 'style_custom' => ['style-3'],
@@ -212,7 +212,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Typography', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-nav-menu .pxl-primary-menu > li > a, {{WRAPPER}} .pxl-nav-menu .pxl-mobile-menu > li > a,{{WRAPPER}} .pxl-nav-menu .pxl-custom-menu > li > a',
+                            'selector' => '{{WRAPPER}} .sntravel-nav-menu .sntravel-primary-menu > li > a, {{WRAPPER}} .sntravel-nav-menu .sntravel-mobile-menu > li > a,{{WRAPPER}} .sntravel-nav-menu .sntravel-custom-menu > li > a',
                         ),
                         array(
                             'name'  => 'show_arrow',
@@ -243,10 +243,10 @@ pxl_add_custom_widget(
                             'control_type' => 'responsive',
                             'size_units' => [ 'px', 'em', '%', 'rem' ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-primary-menu > li' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                                '{{WRAPPER}} .pxl-mobile-menu > li' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                                '{{WRAPPER}} .pxl-nav-menu.style-4 .pxl-primary-menu > li:not(:last-child):after' => 'right: calc(({{LEFT}}{{UNIT}} + {{RIGHT}}{{UNIT}}) / 2 * -1);',
-                                '{{WRAPPER}} .pxl-custom-menu > li' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-primary-menu > li' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-mobile-menu > li' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-nav-menu.style-4 .sntravel-primary-menu > li:not(:last-child):after' => 'right: calc(({{LEFT}}{{UNIT}} + {{RIGHT}}{{UNIT}}) / 2 * -1);',
+                                '{{WRAPPER}} .sntravel-custom-menu > li' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                         ),
                     ),
@@ -272,8 +272,8 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-primary-menu > .menu-item > .sub-menu' => 'top: calc(100% + 20px + {{SIZE}}{{UNIT}});',
-                                '{{WRAPPER}} .pxl-primary-menu > li.active > .sub-menu, {{WRAPPER}} .pxl-primary-menu > li:hover > .sub-menu' => 'top: calc(100% + {{SIZE}}{{UNIT}});'
+                                '{{WRAPPER}} .sntravel-primary-menu > .menu-item > .sub-menu' => 'top: calc(100% + 20px + {{SIZE}}{{UNIT}});',
+                                '{{WRAPPER}} .sntravel-primary-menu > li.active > .sub-menu, {{WRAPPER}} .sntravel-primary-menu > li:hover > .sub-menu' => 'top: calc(100% + {{SIZE}}{{UNIT}});'
                             ],
                             'condition' => [
                                 'type!' => ['5'],
@@ -284,11 +284,11 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Text Color', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-nav-menu .pxl-primary-menu li .sub-menu a' => 'color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-nav-menu .pxl-mobile-menu li .sub-menu a' => 'color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-primary-menu .sub-menu li.menu-item-has-children:after' => 'color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-nav-menu .pxl-custom-menu li .sub-menu a' => 'color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-nav-menu.pxl-nav-menu-main.style-9 .pxl-primary-menu > li .sub-menu > li > a span::after' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-nav-menu .sntravel-primary-menu li .sub-menu a' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-nav-menu .sntravel-mobile-menu li .sub-menu a' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-primary-menu .sub-menu li.menu-item-has-children:after' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-nav-menu .sntravel-custom-menu li .sub-menu a' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-nav-menu.sntravel-nav-menu-main.style-9 .sntravel-primary-menu > li .sub-menu > li > a span::after' => 'background-color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -296,14 +296,14 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Color Hover/Active', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-nav-menu .pxl-mobile-menu .sub-menu .menu-item:hover > a,
-                                 {{WRAPPER}} .pxl-nav-menu .pxl-mobile-menu .sub-menu .current-menu-item > a,
-                                 {{WRAPPER}} .pxl-nav-menu .pxl-custom-menu .sub-menu .menu-item:hover > a,
-                                 {{WRAPPER}} .pxl-nav-menu .pxl-mobile-menu .sub-menu .current-menu-ancestor > a' => 'color: {{VALUE}};',
-                                 '{{WRAPPER}} .pxl-nav-menu .pxl-primary-menu li .sub-menu a:hover, {{WRAPPER}} .pxl-nav-menu .pxl-primary-menu .sub-menu > li.current-menu-item a' => 'color: {{VALUE}};',
-                                 '{{WRAPPER}} .pxl-nav-menu .pxl-mobile-menu li .sub-menu a:hover' => 'color: {{VALUE}};',
-                                 '{{WRAPPER}} .pxl-nav-menu .pxl-custom-menu .sub-menu .menu-item:hover > a::before' => 'background-color: {{VALUE}};',
-                                 '{{WRAPPER}} .pxl-nav-menu.pxl-nav-menu-main .pxl-primary-menu > li .sub-menu > li > a span::after' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-nav-menu .sntravel-mobile-menu .sub-menu .menu-item:hover > a,
+                                 {{WRAPPER}} .sntravel-nav-menu .sntravel-mobile-menu .sub-menu .current-menu-item > a,
+                                 {{WRAPPER}} .sntravel-nav-menu .sntravel-custom-menu .sub-menu .menu-item:hover > a,
+                                 {{WRAPPER}} .sntravel-nav-menu .sntravel-mobile-menu .sub-menu .current-menu-ancestor > a' => 'color: {{VALUE}};',
+                                 '{{WRAPPER}} .sntravel-nav-menu .sntravel-primary-menu li .sub-menu a:hover, {{WRAPPER}} .sntravel-nav-menu .sntravel-primary-menu .sub-menu > li.current-menu-item a' => 'color: {{VALUE}};',
+                                 '{{WRAPPER}} .sntravel-nav-menu .sntravel-mobile-menu li .sub-menu a:hover' => 'color: {{VALUE}};',
+                                 '{{WRAPPER}} .sntravel-nav-menu .sntravel-custom-menu .sub-menu .menu-item:hover > a::before' => 'background-color: {{VALUE}};',
+                                 '{{WRAPPER}} .sntravel-nav-menu.sntravel-nav-menu-main .sntravel-primary-menu > li .sub-menu > li > a span::after' => 'background-color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -311,14 +311,14 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Typography', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-nav-menu .pxl-primary-menu li .sub-menu a, {{WRAPPER}} .pxl-nav-menu .pxl-mobile-menu li .sub-menu a, {{WRAPPER}} .pxl-nav-menu .pxl-custom-menu li .sub-menu a',
+                            'selector' => '{{WRAPPER}} .sntravel-nav-menu .sntravel-primary-menu li .sub-menu a, {{WRAPPER}} .sntravel-nav-menu .sntravel-mobile-menu li .sub-menu a, {{WRAPPER}} .sntravel-nav-menu .sntravel-custom-menu li .sub-menu a',
                         ),
                         array(
                             'name' => 'sub_background',
                             'label' => esc_html__('Background Color', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-nav-menu .pxl-primary-menu .sub-menu' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-nav-menu .sntravel-primary-menu .sub-menu' => 'background-color: {{VALUE}};',
                             ],
                             'condition' => [
                                 'type!' => ['5'],
@@ -337,7 +337,7 @@ pxl_add_custom_widget(
                                 'groove' => esc_html__( 'Groove', 'sntravel' ),
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-nav-menu .pxl-primary-menu .sub-menu > li a' => 'border-bottom-style: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-nav-menu .sntravel-primary-menu .sub-menu > li a' => 'border-bottom-style: {{VALUE}};',
                             ],
                             'condition' => [
                                 'type!' => ['5'],
@@ -349,7 +349,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Divider Color', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-nav-menu .pxl-primary-menu .sub-menu > li a' => 'border-bottom-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-nav-menu .sntravel-primary-menu .sub-menu > li a' => 'border-bottom-color: {{VALUE}};',
                             ],
                             'condition' => [
                                 'type!' => ['5'],
@@ -363,7 +363,7 @@ pxl_add_custom_widget(
                             'exclude' => [
                                 'box_shadow_position',
                             ],
-                            'selector' => '{{WRAPPER}} .pxl-nav-menu .pxl-primary-menu .sub-menu',
+                            'selector' => '{{WRAPPER}} .sntravel-nav-menu .sntravel-primary-menu .sub-menu',
                             'condition' => [
                                 'type!' => ['5'],
                             ],
@@ -374,7 +374,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::DIMENSIONS,
                             'size_units' => [ 'px' ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-nav-menu .pxl-primary-menu .sub-menu' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-nav-menu .sntravel-primary-menu .sub-menu' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                             'condition' => [
                                 'type!' => ['5'],
@@ -396,8 +396,8 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Color', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-nav-menu .pxl-nav-inner li' => 'color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-nav-menu .pxl-nav-inner a' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-nav-menu .sntravel-nav-inner li' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-nav-menu .sntravel-nav-inner a' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -405,7 +405,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Color Hover', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-nav-menu .pxl-nav-inner a:hover' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-nav-menu .sntravel-nav-inner a:hover' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -419,7 +419,7 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-nav-menu .pxl-nav-inner a .link-icon' => 'font-size: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-nav-menu .sntravel-nav-inner a .link-icon' => 'font-size: {{SIZE}}{{UNIT}};',
                             ],
                         ),
                         array(
@@ -427,7 +427,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Icon Color', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-nav-menu .pxl-nav-inner a .link-icon' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-nav-menu .sntravel-nav-inner a .link-icon' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -442,7 +442,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Typography', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-nav-menu .pxl-nav-inner a',
+                            'selector' => '{{WRAPPER}} .sntravel-nav-menu .sntravel-nav-inner a',
                         ),
                         array(
                             'name' => 'nav_item_space',
@@ -457,7 +457,7 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-nav-menu .pxl-nav-inner li + li' => 'margin-top: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-nav-menu .sntravel-nav-inner li + li' => 'margin-top: {{SIZE}}{{UNIT}};',
                             ],
                         ),
                     ),

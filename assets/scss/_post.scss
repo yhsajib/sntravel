@@ -147,7 +147,7 @@
  		margin-right: 8px;
  		position: relative;
  		color: $primary_color;
- 		&.pxli-comment{
+ 		&.sntraveli-comment{
  			font-size: 13px;
  		}
  	}
@@ -626,7 +626,7 @@
 				position: relative;
 				&::after{
 					content: "\e9a0";
-					font-family: "pxli";
+					font-family: "sntraveli";
 					font-size: 16px;
 				    margin-left: 9px;
 					transition: transform 400ms ease;
@@ -752,7 +752,7 @@
 			}
 			&.col-sm-7{
 				display: flex;
-				.pxli {
+				.sntraveli {
 					font-size: 14px;
 					color: $secondary_color;
 					margin-right: 7px;
@@ -979,7 +979,7 @@
 			}
 			&.col-sm-7{
 				display: flex;
-				.pxli {
+				.sntraveli {
 					font-size: 14px;
 					color: $additional01_color;
 					margin-right: 7px;
@@ -1224,7 +1224,7 @@
 			}
 			&.col-sm-7{
 				display: flex;
-				.pxli {
+				.sntraveli {
 					font-size: 14px;
 					color: $primary_color;
 					margin-right: 7px;
@@ -1507,7 +1507,7 @@
 			}
 			&.col-sm-7{
 				display: flex;
-				.pxli {
+				.sntraveli {
 					font-size: 14px;
 					color: $primary_color;
 					margin-right: 7px;
@@ -1758,7 +1758,7 @@
 			}
 			&.col-sm-7{
 				display: flex;
-				.pxli {
+				.sntraveli {
 					font-size: 14px;
 					color: $primary_color;
 					margin-right: 7px;
@@ -2012,7 +2012,7 @@
 			}
 			&.col-sm-7{
 				display: flex;
-				.pxli {
+				.sntraveli {
 					font-size: 14px;
 					color: $primary_color;
 					margin-right: 7px;
@@ -2257,7 +2257,7 @@
 		.label {
 			&:before {
 				content: "\e9e6";
-				font-family: $pxli_font;
+				font-family: $sntraveli_font;
 				color: $primary_color;
 				font-size: 13px;
 				margin-right: 10px;
@@ -2966,7 +2966,7 @@
 			top: 50%;
 			left: 50%;
 			content: "\e95b";
-			font-family: $pxli_font;
+			font-family: $sntraveli_font;
 			font-size: 50px;
 			width: 50px;
 			height: 50px;

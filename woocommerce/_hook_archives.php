@@ -58,8 +58,8 @@ if(!function_exists('basilico_woocommerce_catalog_result')){
                 <div class="sntravel-view-layout-wrap col-12 col-sm-auto order-md-3">
                     <ul class="sntravel-view-layout d-flex align-items-center">
                         <li class="lbl"><?php echo esc_html__( 'View', 'sntravel' ); ?></li>
-                        <li class="view-icon view-grid <?php echo esc_attr($active_grid) ?>"><a href="javascript:void(0);" class="sntravel-ttip tt-top-left" data-cls="products <?php echo implode(' ', $row_cols_class);?>" data-col="grid"><span class="tt-txt"><?php echo esc_html__('View Grid','sntravel') ?></span><span class="pxli-grid"></span></a></li>
-                        <li class="view-icon view-list <?php echo esc_attr($active_list) ?>"><a href="javascript:void(0);" class="sntravel-ttip tt-top-left" data-cls="products shop-view-list" data-col="list"><span class="tt-txt"><?php echo esc_html__('View List','sntravel') ?></span><span class="pxli-list"></span></a></li>
+                        <li class="view-icon view-grid <?php echo esc_attr($active_grid) ?>"><a href="javascript:void(0);" class="sntravel-ttip tt-top-left" data-cls="products <?php echo implode(' ', $row_cols_class);?>" data-col="grid"><span class="tt-txt"><?php echo esc_html__('View Grid','sntravel') ?></span><span class="sntraveli-grid"></span></a></li>
+                        <li class="view-icon view-list <?php echo esc_attr($active_list) ?>"><a href="javascript:void(0);" class="sntravel-ttip tt-top-left" data-cls="products shop-view-list" data-col="list"><span class="tt-txt"><?php echo esc_html__('View List','sntravel') ?></span><span class="sntraveli-list"></span></a></li>
                     </ul>
                 </div>
             <?php endif; ?>
@@ -83,12 +83,12 @@ function basilico_woocommerce_loop_add_to_cart_link($button, $product, $args){
     }
 
     $product_layout = sntravel()->get_theme_opt('product_layout', 'layout-1');
-    $btn_icon = '<span class="sntravel-icon pxli-shopping-bag-2"></span>';
+    $btn_icon = '<span class="sntravel-icon sntraveli-shopping-bag-2"></span>';
     if ($product_layout == 'layout-3' || $product_layout == 'layout-4') {
         $btn_icon = '';
     }
     else if ($product_layout == 'layout-5' || $product_layout == 'layout-7' || $product_layout == 'layout-9') {
-        $btn_icon = '<span class="sntravel-icon pxli pxli-shopping-cart-plus"></span>';
+        $btn_icon = '<span class="sntravel-icon sntraveli sntraveli-shopping-cart-plus"></span>';
     }
     return sprintf(
         '<a href="%s" data-quantity="%s" class="sntravel-btn %s" %s><span class="sntravel-btn-text">%s</span>%s</a>',
@@ -105,8 +105,8 @@ function basilico_woocommerce_loop_add_to_cart_link($button, $product, $args){
 add_filter('woocommerce_pagination_args', 'basilico_woocommerce_pagination_args');
 function basilico_woocommerce_pagination_args($default){
     $default = array_merge($default, [
-        'prev_text' => '<span class="pxli-angle-double-left"></span>',
-        'next_text' => '<span class="pxli-angle-double-right"></span>',
+        'prev_text' => '<span class="sntraveli-angle-double-left"></span>',
+        'next_text' => '<span class="sntraveli-angle-double-right"></span>',
         'type'      => 'plain',
     ]);
     return $default;
@@ -115,7 +115,7 @@ function basilico_woocommerce_pagination_args($default){
 
 /* Product Quickview */
 
-function pxl_product_quickview() {
+function sntravel_product_quickview() {
     $product_id = intval(sanitize_text_field($_POST['product_id']));
     $product = wc_get_product($product_id);
     ob_start();
@@ -130,11 +130,11 @@ function pxl_product_quickview() {
                 <div class="content-left col-md-5 col-12">
                     <div class="product-content">
                         <h3 class="product-title"><?php echo esc_html($product->get_name()); ?></h3>
-                        <div class="product-price"><?php pxl_print_html($product->get_price_html()); ?></div>
+                        <div class="product-price"><?php sntravel_print_html($product->get_price_html()); ?></div>
                         <div class="sntravel-divider"></div>
                         <div class="product-description"><?php echo esc_html($product->get_short_description()); ?></div>     
                     </div>
-                    <div class="product-images"><?php pxl_print_html($product->get_image()); ?></div>
+                    <div class="product-images"><?php sntravel_print_html($product->get_image()); ?></div>
                 </div>
                 <div class="content-right col-md-7 col-12">
                     <?php
@@ -164,8 +164,8 @@ function pxl_product_quickview() {
     echo ob_get_clean();
 }
 
-add_action('wp_ajax_nopriv_pxl_product_quickview', 'pxl_product_quickview');
-add_action('wp_ajax_pxl_product_quickview', 'pxl_product_quickview');
+add_action('wp_ajax_nopriv_sntravel_product_quickview', 'sntravel_product_quickview');
+add_action('wp_ajax_sntravel_product_quickview', 'sntravel_product_quickview');
 
 function add_quickview_modal() {
     $quickview_style = sntravel()->get_theme_opt('quick_view_style', 'style-1');

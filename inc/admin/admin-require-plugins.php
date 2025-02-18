@@ -6,8 +6,8 @@ get_template_part( 'inc/admin/libs/tgmpa/class-tgm-plugin-activation' );
 
 add_action( 'tgmpa_register', 'basilico_register_required_plugins' );
 function basilico_register_required_plugins() {
-    $pxl_server_info = apply_filters( 'pxl_server_info', ['plugin_url' => ''] ) ;
-    $default_path = $pxl_server_info['plugin_url'];  
+    $sntravel_server_info = apply_filters( 'sntravel_server_info', ['plugin_url' => ''] ) ;
+    $default_path = $sntravel_server_info['plugin_url'];  
     $images = get_template_directory_uri() . '/inc/admin/assets/img/plugins';
     $plugins = array(
         array(
@@ -26,8 +26,8 @@ function basilico_register_required_plugins() {
         ),
         array(
             'name'               => esc_html__('Pxl Theme Core', 'sntravel'),
-            'slug'               => 'pxltheme-core',
-            'source'             => 'pxltheme-core.zip',
+            'slug'               => 'sntraveltheme-core',
+            'source'             => 'sntraveltheme-core.zip',
             'required'           => true,
             'logo'        => $images . '/author-logo.jpg',
             'description' => esc_html__( 'Main process and Powerful Elements Plugin, exclusively for Sntravel WordPress Theme.', 'sntravel' ),

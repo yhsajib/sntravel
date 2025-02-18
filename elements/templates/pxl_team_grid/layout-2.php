@@ -48,7 +48,7 @@ else
                 $link     = isset($value['link']) ? $value['link'] : '';  
                 $thumbnail = '';
                 if(!empty($image)) {
-                    $img = pxl_get_image_by_size( array(
+                    $img = sntravel_get_image_by_size( array(
                         'attach_id'  => $image['id'],
                         'thumb_size' => $img_size,
                         'class' => 'no-lazyload',
@@ -85,7 +85,7 @@ else
                     $data_settings = 'data-settings="'.esc_attr($data_animation).'"';
                 }
                 ?>
-                <div class="<?php echo esc_attr($item_class.' '.$animate_cls); ?>" <?php pxl_print_html($data_settings); ?>>
+                <div class="<?php echo esc_attr($item_class.' '.$animate_cls); ?>" <?php sntravel_print_html($data_settings); ?>>
                     <div class="item-inner elementor-repeater-item-<?php echo esc_attr($value['_id']); ?>">
                         <?php if(!empty($thumbnail)) { ?>
                             <div class="item-image">
@@ -99,14 +99,14 @@ else
                         <div class="box-title-pos">
                             <h3 class="item-title">
                                     <?php if ( ! empty( $link['url'] ) ): ?><a <?php echo implode( ' ', [ $link_attributes ] ); ?>><?php endif; ?>
-                                    <?php echo pxl_print_html($title); ?>
+                                    <?php echo sntravel_print_html($title); ?>
                                     <?php if ( ! empty( $link['url'] ) ): ?></a><?php endif; ?>
                             </h3>
-                            <div class="item-position"><?php echo pxl_print_html($position); ?></div>
+                            <div class="item-position"><?php echo sntravel_print_html($position); ?></div>
                         </div>
                         <div class="item-content">
                             <?php if(!empty($description)) { ?>
-                                <div class="item-description"><?php echo pxl_print_html($description); ?></div>
+                                <div class="item-description"><?php echo sntravel_print_html($description); ?></div>
                             <?php } ?>
                             <?php if(!empty($social)): ?>
                                 <div class="item-social">
@@ -114,7 +114,7 @@ else
                                     $team_social = json_decode($social, true);
                                     foreach ($team_social as $value): ?>
                                         <a href="<?php echo esc_url($value['url']); ?>" target="_blank">
-                                            <i class="pxli <?php echo esc_attr($value['icon']); ?>"></i>
+                                            <i class="sntraveli <?php echo esc_attr($value['icon']); ?>"></i>
                                         </a>
                                     <?php endforeach;?>
                                 </div>

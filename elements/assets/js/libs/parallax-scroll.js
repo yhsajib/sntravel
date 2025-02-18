@@ -44,15 +44,15 @@
                     var $el = $(el);
 
                     //knight
-                    if( ($el.hasClass('pxl-parallax-laptop-no') || $el.closest('.pxl-parallax-laptop-no').length > 0) && $(window).outerWidth() < 1600 )
+                    if( ($el.hasClass('sntravel-parallax-laptop-no') || $el.closest('.sntravel-parallax-laptop-no').length > 0) && $(window).outerWidth() < 1600 )
                         return;
-                    if( ($el.hasClass('pxl-parallax-tablet_extra-no') || $el.closest('.pxl-parallax-tablet_extra-no').length > 0) && $(window).outerWidth() < 1200 )
+                    if( ($el.hasClass('sntravel-parallax-tablet_extra-no') || $el.closest('.sntravel-parallax-tablet_extra-no').length > 0) && $(window).outerWidth() < 1200 )
                         return;
-                    if( ($el.hasClass('pxl-parallax-tablet-no') || $el.closest('.pxl-parallax-tablet-no').length > 0) && $(window).outerWidth() < 992 )
+                    if( ($el.hasClass('sntravel-parallax-tablet-no') || $el.closest('.sntravel-parallax-tablet-no').length > 0) && $(window).outerWidth() < 992 )
                         return;  
-                    if( ($el.hasClass('pxl-parallax-mobile_extra-no') || $el.closest('.pxl-parallax-mobile_extra-no').length > 0) && $(window).outerWidth() < 768 )
+                    if( ($el.hasClass('sntravel-parallax-mobile_extra-no') || $el.closest('.sntravel-parallax-mobile_extra-no').length > 0) && $(window).outerWidth() < 768 )
                         return;
-                    if( ($el.hasClass('pxl-parallax-mobile-no') || $el.closest('.pxl-parallax-mobile-no').length > 0) && $(window).outerWidth() < 576 )
+                    if( ($el.hasClass('sntravel-parallax-mobile-no') || $el.closest('.sntravel-parallax-mobile-no').length > 0) && $(window).outerWidth() < 576 )
                         return;
                     //end knight 
 

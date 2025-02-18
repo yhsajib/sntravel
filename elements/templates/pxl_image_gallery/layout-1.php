@@ -27,16 +27,16 @@ $grid_sizer = trim(implode(' ', [$col_xxl, $col_xl, $col_lg, $col_md, $col_sm, $
 
 $animate_cls = '';
 if (!empty($item_animation)) {
-    $animate_cls = ' pxl-animate pxl-invisible animated-' . $item_animation_duration;
+    $animate_cls = ' sntravel-animate sntravel-invisible animated-' . $item_animation_duration;
 }
 $item_animation_delay = !empty($item_animation_delay) ? $item_animation_delay : '200';
 
 $img_size = !empty($img_size) ? $img_size : '600x600';
 $layout_mode = $widget->get_setting('layout_mode', 'fitRows');
 if (is_admin())
-    $grid_class = 'pxl-grid-inner pxl-grid-masonry-adm row relative';
+    $grid_class = 'sntravel-grid-inner sntravel-grid-masonry-adm row relative';
 else
-    $grid_class = 'pxl-grid-inner pxl-grid-masonry row relative overflow-hidden';
+    $grid_class = 'sntravel-grid-inner sntravel-grid-masonry row relative overflow-hidden';
 
 if (!$settings['wp_gallery']) {
     return;
@@ -72,7 +72,7 @@ if ($layout_mode == 'masonry') {
     }
 }
 ?>
-<div class="pxl-grid pxl-image-gallery images-light-box layout-1" data-layout-mode="<?php echo esc_attr($layout_mode); ?>">
+<div class="sntravel-grid sntravel-image-gallery images-light-box layout-1" data-layout-mode="<?php echo esc_attr($layout_mode); ?>">
     <div class="<?php echo esc_attr($grid_class) ?>">
         <?php foreach ($randGallery as $key => $value) :
             $image = isset($value['id']) ? $value['id'] : '';
@@ -83,13 +83,13 @@ if ($layout_mode == 'masonry') {
             if (!empty($image)) {
                 $image_title = get_the_title($image);
                 if (!empty($grid_custom_columns) && $grid_custom_columns[$key]['img_size_c']) {
-                    $img = pxl_get_image_by_size(array(
+                    $img = sntravel_get_image_by_size(array(
                         'attach_id'  => $image,
                         'thumb_size' => $grid_custom_columns[$key]['img_size_c'],
                         'class' => 'no-lazyload',
                     ));
                 } else {
-                    $img = pxl_get_image_by_size(array(
+                    $img = sntravel_get_image_by_size(array(
                         'attach_id'  => $image,
                         'thumb_size' => $img_size,
                         'class' => 'no-lazyload',
@@ -108,7 +108,7 @@ if ($layout_mode == 'masonry') {
                 $data_settings = 'data-settings="' . esc_attr($data_animation) . '"';
             }
         ?>
-            <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls); ?>" <?php pxl_print_html($data_settings); ?>>
+            <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls); ?>" <?php sntravel_print_html($data_settings); ?>>
                 <?php if (!empty($image)) : ?>
                     <div class="item-inner">
                         <?php echo wp_kses_post($thumbnail); ?>

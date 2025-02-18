@@ -59,7 +59,7 @@
 
 .sntravel-entry-content {
     .fadeInUp.animated {
-        @include animation(pxlFadeInUp 1s linear);
+        @include animation(sntravelFadeInUp 1s linear);
         @include transition(all 1s linear);
         &.animated-slow{
             -webkit-animation-duration: 2s;
@@ -72,7 +72,7 @@
     }
 
     .fadeInDown.animated {
-        @include animation(pxlFadeInDown 1s linear);
+        @include animation(sntravelFadeInDown 1s linear);
         @include transition(all 1s linear);
         &.animated-slow{
             -webkit-animation-duration: 2s;
@@ -84,7 +84,7 @@
         }
     }
     .fadeInLeft.animated {
-        @include animation(pxlFadeInLeft 1s linear);
+        @include animation(sntravelFadeInLeft 1s linear);
         @include transition(all 1s linear);
         &.animated-slow{
             -webkit-animation-duration: 2s;
@@ -96,7 +96,7 @@
         }
     }
     .fadeInRight.animated {
-        @include animation(pxlFadeInRight 1s linear);
+        @include animation(sntravelFadeInRight 1s linear);
         @include transition(all 1s linear);
         &.animated-slow{
             -webkit-animation-duration: 2s;

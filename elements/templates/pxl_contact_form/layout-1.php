@@ -4,7 +4,7 @@ $default_settings = [
 ];
 $settings = array_merge($default_settings, $settings);
 extract($settings);
-$html_id = pxl_get_element_id($settings);
+$html_id = sntravel_get_element_id($settings);
 $ctf7_id = '';
 
 if(class_exists('WPCF7') && !empty($ctf7_slug)){
@@ -19,8 +19,8 @@ if(class_exists('WPCF7') && !empty($ctf7_slug)){
     }
     if (!empty($ctf7_id)){
         ?>
-        <div id="<?php echo esc_attr($html_id); ?>" class="pxl-contact-form7">
-            <div class="pxl-contact-form-inner <?php echo esc_attr($select_style); ?>">
+        <div id="<?php echo esc_attr($html_id); ?>" class="sntravel-contact-form7">
+            <div class="sntravel-contact-form-inner <?php echo esc_attr($select_style); ?>">
                 <?php echo do_shortcode('[contact-form-7 id="'.esc_attr( $ctf7_id ).'"]'); ?>
             </div>
         </div>

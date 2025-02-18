@@ -5,7 +5,7 @@
  * @package Sntravel
  */
 
-add_filter( 'pxl_server_info', 'basilico_add_server_info');
+add_filter( 'sntravel_server_info', 'basilico_add_server_info');
 function basilico_add_server_info($infos){
     $infos = [
         'api_url' => 'https://api.7iquid.com/',
@@ -28,7 +28,7 @@ function basilico_custom_register_folder($folder_path){
 }
 
 //* Post Type Support Elementor
-add_filter( 'pxl_add_cpt_support', 'basilico_add_cpt_support' );
+add_filter( 'sntravel_add_cpt_support', 'basilico_add_cpt_support' );
 function basilico_add_cpt_support($cpt_support) {
     $cpt_support[] = 'sntravel-portfolio';
     $cpt_support[] = 'sntravel-service';
@@ -37,7 +37,7 @@ function basilico_add_cpt_support($cpt_support) {
 }
 
 
-add_filter( 'pxl_extra_post_types', 'basilico_add_post_type' );
+add_filter( 'sntravel_extra_post_types', 'basilico_add_post_type' );
 function basilico_add_post_type( $postypes ) {
     $postypes['portfolio'] = array(
         'status' => false,
@@ -47,8 +47,8 @@ function basilico_add_post_type( $postypes ) {
             ),
         ),
     );
-    $portfolio_slug = sntravel()->get_theme_opt('pxl_portfolio_slug', 'portfolio');
-    $portfolio_label = sntravel()->get_theme_opt('pxl_portfolio_label', 'Portfolio');
+    $portfolio_slug = sntravel()->get_theme_opt('sntravel_portfolio_slug', 'portfolio');
+    $portfolio_label = sntravel()->get_theme_opt('sntravel_portfolio_label', 'Portfolio');
     $postypes['sntravel-portfolio'] = array(
         'status'     => true,
         'item_name'  => esc_html__('Portfolio', 'sntravel'),
@@ -76,8 +76,8 @@ function basilico_add_post_type( $postypes ) {
         )
     );
 
-    $service_slug = sntravel()->get_theme_opt('pxl_service_slug', 'service');
-    $service_label = sntravel()->get_theme_opt('pxl_service_label', 'Service');
+    $service_slug = sntravel()->get_theme_opt('sntravel_service_slug', 'service');
+    $service_label = sntravel()->get_theme_opt('sntravel_service_label', 'Service');
     $postypes['sntravel-service'] = array(
         'status'     => true,
         'item_name'  => esc_html__('Services', 'sntravel'),
@@ -106,8 +106,8 @@ function basilico_add_post_type( $postypes ) {
 
     );
 
-    $food_slug = sntravel()->get_theme_opt('pxl_food_slug', 'food');
-    $food_label = sntravel()->get_theme_opt('pxl_food_label', 'Food');
+    $food_slug = sntravel()->get_theme_opt('sntravel_food_slug', 'food');
+    $food_label = sntravel()->get_theme_opt('sntravel_food_label', 'Food');
     $postypes['sntravel-food'] = array(
         'status'     => true,
         'item_name'  => esc_html__('Food', 'sntravel'),
@@ -138,7 +138,7 @@ function basilico_add_post_type( $postypes ) {
 	return $postypes;
 }
 
-add_filter( 'pxl_extra_taxonomies', 'basilico_add_tax' );
+add_filter( 'sntravel_extra_taxonomies', 'basilico_add_tax' );
 function basilico_add_tax( $taxonomies ) {
 	$taxonomies['sntravel-portfolio-category'] = array(
 		'status'     => true,
@@ -175,7 +175,7 @@ function basilico_add_tax( $taxonomies ) {
 	return $taxonomies;
 }
 
-add_filter( 'pxl_theme_builder_layout_ids', 'basilico_theme_builder_layout_id' );
+add_filter( 'sntravel_theme_builder_layout_ids', 'basilico_theme_builder_layout_id' );
 function basilico_theme_builder_layout_id($layout_ids){
 	//default [], 
 	$header_layout        = (int)sntravel()->get_opt('header_layout');
@@ -196,14 +196,14 @@ function basilico_theme_builder_layout_id($layout_ids){
 	return $layout_ids;
 }
 
-add_filter( 'pxl_wg_get_source_id_builder', 'basilico_wg_get_source_builder' );
+add_filter( 'sntravel_wg_get_source_id_builder', 'basilico_wg_get_source_builder' );
 function basilico_wg_get_source_builder($wg_datas){
-	$wg_datas['pxl_slider'] = 'slider_source';
-	$wg_datas['pxl_tabs'] = ['control_name' => 'tabs_list', 'source_name' => 'content_template'];
+	$wg_datas['sntravel_slider'] = 'slider_source';
+	$wg_datas['sntravel_tabs'] = ['control_name' => 'tabs_list', 'source_name' => 'content_template'];
 	return $wg_datas;
 }
 
-add_filter( 'pxl_template_type_support', 'basilico_template_type_support' );
+add_filter( 'sntravel_template_type_support', 'basilico_template_type_support' );
 function basilico_template_type_support($type){
     //default ['header','footer','mega-menu']
     $extra_type = [
@@ -243,29 +243,29 @@ function basilico_comment_reply_text( $link ) {
 }
  
 
-add_filter( 'pxl_enable_megamenu', 'basilico_enable_megamenu' );
+add_filter( 'sntravel_enable_megamenu', 'basilico_enable_megamenu' );
 function basilico_enable_megamenu() {
 	return true;
 }
-add_filter( 'pxl_enable_onepage', 'basilico_enable_onepage' );
+add_filter( 'sntravel_enable_onepage', 'basilico_enable_onepage' );
 function basilico_enable_onepage() {
 	return true;
 }
 
-add_filter( 'pxl_support_awesome_pro', 'basilico_support_awesome_pro' );
+add_filter( 'sntravel_support_awesome_pro', 'basilico_support_awesome_pro' );
 function basilico_support_awesome_pro() {
 	return false;
 }
 
-add_filter( 'redux_pxl_iconpicker_field/get_icons', 'basilico_add_icons_to_pxl_iconpicker_field' );
-function basilico_add_icons_to_pxl_iconpicker_field($icons){
+add_filter( 'redux_sntravel_iconpicker_field/get_icons', 'basilico_add_icons_to_sntravel_iconpicker_field' );
+function basilico_add_icons_to_sntravel_iconpicker_field($icons){
 	$custom_icons = [];
 	$icons = array_merge($custom_icons, $icons);
 	return $icons;
 }
 
 
-add_filter("pxl_mega_menu/get_icons", "basilico_add_icons_to_megamenu");
+add_filter("sntravel_mega_menu/get_icons", "basilico_add_icons_to_megamenu");
 function basilico_add_icons_to_megamenu($icons){
 	$custom_icons = [];
 	$icons = array_merge($custom_icons, $icons);
@@ -364,18 +364,18 @@ function basilico_custom_fonts($fonts){
 //* Add Custom Fonts Elementor
 add_filter( 'elementor/fonts/groups', 'basilico_update_elementor_font_groups_control' );
 function basilico_update_elementor_font_groups_control($font_groups){
-    $pxlfonts_group = array( 'pxlfonts' => esc_html__( 'Custom Fonts', 'sntravel' ) );
-    return array_merge( $pxlfonts_group, $font_groups );
+    $sntravelfonts_group = array( 'sntravelfonts' => esc_html__( 'Custom Fonts', 'sntravel' ) );
+    return array_merge( $sntravelfonts_group, $font_groups );
 }
 
 add_filter( 'elementor/fonts/additional_fonts', 'basilico_update_elementor_font_control' );
 function basilico_update_elementor_font_control($additional_fonts){
-    $additional_fonts['Audrey'] = 'pxlfonts';
-    $additional_fonts['Cormorant Infant'] = 'pxlfonts';
-    $additional_fonts['PS Demo'] = 'pxlfonts';
-    $additional_fonts['Cirka'] = 'pxlfonts';
-    $additional_fonts['Souvenir'] = 'pxlfonts';
-    $additional_fonts['IPAMincho'] = 'pxlfonts';
-    $additional_fonts['Hertine'] = 'pxlfonts';
+    $additional_fonts['Audrey'] = 'sntravelfonts';
+    $additional_fonts['Cormorant Infant'] = 'sntravelfonts';
+    $additional_fonts['PS Demo'] = 'sntravelfonts';
+    $additional_fonts['Cirka'] = 'sntravelfonts';
+    $additional_fonts['Souvenir'] = 'sntravelfonts';
+    $additional_fonts['IPAMincho'] = 'sntravelfonts';
+    $additional_fonts['Hertine'] = 'sntravelfonts';
     return $additional_fonts;
 }

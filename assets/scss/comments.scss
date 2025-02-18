@@ -311,7 +311,7 @@
 
         input[type=checkbox] + label:before {
             content: "\e915";
-            font-family: $pxli_font;
+            font-family: $sntraveli_font;
             border: 1px solid $border-color;
             border-radius: 0;
             background-color: #fff;
@@ -394,7 +394,7 @@ p.no-comments{
     color: red;
 }
  
-$star_icon_font: "pxli";
+$star_icon_font: "sntraveli";
 $star_icon: "\e948";
 $star_icon_filled: "\e949";
 $star_icon_color: #FFB237;

@@ -1,6 +1,6 @@
 ( function( $ ) {
-    var pxl_widget_piechart_handler = function( $scope, $ ) {
-        elementorFrontend.waypoint($scope.find('.pxl-pie-chart .pxl-percentage'), function () {
+    var sntravel_widget_piechart_handler = function( $scope, $ ) {
+        elementorFrontend.waypoint($scope.find('.sntravel-pie-chart .sntravel-percentage'), function () {
             var track_color = $(this).data('track-color');
             var bar_color_start = $(this).data('barcolor-start');
             var bar_color_end = $(this).data('barcolor-end');
@@ -32,6 +32,6 @@
     };
 
     $( window ).on( 'elementor/frontend/init', function() {
-        elementorFrontend.hooks.addAction( 'frontend/element_ready/pxl_pie_chart.default', pxl_widget_piechart_handler );
+        elementorFrontend.hooks.addAction( 'frontend/element_ready/sntravel_pie_chart.default', sntravel_widget_piechart_handler );
     } );
 } )( jQuery );

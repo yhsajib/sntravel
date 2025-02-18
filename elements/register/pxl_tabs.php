@@ -1,11 +1,11 @@
 <?php
 $templates = basilico_get_templates_option('default', []) ;
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name'       => 'pxl_tabs',
+        'name'       => 'sntravel_tabs',
         'title'      => esc_html__( 'PXL Tabs', 'sntravel' ),
         'icon'       => 'eicon-tabs',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'scripts' => [
             'sntravel-tabs',
         ],
@@ -24,74 +24,74 @@ pxl_add_custom_widget(
                             'options' => [
                                 '1' => [
                                     'label' => esc_html__( 'Layout 1', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_tabs-1.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_tabs-1.jpg'
                                 ],
                                 '2' => [
                                     'label' => esc_html__( 'Layout 2', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_tabs-2.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_tabs-2.jpg'
                                 ],
                                 '3' => [
                                     'label' => esc_html__( 'Layout 3', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_tabs-3.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_tabs-3.jpg'
                                 ],
                                 '4' => [
                                     'label' => esc_html__( 'Layout 4', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_tabs-4.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_tabs-4.jpg'
                                 ],
                                 '5' => [
                                     'label' => esc_html__( 'Layout 5', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_tabs-5.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_tabs-5.jpg'
                                 ],
                                 '6' => [
                                     'label' => esc_html__( 'Layout 6', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_tabs-6.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_tabs-6.jpg'
                                 ],
                                 '7' => [
                                     'label' => esc_html__( 'Layout 7', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_tabs-7.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_tabs-7.jpg'
                                 ],
                                 '8' => [
                                     'label' => esc_html__( 'Layout 8', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_tabs-8.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_tabs-8.jpg'
                                 ],
                                 '9' => [
                                     'label' => esc_html__( 'Layout 9', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_tabs-9.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_tabs-9.jpg'
                                 ],
                                 '10' => [
                                     'label' => esc_html__( 'Layout 10', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_tabs-10.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_tabs-10.jpg'
                                 ],
                                 '11' => [
                                     'label' => esc_html__( 'Layout 11', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_tabs-11.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_tabs-11.jpg'
                                 ],
                                 '12' => [
                                     'label' => esc_html__( 'Layout 12', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_tabs-12.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_tabs-12.jpg'
                                 ],
                                 '13' => [
                                     'label' => esc_html__( 'Layout 13', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_tabs-13.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_tabs-13.jpg'
                                 ],
                                 '14' => [
                                     'label' => esc_html__( 'Layout 14', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_tabs-14.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_tabs-14.jpg'
                                 ],
                                 '15' => [
                                     'label' => esc_html__( 'Layout 15', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_tabs-15.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_tabs-15.jpg'
                                 ],
                                 '16' => [
                                     'label' => esc_html__( 'Layout 16', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_tabs-16.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_tabs-16.jpg'
                                 ],
                                 '17' => [
                                     'label' => esc_html__( 'Layout 17', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_tabs-17.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_tabs-17.jpg'
                                 ],
                             ],
-                            'prefix_class' => 'pxl-tabs-layout-',
+                            'prefix_class' => 'sntravel-tabs-layout-',
                         ),
                     )
                 ),
@@ -135,7 +135,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Title Typography', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-tabs.layout-10 .tabs-title .box-title',
+                            'selector' => '{{WRAPPER}} .sntravel-tabs.layout-10 .tabs-title .box-title',
                             'condition' => [
                                 'layout' => '10'
                             ]
@@ -145,7 +145,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Title Color', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-tabs.layout-10 .tabs-title .box-title' => 'color: {{VALUE}};'
+                                '{{WRAPPER}} .sntravel-tabs.layout-10 .tabs-title .box-title' => 'color: {{VALUE}};'
                             ],
                             'condition' => [
                                 'layout' => '10'
@@ -236,7 +236,7 @@ pxl_add_custom_widget(
                                 array(
                                     'name' => 'content_template',
                                     'label' => esc_html__('Select Templates', 'sntravel'),
-                                    'description'        => sprintf(esc_html__('Please create your layout before choosing. %sClick Here%s','sntravel'),'<a href="' . esc_url( admin_url( 'edit.php?post_type=pxl-template' ) ) . '">','</a>'),
+                                    'description'        => sprintf(esc_html__('Please create your layout before choosing. %sClick Here%s','sntravel'),'<a href="' . esc_url( admin_url( 'edit.php?post_type=sntravel-template' ) ) . '">','</a>'),
                                     'type' => 'select',
                                     'options' => $templates,
                                     'default' => 'df',
@@ -318,7 +318,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::DIMENSIONS,
                             'size_units' => [ 'px' ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-tabs .tabs-content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-tabs .tabs-content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                             'control_type' => 'responsive',
                             'condition' => [
@@ -331,7 +331,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::DIMENSIONS,
                             'size_units' => [ 'px' ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-tabs .tabs-content, {{WRAPPER}} .pxl-tabs.layout-15 .tabs-title .title-wrap' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-tabs .tabs-content, {{WRAPPER}} .sntravel-tabs.layout-15 .tabs-title .title-wrap' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                             'control_type' => 'responsive',
                             'condition' => [
@@ -351,9 +351,9 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-tabs .tabs-title .title-wrap' => 'column-gap: {{SIZE}}{{UNIT}};',
-                                '{{WRAPPER}} .pxl-tabs.layout-12 .tabs-title .title-wrap, .pxl-tabs.layout-13 .tabs-title .title-wrap' => 'gap: {{SIZE}}{{UNIT}} !important;',
-                                '{{WRAPPER}} .pxl-tabs.layout-15 .tab-title' => 'padding-top: {{SIZE}}{{UNIT}}; padding-bottom: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-tabs .tabs-title .title-wrap' => 'column-gap: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-tabs.layout-12 .tabs-title .title-wrap, .sntravel-tabs.layout-13 .tabs-title .title-wrap' => 'gap: {{SIZE}}{{UNIT}} !important;',
+                                '{{WRAPPER}} .sntravel-tabs.layout-15 .tab-title' => 'padding-top: {{SIZE}}{{UNIT}}; padding-bottom: {{SIZE}}{{UNIT}};',
                             ],
                             'condition' => [
                                 'layout!' => '14'
@@ -372,7 +372,7 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-tabs.layout-17 .tab-title::before' => 'right: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-tabs.layout-17 .tab-title::before' => 'right: {{SIZE}}{{UNIT}};',
                             ],
                             'condition' => [
                                 'layout' => '17'
@@ -391,8 +391,8 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-tabs .tabs-title .image-wrap' => 'column-gap: {{SIZE}}{{UNIT}};',
-                                '{{WRAPPER}} .pxl-tabs.layout-16 .tab-title' => 'gap: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-tabs .tabs-title .image-wrap' => 'column-gap: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-tabs.layout-16 .tab-title' => 'gap: {{SIZE}}{{UNIT}};',
                             ],
                             'condition' => [
                                 'layout' => ['14', '16']
@@ -411,7 +411,7 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-tabs .tab-title .item-image::after' => 'right: calc(-50% - {{SIZE}}{{UNIT}});',
+                                '{{WRAPPER}} .sntravel-tabs .tab-title .item-image::after' => 'right: calc(-50% - {{SIZE}}{{UNIT}});',
                             ],
                             'condition' => [
                                 'layout' => ['16']
@@ -430,7 +430,7 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-tabs .tab-title .item-image::after' => 'top: calc(-50% - {{SIZE}}{{UNIT}});',
+                                '{{WRAPPER}} .sntravel-tabs .tab-title .item-image::after' => 'top: calc(-50% - {{SIZE}}{{UNIT}});',
                             ],
                             'condition' => [
                                 'layout' => ['16']
@@ -442,7 +442,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::DIMENSIONS,
                             'size_units' => [ 'px' ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-tabs .tabs-title' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-tabs .tabs-title' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                             'control_type' => 'responsive',
                             'condition' => [
@@ -454,7 +454,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Tab Background', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-tabs.layout-4' => 'background-color: {{VALUE}};'
+                                '{{WRAPPER}} .sntravel-tabs.layout-4' => 'background-color: {{VALUE}};'
                             ],
                             'condition' => [
                                 'layout' => '4'
@@ -465,7 +465,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Title Divider Color', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-tabs.layout-4 .tabs-title:after' => 'border-color: {{VALUE}};'
+                                '{{WRAPPER}} .sntravel-tabs.layout-4 .tabs-title:after' => 'border-color: {{VALUE}};'
                             ],
                             'condition' => [
                                 'layout' => '4'
@@ -476,14 +476,14 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Title Typography', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-tabs .tab-title, {{WRAPPER}} .pxl-tabs.layout-14 .item-title, {{WRAPPER}} .pxl-tabs.layout-15 .tab-title > span',
+                            'selector' => '{{WRAPPER}} .sntravel-tabs .tab-title, {{WRAPPER}} .sntravel-tabs.layout-14 .item-title, {{WRAPPER}} .sntravel-tabs.layout-15 .tab-title > span',
                         ),
                         array(
                             'name' => 'title_background',
                             'label' => esc_html__('Title Background', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-tabs .tab-title' => 'background-color: {{VALUE}};'
+                                '{{WRAPPER}} .sntravel-tabs .tab-title' => 'background-color: {{VALUE}};'
                             ],
                             'condition' => [
                                 'layout!' => ['10', '14', '15', '16', '17']
@@ -494,7 +494,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Active Background', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-tabs .tab-title.active' => 'background-color: {{VALUE}}; border-color: {{VALUE}};'
+                                '{{WRAPPER}} .sntravel-tabs .tab-title.active' => 'background-color: {{VALUE}}; border-color: {{VALUE}};'
                             ],
                             'condition' => [
                                 'layout!' => ['10', '14', '15', '16', '17']
@@ -505,7 +505,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Toggle Background', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-tabs .toggle-slide' => 'background-color: {{VALUE}} !important;'
+                                '{{WRAPPER}} .sntravel-tabs .toggle-slide' => 'background-color: {{VALUE}} !important;'
                             ],
                             'condition' => [
                                 'layout!' => ['10','11','12','13', '14', '15', '16', '17']
@@ -524,8 +524,8 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-tabs .tab-title .title-icon i' => 'font-size: {{SIZE}}{{UNIT}};',
-                                '{{WRAPPER}} .pxl-tabs .tab-title .title-icon svg' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};'
+                                '{{WRAPPER}} .sntravel-tabs .tab-title .title-icon i' => 'font-size: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-tabs .tab-title .title-icon svg' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};'
                             ],
                             'condition' => [
                                 'layout' => ['12', '17']
@@ -544,7 +544,7 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-tabs .tab-title' => 'gap: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-tabs .tab-title' => 'gap: {{SIZE}}{{UNIT}};',
                             ],
                             'condition' => [
                                 'layout' => '12'
@@ -555,8 +555,8 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Icon Color', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-tabs .tab-title .title-icon i' => 'color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-tabs .tab-title .title-icon svg' => 'fill: {{VALUE}};'
+                                '{{WRAPPER}} .sntravel-tabs .tab-title .title-icon i' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-tabs .tab-title .title-icon svg' => 'fill: {{VALUE}};'
                             ],
                             'condition' => [
                                 'layout' => ['12','17']
@@ -567,8 +567,8 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Active Icon Color', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-tabs .tab-title.active .title-icon i' => 'color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-tabs .tab-title.active .title-icon svg' => 'fill: {{VALUE}};'
+                                '{{WRAPPER}} .sntravel-tabs .tab-title.active .title-icon i' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-tabs .tab-title.active .title-icon svg' => 'fill: {{VALUE}};'
                             ],
                             'condition' => [
                                 'layout' => '12'
@@ -579,7 +579,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Background Icon', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-tabs .tab-title .title-icon' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-tabs .tab-title .title-icon' => 'background-color: {{VALUE}};',
                             ],
                             'condition' => [
                                 'layout' => '17'
@@ -590,7 +590,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Background Active Icon', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-tabs .tab-title.active .title-icon' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-tabs .tab-title.active .title-icon' => 'background-color: {{VALUE}};',
                             ],
                             'condition' => [
                                 'layout' => '17'
@@ -602,7 +602,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::DIMENSIONS,
                             'size_units' => [ 'px' ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-tabs .tab-title .title-icon' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-tabs .tab-title .title-icon' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                             'control_type' => 'responsive',
                             'condition' => [
@@ -614,7 +614,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Title Color', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .tab-title, {{WRAPPER}} .pxl-tabs.layout-14 .item-title, {{WRAPPER}} .pxl-tabs.layout-15 .tab-title > span' => 'color: {{VALUE}};'
+                                '{{WRAPPER}} .tab-title, {{WRAPPER}} .sntravel-tabs.layout-14 .item-title, {{WRAPPER}} .sntravel-tabs.layout-15 .tab-title > span' => 'color: {{VALUE}};'
                             ],
                         ),
                         array(
@@ -622,9 +622,9 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Active Color', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-tabs .tab-title.active, {{WRAPPER}} .pxl-tabs.layout-15 .tab-title.active > span' => 'color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-tabs.layout-1 .tab-title:after' => 'border-bottom-color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-tabs .tab-title.active span:after' => 'background: {{VALUE}};'
+                                '{{WRAPPER}} .sntravel-tabs .tab-title.active, {{WRAPPER}} .sntravel-tabs.layout-15 .tab-title.active > span' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-tabs.layout-1 .tab-title:after' => 'border-bottom-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-tabs .tab-title.active span:after' => 'background: {{VALUE}};'
                             ],
                             'condition' => [
                                 'layout!' => '14'
@@ -635,7 +635,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Active Border Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-tabs .tabs-title .tab-title.active::before' => 'border-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-tabs .tabs-title .tab-title.active::before' => 'border-color: {{VALUE}};',
                             ],
                             'condition' => [
                                 'layout' => ['14', '16']
@@ -646,7 +646,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Position Typography', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-tabs .item-position, {{WRAPPER}} .pxl-tabs.layout-15 .box-content .item-position',
+                            'selector' => '{{WRAPPER}} .sntravel-tabs .item-position, {{WRAPPER}} .sntravel-tabs.layout-15 .box-content .item-position',
                             'condition' => [
                                 'layout' => ['14', '15']
                             ]
@@ -656,7 +656,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Position Color', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-tabs .item-position, {{WRAPPER}} .pxl-tabs.layout-15 .box-content .item-position' => 'color: {{VALUE}};'
+                                '{{WRAPPER}} .sntravel-tabs .item-position, {{WRAPPER}} .sntravel-tabs.layout-15 .box-content .item-position' => 'color: {{VALUE}};'
                             ],
                             'condition' => [
                                 'layout' => ['14', '15']
@@ -667,7 +667,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Description Typography', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-tabs .box-content .item-des',
+                            'selector' => '{{WRAPPER}} .sntravel-tabs .box-content .item-des',
                             'condition' => [
                                 'layout' => '15'
                             ]
@@ -677,7 +677,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Description Color', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-tabs .box-content .item-des' => 'color: {{VALUE}};'
+                                '{{WRAPPER}} .sntravel-tabs .box-content .item-des' => 'color: {{VALUE}};'
                             ],
                             'condition' => [
                                 'layout' => '15'
@@ -699,7 +699,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Button Text Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .tabs-title .btn-wrapper .btn span, {{WRAPPER}} .pxl-tabs.layout-15 .box-content .btn-more' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .tabs-title .btn-wrapper .btn span, {{WRAPPER}} .sntravel-tabs.layout-15 .box-content .btn-more' => 'color: {{VALUE}};',
                             ],
                             'condition' => [
                                 'layout' => ['2', '15']
@@ -710,7 +710,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Button Border Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-tabs .box-content .btn-more::after' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-tabs .box-content .btn-more::after' => 'background-color: {{VALUE}};',
                             ],
                             'condition' => [
                                 'layout' => ['15']
@@ -721,8 +721,8 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Border Color', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-tabs .tabs-title, {{WRAPPER}} .pxl-tabs.layout-15 .tab-title' => 'border-color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-tabs.layout-17 .tab-title::before' => 'background-image: linear-gradient(to bottom, {{VALUE}} 80%, transparent 20%);'
+                                '{{WRAPPER}} .sntravel-tabs .tabs-title, {{WRAPPER}} .sntravel-tabs.layout-15 .tab-title' => 'border-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-tabs.layout-17 .tab-title::before' => 'background-image: linear-gradient(to bottom, {{VALUE}} 80%, transparent 20%);'
                             ],
                             'condition' => [
                                 'layout' => ['11', '15', '17']
@@ -783,9 +783,9 @@ pxl_add_custom_widget(
                                 ]
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-tabs .tabs-title' => 'justify-content: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-tabs .title-wrap' => 'justify-content: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-tabs.layout-6 .title-wrap .tab-title' => 'align-items: {{VALUE}};'
+                                '{{WRAPPER}} .sntravel-tabs .tabs-title' => 'justify-content: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-tabs .title-wrap' => 'justify-content: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-tabs.layout-6 .title-wrap .tab-title' => 'align-items: {{VALUE}};'
                             ],
                             'condition' => [
                                 'layout!' => ['14', '15']
@@ -811,8 +811,8 @@ pxl_add_custom_widget(
                                 ]
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-tabs .tabs-title .image-wrap' => 'justify-content: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-tabs .tabs-content .tab-content' => 'text-align: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-tabs .tabs-title .image-wrap' => 'justify-content: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-tabs .tabs-content .tab-content' => 'text-align: {{VALUE}};',
                             ],
                             'condition' => [
                                 'layout' => '14'
@@ -831,7 +831,7 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-tabs .tab-title span:after' => 'height: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-tabs .tab-title span:after' => 'height: {{SIZE}}{{UNIT}};',
                             ],
                             'condition' => [
                                 'layout' => '8'
@@ -842,7 +842,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Divider Color', 'sntravel' ),
                             'type' => 'color',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-tabs .title-wrap:after' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-tabs .title-wrap:after' => 'background-color: {{VALUE}};',
                             ],
                             'condition' => [
                                 'layout' => '8'
@@ -861,7 +861,7 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-tabs .tabs-title img' => 'max-width: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-tabs .tabs-title img' => 'max-width: {{SIZE}}{{UNIT}};',
                             ],
                             'condition' => [
                                 'layout' => ['14', '16']

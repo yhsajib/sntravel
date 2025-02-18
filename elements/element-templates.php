@@ -50,7 +50,7 @@ function basilico_get_filter_html()
             set_query_var('paged', $settings['paged']);
             $limitx = isset($settings['limit']) ? $settings['limit'] : '6';
         }
-        extract(pxl_get_posts_of_grid(
+        extract(sntravel_get_posts_of_grid(
             $settings['post_type'],
             [
                 'source' => isset($settings['source']) ? $settings['source'] : '',
@@ -172,7 +172,7 @@ function basilico_load_more_product_grid()
                 }
 
                 ?>
-                <div class="<?php echo trim(implode(' ', [$item_class, $filter_class, $animate_cls])); ?>" <?php pxl_print_html($data_settings); ?>>
+                <div class="<?php echo trim(implode(' ', [$item_class, $filter_class, $animate_cls])); ?>" <?php sntravel_print_html($data_settings); ?>>
                     <?php
                     do_action('woocommerce_before_shop_loop_item');
                     do_action('woocommerce_before_shop_loop_item_title');
@@ -223,7 +223,7 @@ function basilico_load_more_post_grid()
         }
         $settings = sanitize_text_field_array($_POST['settings']);
         set_query_var('paged', $settings['paged']);
-        extract(pxl_get_posts_of_grid(
+        extract(sntravel_get_posts_of_grid(
             $settings['post_type'],
             [
                 'source' => isset($settings['source']) ? $settings['source'] : '',
@@ -296,7 +296,7 @@ if (!function_exists('basilico_get_post_grid')) {
                     if (has_post_thumbnail($post->ID) && wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), false)) {
                         $img_id = get_post_thumbnail_id($post->ID);
                         if ($img_id) {
-                            $img = pxl_get_image_by_size(array(
+                            $img = sntravel_get_image_by_size(array(
                                 'attach_id'  => $img_id,
                                 'thumb_size' => $image_size,
                                 'class' => 'no-lazyload',
@@ -341,7 +341,7 @@ if (!function_exists('basilico_get_post_grid')) {
             basilico_get_post_list_layout4($posts, $settings, $args_m);
             break;
             case 'sntravel-portfolio-list-1':
-            basilico_get_pxl_portfolio_list_layout1($posts, $settings, $args_m);
+            basilico_get_sntravel_portfolio_list_layout1($posts, $settings, $args_m);
             break;
             case 'post-1':
             basilico_get_post_grid_layout1($posts, $settings, $args_m);
@@ -374,40 +374,40 @@ if (!function_exists('basilico_get_post_grid')) {
             basilico_get_post_grid_layout3($posts, $settings, $args_m);
             break;
             case 'sntravel-portfolio-1':
-            basilico_get_post_grid_pxl_portfolio1($posts, $settings, $args_m);
+            basilico_get_post_grid_sntravel_portfolio1($posts, $settings, $args_m);
             break;
             case 'sntravel-portfolio-2':
-            basilico_get_post_grid_pxl_portfolio2($posts, $settings, $args_m);
+            basilico_get_post_grid_sntravel_portfolio2($posts, $settings, $args_m);
             break;
             case 'sntravel-portfolio-3':
-            basilico_get_post_grid_pxl_portfolio1($posts, $settings, $args_m);
+            basilico_get_post_grid_sntravel_portfolio1($posts, $settings, $args_m);
             break;
             case 'sntravel-portfolio-4':
-            basilico_get_post_grid_pxl_portfolio2($posts, $settings, $args_m);
+            basilico_get_post_grid_sntravel_portfolio2($posts, $settings, $args_m);
             break;
             case 'sntravel-portfolio-5':
-            basilico_get_post_grid_pxl_portfolio1($posts, $settings, $args_m);
+            basilico_get_post_grid_sntravel_portfolio1($posts, $settings, $args_m);
             break;
             case 'sntravel-portfolio-6':
-            basilico_get_post_grid_pxl_portfolio1($posts, $settings, $args_m);
+            basilico_get_post_grid_sntravel_portfolio1($posts, $settings, $args_m);
             break;
             case 'sntravel-portfolio-7':
-            basilico_get_post_grid_pxl_portfolio3($posts, $settings, $args_m);
+            basilico_get_post_grid_sntravel_portfolio3($posts, $settings, $args_m);
             break;
             case 'sntravel-portfolio-8':
-            basilico_get_post_grid_pxl_portfolio8($posts, $settings, $args_m);
+            basilico_get_post_grid_sntravel_portfolio8($posts, $settings, $args_m);
             break;
             case 'sntravel-portfolio-9':
-            basilico_get_post_grid_pxl_portfolio9($posts, $settings, $args_m);
+            basilico_get_post_grid_sntravel_portfolio9($posts, $settings, $args_m);
             break;
             case 'sntravel-portfolio-10':
-            basilico_get_post_grid_pxl_portfolio10($posts, $settings, $args_m);
+            basilico_get_post_grid_sntravel_portfolio10($posts, $settings, $args_m);
             break;
             case 'sntravel-portfolio-11':
-            basilico_get_post_grid_pxl_portfolio9($posts, $settings, $args_m);
+            basilico_get_post_grid_sntravel_portfolio9($posts, $settings, $args_m);
             break;
             case 'sntravel-portfolio-12':
-            basilico_get_post_grid_pxl_portfolio12($posts, $settings, $args_m);
+            basilico_get_post_grid_sntravel_portfolio12($posts, $settings, $args_m);
             break;
             default:
             return false;
@@ -428,7 +428,7 @@ function basilico_get_post_list_layout1($posts = [], $settings = [], $args_m = [
         if (has_post_thumbnail($post->ID) && wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), false)) {
             $img_id = get_post_thumbnail_id($post->ID);
             if ($img_id) {
-                $img = pxl_get_image_by_size(array(
+                $img = sntravel_get_image_by_size(array(
                     'attach_id'  => $img_id,
                     'thumb_size' => $img_size,
                     'class' => 'no-lazyload',
@@ -440,7 +440,7 @@ function basilico_get_post_list_layout1($posts = [], $settings = [], $args_m = [
         }
         $filter_class = '';
         if ($select_post_by === 'term_selected' && $filter == "true")
-            $filter_class = pxl_get_term_of_post_to_class($post->ID, array_unique($tax));
+            $filter_class = sntravel_get_term_of_post_to_class($post->ID, array_unique($tax));
         $button_text = !empty($button_text) ? $button_text : esc_html__('Continue reading', 'sntravel');
         $increase = $key + 1;
         $data_settings = '';
@@ -457,7 +457,7 @@ function basilico_get_post_list_layout1($posts = [], $settings = [], $args_m = [
             $data_settings = $args_m[$key]['data_setting'];
         $author = get_user_by('id', $post->post_author);
         ?>
-        <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls . ' ' . $filter_class); ?>" <?php pxl_print_html($data_settings); ?>>
+        <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls . ' ' . $filter_class); ?>" <?php sntravel_print_html($data_settings); ?>>
             <div class="grid-item-inner">
                 <?php
                 if (has_post_format('quote', $post->ID)) {
@@ -512,7 +512,7 @@ function basilico_get_post_list_layout1($posts = [], $settings = [], $args_m = [
                                 </div>
                                 <div class="inner-right col-2 d-flex justify-content-center align-items-center">
                                     <div class="link-icon">
-                                        <a href="<?php echo esc_url($link_url); ?>"><span class="pxli-link"></span></a>
+                                        <a href="<?php echo esc_url($link_url); ?>"><span class="sntraveli-link"></span></a>
                                     </div>
                                 </div>
                             </div>
@@ -542,7 +542,7 @@ function basilico_get_post_list_layout1($posts = [], $settings = [], $args_m = [
                                     <div class="sntravel-media-popup featured-video">
                                         <div class="content-inner">
                                             <a class="media-play-button media-default style-2" href="<?php echo esc_url($featured_video); ?>">
-                                                <i class="pxli-play-2"></i>
+                                                <i class="sntraveli-play-2"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -553,7 +553,7 @@ function basilico_get_post_list_layout1($posts = [], $settings = [], $args_m = [
                                     <div class="sntravel-media-popup featured-audio">
                                         <div class="content-inner">
                                             <a class="media-play-button media-default" href="<?php echo esc_url($audio_url); ?>">
-                                                <i class="pxli-volume"></i>
+                                                <i class="sntraveli-volume"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -584,7 +584,7 @@ function basilico_get_post_list_layout1($posts = [], $settings = [], $args_m = [
                             <?php if ($show_button == 'true') : ?>
                                 <div class="item-readmore sntravel-button-wrapper">
                                     <a class="btn btn-outline-secondary" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
-                                        <span><?php echo pxl_print_html($button_text); ?></span>
+                                        <span><?php echo sntravel_print_html($button_text); ?></span>
                                     </a>
                                 </div>
                             <?php endif; ?>
@@ -652,7 +652,7 @@ function basilico_get_post_list_layout2($posts = [], $settings = [], $args_m = [
         if (has_post_thumbnail($post->ID) && wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), false)) {
             $img_id = get_post_thumbnail_id($post->ID);
             if ($img_id) {
-                $img = pxl_get_image_by_size(array(
+                $img = sntravel_get_image_by_size(array(
                     'attach_id'  => $img_id,
                     'thumb_size' => $img_size,
                     'class' => 'no-lazyload',
@@ -664,7 +664,7 @@ function basilico_get_post_list_layout2($posts = [], $settings = [], $args_m = [
         }
         $filter_class = '';
         if ($select_post_by === 'term_selected' && $filter == "true")
-            $filter_class = pxl_get_term_of_post_to_class($post->ID, array_unique($tax));
+            $filter_class = sntravel_get_term_of_post_to_class($post->ID, array_unique($tax));
         $button_text = !empty($button_text) ? $button_text : esc_html__('Continue reading', 'sntravel');
         $increase = $key + 1;
         $data_settings = '';
@@ -681,7 +681,7 @@ function basilico_get_post_list_layout2($posts = [], $settings = [], $args_m = [
             $data_settings = $args_m[$key]['data_setting'];
         $author = get_user_by('id', $post->post_author);
         ?>
-        <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls . ' ' . $filter_class); ?>" <?php pxl_print_html($data_settings); ?>>
+        <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls . ' ' . $filter_class); ?>" <?php sntravel_print_html($data_settings); ?>>
             <div class="grid-item-inner row align-items-center">
                 <?php
                 if (has_post_format('quote', $post->ID)) {
@@ -720,7 +720,7 @@ function basilico_get_post_list_layout2($posts = [], $settings = [], $args_m = [
                         <div class="format-wrap">
                             <div class="link-inner">
                                 <div class="link-icon">
-                                    <a href="<?php echo esc_url($link_url); ?>"><span class="pxli-link"></span></a>
+                                    <a href="<?php echo esc_url($link_url); ?>"><span class="sntraveli-link"></span></a>
                                 </div>
                                 <div class="link-text">
                                     <a target="_blank" href="<?php echo esc_url($link_url); ?>"><?php echo esc_html($link_text); ?></a>
@@ -748,7 +748,7 @@ function basilico_get_post_list_layout2($posts = [], $settings = [], $args_m = [
                                     <div class="sntravel-media-popup featured-video">
                                         <div class="content-inner">
                                             <a class="media-play-button media-default style-2" href="<?php echo esc_url($featured_video); ?>">
-                                                <i class="pxli-play-2"></i>
+                                                <i class="sntraveli-play-2"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -759,7 +759,7 @@ function basilico_get_post_list_layout2($posts = [], $settings = [], $args_m = [
                                     <div class="sntravel-media-popup featured-audio">
                                         <div class="content-inner">
                                             <a class="media-play-button media-default" href="<?php echo esc_url($audio_url); ?>">
-                                                <i class="pxli-volume"></i>
+                                                <i class="sntraveli-volume"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -837,7 +837,7 @@ function basilico_get_post_list_layout3($posts = [], $settings = [], $args_m = [
         if (has_post_thumbnail($post->ID) && wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), false)) {
             $img_id = get_post_thumbnail_id($post->ID);
             if ($img_id) {
-                $img = pxl_get_image_by_size(array(
+                $img = sntravel_get_image_by_size(array(
                     'attach_id'  => $img_id,
                     'thumb_size' => $img_size,
                     'class' => 'no-lazyload',
@@ -849,7 +849,7 @@ function basilico_get_post_list_layout3($posts = [], $settings = [], $args_m = [
         }
         $filter_class = '';
         if ($select_post_by === 'term_selected' && $filter == "true")
-            $filter_class = pxl_get_term_of_post_to_class($post->ID, array_unique($tax));
+            $filter_class = sntravel_get_term_of_post_to_class($post->ID, array_unique($tax));
         $button_text = !empty($button_text) ? $button_text : esc_html__('Continue reading', 'sntravel');
         $increase = $key + 1;
         $data_settings = '';
@@ -866,7 +866,7 @@ function basilico_get_post_list_layout3($posts = [], $settings = [], $args_m = [
             $data_settings = $args_m[$key]['data_setting'];
         $author = get_user_by('id', $post->post_author);
         ?>
-        <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls . ' ' . $filter_class); ?>" <?php pxl_print_html($data_settings); ?>>
+        <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls . ' ' . $filter_class); ?>" <?php sntravel_print_html($data_settings); ?>>
             <div class="grid-item-inner">
                 <?php
                 if (has_post_format('quote', $post->ID)) {
@@ -921,7 +921,7 @@ function basilico_get_post_list_layout3($posts = [], $settings = [], $args_m = [
                                 </div>
                                 <div class="inner-right col-2 d-flex justify-content-center align-items-center">
                                     <div class="link-icon">
-                                        <a href="<?php echo esc_url($link_url); ?>"><span class="pxli-link"></span></a>
+                                        <a href="<?php echo esc_url($link_url); ?>"><span class="sntraveli-link"></span></a>
                                     </div>
                                 </div>
                             </div>
@@ -951,7 +951,7 @@ function basilico_get_post_list_layout3($posts = [], $settings = [], $args_m = [
                                     <div class="sntravel-media-popup featured-video">
                                         <div class="content-inner">
                                             <a class="media-play-button media-default style-2" href="<?php echo esc_url($featured_video); ?>">
-                                                <i class="pxli-play-2"></i>
+                                                <i class="sntraveli-play-2"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -962,7 +962,7 @@ function basilico_get_post_list_layout3($posts = [], $settings = [], $args_m = [
                                     <div class="sntravel-media-popup featured-audio">
                                         <div class="content-inner">
                                             <a class="media-play-button media-default" href="<?php echo esc_url($audio_url); ?>">
-                                                <i class="pxli-volume"></i>
+                                                <i class="sntraveli-volume"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -993,7 +993,7 @@ function basilico_get_post_list_layout3($posts = [], $settings = [], $args_m = [
                             <?php if ($show_button == 'true') : ?>
                                 <div class="item-readmore sntravel-button-wrapper">
                                     <a class="btn-more style-2" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
-                                        <span><?php echo pxl_print_html($button_text); ?></span>
+                                        <span><?php echo sntravel_print_html($button_text); ?></span>
                                         <i class="zmdi zmdi-long-arrow-right"></i>
                                     </a>
                                 </div>
@@ -1060,7 +1060,7 @@ function basilico_get_post_list_layout4($posts = [], $settings = [], $args_m = [
         if (has_post_thumbnail($post->ID) && wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), false)) {
             $img_id = get_post_thumbnail_id($post->ID);
             if ($img_id) {
-                $img = pxl_get_image_by_size(array(
+                $img = sntravel_get_image_by_size(array(
                     'attach_id'  => $img_id,
                     'thumb_size' => $img_size,
                     'class' => 'no-lazyload',
@@ -1072,7 +1072,7 @@ function basilico_get_post_list_layout4($posts = [], $settings = [], $args_m = [
         }
         $filter_class = '';
         if ($select_post_by === 'term_selected' && $filter == "true")
-            $filter_class = pxl_get_term_of_post_to_class($post->ID, array_unique($tax));
+            $filter_class = sntravel_get_term_of_post_to_class($post->ID, array_unique($tax));
         $button_text = !empty($button_text) ? $button_text : esc_html__('Continue reading', 'sntravel');
         $increase = $key + 1;
         $data_settings = '';
@@ -1089,7 +1089,7 @@ function basilico_get_post_list_layout4($posts = [], $settings = [], $args_m = [
             $data_settings = $args_m[$key]['data_setting'];
         $author = get_user_by('id', $post->post_author);
         ?>
-        <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls . ' ' . $filter_class); ?>" <?php pxl_print_html($data_settings); ?>>
+        <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls . ' ' . $filter_class); ?>" <?php sntravel_print_html($data_settings); ?>>
             <div class="grid-item-inner">
                 <?php
                 if (has_post_format('quote', $post->ID)) {
@@ -1128,7 +1128,7 @@ function basilico_get_post_list_layout4($posts = [], $settings = [], $args_m = [
                         <div class="format-wrap">
                             <div class="link-inner">
                                 <div class="link-icon">
-                                    <a target="_blank" href="<?php echo esc_url($link_url); ?>"><span class="pxli-link"></span></a>
+                                    <a target="_blank" href="<?php echo esc_url($link_url); ?>"><span class="sntraveli-link"></span></a>
                                 </div>
                                 <a class="link-text" target="_blank" href="<?php echo esc_url($link_url); ?>"><?php echo esc_html($link_text); ?></a>
                                 <?php if (!empty($link_cite)) : ?>
@@ -1152,7 +1152,7 @@ function basilico_get_post_list_layout4($posts = [], $settings = [], $args_m = [
                                 <div class="sntravel-media-popup">
                                     <div class="content-inner">
                                         <a class="media-play-button media-default" href="<?php echo esc_url($featured_video); ?>">
-                                            <i class="pxli-play-2 sntravel-icon-outline"></i>
+                                            <i class="sntraveli-play-2 sntravel-icon-outline"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -1173,14 +1173,14 @@ function basilico_get_post_list_layout4($posts = [], $settings = [], $args_m = [
                                 <div class="sntravel-media-popup">
                                     <div class="content-inner">
                                         <a class="media-play-button media-default" href="<?php echo esc_url($audio_url); ?>">
-                                            <i class="pxli-volume"></i>
+                                            <i class="sntraveli-volume"></i>
                                         </a>
                                     </div>
                                 </div>
                             <?php }
                         } else {
                             global $wp_embed;
-                            pxl_print_html($wp_embed->run_shortcode('[embed]' . $audio_url . '[/embed]'));
+                            sntravel_print_html($wp_embed->run_shortcode('[embed]' . $audio_url . '[/embed]'));
                         } ?>
                     </div>
                     <?php
@@ -1256,7 +1256,7 @@ function basilico_get_post_list_layout4($posts = [], $settings = [], $args_m = [
                             <?php if ($show_button == 'true') : ?>
                                 <div class="item-readmore sntravel-button-wrapper">
                                     <a class="btn-more style-2" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
-                                        <span><?php echo pxl_print_html($button_text); ?></span>
+                                        <span><?php echo sntravel_print_html($button_text); ?></span>
                                         <i class="zmdi zmdi-long-arrow-right"></i>
                                     </a>
                                 </div>
@@ -1282,7 +1282,7 @@ function basilico_get_post_grid_layout1($posts = [], $settings = [], $args_m = [
             if (has_post_thumbnail($post->ID) && wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), false)) {
                 $img_id = get_post_thumbnail_id($post->ID);
                 if ($img_id) {
-                    $img = pxl_get_image_by_size(array(
+                    $img = sntravel_get_image_by_size(array(
                         'attach_id'  => $img_id,
                         'thumb_size' => $img_size,
                         'class' => 'no-lazyload',
@@ -1295,7 +1295,7 @@ function basilico_get_post_grid_layout1($posts = [], $settings = [], $args_m = [
         }
         $filter_class = '';
         if ($select_post_by === 'term_selected' && $filter == "true")
-            $filter_class = pxl_get_term_of_post_to_class($post->ID, array_unique($tax));
+            $filter_class = sntravel_get_term_of_post_to_class($post->ID, array_unique($tax));
         $button_text = !empty($button_text) ? $button_text : esc_html__('Read more', 'sntravel');
         $increase = $key + 1;
         $data_settings = '';
@@ -1312,7 +1312,7 @@ function basilico_get_post_grid_layout1($posts = [], $settings = [], $args_m = [
             $data_settings = $args_m[$key]['data_setting'];
         $author = get_user_by('id', $post->post_author);
         ?>
-        <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls . ' ' . $filter_class); ?>" <?php pxl_print_html($data_settings); ?>>
+        <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls . ' ' . $filter_class); ?>" <?php sntravel_print_html($data_settings); ?>>
             <div class="grid-item-inner">
                 <?php
                 $featured_video = get_post_meta($post->ID, 'featured-video-url', true);
@@ -1339,7 +1339,7 @@ function basilico_get_post_grid_layout1($posts = [], $settings = [], $args_m = [
                             <div class="sntravel-media-popup">
                                 <div class="content-inner">
                                     <a class="media-play-button media-default style-2" href="<?php echo esc_url($featured_video); ?>">
-                                        <i class="pxli-play-2"></i>
+                                        <i class="sntraveli-play-2"></i>
                                     </a>
                                 </div>
                             </div>
@@ -1398,7 +1398,7 @@ function basilico_get_post_grid_layout1($posts = [], $settings = [], $args_m = [
             <?php if ($show_button == 'true') : ?>
                 <div class="item-readmore sntravel-button-wrapper">
                     <a class="btn-more" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
-                        <span><?php echo pxl_print_html($button_text); ?></span>
+                        <span><?php echo sntravel_print_html($button_text); ?></span>
                         <i class="zmdi zmdi-long-arrow-right"></i>
                     </a>
                 </div>
@@ -1421,7 +1421,7 @@ function basilico_get_post_grid_layout2($posts = [], $settings = [], $args_m = [
             if (has_post_thumbnail($post->ID) && wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), false)) {
                 $img_id = get_post_thumbnail_id($post->ID);
                 if ($img_id) {
-                    $img = pxl_get_image_by_size(array(
+                    $img = sntravel_get_image_by_size(array(
                         'attach_id'  => $img_id,
                         'thumb_size' => $img_size,
                         'class' => 'no-lazyload',
@@ -1434,7 +1434,7 @@ function basilico_get_post_grid_layout2($posts = [], $settings = [], $args_m = [
         }
         $filter_class = '';
         if ($select_post_by === 'term_selected' && $filter == "true")
-            $filter_class = pxl_get_term_of_post_to_class($post->ID, array_unique($tax));
+            $filter_class = sntravel_get_term_of_post_to_class($post->ID, array_unique($tax));
         $button_text = !empty($button_text) ? $button_text : esc_html__('Read more', 'sntravel');
         $increase = $key + 1;
         $data_settings = '';
@@ -1451,7 +1451,7 @@ function basilico_get_post_grid_layout2($posts = [], $settings = [], $args_m = [
             $data_settings = $args_m[$key]['data_setting'];
         $author = get_user_by('id', $post->post_author);
         ?>
-        <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls . ' ' . $filter_class); ?>" <?php pxl_print_html($data_settings); ?>>
+        <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls . ' ' . $filter_class); ?>" <?php sntravel_print_html($data_settings); ?>>
             <div class="grid-item-inner">
                 <?php if (isset($thumbnail)) : ?>
                     <div class="item-featured">
@@ -1466,7 +1466,7 @@ function basilico_get_post_grid_layout2($posts = [], $settings = [], $args_m = [
                                     <?php
                                     if ($show_date == 'true') : ?>
                                         <div class="post-date d-flex align-items-center">
-                                            <i class="pxli pxli-calendar-days"></i>
+                                            <i class="sntraveli sntraveli-calendar-days"></i>
                                             <?php echo get_the_date(get_option('date_format'), $post->ID); ?>
                                         </div>
                                     <?php endif; ?>
@@ -1474,7 +1474,7 @@ function basilico_get_post_grid_layout2($posts = [], $settings = [], $args_m = [
                                     $posttags = get_the_tags($post->ID);
                                     if ($posttags && $show_category == 'true') : ?>
                                         <div class="post-tags d-flex align-items-center">
-                                            <i class="pxli pxli-tag1"></i>
+                                            <i class="sntraveli sntraveli-tag1"></i>
                                             <?php
                                             $last_key = array_key_last($posttags);
                                             foreach ($posttags as $key => $tag) {
@@ -1510,7 +1510,7 @@ function basilico_get_post_grid_layout2($posts = [], $settings = [], $args_m = [
                     <?php if ($show_button == 'true') : ?>
                         <div class="item-readmore sntravel-button-wrapper">
                             <a class="btn btn-additional-6" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
-                                <span><?php echo pxl_print_html($button_text); ?></span>
+                                <span><?php echo sntravel_print_html($button_text); ?></span>
                             </a>
                         </div>
                     <?php endif; ?>
@@ -1532,7 +1532,7 @@ function basilico_get_post_grid_layout3($posts = [], $settings = [], $args_m = [
             if (has_post_thumbnail($post->ID) && wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), false)) {
                 $img_id = get_post_thumbnail_id($post->ID);
                 if ($img_id) {
-                    $img = pxl_get_image_by_size(array(
+                    $img = sntravel_get_image_by_size(array(
                         'attach_id'  => $img_id,
                         'thumb_size' => $img_size,
                         'class' => 'no-lazyload',
@@ -1545,7 +1545,7 @@ function basilico_get_post_grid_layout3($posts = [], $settings = [], $args_m = [
         }
         $filter_class = '';
         if ($select_post_by === 'term_selected' && $filter == "true")
-            $filter_class = pxl_get_term_of_post_to_class($post->ID, array_unique($tax));
+            $filter_class = sntravel_get_term_of_post_to_class($post->ID, array_unique($tax));
         $button_text = !empty($button_text) ? $button_text : esc_html__('Read more', 'sntravel');
         $increase = $key + 1;
         $data_settings = '';
@@ -1562,7 +1562,7 @@ function basilico_get_post_grid_layout3($posts = [], $settings = [], $args_m = [
             $data_settings = $args_m[$key]['data_setting'];
         $author = get_user_by('id', $post->post_author);
         ?>
-        <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls . ' ' . $filter_class); ?>" <?php pxl_print_html($data_settings); ?>>
+        <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls . ' ' . $filter_class); ?>" <?php sntravel_print_html($data_settings); ?>>
             <div class="grid-item-inner">
                 <?php if (isset($thumbnail)) : ?>
                     <div class="item-featured">
@@ -1615,8 +1615,8 @@ function basilico_get_post_grid_layout3($posts = [], $settings = [], $args_m = [
                     <?php if ($show_button == 'true') : ?>
                         <div class="item-readmore sntravel-button-wrapper">
                             <a class="btn-more style-3" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
-                                <span><?php echo pxl_print_html($button_text); ?></span>
-                                <i class="pxli pxli-arrow-right-solid"></i>
+                                <span><?php echo sntravel_print_html($button_text); ?></span>
+                                <i class="sntraveli sntraveli-arrow-right-solid"></i>
                             </a>
                         </div>
                     <?php endif; ?>
@@ -1638,7 +1638,7 @@ function basilico_get_post_grid_layout4($posts = [], $settings = [], $args_m = [
             if (has_post_thumbnail($post->ID) && wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), false)) {
                 $img_id = get_post_thumbnail_id($post->ID);
                 if ($img_id) {
-                    $img = pxl_get_image_by_size(array(
+                    $img = sntravel_get_image_by_size(array(
                         'attach_id'  => $img_id,
                         'thumb_size' => $img_size,
                         'class' => 'no-lazyload',
@@ -1651,7 +1651,7 @@ function basilico_get_post_grid_layout4($posts = [], $settings = [], $args_m = [
         }
         $filter_class = '';
         if ($select_post_by === 'term_selected' && $filter == "true")
-            $filter_class = pxl_get_term_of_post_to_class($post->ID, array_unique($tax));
+            $filter_class = sntravel_get_term_of_post_to_class($post->ID, array_unique($tax));
         $button_text = !empty($button_text) ? $button_text : esc_html__('Read more', 'sntravel');
         $increase = $key + 1;
         $data_settings = '';
@@ -1668,7 +1668,7 @@ function basilico_get_post_grid_layout4($posts = [], $settings = [], $args_m = [
             $data_settings = $args_m[$key]['data_setting'];
         $author = get_user_by('id', $post->post_author);
         ?>
-        <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls . ' ' . $filter_class); ?>" <?php pxl_print_html($data_settings); ?>>
+        <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls . ' ' . $filter_class); ?>" <?php sntravel_print_html($data_settings); ?>>
             <div class="grid-item-inner">
                 <?php if (isset($thumbnail)) : ?>
                     <div class="item-featured">
@@ -1733,8 +1733,8 @@ function basilico_get_post_grid_layout4($posts = [], $settings = [], $args_m = [
                     <?php if ($show_button == 'true') : ?>
                         <div class="item-readmore sntravel-button-wrapper">
                             <a class="btn-more style-3" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
-                                <span><?php echo pxl_print_html($button_text); ?></span>
-                                <i class="pxli pxli-angle-right1"></i>
+                                <span><?php echo sntravel_print_html($button_text); ?></span>
+                                <i class="sntraveli sntraveli-angle-right1"></i>
                             </a>
                         </div>
                     <?php endif; ?>
@@ -1756,7 +1756,7 @@ function basilico_get_post_grid_layout5($posts = [], $settings = [], $args_m = [
             if (has_post_thumbnail($post->ID) && wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), false)) {
                 $img_id = get_post_thumbnail_id($post->ID);
                 if ($img_id) {
-                    $img = pxl_get_image_by_size(array(
+                    $img = sntravel_get_image_by_size(array(
                         'attach_id'  => $img_id,
                         'thumb_size' => $img_size,
                         'class' => 'no-lazyload',
@@ -1769,7 +1769,7 @@ function basilico_get_post_grid_layout5($posts = [], $settings = [], $args_m = [
         }
         $filter_class = '';
         if ($select_post_by === 'term_selected' && $filter == "true")
-            $filter_class = pxl_get_term_of_post_to_class($post->ID, array_unique($tax));
+            $filter_class = sntravel_get_term_of_post_to_class($post->ID, array_unique($tax));
         $button_text = !empty($button_text) ? $button_text : esc_html__('Read more', 'sntravel');
         $increase = $key + 1;
         $data_settings = '';
@@ -1786,7 +1786,7 @@ function basilico_get_post_grid_layout5($posts = [], $settings = [], $args_m = [
             $data_settings = $args_m[$key]['data_setting'];
         $author = get_user_by('id', $post->post_author);
         ?>
-        <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls . ' ' . $filter_class); ?>" <?php pxl_print_html($data_settings); ?>>
+        <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls . ' ' . $filter_class); ?>" <?php sntravel_print_html($data_settings); ?>>
             <div class="grid-item-inner">
                 <?php
                 $featured_video = get_post_meta($post->ID, 'featured-video-url', true);
@@ -1813,7 +1813,7 @@ function basilico_get_post_grid_layout5($posts = [], $settings = [], $args_m = [
                             <div class="sntravel-media-popup">
                                 <div class="content-inner">
                                     <a class="media-play-button media-default style-2" href="<?php echo esc_url($featured_video); ?>">
-                                        <i class="pxli-play-2"></i>
+                                        <i class="sntraveli-play-2"></i>
                                     </a>
                                 </div>
                             </div>
@@ -1872,7 +1872,7 @@ function basilico_get_post_grid_layout5($posts = [], $settings = [], $args_m = [
             <?php if ($show_button == 'true') : ?>
                 <div class="item-readmore sntravel-button-wrapper">
                     <a class="btn-more" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
-                        <span><?php echo pxl_print_html($button_text); ?></span>
+                        <span><?php echo sntravel_print_html($button_text); ?></span>
                         <i class="zmdi zmdi-long-arrow-right"></i>
                     </a>
                 </div>
@@ -1895,7 +1895,7 @@ function basilico_get_post_grid_layout6($posts = [], $settings = [], $args_m = [
             if (has_post_thumbnail($post->ID) && wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), false)) {
                 $img_id = get_post_thumbnail_id($post->ID);
                 if ($img_id) {
-                    $img = pxl_get_image_by_size(array(
+                    $img = sntravel_get_image_by_size(array(
                         'attach_id'  => $img_id,
                         'thumb_size' => $img_size,
                         'class' => 'no-lazyload',
@@ -1908,7 +1908,7 @@ function basilico_get_post_grid_layout6($posts = [], $settings = [], $args_m = [
         }
         $filter_class = '';
         if ($select_post_by === 'term_selected' && $filter == "true")
-            $filter_class = pxl_get_term_of_post_to_class($post->ID, array_unique($tax));
+            $filter_class = sntravel_get_term_of_post_to_class($post->ID, array_unique($tax));
         $button_text = !empty($button_text) ? $button_text : esc_html__('Read more', 'sntravel');
         $increase = $key + 1;
         $data_settings = '';
@@ -1925,7 +1925,7 @@ function basilico_get_post_grid_layout6($posts = [], $settings = [], $args_m = [
             $data_settings = $args_m[$key]['data_setting'];
         $author = get_user_by('id', $post->post_author);
         ?>
-        <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls . ' ' . $filter_class); ?>" <?php pxl_print_html($data_settings); ?>>
+        <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls . ' ' . $filter_class); ?>" <?php sntravel_print_html($data_settings); ?>>
             <div class="grid-item-inner">
                 <?php if (isset($thumbnail)) : ?>
                     <div class="item-featured">
@@ -1978,7 +1978,7 @@ function basilico_get_post_grid_layout6($posts = [], $settings = [], $args_m = [
                     <?php if ($show_button == 'true') : ?>
                         <div class="item-readmore sntravel-button-wrapper">
                             <a class="btn-more" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
-                                <span><?php echo pxl_print_html($button_text); ?></span>
+                                <span><?php echo sntravel_print_html($button_text); ?></span>
                                 <i class="zmdi zmdi-long-arrow-right"></i>
                             </a>
                         </div>
@@ -2001,7 +2001,7 @@ function basilico_get_post_grid_layout7($posts = [], $settings = [], $args_m = [
             if (has_post_thumbnail($post->ID) && wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), false)) {
                 $img_id = get_post_thumbnail_id($post->ID);
                 if ($img_id) {
-                    $img = pxl_get_image_by_size(array(
+                    $img = sntravel_get_image_by_size(array(
                         'attach_id'  => $img_id,
                         'thumb_size' => $img_size,
                         'class' => 'no-lazyload',
@@ -2014,7 +2014,7 @@ function basilico_get_post_grid_layout7($posts = [], $settings = [], $args_m = [
         }
         $filter_class = '';
         if ($select_post_by === 'term_selected' && $filter == "true")
-            $filter_class = pxl_get_term_of_post_to_class($post->ID, array_unique($tax));
+            $filter_class = sntravel_get_term_of_post_to_class($post->ID, array_unique($tax));
         $button_text = !empty($button_text) ? $button_text : esc_html__('Read more', 'sntravel');
         $increase = $key + 1;
         $data_settings = '';
@@ -2031,7 +2031,7 @@ function basilico_get_post_grid_layout7($posts = [], $settings = [], $args_m = [
             $data_settings = $args_m[$key]['data_setting'];
         $author = get_user_by('id', $post->post_author);
         ?>
-        <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls . ' ' . $filter_class); ?>" <?php pxl_print_html($data_settings); ?>>
+        <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls . ' ' . $filter_class); ?>" <?php sntravel_print_html($data_settings); ?>>
             <div class="grid-item-inner">
                 <?php
                 $featured_video = get_post_meta($post->ID, 'featured-video-url', true);
@@ -2058,7 +2058,7 @@ function basilico_get_post_grid_layout7($posts = [], $settings = [], $args_m = [
                             <div class="sntravel-media-popup">
                                 <div class="content-inner">
                                     <a class="media-play-button media-default style-2" href="<?php echo esc_url($featured_video); ?>">
-                                        <i class="pxli-play-2"></i>
+                                        <i class="sntraveli-play-2"></i>
                                     </a>
                                 </div>
                             </div>
@@ -2117,7 +2117,7 @@ function basilico_get_post_grid_layout7($posts = [], $settings = [], $args_m = [
             <?php if ($show_button == 'true') : ?>
                 <div class="item-readmore sntravel-button-wrapper">
                     <a class="btn-more" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
-                        <span><?php echo pxl_print_html($button_text); ?></span>
+                        <span><?php echo sntravel_print_html($button_text); ?></span>
                         <i class="zmdi zmdi-long-arrow-right"></i>
                     </a>
                 </div>
@@ -2140,7 +2140,7 @@ function basilico_get_post_grid_layout9($posts = [], $settings = [], $args_m = [
             if (has_post_thumbnail($post->ID) && wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), false)) {
                 $img_id = get_post_thumbnail_id($post->ID);
                 if ($img_id) {
-                    $img = pxl_get_image_by_size(array(
+                    $img = sntravel_get_image_by_size(array(
                         'attach_id'  => $img_id,
                         'thumb_size' => $img_size,
                         'class' => 'no-lazyload',
@@ -2153,7 +2153,7 @@ function basilico_get_post_grid_layout9($posts = [], $settings = [], $args_m = [
         }
         $filter_class = '';
         if ($select_post_by === 'term_selected' && $filter == "true")
-            $filter_class = pxl_get_term_of_post_to_class($post->ID, array_unique($tax));
+            $filter_class = sntravel_get_term_of_post_to_class($post->ID, array_unique($tax));
         $button_text = !empty($button_text) ? $button_text : esc_html__('Read more', 'sntravel');
         $increase = $key + 1;
         $data_settings = '';
@@ -2170,7 +2170,7 @@ function basilico_get_post_grid_layout9($posts = [], $settings = [], $args_m = [
             $data_settings = $args_m[$key]['data_setting'];
         $author = get_user_by('id', $post->post_author);
         ?>
-        <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls . ' ' . $filter_class); ?>" <?php pxl_print_html($data_settings); ?>>
+        <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls . ' ' . $filter_class); ?>" <?php sntravel_print_html($data_settings); ?>>
             <div class="grid-item-inner">
                 <?php if (isset($thumbnail)) : ?>
                     <div class="item-featured">
@@ -2231,7 +2231,7 @@ function basilico_get_post_grid_layout9($posts = [], $settings = [], $args_m = [
                     <?php if ($show_button == 'true') : ?>
                         <div class="item-readmore sntravel-button-wrapper">
                             <a class="btn-more style-1" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
-                                <span><?php echo pxl_print_html($button_text); ?></span>
+                                <span><?php echo sntravel_print_html($button_text); ?></span>
                                 <i class="zmdi zmdi-arrow-forward"></i>
                             </a>
                         </div>
@@ -2243,7 +2243,7 @@ function basilico_get_post_grid_layout9($posts = [], $settings = [], $args_m = [
     endforeach;
 }
 
-function basilico_get_pxl_portfolio_list_layout1($posts = [], $settings = [], $args_m = [])
+function basilico_get_sntravel_portfolio_list_layout1($posts = [], $settings = [], $args_m = [])
 {
     extract($settings);
     foreach ($posts as $key => $post) :
@@ -2254,7 +2254,7 @@ function basilico_get_pxl_portfolio_list_layout1($posts = [], $settings = [], $a
             if (has_post_thumbnail($post->ID) && wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), false)) {
                 $img_id = get_post_thumbnail_id($post->ID);
                 if ($img_id) {
-                    $img = pxl_get_image_by_size(array(
+                    $img = sntravel_get_image_by_size(array(
                         'attach_id'  => $img_id,
                         'thumb_size' => $img_size,
                         'class' => 'no-lazyload',
@@ -2267,7 +2267,7 @@ function basilico_get_pxl_portfolio_list_layout1($posts = [], $settings = [], $a
         }
         $filter_class = '';
         if ($select_post_by === 'term_selected' && $filter == "true")
-            $filter_class = pxl_get_term_of_post_to_class($post->ID, array_unique($tax));
+            $filter_class = sntravel_get_term_of_post_to_class($post->ID, array_unique($tax));
         $button_text = !empty($button_text) ? $button_text : esc_html__('Read more', 'sntravel');
         $increase = $key + 1;
         $data_settings = '';
@@ -2284,7 +2284,7 @@ function basilico_get_pxl_portfolio_list_layout1($posts = [], $settings = [], $a
             $data_settings = $args_m[$key]['data_setting'];
         $author = get_user_by('id', $post->post_author);
         ?>
-        <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls . ' ' . $filter_class); ?>" <?php pxl_print_html($data_settings); ?>>
+        <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls . ' ' . $filter_class); ?>" <?php sntravel_print_html($data_settings); ?>>
             <div class="grid-item-inner">
                 <div class="row gx-lg-50 align-items-lg-center">
                     <?php
@@ -2330,7 +2330,7 @@ function basilico_get_pxl_portfolio_list_layout1($posts = [], $settings = [], $a
                         <?php if ($show_button == 'true') : ?>
                             <div class="item-readmore sntravel-button-wrapper">
                                 <a class="btn" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
-                                    <span><?php echo pxl_print_html($button_text); ?></span>
+                                    <span><?php echo sntravel_print_html($button_text); ?></span>
                                     <i class="zmdi zmdi-long-arrow-right"></i>
                                 </a>
                             </div>
@@ -2345,7 +2345,7 @@ function basilico_get_pxl_portfolio_list_layout1($posts = [], $settings = [], $a
     endforeach;
 }
 
-function basilico_get_post_grid_pxl_portfolio1($posts = [], $settings = [], $args_m = [])
+function basilico_get_post_grid_sntravel_portfolio1($posts = [], $settings = [], $args_m = [])
 {
     extract($settings);
     foreach ($posts as $key => $post) :
@@ -2356,7 +2356,7 @@ function basilico_get_post_grid_pxl_portfolio1($posts = [], $settings = [], $arg
             if (has_post_thumbnail($post->ID) && wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), false)) {
                 $img_id = get_post_thumbnail_id($post->ID);
                 if ($img_id) {
-                    $img = pxl_get_image_by_size(array(
+                    $img = sntravel_get_image_by_size(array(
                         'attach_id'  => $img_id,
                         'thumb_size' => $img_size,
                         'class' => 'no-lazyload',
@@ -2370,7 +2370,7 @@ function basilico_get_post_grid_pxl_portfolio1($posts = [], $settings = [], $arg
 
         $filter_class = '';
         if ($select_post_by === 'term_selected' && $filter == "true")
-            $filter_class = pxl_get_term_of_post_to_class($post->ID, array_unique($tax));
+            $filter_class = sntravel_get_term_of_post_to_class($post->ID, array_unique($tax));
 
         $increase = $key + 1;
         $data_settings = '';
@@ -2390,7 +2390,7 @@ function basilico_get_post_grid_pxl_portfolio1($posts = [], $settings = [], $arg
             $data_settings = $args_m[$key]['data_setting'];
 
         ?>
-        <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls . ' ' . $filter_class); ?>" <?php pxl_print_html($data_settings); ?>>
+        <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls . ' ' . $filter_class); ?>" <?php sntravel_print_html($data_settings); ?>>
             <div class="grid-item-inner">
                 <?php if (isset($thumbnail)) : ?>
                     <div class="item-featured">
@@ -2445,7 +2445,7 @@ function basilico_get_post_grid_pxl_portfolio1($posts = [], $settings = [], $arg
     endforeach;
 }
 
-function basilico_get_post_grid_pxl_portfolio2($posts = [], $settings = [], $args_m = [])
+function basilico_get_post_grid_sntravel_portfolio2($posts = [], $settings = [], $args_m = [])
 {
     extract($settings);
     foreach ($posts as $key => $post) :
@@ -2456,7 +2456,7 @@ function basilico_get_post_grid_pxl_portfolio2($posts = [], $settings = [], $arg
             if (has_post_thumbnail($post->ID) && wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), false)) {
                 $img_id = get_post_thumbnail_id($post->ID);
                 if ($img_id) {
-                    $img = pxl_get_image_by_size(array(
+                    $img = sntravel_get_image_by_size(array(
                         'attach_id'  => $img_id,
                         'thumb_size' => $img_size,
                         'class' => 'no-lazyload',
@@ -2470,7 +2470,7 @@ function basilico_get_post_grid_pxl_portfolio2($posts = [], $settings = [], $arg
 
         $filter_class = '';
         if ($select_post_by === 'term_selected' && $filter == "true")
-            $filter_class = pxl_get_term_of_post_to_class($post->ID, array_unique($tax));
+            $filter_class = sntravel_get_term_of_post_to_class($post->ID, array_unique($tax));
 
         $increase = $key + 1;
         $data_settings = '';
@@ -2490,7 +2490,7 @@ function basilico_get_post_grid_pxl_portfolio2($posts = [], $settings = [], $arg
             $data_settings = $args_m[$key]['data_setting'];
 
         ?>
-        <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls . ' ' . $filter_class); ?>" <?php pxl_print_html($data_settings); ?>>
+        <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls . ' ' . $filter_class); ?>" <?php sntravel_print_html($data_settings); ?>>
             <div class="grid-item-inner">
                 <?php if (isset($thumbnail)) : ?>
                     <div class="item-featured">
@@ -2545,7 +2545,7 @@ function basilico_get_post_grid_pxl_portfolio2($posts = [], $settings = [], $arg
     endforeach;
 }
 
-function basilico_get_post_grid_pxl_portfolio3($posts = [], $settings = [], $args_m = [])
+function basilico_get_post_grid_sntravel_portfolio3($posts = [], $settings = [], $args_m = [])
 {
     extract($settings);
     foreach ($posts as $key => $post) :
@@ -2556,7 +2556,7 @@ function basilico_get_post_grid_pxl_portfolio3($posts = [], $settings = [], $arg
             if (has_post_thumbnail($post->ID) && wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), false)) {
                 $img_id = get_post_thumbnail_id($post->ID);
                 if ($img_id) {
-                    $img = pxl_get_image_by_size(array(
+                    $img = sntravel_get_image_by_size(array(
                         'attach_id'  => $img_id,
                         'thumb_size' => $img_size,
                         'class' => 'no-lazyload',
@@ -2570,7 +2570,7 @@ function basilico_get_post_grid_pxl_portfolio3($posts = [], $settings = [], $arg
 
         $filter_class = '';
         if ($select_post_by === 'term_selected' && $filter == "true")
-            $filter_class = pxl_get_term_of_post_to_class($post->ID, array_unique($tax));
+            $filter_class = sntravel_get_term_of_post_to_class($post->ID, array_unique($tax));
 
         $increase = $key + 1;
         $data_settings = '';
@@ -2590,7 +2590,7 @@ function basilico_get_post_grid_pxl_portfolio3($posts = [], $settings = [], $arg
             $data_settings = $args_m[$key]['data_setting'];
 
         ?>
-        <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls . ' ' . $filter_class); ?>" <?php pxl_print_html($data_settings); ?>>
+        <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls . ' ' . $filter_class); ?>" <?php sntravel_print_html($data_settings); ?>>
             <div class="grid-item-inner">
                 <?php if (isset($thumbnail)) : ?>
                     <div class="item-featured">
@@ -2644,7 +2644,7 @@ function basilico_get_post_grid_pxl_portfolio3($posts = [], $settings = [], $arg
     endforeach;
 }
 
-function basilico_get_post_grid_pxl_portfolio8($posts = [], $settings = [], $args_m = [])
+function basilico_get_post_grid_sntravel_portfolio8($posts = [], $settings = [], $args_m = [])
 {
     extract($settings);
     foreach ($posts as $key => $post) :
@@ -2655,7 +2655,7 @@ function basilico_get_post_grid_pxl_portfolio8($posts = [], $settings = [], $arg
             if (has_post_thumbnail($post->ID) && wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), false)) {
                 $img_id = get_post_thumbnail_id($post->ID);
                 if ($img_id) {
-                    $img = pxl_get_image_by_size(array(
+                    $img = sntravel_get_image_by_size(array(
                         'attach_id'  => $img_id,
                         'thumb_size' => $img_size,
                         'class' => 'no-lazyload',
@@ -2669,7 +2669,7 @@ function basilico_get_post_grid_pxl_portfolio8($posts = [], $settings = [], $arg
 
         $filter_class = '';
         if ($select_post_by === 'term_selected' && $filter == "true")
-            $filter_class = pxl_get_term_of_post_to_class($post->ID, array_unique($tax));
+            $filter_class = sntravel_get_term_of_post_to_class($post->ID, array_unique($tax));
 
         $increase = $key + 1;
         $data_settings = '';
@@ -2689,7 +2689,7 @@ function basilico_get_post_grid_pxl_portfolio8($posts = [], $settings = [], $arg
             $data_settings = $args_m[$key]['data_setting'];
 
         ?>
-        <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls . ' ' . $filter_class); ?>" <?php pxl_print_html($data_settings); ?>>
+        <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls . ' ' . $filter_class); ?>" <?php sntravel_print_html($data_settings); ?>>
             <div class="grid-item-inner">
                 <?php if (isset($thumbnail)) : ?>
                     <div class="item-featured">
@@ -2720,7 +2720,7 @@ function basilico_get_post_grid_pxl_portfolio8($posts = [], $settings = [], $arg
     endforeach;
 }
 
-function basilico_get_post_grid_pxl_portfolio9($posts = [], $settings = [], $args_m = [])
+function basilico_get_post_grid_sntravel_portfolio9($posts = [], $settings = [], $args_m = [])
 {
     extract($settings);
     foreach ($posts as $key => $post) :
@@ -2731,7 +2731,7 @@ function basilico_get_post_grid_pxl_portfolio9($posts = [], $settings = [], $arg
             if (has_post_thumbnail($post->ID) && wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), false)) {
                 $img_id = get_post_thumbnail_id($post->ID);
                 if ($img_id) {
-                    $img = pxl_get_image_by_size(array(
+                    $img = sntravel_get_image_by_size(array(
                         'attach_id'  => $img_id,
                         'thumb_size' => $img_size,
                         'class' => 'no-lazyload',
@@ -2745,7 +2745,7 @@ function basilico_get_post_grid_pxl_portfolio9($posts = [], $settings = [], $arg
 
         $filter_class = '';
         if ($select_post_by === 'term_selected' && $filter == "true")
-            $filter_class = pxl_get_term_of_post_to_class($post->ID, array_unique($tax));
+            $filter_class = sntravel_get_term_of_post_to_class($post->ID, array_unique($tax));
 
         $increase = $key + 1;
         $data_settings = '';
@@ -2766,7 +2766,7 @@ function basilico_get_post_grid_pxl_portfolio9($posts = [], $settings = [], $arg
         $button_text = !empty($button_text) ? $button_text : esc_html__('Read more', 'sntravel');
         $custom_text = get_post_meta($post->ID, 'custom_text_portfolio',true);
         ?>
-        <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls . ' ' . $filter_class); ?>" <?php pxl_print_html($data_settings); ?>>
+        <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls . ' ' . $filter_class); ?>" <?php sntravel_print_html($data_settings); ?>>
             <div class="grid-item-inner">
                 <?php if (isset($thumbnail)) : ?>
                     <div class="item-featured">
@@ -2798,7 +2798,7 @@ function basilico_get_post_grid_pxl_portfolio9($posts = [], $settings = [], $arg
                         <?php if ($show_button == 'true') : ?>
                             <div class="item-readmore">
                                 <a class="sntravel-buttonmore" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
-                                    <span><?php echo pxl_print_html($button_text); ?></span>
+                                    <span><?php echo sntravel_print_html($button_text); ?></span>
                                 </a>
                             </div>
                         <?php endif; ?>
@@ -2810,7 +2810,7 @@ function basilico_get_post_grid_pxl_portfolio9($posts = [], $settings = [], $arg
     endforeach;
 }
 
-function basilico_get_post_grid_pxl_portfolio10($posts = [], $settings = [], $args_m = [])
+function basilico_get_post_grid_sntravel_portfolio10($posts = [], $settings = [], $args_m = [])
 {
     extract($settings);
     foreach ($posts as $key => $post) :
@@ -2821,7 +2821,7 @@ function basilico_get_post_grid_pxl_portfolio10($posts = [], $settings = [], $ar
             if (has_post_thumbnail($post->ID) && wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), false)) {
                 $img_id = get_post_thumbnail_id($post->ID);
                 if ($img_id) {
-                    $img = pxl_get_image_by_size(array(
+                    $img = sntravel_get_image_by_size(array(
                         'attach_id'  => $img_id,
                         'thumb_size' => $img_size,
                         'class' => 'no-lazyload',
@@ -2835,7 +2835,7 @@ function basilico_get_post_grid_pxl_portfolio10($posts = [], $settings = [], $ar
 
         $filter_class = '';
         if ($select_post_by === 'term_selected' && $filter == "true")
-            $filter_class = pxl_get_term_of_post_to_class($post->ID, array_unique($tax));
+            $filter_class = sntravel_get_term_of_post_to_class($post->ID, array_unique($tax));
 
         $increase = $key + 1;
         $data_settings = '';
@@ -2856,7 +2856,7 @@ function basilico_get_post_grid_pxl_portfolio10($posts = [], $settings = [], $ar
         $button_text = !empty($button_text) ? $button_text : esc_html__('read more', 'sntravel');
 
         ?>
-        <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls . ' ' . $filter_class); ?>" <?php pxl_print_html($data_settings); ?>>
+        <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls . ' ' . $filter_class); ?>" <?php sntravel_print_html($data_settings); ?>>
             <div class="grid-item-inner">
                 <?php if (isset($thumbnail)) : ?>
                     <div class="item-featured">
@@ -2899,7 +2899,7 @@ function basilico_get_post_grid_pxl_portfolio10($posts = [], $settings = [], $ar
                         <?php if ($show_button == 'true') : ?>
                             <div class="item-buttom">
                                 <a class="btn btn-outline-secondary-2" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
-                                    <span><?php echo pxl_print_html($button_text); ?></span>
+                                    <span><?php echo sntravel_print_html($button_text); ?></span>
                                 </a>
                             </div>
                         <?php endif; ?>
@@ -2911,7 +2911,7 @@ function basilico_get_post_grid_pxl_portfolio10($posts = [], $settings = [], $ar
     endforeach;
 }
 
-function basilico_get_post_grid_pxl_portfolio12($posts = [], $settings = [], $args_m = [])
+function basilico_get_post_grid_sntravel_portfolio12($posts = [], $settings = [], $args_m = [])
 {
     extract($settings);
     foreach ($posts as $key => $post) :
@@ -2922,7 +2922,7 @@ function basilico_get_post_grid_pxl_portfolio12($posts = [], $settings = [], $ar
             if (has_post_thumbnail($post->ID) && wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), false)) {
                 $img_id = get_post_thumbnail_id($post->ID);
                 if ($img_id) {
-                    $img = pxl_get_image_by_size(array(
+                    $img = sntravel_get_image_by_size(array(
                         'attach_id'  => $img_id,
                         'thumb_size' => $img_size,
                         'class' => 'no-lazyload',
@@ -2936,7 +2936,7 @@ function basilico_get_post_grid_pxl_portfolio12($posts = [], $settings = [], $ar
 
         $filter_class = '';
         if ($select_post_by === 'term_selected' && $filter == "true")
-            $filter_class = pxl_get_term_of_post_to_class($post->ID, array_unique($tax));
+            $filter_class = sntravel_get_term_of_post_to_class($post->ID, array_unique($tax));
 
         $increase = $key + 1;
         $data_settings = '';
@@ -2956,7 +2956,7 @@ function basilico_get_post_grid_pxl_portfolio12($posts = [], $settings = [], $ar
             $data_settings = $args_m[$key]['data_setting'];
 
         ?>
-        <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls . ' ' . $filter_class); ?>" <?php pxl_print_html($data_settings); ?>>
+        <div class="<?php echo esc_attr($str_item_class . ' ' . $animate_cls . ' ' . $filter_class); ?>" <?php sntravel_print_html($data_settings); ?>>
             <div class="grid-item-inner">
                 <?php if (isset($thumbnail)) : ?>
                     <div class="item-featured">
@@ -2987,7 +2987,7 @@ function basilico_get_post_grid_pxl_portfolio12($posts = [], $settings = [], $ar
     endforeach;
 }
 
-function basilico_arrow_template($settings = [], $arrow_icon_prev_cls = 'pxli pxli-arrow-prev', $arrow_icon_next_cls = 'pxli pxli-arrow-next') {
+function basilico_arrow_template($settings = [], $arrow_icon_prev_cls = 'sntraveli sntraveli-arrow-prev', $arrow_icon_next_cls = 'sntraveli sntraveli-arrow-next') {
     ?>
     <div class="sntravel-swiper-arrows <?php echo esc_attr($settings['arrows_style']); ?>">
         <div class="sntravel-swiper-arrow sntravel-swiper-arrow-prev <?php echo esc_attr($settings['arrow_prev_position']); ?>">

@@ -1,11 +1,11 @@
 <?php
 // Register PXL Widget
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name' => 'pxl_navigation_carousel',
+        'name' => 'sntravel_navigation_carousel',
         'title' => esc_html__('Navigation Carousel', 'sntravel' ),
         'icon' => 'eicon-dual-button',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'params' => array(
             'sections' => array(
                 array(
@@ -35,7 +35,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Prev Button Background', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-navigation-carousel .nav-prev' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-navigation-carousel .nav-prev' => 'background-color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -43,7 +43,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Prev Button Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-navigation-carousel .nav-prev i' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-navigation-carousel .nav-prev i' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -51,7 +51,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Next Button Background', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-navigation-carousel .nav-next' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-navigation-carousel .nav-next' => 'background-color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -59,7 +59,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Next Button Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-navigation-carousel .nav-next i' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-navigation-carousel .nav-next i' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -74,7 +74,7 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-navigation-carousel .nav-button' => 'width: {{SIZE}}{{UNIT}} !important; height: {{SIZE}}{{UNIT}} !important;',
+                                '{{WRAPPER}} .sntravel-navigation-carousel .nav-button' => 'width: {{SIZE}}{{UNIT}} !important; height: {{SIZE}}{{UNIT}} !important;',
                             ],
 
                         ),

@@ -1,5 +1,5 @@
 <?php
-$html_id = pxl_get_element_id($settings);
+$html_id = sntravel_get_element_id($settings);
 $tax = ['category'];
 $select_post_by = $widget->get_setting('select_post_by', 'term_selected');
 $source = $post_ids = [];
@@ -13,7 +13,7 @@ if ($select_post_by === 'post_selected') {
 $orderby = $widget->get_setting('orderby', 'date');
 $order = $widget->get_setting('order', 'desc');
 
-extract(pxl_get_posts_of_grid(
+extract(sntravel_get_posts_of_grid(
     'post',
     ['source' => $source, 'orderby' => $orderby, 'order' => $order, 'post_ids' => $post_ids],
     $tax
@@ -24,13 +24,13 @@ $layout               = $widget->get_setting('layout_' . $post_type, 'post-creat
 $layout_mode          = $widget->get_setting('layout_mode', 'fitRows');
 
 if (count($posts) <= 0) {
-    echo '<div class="pxl-no-post-grid">' . esc_html__('No Post Found', 'sntravel') . '</div>';
+    echo '<div class="sntravel-no-post-grid">' . esc_html__('No Post Found', 'sntravel') . '</div>';
     return;
 }
 extract($settings);
 ?>
 
-<div class="pxl-post-create layout-1">
+<div class="sntravel-post-create layout-1">
     <div class="post-imgs"></div>
     <div class="container d-flex justify-content-between">
         <div class="post-list-container">
@@ -38,7 +38,7 @@ extract($settings);
                 if (has_post_thumbnail($post->ID) && wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), false)) {
                     $img_id = get_post_thumbnail_id($post->ID);
                     if ($img_id) {
-                        $img = pxl_get_image_by_size(array(
+                        $img = sntravel_get_image_by_size(array(
                             'attach_id'  => $img_id,
                             'thumb_size' => 'full',
                             'class' => 'no-lazyload'
@@ -105,9 +105,9 @@ extract($settings);
                             </div>
                         <?php endif; ?>
                         <?php if ($show_button == 'true') : ?>
-                            <div class="item-readmore pxl-button-wrapper d-none">
+                            <div class="item-readmore sntravel-button-wrapper d-none">
                                 <a class="btn-more" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
-                                    <span><?php echo pxl_print_html($button_text); ?></span>
+                                    <span><?php echo sntravel_print_html($button_text); ?></span>
                                     <i class="zmdi zmdi-long-arrow-right"></i>
                                 </a>
                             </div>
@@ -150,14 +150,14 @@ extract($settings);
             </div>
             <div class="post-title"></div>
             <div class="post-metas"></div>
-            <div class="pxl-divider"></div>
+            <div class="sntravel-divider"></div>
             <div class="post-excerpt"></div>
             <div class="post-readmore"></div>
         </div>
         <div class="scroll-bar animation">
             <span><?php echo esc_html('Scroll', 'sntravel') ?></span>
             <div class="scroll-icon">
-                <i class="pxli pxli-down-arrow"></i>
+                <i class="sntraveli sntraveli-down-arrow"></i>
             </div>
         </div>
     </div>

@@ -1,12 +1,12 @@
 <?php
 use Elementor\Icons_Manager;
 Icons_Manager::enqueue_shim();
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name' => 'pxl_fancy_box_grid',
+        'name' => 'sntravel_fancy_box_grid',
         'title' => esc_html__('PXL Fancy Box Grid', 'sntravel'),
         'icon' => 'eicon-info-box',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'scripts' => [
             'imagesloaded',
             'isotope',
@@ -27,10 +27,10 @@ pxl_add_custom_widget(
                             'options' => [
                                 '1' => [
                                     'label' => esc_html__( 'Layout 1', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_fancy_box_grid-1.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_fancy_box_grid-1.jpg'
                                 ],
                             ],
-                            'prefix_class' => 'pxl-fancy-box-grid-layout-',
+                            'prefix_class' => 'sntravel-fancy-box-grid-layout-',
                         ),
                     ),
                 ),
@@ -72,7 +72,7 @@ pxl_add_custom_widget(
                                     'label' => esc_html__('Background Color', 'sntravel' ),
                                     'type' => \Elementor\Controls_Manager::COLOR,
                                     'selectors' => [
-                                        '{{WRAPPER}} .pxl-fancy-box-grid {{CURRENT_ITEM}}' => 'background-color: {{VALUE}};',
+                                        '{{WRAPPER}} .sntravel-fancy-box-grid {{CURRENT_ITEM}}' => 'background-color: {{VALUE}};',
                                     ],
                                 ),
                             ),
@@ -86,7 +86,7 @@ pxl_add_custom_widget(
                     'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
                     'controls' => array(
                         array(
-                            'name' => 'pxl_parallax',
+                            'name' => 'sntravel_parallax',
                             'label' => esc_html__( 'Parallax Type', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::SELECT,
                             'options' => [
@@ -108,10 +108,10 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Value', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::TEXT,
                             'default' => '',
-                            'condition' => [ 'pxl_parallax!' => '']  
+                            'condition' => [ 'sntravel_parallax!' => '']  
                         ),
                         array(
-                            'name' => 'pxl_parallax_screen',
+                            'name' => 'sntravel_parallax_screen',
                             'label'   => esc_html__( 'Parallax In Screen', 'sntravel' ),
                             'type'    => \Elementor\Controls_Manager::SELECT,
                             'control_type' => 'responsive',
@@ -120,8 +120,8 @@ pxl_add_custom_widget(
                                 '' => esc_html__( 'Default', 'sntravel' ),
                                 'no'   => esc_html__( 'No', 'sntravel' ),
                             ),
-                            'prefix_class' => 'pxl-parallax%s-',
-                            'condition' => [ 'pxl_parallax!' => '']  
+                            'prefix_class' => 'sntravel-parallax%s-',
+                            'condition' => [ 'sntravel_parallax!' => '']  
                         )
                     ),
                 ),
@@ -155,15 +155,15 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Title Typography', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-fancy-box-grid .item-inner .item-title',
+                            'selector' => '{{WRAPPER}} .sntravel-fancy-box-grid .item-inner .item-title',
                         ),
                         array(
                             'name' => 'color_title',
                             'label' => esc_html__('Color Title', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box-grid .item-inner .item-title' => 'color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-fancy-box-grid .item-inner .item-title a::after' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-fancy-box-grid .item-inner .item-title' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-fancy-box-grid .item-inner .item-title a::after' => 'background-color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -171,14 +171,14 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Categories Typography', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-fancy-box-grid .item-inner .item-categories',
+                            'selector' => '{{WRAPPER}} .sntravel-fancy-box-grid .item-inner .item-categories',
                         ),
                         array(
                             'name' => 'color_categories',
                             'label' => esc_html__('Color Categories', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box-grid .item-inner .item-categories' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-fancy-box-grid .item-inner .item-categories' => 'color: {{VALUE}};',
                             ],
                         ),
                     ),

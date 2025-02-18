@@ -88,7 +88,7 @@ label[for="coupon_code"]{
 			}
 			&:after {
 				content: "\e95b" !important;
-				font-family: $pxli_font;
+				font-family: $sntraveli_font;
 				font-size: 20px;
 				color: #fff;
 				@include animation(sntravel-spin 2s linear infinite);
@@ -354,7 +354,7 @@ label[for="coupon_code"]{
 					content: '\e9e9';
 					font-size: 15px;
 					color: $primary_color;
-					font-family: $pxli_font;
+					font-family: $sntraveli_font;
 					margin-right: 5px;
 				}
 			}
@@ -583,7 +583,7 @@ label[for="coupon_code"]{
 					content: '\e9e9';
 					font-size: 15px;
 					color: #fff;
-					font-family: $pxli_font;
+					font-family: $sntraveli_font;
 					margin-right: 5px;
 				}
 			}
@@ -670,7 +670,7 @@ label[for="coupon_code"]{
 							content: '\e9e9';
 							font-size: 15px;
 							color: #fff;
-							font-family: $pxli_font;
+							font-family: $sntraveli_font;
 							margin-right: 9px;
 						}
 					}
@@ -738,7 +738,7 @@ label[for="coupon_code"]{
 							content: '\e9e9';
 							font-size: 15px;
 							color: $primary_color;
-							font-family: $pxli_font;
+							font-family: $sntraveli_font;
 							margin-right: 9px;
 						}
 					}

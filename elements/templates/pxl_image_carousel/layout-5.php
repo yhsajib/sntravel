@@ -30,7 +30,7 @@ $opts = [
 ];
 
 $widget->add_render_attribute( 'carousel', [
-    'class'         => 'pxl-swiper-container overflow-hidden',
+    'class'         => 'sntravel-swiper-container overflow-hidden',
     'dir'           => is_rtl() ? 'rtl' : 'ltr',
     'data-settings' => wp_json_encode($opts)
 ]);
@@ -39,25 +39,25 @@ $img_size = !empty($img_size) ? $img_size : 'full';
 $button_text = !empty($button_text) ? $button_text : esc_html__('Drag', 'sntravel');
 ?>
 
-<div class="pxl-swiper-slider pxl-image-carousel layout-5">
+<div class="sntravel-swiper-slider sntravel-image-carousel layout-5">
     <?php if ($drag_cursor == "true") : ?>
         <div class="circle-cursor">
             <span><?php echo esc_html($drag_text); ?></span>
         </div>
     <?php endif; ?>
-    <div class="pxl-swiper-slider-wrap pxl-carousel-inner relative">
-        <div <?php pxl_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
-            <div class="pxl-swiper-wrapper swiper-wrapper">
+    <div class="sntravel-swiper-slider-wrap sntravel-carousel-inner relative">
+        <div <?php sntravel_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
+            <div class="sntravel-swiper-wrapper swiper-wrapper">
                 <?php foreach ($imgGallery as $key => $value) :
                     $image = isset($value['id']) ? $value['id'] : '';
-                    $img = pxl_get_image_by_size(array(
+                    $img = sntravel_get_image_by_size(array(
                         'attach_id'  => $image,
                         'thumb_size' => $img_size,
                         'class' => 'no-lazyload',
                     ));
                     $thumbnail = $img['thumbnail'];
                     ?>
-                    <div class="pxl-swiper-slide swiper-slide">
+                    <div class="sntravel-swiper-slide swiper-slide">
                         <?php if (!empty($image)) : ?>
                             <div class="item-inner">
                                 <?php echo wp_kses_post($thumbnail); ?>
@@ -67,7 +67,7 @@ $button_text = !empty($button_text) ? $button_text : esc_html__('Drag', 'sntrave
                 <?php endforeach; ?>
             </div>
         </div>
-        <?php basilico_arrow_template($settings, 'pxli pxli-left-arrow', 'pxli pxli-right-arrow'); ?>
-        <div class="pxl-swiper-dots"></div>
+        <?php basilico_arrow_template($settings, 'sntraveli sntraveli-left-arrow', 'sntraveli sntraveli-right-arrow'); ?>
+        <div class="sntravel-swiper-dots"></div>
     </div>
 </div>

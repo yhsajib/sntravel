@@ -877,7 +877,7 @@
             }
             .item-info {
                 margin-top: 13px;
-                i.pxli {
+                i.sntraveli {
                     font-size: 17px;
                     color: $primary_color;
                     margin-bottom: 17px;
@@ -1318,7 +1318,7 @@
                     position: absolute;
                     top: -3px;
                     left: 0;
-                    font-family: "pxli";
+                    font-family: "sntraveli";
                     font-size: 16px;
                     color: $primary_color;
                     transition: all 300ms ease 0s;
@@ -4690,7 +4690,7 @@
                         transform: scale(1.1);
                     }
                 }
-                .pxli-play-2 {
+                .sntraveli-play-2 {
                     color: inherit !important;
                     -webkit-text-stroke: unset;
                 }
@@ -4986,7 +4986,7 @@
                 }
                 &::after{
                     content: "\e9eb";
-                    font-family: 'pxli';
+                    font-family: 'sntraveli';
                 }
             }
             .post-category{
@@ -5317,7 +5317,7 @@
                     transform: scale(1.1);
                 }
             }
-            .pxli-play-2 {
+            .sntraveli-play-2 {
                 color: inherit !important;
                 -webkit-text-stroke: unset;
             }

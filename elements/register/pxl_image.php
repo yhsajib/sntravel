@@ -1,10 +1,10 @@
 <?php
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     [
-        'name' => 'pxl_image',
+        'name' => 'sntravel_image',
         'title' => esc_html__('PXL Image', 'sntravel' ),
         'icon' => 'eicon-image',
-        'categories' => ['pxltheme-core'],
+        'categories' => ['sntraveltheme-core'],
         'params' => [
             'sections' => [
                 [
@@ -183,7 +183,7 @@ pxl_add_custom_widget(
                     'tab'      => 'content',
                     'controls' => [
                         [
-                            'name' => 'pxl_parallax',
+                            'name' => 'sntravel_parallax',
                             'label' => esc_html__( 'Parallax Type', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::SELECT,
                             'options' => [
@@ -205,10 +205,10 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Value', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::TEXT,
                             'default' => '',
-                            'condition' => [ 'pxl_parallax!' => '']  
+                            'condition' => [ 'sntravel_parallax!' => '']  
                         ],
                         [
-                            'name' => 'pxl_parallax_screen',
+                            'name' => 'sntravel_parallax_screen',
                             'label'   => esc_html__( 'Parallax In Screen', 'sntravel' ),
                             'type'    => \Elementor\Controls_Manager::SELECT,
                             'control_type' => 'responsive',
@@ -217,8 +217,8 @@ pxl_add_custom_widget(
                                 '' => esc_html__( 'Default', 'sntravel' ),
                                 'no'   => esc_html__( 'No', 'sntravel' ),
                             ),
-                            'prefix_class' => 'pxl-parallax%s-',
-                            'condition' => [ 'pxl_parallax!' => '']  
+                            'prefix_class' => 'sntravel-parallax%s-',
+                            'condition' => [ 'sntravel_parallax!' => '']  
                         ]
                         
                     ]
@@ -230,7 +230,7 @@ pxl_add_custom_widget(
                     'controls' => array_merge(
                         [
                             [
-                                'name'    => 'pxl_bg_parallax',
+                                'name'    => 'sntravel_bg_parallax',
                                 'label'   => esc_html__( 'Background Parallax Type', 'sntravel' ),
                                 'type'    => \Elementor\Controls_Manager::SELECT,
                                 'options' => [
@@ -273,9 +273,9 @@ pxl_add_custom_widget(
                                     ],
                                 ],
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-image-wg' => 'width: {{SIZE}}{{UNIT}};',
+                                    '{{WRAPPER}} .sntravel-image-wg' => 'width: {{SIZE}}{{UNIT}};',
                                 ],
-                                'condition' => [ 'pxl_bg_parallax!' => '']  
+                                'condition' => [ 'sntravel_bg_parallax!' => '']  
                             ],
                             [
                                 'name' => 'bg_parallax_height',
@@ -303,20 +303,20 @@ pxl_add_custom_widget(
                                     ],
                                 ],
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-image-wg' => 'height: {{SIZE}}{{UNIT}};',
+                                    '{{WRAPPER}} .sntravel-image-wg' => 'height: {{SIZE}}{{UNIT}};',
                                 ],
-                                'condition' => [ 'pxl_bg_parallax!' => '']  
+                                'condition' => [ 'sntravel_bg_parallax!' => '']  
                             ]
                         ],
                         basilico_position_option_base([
                                 'prefix' => '',
                                 'selectors_class' => '.parallax-inner',
-                                'condition' => ['pxl_bg_parallax' => 'transform']
+                                'condition' => ['sntravel_bg_parallax' => 'transform']
                             ]
                         ),
                         basilico_parallax_effect_option([
                                 'prefix' => '',
-                                'condition' => ['pxl_bg_parallax' => 'transform']
+                                'condition' => ['sntravel_bg_parallax' => 'transform']
                             ]
                         )
                     )
@@ -532,7 +532,7 @@ pxl_add_custom_widget(
                             'name' => 'image_border',
                             'type' => \Elementor\Group_Control_Border::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-image-wg, {{WRAPPER}} .pxl-bg-parallax',
+                            'selector' => '{{WRAPPER}} .sntravel-image-wg, {{WRAPPER}} .sntravel-bg-parallax',
                             'separator' => 'before',
                         ],
                         [
@@ -542,8 +542,8 @@ pxl_add_custom_widget(
                             'control_type' => 'responsive',
                             'size_units'   => [ 'px', '%' ],
                             'selectors'    => [
-                                '{{WRAPPER}} .pxl-image-wg' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                                '{{WRAPPER}} .pxl-bg-parallax' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-image-wg' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-bg-parallax' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                                 '{{WRAPPER}} img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                         ],
@@ -570,7 +570,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::SELECT,
                             'options' => [
                                 ''           => esc_html__( 'None', 'sntravel' ),
-                                'pxl-transition' => esc_html__( 'Transition', 'sntravel' ),
+                                'sntravel-transition' => esc_html__( 'Transition', 'sntravel' ),
                                 'draw-from-top' => esc_html__( 'Draw From Top', 'sntravel' ),
                                 'draw-from-left' => esc_html__( 'Draw From Left', 'sntravel' ),
                                 'draw-from-right' => esc_html__( 'Draw From Right', 'sntravel' ),
@@ -618,7 +618,7 @@ pxl_add_custom_widget(
                             'min'       => 0,
                             'step'      => 100,
                             'selectors'    => [
-                                '{{WRAPPER}} .pxl-image-wg' => 'animation-delay: {{VALUE}}ms;',
+                                '{{WRAPPER}} .sntravel-image-wg' => 'animation-delay: {{VALUE}}ms;',
                             ],
                             'condition' => [
                                 'img_animation!' => 'default'

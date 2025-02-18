@@ -4,8 +4,8 @@
      * @param $ The jQuery alias
      */
     var PxlCircleTextHandler = function( $scope, $ ) {
-        if ($scope.find(".pxl-circle-text .circle-text").length > 0) {
-            const $circleTextElement = $scope.find(".pxl-circle-text .circle-text");
+        if ($scope.find(".sntravel-circle-text .circle-text").length > 0) {
+            const $circleTextElement = $scope.find(".sntravel-circle-text .circle-text");
             let textContent = $circleTextElement.text().trim();
 
             const middleIndex = Math.floor(textContent.length / 2);
@@ -18,6 +18,6 @@
 
     // Make sure you run this code under Elementor.
     $( window ).on( 'elementor/frontend/init', function() {
-        elementorFrontend.hooks.addAction( 'frontend/element_ready/pxl_circle_text.default', PxlCircleTextHandler );
+        elementorFrontend.hooks.addAction( 'frontend/element_ready/sntravel_circle_text.default', PxlCircleTextHandler );
     } );
 } )( jQuery );

@@ -13,11 +13,11 @@ $pricing_table_layout_section = array(
             'options' => [
                 '1' => [
                     'label' => esc_html__( 'Layout 1', 'sntravel' ),
-                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_pricing_table-1.jpg'
+                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_pricing_table-1.jpg'
                 ],
                 '2' => [
                     'label' => esc_html__( 'Layout 2', 'sntravel' ),
-                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_pricing_table-2.jpg'
+                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/sntravel_pricing_table-2.jpg'
                 ],
             ],
         ),
@@ -193,7 +193,7 @@ $pricing_table_button_section = array(
             'name' => 'pricing_table_button_link_existing_content',
             'label' => esc_html__('Existing Page', 'sntravel'),
             'type' => \Elementor\Controls_Manager::SELECT2,
-            'options' => pxl_get_all_page(),
+            'options' => sntravel_get_all_page(),
             'condition' => [
                 'pricing_table_button_url_type' => 'link',
             ],
@@ -239,14 +239,14 @@ $pricing_title_style_settings = array(
             'type' => \Elementor\Group_Control_Background::get_type(),
             'control_type' => 'group',
             'types' => ['classic', 'gradient'],
-            'selector' => '{{WRAPPER}} .pricing-table-title .title-icon, {{WRAPPER}} .pxl-pricing-wrap .pricing-table-container .price-money-container:before',
+            'selector' => '{{WRAPPER}} .pricing-table-title .title-icon, {{WRAPPER}} .sntravel-pricing-wrap .pricing-table-container .price-money-container:before',
         ),
         array(
             'name' => 'border_width',
             'label' => esc_html__( 'Border Width', 'sntravel' ),
             'type' => \Elementor\Controls_Manager::DIMENSIONS,
             'selectors' => [
-                '{{WRAPPER}} .pxl-pricing-wrap .pricing-table-container .inner-box' => 'border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .sntravel-pricing-wrap .pricing-table-container .inner-box' => 'border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
             'responsive' => true,
         ),
@@ -256,7 +256,7 @@ $pricing_title_style_settings = array(
             'type' => \Elementor\Controls_Manager::COLOR,
             'default' => '',
             'selectors' => [
-                '{{WRAPPER}} .pxl-pricing-wrap .pricing-table-container .inner-box' => 'border-color: {{VALUE}};',
+                '{{WRAPPER}} .sntravel-pricing-wrap .pricing-table-container .inner-box' => 'border-color: {{VALUE}};',
             ],
         ),
         array(
@@ -328,14 +328,14 @@ $pricing_price_style_settings = array(
             'label' => esc_html__('Color', 'sntravel'),
             'type' => \Elementor\Controls_Manager::COLOR,
             'selectors' => [
-                '{{WRAPPER}} .pxl-pricing-wrap .pricing-price-currency' => 'color: {{VALUE}} !important;'
+                '{{WRAPPER}} .sntravel-pricing-wrap .pricing-price-currency' => 'color: {{VALUE}} !important;'
             ],
         ),
         array(
             'name' => 'currency_typo',
             'type' => \Elementor\Group_Control_Typography::get_type(),
             'control_type' => 'group',
-            'selector' => '{{WRAPPER}} .pxl-pricing-wrap .pricing-price-currency',
+            'selector' => '{{WRAPPER}} .sntravel-pricing-wrap .pricing-price-currency',
         ),
         array(
             'name' => 'pricing_currency_postion',
@@ -345,7 +345,7 @@ $pricing_price_style_settings = array(
             'size_units' => ['px', 'em', '%'],
             'allowed_dimensions' => ['top', 'left'],
             'selectors' => [
-                '{{WRAPPER}} .pxl-pricing-wrap  .pricing-price-currency' => 'top: {{TOP}}{{UNIT}}; left: {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .sntravel-pricing-wrap  .pricing-price-currency' => 'top: {{TOP}}{{UNIT}}; left: {{LEFT}}{{UNIT}};',
             ],
             'separator' => 'after'
         ),
@@ -359,14 +359,14 @@ $pricing_price_style_settings = array(
             'label' => esc_html__('Color', 'sntravel'),
             'type' => \Elementor\Controls_Manager::COLOR,
             'selectors' => [
-                '{{WRAPPER}} .pxl-pricing-wrap .pricing-price-value' => 'color: {{VALUE}};'
+                '{{WRAPPER}} .sntravel-pricing-wrap .pricing-price-value' => 'color: {{VALUE}};'
             ],
         ),
         array(
             'name' => 'price_typo',
             'type' => \Elementor\Group_Control_Typography::get_type(),
             'control_type' => 'group',
-            'selector' => '{{WRAPPER}} .pxl-pricing-wrap .pricing-price-value',
+            'selector' => '{{WRAPPER}} .sntravel-pricing-wrap .pricing-price-value',
         ),
         array(
             'name' => 'pricing_price_margin',
@@ -375,7 +375,7 @@ $pricing_price_style_settings = array(
             'control_type' => 'responsive',
             'size_units' => ['px', 'em', '%'],
             'selectors' => [
-                '{{WRAPPER}} .pxl-pricing-wrap .pricing-price-value' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .sntravel-pricing-wrap .pricing-price-value' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
             'separator' => 'after',
         ),
@@ -389,14 +389,14 @@ $pricing_price_style_settings = array(
             'label' => esc_html__('Color', 'sntravel'),
             'type' => \Elementor\Controls_Manager::COLOR,
             'selectors' => [
-                '{{WRAPPER}} .pxl-pricing-wrap .pricing-price-separator' => 'color: {{VALUE}};'
+                '{{WRAPPER}} .sntravel-pricing-wrap .pricing-price-separator' => 'color: {{VALUE}};'
             ],
         ),
         array(
             'name' => 'separator_typo',
             'type' => \Elementor\Group_Control_Typography::get_type(),
             'control_type' => 'group',
-            'selector' => '{{WRAPPER}} .pxl-pricing-wrap .pricing-price-separator',
+            'selector' => '{{WRAPPER}} .sntravel-pricing-wrap .pricing-price-separator',
         ),
         array(
             'name' => 'pricing_sep_margin',
@@ -405,7 +405,7 @@ $pricing_price_style_settings = array(
             'control_type' => 'responsive',
             'size_units' => ['px', 'em', '%'],
             'selectors' => [
-                '{{WRAPPER}} .pxl-pricing-wrap .pricing-price-separator' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                '{{WRAPPER}} .sntravel-pricing-wrap .pricing-price-separator' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
             ],
             'separator' => 'after',
         ),
@@ -419,14 +419,14 @@ $pricing_price_style_settings = array(
             'label' => esc_html__('Color', 'sntravel'),
             'type' => \Elementor\Controls_Manager::COLOR,
             'selectors' => [
-                '{{WRAPPER}} .pxl-pricing-wrap .pricing-price-duration' => 'color: {{VALUE}};'
+                '{{WRAPPER}} .sntravel-pricing-wrap .pricing-price-duration' => 'color: {{VALUE}};'
             ],
         ),
         array(
             'name' => 'duration_typo',
             'type' => \Elementor\Group_Control_Typography::get_type(),
             'control_type' => 'group',
-            'selector' => '{{WRAPPER}} .pxl-pricing-wrap .pricing-price-duration',
+            'selector' => '{{WRAPPER}} .sntravel-pricing-wrap .pricing-price-duration',
         ),
         array(
             'name' => 'pricing_dur_margin',
@@ -435,7 +435,7 @@ $pricing_price_style_settings = array(
             'control_type' => 'responsive',
             'size_units' => ['px', 'em', '%'],
             'selectors' => [
-                '{{WRAPPER}} .pxl-pricing-wrap .pricing-price-duration' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                '{{WRAPPER}} .sntravel-pricing-wrap .pricing-price-duration' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
             ],
             'separator' => 'after',
         ),
@@ -458,7 +458,7 @@ $pricing_list_style_settings = array(
             'label' => esc_html__('Color', 'sntravel'),
             'type' => \Elementor\Controls_Manager::COLOR,
             'selectors' => [
-                '{{WRAPPER}} .pxl-pricing-wrap .pricing-list .pricing-list-span' => 'color: {{VALUE}};'
+                '{{WRAPPER}} .sntravel-pricing-wrap .pricing-list .pricing-list-span' => 'color: {{VALUE}};'
             ]
         ),
         array(
@@ -466,7 +466,7 @@ $pricing_list_style_settings = array(
             'label' => esc_html__('Hover Color', 'sntravel'),
             'type' => \Elementor\Controls_Manager::COLOR,
             'selectors' => [
-                '{{WRAPPER}} .pxl-pricing-wrap .pricing-table-container:hover .pricing-list .pricing-list-span' => 'color: {{VALUE}} !important;'
+                '{{WRAPPER}} .sntravel-pricing-wrap .pricing-table-container:hover .pricing-list .pricing-list-span' => 'color: {{VALUE}} !important;'
             ]
         ),
         array(
@@ -474,14 +474,14 @@ $pricing_list_style_settings = array(
             'label' => esc_html__('Slashed Color', 'sntravel'),
             'type' => \Elementor\Controls_Manager::COLOR,
             'selectors' => [
-                '{{WRAPPER}} .pxl-pricing-wrap .pricing-list .pricing-list-span.item-slashed' => 'color: {{VALUE}};'
+                '{{WRAPPER}} .sntravel-pricing-wrap .pricing-list .pricing-list-span.item-slashed' => 'color: {{VALUE}};'
             ]
         ),
         array(
             'name' => 'list_typo',
             'type' => \Elementor\Group_Control_Typography::get_type(),
             'control_type' => 'group',
-            'selector' => '{{WRAPPER}} .pxl-pricing-wrap .pricing-list .pricing-list-span',
+            'selector' => '{{WRAPPER}} .sntravel-pricing-wrap .pricing-list .pricing-list-span',
             'separator' => 'after',
         ),
         array(
@@ -494,7 +494,7 @@ $pricing_list_style_settings = array(
             'label' => esc_html__('Color', 'sntravel'),
             'type' => \Elementor\Controls_Manager::COLOR,
             'selectors' => [
-                '{{WRAPPER}} .pxl-pricing-wrap .pricing-list i' => 'color: {{VALUE}} !important;'
+                '{{WRAPPER}} .sntravel-pricing-wrap .pricing-list i' => 'color: {{VALUE}} !important;'
             ]
         ),
         array(
@@ -502,7 +502,7 @@ $pricing_list_style_settings = array(
             'label' => esc_html__('Size', 'sntravel'),
             'type' => \Elementor\Controls_Manager::SLIDER,
             'selectors' => [
-                '{{WRAPPER}} .pxl-pricing-wrap .pricing-list i' => 'font-size: {{SIZE}}px',
+                '{{WRAPPER}} .sntravel-pricing-wrap .pricing-list i' => 'font-size: {{SIZE}}px',
             ]
         ),
         array(
@@ -510,7 +510,7 @@ $pricing_list_style_settings = array(
             'label' => esc_html__('Spacing', 'sntravel'),
             'type' => \Elementor\Controls_Manager::SLIDER,
             'selectors' => [
-                '{{WRAPPER}} .pxl-pricing-wrap .pricing-list i' => 'margin-right: {{SIZE}}px',
+                '{{WRAPPER}} .sntravel-pricing-wrap .pricing-list i' => 'margin-right: {{SIZE}}px',
             ],
         ),
         array(
@@ -518,7 +518,7 @@ $pricing_list_style_settings = array(
             'label' => esc_html__('Vertical Spacing', 'sntravel'),
             'type' => \Elementor\Controls_Manager::SLIDER,
             'selectors' => [
-                '{{WRAPPER}} .pxl-pricing-wrap .pricing-list li' => 'margin-bottom: {{SIZE}}px;'
+                '{{WRAPPER}} .sntravel-pricing-wrap .pricing-list li' => 'margin-bottom: {{SIZE}}px;'
             ],
             'separator' => 'after'
         ),
@@ -536,7 +536,7 @@ $pricing_button_style_settings = array(
             'label' => esc_html__('Color', 'sntravel'),
             'type' => \Elementor\Controls_Manager::COLOR,
             'selectors' => [
-                '{{WRAPPER}} .pxl-pricing-wrap .pricing-price-button' => 'color: {{VALUE}};'
+                '{{WRAPPER}} .sntravel-pricing-wrap .pricing-price-button' => 'color: {{VALUE}};'
             ]
         ),
         array(
@@ -544,14 +544,14 @@ $pricing_button_style_settings = array(
             'label' => esc_html__('Hover Text Color', 'sntravel'),
             'type' => \Elementor\Controls_Manager::COLOR,
             'selectors' => [
-                '{{WRAPPER}} .pxl-pricing-wrap .pricing-price-button:hover' => 'color: {{VALUE}};'
+                '{{WRAPPER}} .sntravel-pricing-wrap .pricing-price-button:hover' => 'color: {{VALUE}};'
             ]
         ),
         array(
             'name' => 'button_typo',
             'type' => \Elementor\Group_Control_Typography::get_type(),
             'control_type' => 'group',
-            'selector' => '{{WRAPPER}} .pxl-pricing-wrap .pricing-price-button',
+            'selector' => '{{WRAPPER}} .sntravel-pricing-wrap .pricing-price-button',
         ),
         array(
             'name' => 'pricing_table_button_style_tabs',
@@ -566,20 +566,20 @@ $pricing_button_style_settings = array(
                             'type' => \Elementor\Group_Control_Background::get_type(),
                             'control_type' => 'group',
                             'types' => ['classic', 'gradient'],
-                            'selector' => '{{WRAPPER}} .pxl-pricing-wrap .pricing-price-button',
+                            'selector' => '{{WRAPPER}} .sntravel-pricing-wrap .pricing-price-button',
                         ),
                         array(
                             'name' => 'pricing_table_button_border',
                             'type' => \Elementor\Group_Control_Border::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-pricing-wrap .pricing-price-button',
+                            'selector' => '{{WRAPPER}} .sntravel-pricing-wrap .pricing-price-button',
                         ),
                         array(
                             'name' => 'pricing_table_box_button_radius',
                             'label' => esc_html__('Border Radius', 'sntravel'),
                             'type' => \Elementor\Controls_Manager::SLIDER,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-pricing-wrap .pricing-price-button' => 'border-radius: {{SIZE}}{{UNIT}};'
+                                '{{WRAPPER}} .sntravel-pricing-wrap .pricing-price-button' => 'border-radius: {{SIZE}}{{UNIT}};'
                             ]
                         ),
                         array(
@@ -589,7 +589,7 @@ $pricing_button_style_settings = array(
                             'control_type' => 'responsive',
                             'size_units' => ['px', 'em', '%'],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-pricing-wrap .pricing-price-button' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                                '{{WRAPPER}} .sntravel-pricing-wrap .pricing-price-button' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                             ]
                         ),
                         array(
@@ -599,7 +599,7 @@ $pricing_button_style_settings = array(
                             'control_type' => 'responsive',
                             'size_units' => ['px', 'em', '%'],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-pricing-wrap .pricing-price-button' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
+                                '{{WRAPPER}} .sntravel-pricing-wrap .pricing-price-button' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};'
                             ]
                         ),
                     )
@@ -662,12 +662,12 @@ $pricing_button_style_settings = array(
     ),
 );
 
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name' => 'pxl_pricing_table',
+        'name' => 'sntravel_pricing_table',
         'title' => esc_html__('Pxl Pricing Table', 'sntravel'),
         'icon' => 'eicon-price-table',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'scripts'    => array(
         ),
         'params' => array(

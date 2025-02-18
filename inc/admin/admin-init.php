@@ -36,17 +36,17 @@ class Sntravel_Admin extends Sntravel_Base{
 	}
  
 	public function enqueue() {
-		$pxl_server_info = apply_filters( 'pxl_server_info', ['api_url' => ''] ) ;
-		wp_enqueue_style( 'pxlart-dashboard', get_template_directory_uri() . '/inc/admin/assets/css/dashboard.css' );
+		$sntravel_server_info = apply_filters( 'sntravel_server_info', ['api_url' => ''] ) ;
+		wp_enqueue_style( 'sntravelart-dashboard', get_template_directory_uri() . '/inc/admin/assets/css/dashboard.css' );
 
 		if ( ! did_action( 'wp_enqueue_media' ) ) {
 	        wp_enqueue_media();
 	    }
-		wp_enqueue_script( 'pxlart-admin', get_template_directory_uri() . '/inc/admin/assets/js/admin.js', array( 'jquery'), false, true );
-		wp_localize_script( 'pxlart-admin', 'pxlart_admin', array(
+		wp_enqueue_script( 'sntravelart-admin', get_template_directory_uri() . '/inc/admin/assets/js/admin.js', array( 'jquery'), false, true );
+		wp_localize_script( 'sntravelart-admin', 'sntravelart_admin', array(
 			'ajaxurl'        => admin_url( 'admin-ajax.php' ),
 			'wpnonce'        => wp_create_nonce( 'merlin_nonce' ),
-			'api_url' 		 => $pxl_server_info['api_url'],
+			'api_url' 		 => $sntravel_server_info['api_url'],
 			'theme_slug'     => sntravel()->get_slug()
 		));
 	}
@@ -102,7 +102,7 @@ class Sntravel_Admin extends Sntravel_Base{
 		 
 		global $submenu;
 
-		$submenu['pxlart'][0][0] = sntravel()->get_name().' '.esc_html__( 'Dashboard', 'sntravel' );
+		$submenu['sntravelart'][0][0] = sntravel()->get_name().' '.esc_html__( 'Dashboard', 'sntravel' );
 
 		remove_submenu_page( 'themes.php', 'tgmpa-install-plugins' );
 		remove_submenu_page( 'tools.php', 'redux-about' );

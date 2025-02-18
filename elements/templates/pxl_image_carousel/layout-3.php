@@ -29,7 +29,7 @@ $opts = [
 ];
 
 $widget->add_render_attribute( 'carousel', [
-    'class'         => 'pxl-swiper-container overflow-hidden',
+    'class'         => 'sntravel-swiper-container overflow-hidden',
     'dir'           => is_rtl() ? 'rtl' : 'ltr',
     'data-settings' => wp_json_encode($opts)
 ]);
@@ -56,20 +56,20 @@ if(!empty($settings['link']['url'])){
 $link_attributes = $widget->get_render_attribute_string( 'link' );
 ?>
 
-<div class="pxl-swiper-slider pxl-image-carousel layout-3">
-    <div class="pxl-swiper-slider-wrap pxl-carousel-inner add-custom-cursor relative">
-        <div <?php pxl_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
-            <div class="pxl-swiper-wrapper swiper-wrapper">
+<div class="sntravel-swiper-slider sntravel-image-carousel layout-3">
+    <div class="sntravel-swiper-slider-wrap sntravel-carousel-inner add-custom-cursor relative">
+        <div <?php sntravel_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
+            <div class="sntravel-swiper-wrapper swiper-wrapper">
                 <?php foreach ($imgGallery as $key => $value) :
                     $image = isset($value['id']) ? $value['id'] : '';
-                    $img = pxl_get_image_by_size(array(
+                    $img = sntravel_get_image_by_size(array(
                         'attach_id'  => $image,
                         'thumb_size' => $img_size,
                         'class' => 'no-lazyload',
                     ));
                     $thumbnail = $img['thumbnail'];
                     ?>
-                    <div class="pxl-swiper-slide swiper-slide">
+                    <div class="sntravel-swiper-slide swiper-slide">
                         <?php if (!empty($image)) : ?>
                             <div class="item-inner">
                                 <div class="box-image">
@@ -78,7 +78,7 @@ $link_attributes = $widget->get_render_attribute_string( 'link' );
                                 <div class="box-icon">
                                     <?php if ( $link_attributes ) echo '<a '. implode( ' ', [ $link_attributes ] ).'>'; ?>
                                         <?php if(!empty($settings['selected_icon']['value'] )): ?>
-                                            <?php \Elementor\Icons_Manager::render_icon( $settings['selected_icon'], [ 'aria-hidden' => 'true', 'class' => 'pxl-icon' ], 'i' );?>
+                                            <?php \Elementor\Icons_Manager::render_icon( $settings['selected_icon'], [ 'aria-hidden' => 'true', 'class' => 'sntravel-icon' ], 'i' );?>
                                         <?php endif; ?>
                                     <?php if ( $link_attributes ) echo '</a>'; ?>
                                 </div>
@@ -89,6 +89,6 @@ $link_attributes = $widget->get_render_attribute_string( 'link' );
             </div>
         </div>
         <?php basilico_arrow_template($settings); ?>
-        <div class="pxl-swiper-dots"></div>
+        <div class="sntravel-swiper-dots"></div>
     </div>
 </div>

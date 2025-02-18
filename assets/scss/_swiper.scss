@@ -234,7 +234,7 @@ $slider-outer-space: 0;
                 color: #fff;
                 text-transform: uppercase;
             }
-            .pxli-down-arrow-long{
+            .sntraveli-down-arrow-long{
                 font-size: 56px;
                 color: #fff;
                 position: relative;
@@ -256,12 +256,12 @@ $slider-outer-space: 0;
                 gap: 7px;
             }
             &.sntravel-swiper-arrow-prev{
-                .pxli-down-arrow-long{
+                .sntraveli-down-arrow-long{
                     rotate: 180deg;
                 }
             }
             &:hover, &:active{
-                .pxli-down-arrow-long{
+                .sntraveli-down-arrow-long{
                     &::after{
                         opacity: 1;
                     }
@@ -272,7 +272,7 @@ $slider-outer-space: 0;
                 cursor: no-drop;
                 opacity: 0.5;
                 &:hover, &:active{
-                    .pxli-down-arrow-long{
+                    .sntraveli-down-arrow-long{
                         &::after{
                             opacity: 0;
                         }

@@ -1,10 +1,10 @@
 <?php
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name' => 'pxl_dropdown_links',
+        'name' => 'sntravel_dropdown_links',
         'title' => esc_html__('PXL Dropdown Links', 'sntravel'),
         'icon' => 'eicon-editor-link',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'params' => array(
             'sections' => array(
                 array(
@@ -20,10 +20,10 @@ pxl_add_custom_widget(
                             'options' => [
                                 '1' => [
                                     'label' => esc_html__( 'Layout 1', 'sntravel' ),
-                                    'image' => get_template_directory_uri() . '/elements/register/img-layout/pxl_dropdown_links-1.jpg'
+                                    'image' => get_template_directory_uri() . '/elements/register/img-layout/sntravel_dropdown_links-1.jpg'
                                 ],
                             ],
-                            'prefix_class' => 'pxl-dropdown-links-layout-'
+                            'prefix_class' => 'sntravel-dropdown-links-layout-'
                         ),
                     ),
                 ),
@@ -54,8 +54,8 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-dropdown-links .box-icon i' => 'font-size: {{SIZE}}{{UNIT}};',
-                                '{{WRAPPER}} .pxl-dropdown-links .box-icon svg' => 'width: {{SIZE}}{{UNIT}} !important;',
+                                '{{WRAPPER}} .sntravel-dropdown-links .box-icon i' => 'font-size: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-dropdown-links .box-icon svg' => 'width: {{SIZE}}{{UNIT}} !important;',
                             ],
                         ),
                         array(
@@ -64,8 +64,8 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::DIMENSIONS,
                             'size_units' => [ 'px' ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-dropdown-links i' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                                '{{WRAPPER}} .pxl-dropdown-links svg' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-dropdown-links i' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-dropdown-links svg' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                             'control_type' => 'responsive',
                         ),
@@ -108,7 +108,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'control_type' => 'responsive',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-dropdown-links .container-label' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-dropdown-links .container-label' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -116,7 +116,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Typography', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-dropdown-links .container-label',
+                            'selector' => '{{WRAPPER}} .sntravel-dropdown-links .container-label',
                         ),
                         array(
                             'name' => 'icon_color',
@@ -124,8 +124,8 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'control_type' => 'responsive',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-dropdown-links .box-icon i' => 'color: {{VALUE}};',
-                                '{{WRAPPER}} .pxl-dropdown-links .box-icon svg' => 'fill: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-dropdown-links .box-icon i' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-dropdown-links .box-icon svg' => 'fill: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -134,7 +134,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'control_type' => 'responsive',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-dropdown-links .dropdown-icon' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-dropdown-links .dropdown-icon' => 'color: {{VALUE}};',
                             ],
                         ),
                     ),
@@ -160,7 +160,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'control_type' => 'responsive',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-dropdown-links ul li a' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-dropdown-links ul li a' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -168,7 +168,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Typography', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-dropdown-links ul li a',
+                            'selector' => '{{WRAPPER}} .sntravel-dropdown-links ul li a',
                         ),
                     ),
                 ),

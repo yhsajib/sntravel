@@ -1,11 +1,11 @@
 <?php
 // Register PXL Widget
-pxl_add_custom_widget(
+sntravel_add_custom_widget(
     array(
-        'name'       => 'pxl_button_more',
+        'name'       => 'sntravel_button_more',
         'title'      => esc_html__( 'PXL Button More', 'sntravel' ),
         'icon'       => 'eicon-editor-external-link',
-        'categories' => array('pxltheme-core'),
+        'categories' => array('sntraveltheme-core'),
         'params'     => array(
             'sections' => array(
                 array(
@@ -58,7 +58,7 @@ pxl_add_custom_widget(
                             'name' => 'page_link',
                             'label' => esc_html__('Existing Page', 'sntravel'),
                             'type' => \Elementor\Controls_Manager::SELECT2,
-                            'options'       => pxl_get_all_page(),
+                            'options'       => sntravel_get_all_page(),
                             'condition'     => [
                                 'button_url_type'     => 'page',
                             ],
@@ -70,7 +70,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-button-more .btn-more' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-button-more .btn-more' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -78,7 +78,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Border Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-button-more .btn-more:after' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-button-more .btn-more:after' => 'background-color: {{VALUE}};',
                             ],
                             'condition'     => [
                                 'style'     => '',
@@ -89,7 +89,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Color Hover', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-button-more .btn-more:hover' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-button-more .btn-more:hover' => 'color: {{VALUE}};',
                             ],
                             
                         ),
@@ -98,7 +98,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Border Hover Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-button-more .btn-more:hover:after' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-button-more .btn-more:hover:after' => 'background-color: {{VALUE}};',
                             ],
                             'condition'     => [
                                 'style'     => '',
@@ -109,14 +109,14 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Text Typography', 'sntravel' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '.elementor-widget-container .pxl-button-more .btn-more',
+                            'selector' => '.elementor-widget-container .sntravel-button-more .btn-more',
                         ),
                         array(
                             'name' => 'icon_color',
                             'label' => esc_html__('Color', 'sntravel' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-button-more .btn-more i' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .sntravel-button-more .btn-more i' => 'color: {{VALUE}};',
                             ],
                             'separator' => 'before',
                         ),
@@ -133,7 +133,7 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-button-more .btn-more i' => 'font-size: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .sntravel-button-more .btn-more i' => 'font-size: {{SIZE}}{{UNIT}};',
                             ],
                         ),
                     ),

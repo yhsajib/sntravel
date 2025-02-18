@@ -357,8 +357,8 @@
     max-width: 100%;
 }
 
-@mixin font-pxli($icon, $size: "") {
-    font-family: "pxli";
+@mixin font-sntraveli($icon, $size: "") {
+    font-family: "sntraveli";
     content: $icon;
     @if $size != "" {
         font-size: $size;
@@ -657,7 +657,7 @@
     to{opacity:0}
 }
 
-@-webkit-keyframes pxlZoomIn {
+@-webkit-keyframes sntravelZoomIn {
     from {
         opacity: 0;
         @include transform(scale(0.8));
@@ -669,7 +669,7 @@
     }
 }
 
-@-webkit-keyframes pxlFadeIn {
+@-webkit-keyframes sntravelFadeIn {
     from {
         opacity: 0;
     }
@@ -679,7 +679,7 @@
     }
 }
 
-@keyframes pxlFadeIn {
+@keyframes sntravelFadeIn {
     from {
         opacity: 0;
     }
@@ -689,19 +689,7 @@
     }
 }
 
-@-webkit-keyframes pxlFadeInUp {
-    from {
-        opacity: 0;
-        transform: translate3d(0, 30px, 0);
-    }
-
-    to {
-        opacity: 1;
-        transform: none;
-    }
-}
-
-@keyframes pxlFadeInUp {
+@-webkit-keyframes sntravelFadeInUp {
     from {
         opacity: 0;
         transform: translate3d(0, 30px, 0);
@@ -713,7 +701,19 @@
     }
 }
 
-@-webkit-keyframes pxlFadeInDown {
+@keyframes sntravelFadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 30px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@-webkit-keyframes sntravelFadeInDown {
     from {
         opacity: 0;
         transform: translate3d(0, -150px, 0);
@@ -725,7 +725,7 @@
     }
 }
 
-@keyframes pxlFadeInDown {
+@keyframes sntravelFadeInDown {
     from {
         opacity: 0;
         transform: translate3d(0, -150px, 0);
@@ -737,7 +737,7 @@
     }
 }
 
-@-webkit-keyframes pxlFadeInLeft {
+@-webkit-keyframes sntravelFadeInLeft {
     from {
         opacity: 0;
         transform: translate3d(-150px, 0, 0);
@@ -749,7 +749,7 @@
     }
 }
 
-@keyframes pxlFadeInLeft {
+@keyframes sntravelFadeInLeft {
     from {
         opacity: 0;
         transform: translate3d(-150px, 0, 0);
@@ -761,7 +761,7 @@
     }
 }
 
-@-webkit-keyframes pxlFadeInRight {
+@-webkit-keyframes sntravelFadeInRight {
     from {
         opacity: 0;
         transform: translate3d(150px, 0, 0);
@@ -773,7 +773,7 @@
     }
 }
 
-@keyframes pxlFadeInRight {
+@keyframes sntravelFadeInRight {
     from {
         opacity: 0;
         transform: translate3d(150px, 0, 0);

@@ -11,12 +11,12 @@ if(class_exists('WPCF7')) {
         $contact_forms[esc_html__('No contact forms found', 'sntravel')] = 0;
     }
 
-    pxl_add_custom_widget(
+    sntravel_add_custom_widget(
         array(
-            'name'       => 'pxl_contact_form',
+            'name'       => 'sntravel_contact_form',
             'title'      => esc_html__('Pxl Contact Form 7', 'sntravel'),
             'icon'       => 'eicon-form-horizontal',
-            'categories' => array('pxltheme-core'),
+            'categories' => array('sntraveltheme-core'),
             'scripts'    => array(),
             'params'     => array(
                 'sections' => array(
